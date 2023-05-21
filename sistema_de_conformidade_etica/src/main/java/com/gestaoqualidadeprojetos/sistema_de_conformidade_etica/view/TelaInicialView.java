@@ -4,6 +4,10 @@
  */
 package com.gestaoqualidadeprojetos.sistema_de_conformidade_etica.view;
 
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author lucas
@@ -27,10 +31,9 @@ public class TelaInicialView extends javax.swing.JFrame {
     private void initComponents() {
 
         lblBemVindo = new javax.swing.JLabel();
-        sininhoIMG = new javax.swing.JLabel();
         btnAcessarProjetos = new javax.swing.JButton();
         btn2 = new javax.swing.JButton();
-        btn3 = new javax.swing.JButton();
+        btnVerAvisos = new javax.swing.JButton();
         btnSair = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -39,19 +42,27 @@ public class TelaInicialView extends javax.swing.JFrame {
         lblBemVindo.setFont(new java.awt.Font("Dialog", 1, 22)); // NOI18N
         lblBemVindo.setText("Bem-Vindo, [NOME]!");
 
-        sininhoIMG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gestaoqualidadeprojetos/sistema_de_conformidade_etica/images/red bell.png"))); // NOI18N
-
         btnAcessarProjetos.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         btnAcessarProjetos.setText("Acessar Projetos");
 
         btn2.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         btn2.setText("Botão 2");
 
-        btn3.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        btn3.setText("Botão 3");
+        btnVerAvisos.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        btnVerAvisos.setText("Ver Avisos");
+        btnVerAvisos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerAvisosActionPerformed(evt);
+            }
+        });
 
         btnSair.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         btnSair.setText("Sair");
+        btnSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSairActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -60,31 +71,27 @@ public class TelaInicialView extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(147, Short.MAX_VALUE)
                 .addComponent(lblBemVindo)
-                .addGap(46, 46, 46)
-                .addComponent(sininhoIMG)
-                .addGap(53, 53, 53))
+                .addGap(147, 147, 147))
             .addGroup(layout.createSequentialGroup()
                 .addGap(118, 118, 118)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAcessarProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnVerAvisos, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblBemVindo)
-                    .addComponent(sininhoIMG))
+                .addGap(50, 50, 50)
+                .addComponent(lblBemVindo)
                 .addGap(31, 31, 31)
                 .addComponent(btnAcessarProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnVerAvisos, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(50, Short.MAX_VALUE))
@@ -92,6 +99,19 @@ public class TelaInicialView extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        LoginView login = new LoginView();
+        this.dispose();
+        login.setVisible(true);
+    }//GEN-LAST:event_btnSairActionPerformed
+
+    private void btnVerAvisosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerAvisosActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null,"AVISOS BLA BLA BLA");
+    }//GEN-LAST:event_btnVerAvisosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,10 +150,9 @@ public class TelaInicialView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn2;
-    private javax.swing.JButton btn3;
     private javax.swing.JButton btnAcessarProjetos;
     private javax.swing.JButton btnSair;
+    private javax.swing.JButton btnVerAvisos;
     private javax.swing.JLabel lblBemVindo;
-    private javax.swing.JLabel sininhoIMG;
     // End of variables declaration//GEN-END:variables
 }

@@ -139,13 +139,28 @@ public class CriarUsuarioView extends javax.swing.JFrame {
 
         checkAceito.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         checkAceito.setText("Aceito");
+        checkAceito.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkAceitoActionPerformed(evt);
+            }
+        });
 
         btnCancelar.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
 
         btnCadastrar.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         btnCadastrar.setText("Cadastrar");
         btnCadastrar.setEnabled(false);
+        btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -206,7 +221,30 @@ public class CriarUsuarioView extends javax.swing.JFrame {
 
     private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
         // TODO add your handling code here:
+        if(checkAceito.isSelected())
+            btnCadastrar.setEnabled(true);
     }//GEN-LAST:event_txtEmailActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        LoginView login = new LoginView();
+        this.dispose();
+        login.setVisible(true);
+    }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnCadastrarActionPerformed
+
+    private void checkAceitoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkAceitoActionPerformed
+        // TODO add your handling code here:
+        if(checkAceito.isSelected())
+            btnCadastrar.setEnabled(true);
+        else
+            btnCadastrar.setEnabled(false);
+    }//GEN-LAST:event_checkAceitoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,8 +276,8 @@ public class CriarUsuarioView extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CriarUsuarioView().setVisible(true);
-            }
+                new CriarUsuarioView().setVisible(true);               
+            }           
         });
     }
 
