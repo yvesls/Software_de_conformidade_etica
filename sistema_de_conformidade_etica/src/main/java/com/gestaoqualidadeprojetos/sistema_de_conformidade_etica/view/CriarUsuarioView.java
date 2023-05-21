@@ -235,6 +235,10 @@ public class CriarUsuarioView extends javax.swing.JFrame {
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        LoginView login = new LoginView();
+        this.dispose();
+        login.setVisible(true);
         
     }//GEN-LAST:event_btnCadastrarActionPerformed
 

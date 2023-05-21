@@ -109,9 +109,9 @@ public class LoginPrimeiroAcessoView extends javax.swing.JFrame {
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         // TODO add your handling code here:
-        TelaInicialView telaInicial = new TelaInicialView();
+        LoginTermoAceitaçãoView termoPrimeiroAcesso = new LoginTermoAceitaçãoView();
         this.dispose();
-        telaInicial.setVisible(true);
+        termoPrimeiroAcesso.setVisible(true);
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     /**

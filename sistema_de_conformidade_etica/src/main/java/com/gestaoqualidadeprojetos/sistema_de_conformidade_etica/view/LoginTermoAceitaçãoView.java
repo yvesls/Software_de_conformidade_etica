@@ -41,6 +41,11 @@ public class LoginTermoAceitaçãoView extends javax.swing.JFrame {
         btnLogar.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         btnLogar.setText("Logar");
         btnLogar.setEnabled(false);
+        btnLogar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogarActionPerformed(evt);
+            }
+        });
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
@@ -55,9 +60,19 @@ public class LoginTermoAceitaçãoView extends javax.swing.JFrame {
 
         btnCancelar.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
 
         checkAceito.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         checkAceito.setText("Aceito");
+        checkAceito.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkAceitoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -107,6 +122,29 @@ public class LoginTermoAceitaçãoView extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void checkAceitoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkAceitoActionPerformed
+        // TODO add your handling code here:
+        if(checkAceito.isSelected())
+            btnLogar.setEnabled(true);
+        else
+            btnLogar.setEnabled(false);
+    }//GEN-LAST:event_checkAceitoActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        LoginView login = new LoginView();
+        this.dispose();
+        login.setVisible(true);
+    }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void btnLogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogarActionPerformed
+        // TODO add your handling code here:
+        TelaInicialView telaInicial = new TelaInicialView();
+        this.dispose();
+        telaInicial.setVisible(true);
+    }//GEN-LAST:event_btnLogarActionPerformed
 
     /**
      * @param args the command line arguments
