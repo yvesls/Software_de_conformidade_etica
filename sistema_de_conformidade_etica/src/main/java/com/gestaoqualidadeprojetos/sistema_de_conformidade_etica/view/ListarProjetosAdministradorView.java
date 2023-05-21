@@ -16,6 +16,8 @@ public class ListarProjetosAdministradorView extends javax.swing.JFrame {
      */
     public ListarProjetosAdministradorView() {
         initComponents();
+        setVisible(true);
+        this.setLocationRelativeTo(this.getParent());
     }
 
     /**
@@ -34,11 +36,12 @@ public class ListarProjetosAdministradorView extends javax.swing.JFrame {
         txtData = new javax.swing.JLabel();
         jScrollPaneTabelaProjetos = new javax.swing.JScrollPane();
         tableProjetos = new javax.swing.JTable();
-        btnAbrirProjeto = new javax.swing.JButton();
-        btnAbrirProjeto1 = new javax.swing.JButton();
         btnAbrirProjeto2 = new javax.swing.JButton();
+        btnAbrirProjeto3 = new javax.swing.JButton();
+        btnAbrirProjeto1 = new javax.swing.JButton();
         btnNovoProjeto = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        btnFechar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -79,11 +82,16 @@ public class ListarProjetosAdministradorView extends javax.swing.JFrame {
             tableProjetos.getColumnModel().getColumn(4).setResizable(false);
         }
 
-        btnAbrirProjeto.setText("Abrir");
+        btnAbrirProjeto2.setText("Abrir");
+
+        btnAbrirProjeto3.setText("Abrir");
 
         btnAbrirProjeto1.setText("Abrir");
-
-        btnAbrirProjeto2.setText("Abrir");
+        btnAbrirProjeto1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAbrirProjeto1ActionPerformed(evt);
+            }
+        });
 
         btnNovoProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnNovoProjeto.setText("Novo projeto");
@@ -101,6 +109,14 @@ public class ListarProjetosAdministradorView extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setText("Ações");
 
+        btnFechar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnFechar.setText("Fechar");
+        btnFechar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFecharActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -110,7 +126,9 @@ public class ListarProjetosAdministradorView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnNovoProjeto)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnFechar)
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(txtOla)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -124,15 +142,18 @@ public class ListarProjetosAdministradorView extends javax.swing.JFrame {
                         .addGap(37, 37, 37))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnAbrirProjeto)
-                            .addComponent(btnAbrirProjeto1)
-                            .addComponent(btnAbrirProjeto2)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(17, 17, 17)
-                                .addComponent(jLabel5)))
-                        .addGap(31, 31, 31))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                                .addComponent(jLabel5)
+                                .addGap(48, 48, 48))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnAbrirProjeto2)
+                                    .addComponent(btnAbrirProjeto3)
+                                    .addComponent(btnAbrirProjeto1))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -145,18 +166,20 @@ public class ListarProjetosAdministradorView extends javax.swing.JFrame {
                     .addComponent(txtTituloData)
                     .addComponent(txtData))
                 .addGap(56, 56, 56)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnAbrirProjeto1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnAbrirProjeto2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnAbrirProjeto)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnAbrirProjeto1)))
+                        .addComponent(btnAbrirProjeto3)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addComponent(btnNovoProjeto)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnNovoProjeto)
+                    .addComponent(btnFechar))
                 .addGap(26, 26, 26))
         );
 
@@ -171,6 +194,15 @@ public class ListarProjetosAdministradorView extends javax.swing.JFrame {
         CriarNovoProjetoView criarNovoProjeto = new CriarNovoProjetoView();
         criarNovoProjeto.setVisible(true);
     }//GEN-LAST:event_btnNovoProjetoActionPerformed
+
+    private void btnAbrirProjeto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirProjeto1ActionPerformed
+        SelecionarFasesProjetoView selecionarFasesProjetoView = new SelecionarFasesProjetoView();
+        selecionarFasesProjetoView.setVisible(true);
+    }//GEN-LAST:event_btnAbrirProjeto1ActionPerformed
+
+    private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnFecharActionPerformed
 
     /**
      * @param args the command line arguments
@@ -209,9 +241,10 @@ public class ListarProjetosAdministradorView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAbrirProjeto;
     private javax.swing.JButton btnAbrirProjeto1;
     private javax.swing.JButton btnAbrirProjeto2;
+    private javax.swing.JButton btnAbrirProjeto3;
+    private javax.swing.JButton btnFechar;
     private javax.swing.JButton btnNovoProjeto;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPaneTabelaProjetos;

@@ -8,13 +8,15 @@ package com.gestaoqualidadeprojetos.sistema_de_conformidade_etica.view;
  *
  * @author Gabriel
  */
-public class PerguntasQuestionarioView extends javax.swing.JFrame {
+public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
 
     /**
      * Creates new form PerguntasQuestionarioView
      */
-    public PerguntasQuestionarioView() {
+    public ManterPerguntasQuestionarioView() {
         initComponents();
+        setVisible(true);
+        this.setLocationRelativeTo(this.getParent());
     }
 
     /**
@@ -48,6 +50,7 @@ public class PerguntasQuestionarioView extends javax.swing.JFrame {
         labelStatus = new javax.swing.JLabel();
         txtStatusQuestionario = new javax.swing.JLabel();
         btnSalvar = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -135,6 +138,19 @@ public class PerguntasQuestionarioView extends javax.swing.JFrame {
 
         btnSalvar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnSalvar.setText("Salvar questionário");
+        btnSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalvarActionPerformed(evt);
+            }
+        });
+
+        btnCancelar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -148,7 +164,7 @@ public class PerguntasQuestionarioView extends javax.swing.JFrame {
                 .addContainerGap(56, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
@@ -182,6 +198,8 @@ public class PerguntasQuestionarioView extends javax.swing.JFrame {
                                         .addGap(100, 100, 100))))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(btnNovaPergunta)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnCancelar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnSalvar)))
                         .addGap(54, 54, 54))
@@ -241,7 +259,8 @@ public class PerguntasQuestionarioView extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnNovaPergunta)
-                    .addComponent(btnSalvar))
+                    .addComponent(btnSalvar)
+                    .addComponent(btnCancelar))
                 .addGap(22, 22, 22))
         );
 
@@ -257,8 +276,19 @@ public class PerguntasQuestionarioView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnDuplicarPergunta1ActionPerformed
 
     private void btnNovaPerguntaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovaPerguntaActionPerformed
-        // TODO add your handling code here:
+        CriarNovaPerguntaView criarNovaPerguntaView = new CriarNovaPerguntaView();
+        criarNovaPerguntaView.setVisible(true);
     }//GEN-LAST:event_btnNovaPerguntaActionPerformed
+
+    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+        dispose();
+        ListarQuestionariosView listarQuestionariosView = new ListarQuestionariosView();
+        listarQuestionariosView.setVisible(true);
+    }//GEN-LAST:event_btnSalvarActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -277,25 +307,27 @@ public class PerguntasQuestionarioView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PerguntasQuestionarioView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ManterPerguntasQuestionarioView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PerguntasQuestionarioView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ManterPerguntasQuestionarioView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PerguntasQuestionarioView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ManterPerguntasQuestionarioView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PerguntasQuestionarioView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ManterPerguntasQuestionarioView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PerguntasQuestionarioView().setVisible(true);
+                new ManterPerguntasQuestionarioView().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnDuplicarPergunta1;
     private javax.swing.JButton btnDuplicarPergunta2;
     private javax.swing.JButton btnDuplicarPergunta3;

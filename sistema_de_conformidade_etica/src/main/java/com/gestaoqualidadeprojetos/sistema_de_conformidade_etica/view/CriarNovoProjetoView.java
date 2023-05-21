@@ -48,6 +48,7 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
         selectFuncaoAtor3 = new javax.swing.JComboBox<>();
         selectFuncaoAtor4 = new javax.swing.JComboBox<>();
         selectFuncaoAtor6 = new javax.swing.JComboBox<>();
+        btnCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,8 +57,14 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
 
         btnSalvarProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnSalvarProjeto.setText("Salvar projeto");
+        btnSalvarProjeto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalvarProjetoActionPerformed(evt);
+            }
+        });
 
         inputEmailAtor3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        inputEmailAtor3.setText("arquitetoSoftware@projeto.com");
 
         labelTipo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         labelTipo.setText("Tipo:");
@@ -77,18 +84,29 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
         labelEquipe.setText("Equipe:");
 
         inputNomeProjeto1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        inputNomeProjeto1.setText("Sistema de padaria");
 
         inputEmailAtor1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        inputEmailAtor1.setText("cliente@projeto.com");
         inputEmailAtor1.setToolTipText("");
         inputEmailAtor1.setName(""); // NOI18N
+        inputEmailAtor1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputEmailAtor1ActionPerformed(evt);
+            }
+        });
 
         inputEmailAtor4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        inputEmailAtor4.setText("liderTecnico@projeto.com");
 
         inputEmailAtor2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        inputEmailAtor2.setText("desenvolvedor@projeto.com");
 
         inputEmailAtor5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        inputEmailAtor5.setText("gerenteProjeto@projeto.com");
 
         inputEmailAtor6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        inputEmailAtor6.setText("analistaQualidade@projeto.com");
 
         labelFuncaoAtor.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         labelFuncaoAtor.setText("Função:");
@@ -141,6 +159,14 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
             }
         });
 
+        btnCancelar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -148,28 +174,31 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnSalvarProjeto))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(labelNome, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelEquipe, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(inputNomeProjeto1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(inputEmailAtor4, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(inputEmailAtor3, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(inputEmailAtor2, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(inputEmailAtor5, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(inputEmailAtor6, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(inputEmailAtor1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelFuncaoAtor)
-                            .addComponent(labelTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(43, 43, 43)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(labelNome, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelEquipe, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(inputNomeProjeto1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(inputEmailAtor4, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(inputEmailAtor3, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(inputEmailAtor2, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(inputEmailAtor5, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(inputEmailAtor6, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(inputEmailAtor1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelFuncaoAtor)
+                                    .addComponent(labelTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtTituloProjetos)
+                                .addGap(17, 17, 17)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(selectFuncaoAtor2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(selectFuncaoAtor1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -177,12 +206,13 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
                             .addComponent(selectFuncaoAtor4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(selectFuncaoAtor5, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(selectFuncaoAtor6, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(selectTipoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(selectTipoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnCancelar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnSalvarProjeto)))
                 .addGap(50, 50, 50))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(txtTituloProjetos)
-                .addGap(255, 255, 255))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -222,7 +252,9 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
                     .addComponent(inputEmailAtor6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(selectFuncaoAtor6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addComponent(btnSalvarProjeto)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSalvarProjeto)
+                    .addComponent(btnCancelar))
                 .addGap(28, 28, 28))
         );
 
@@ -258,6 +290,20 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
     private void selectFuncaoAtor6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectFuncaoAtor6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_selectFuncaoAtor6ActionPerformed
+
+    private void btnSalvarProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarProjetoActionPerformed
+        dispose();
+        //ListarProjetosAdministradorView listarProjetosAdministrador = new ListarProjetosAdministradorView();
+        //listarProjetosAdministrador.setVisible(true);;
+    }//GEN-LAST:event_btnSalvarProjetoActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void inputEmailAtor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputEmailAtor1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputEmailAtor1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -296,6 +342,7 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnSalvarProjeto;
     private javax.swing.JTextField inputEmailAtor1;
     private javax.swing.JTextField inputEmailAtor2;

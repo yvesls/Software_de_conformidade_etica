@@ -8,13 +8,15 @@ package com.gestaoqualidadeprojetos.sistema_de_conformidade_etica.view;
  *
  * @author Gabriel
  */
-public class ListarFasesProjetoView extends javax.swing.JFrame {
+public class SelecionarFasesProjetoView extends javax.swing.JFrame {
 
     /**
      * Creates new form SelecionarModeloQuestionarioView
      */
-    public ListarFasesProjetoView() {
+    public SelecionarFasesProjetoView() {
         initComponents();
+        setVisible(true);
+        this.setLocationRelativeTo(this.getParent());
     }
 
     /**
@@ -26,12 +28,22 @@ public class ListarFasesProjetoView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnCancelar = new javax.swing.JButton();
         txtTituloSelecionarModeloQuestionario = new javax.swing.JLabel();
         labelQuestionario = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         btnProximo = new javax.swing.JButton();
         labelFaseAtual = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        btnVoltar = new javax.swing.JButton();
+
+        btnCancelar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -46,6 +58,11 @@ public class ListarFasesProjetoView extends javax.swing.JFrame {
 
         btnProximo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnProximo.setText("Próximo");
+        btnProximo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProximoActionPerformed(evt);
+            }
+        });
 
         labelFaseAtual.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         labelFaseAtual.setText("Fase atual:");
@@ -53,29 +70,45 @@ public class ListarFasesProjetoView extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setText("Fase III");
 
+        btnVoltar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(81, Short.MAX_VALUE)
+                .addContainerGap(103, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(txtTituloSelecionarModeloQuestionario)
                         .addGap(99, 99, 99))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(labelFaseAtual)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(labelQuestionario)
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnProximo)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(76, 76, 76))))
+                        .addComponent(labelFaseAtual)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel1)
+                        .addGap(127, 127, 127))))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(btnVoltar))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(labelQuestionario)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(57, 57, 57)
+                        .addComponent(btnProximo))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(37, 37, 37))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -91,12 +124,28 @@ public class ListarFasesProjetoView extends javax.swing.JFrame {
                     .addComponent(labelQuestionario)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(btnProximo)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnProximo)
+                    .addComponent(btnVoltar))
                 .addGap(17, 17, 17))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnProximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProximoActionPerformed
+        dispose();
+        ListarQuestionariosView listarQuestionariosView = new ListarQuestionariosView();
+        listarQuestionariosView.setVisible(true);
+    }//GEN-LAST:event_btnProximoActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -115,27 +164,31 @@ public class ListarFasesProjetoView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ListarFasesProjetoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SelecionarFasesProjetoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ListarFasesProjetoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SelecionarFasesProjetoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ListarFasesProjetoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SelecionarFasesProjetoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ListarFasesProjetoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SelecionarFasesProjetoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ListarFasesProjetoView().setVisible(true);
+                new SelecionarFasesProjetoView().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnProximo;
+    private javax.swing.JButton btnVoltar;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel labelFaseAtual;

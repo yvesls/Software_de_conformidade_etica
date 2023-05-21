@@ -16,6 +16,8 @@ public class ListarProjetosView extends javax.swing.JFrame {
      */
     public ListarProjetosView() {
         initComponents();
+        setVisible(true);
+        this.setLocationRelativeTo(this.getParent());
     }
 
     /**
@@ -38,6 +40,7 @@ public class ListarProjetosView extends javax.swing.JFrame {
         btnAbrirProjeto1 = new javax.swing.JButton();
         btnAbrirProjeto2 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        btnFechar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -83,9 +86,22 @@ public class ListarProjetosView extends javax.swing.JFrame {
         btnAbrirProjeto1.setText("Abrir");
 
         btnAbrirProjeto2.setText("Abrir");
+        btnAbrirProjeto2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAbrirProjeto2ActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setText("Ações");
+
+        btnFechar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnFechar.setText("Fechar");
+        btnFechar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFecharActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -94,6 +110,9 @@ public class ListarProjetosView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnFechar)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 682, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)
@@ -138,11 +157,21 @@ public class ListarProjetosView extends javax.swing.JFrame {
                         .addComponent(btnAbrirProjeto)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnAbrirProjeto1)))
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnFechar)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAbrirProjeto2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirProjeto2ActionPerformed
+        //Responder questionário
+    }//GEN-LAST:event_btnAbrirProjeto2ActionPerformed
+
+    private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnFecharActionPerformed
 
     /**
      * @param args the command line arguments
@@ -186,6 +215,7 @@ public class ListarProjetosView extends javax.swing.JFrame {
     private javax.swing.JButton btnAbrirProjeto;
     private javax.swing.JButton btnAbrirProjeto1;
     private javax.swing.JButton btnAbrirProjeto2;
+    private javax.swing.JButton btnFechar;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPaneTabelaProjetos;
     private javax.swing.JTable tableProjetos;

@@ -16,6 +16,8 @@ public class ListarQuestionariosView extends javax.swing.JFrame {
      */
     public ListarQuestionariosView() {
         initComponents();
+        setVisible(true);
+        this.setLocationRelativeTo(this.getParent());
     }
 
     /**
@@ -27,6 +29,7 @@ public class ListarQuestionariosView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnCancelar = new javax.swing.JButton();
         txtTituloProjetos = new javax.swing.JLabel();
         txtNomeUsuario = new javax.swing.JLabel();
         txtOla = new javax.swing.JLabel();
@@ -46,6 +49,18 @@ public class ListarQuestionariosView extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
         jComboBox3 = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        btnFechar = new javax.swing.JButton();
+
+        btnCancelar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -98,6 +113,11 @@ public class ListarQuestionariosView extends javax.swing.JFrame {
         btnAbrirProjeto3.setText("Abrir");
 
         btnAbrirProjeto1.setText("Abrir");
+        btnAbrirProjeto1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAbrirProjeto1ActionPerformed(evt);
+            }
+        });
 
         btnNovoQuationario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnNovoQuationario.setText("Novo questionário");
@@ -130,111 +150,164 @@ public class ListarQuestionariosView extends javax.swing.JFrame {
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Publicado", "Fechado", "Rascunho" }));
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setText("Questionários:");
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setText("IV");
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setText("Fase:");
+
+        btnFechar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnFechar.setText("Fechar");
+        btnFechar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFecharActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnNovoQuationario)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(txtOla)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txtNomeUsuario)
                                 .addGap(230, 230, 230)
-                                .addComponent(txtTituloProjetos)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtTituloData, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(3, 3, 3)
-                                .addComponent(txtData))
+                                .addComponent(txtTituloProjetos))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(btnNovoQuationario)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(btnFechar)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(526, 526, 526))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(41, 41, 41)
                                         .addComponent(jLabel5))
+                                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(40, 40, 40)
+                                        .addComponent(txtTituloData)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txtData))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(18, 18, 18)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(btnAbrirProjeto3)
-                                            .addComponent(btnAbrirProjeto2)
-                                            .addComponent(btnAbrirProjeto1))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(btnNotificarAtor2)
-                                            .addComponent(btnNotificarAtor3)
-                                            .addComponent(btnNotificarAtor1)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel6)
-                                        .addGap(57, 57, 57)))))
-                        .addContainerGap(44, Short.MAX_VALUE))))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(btnAbrirProjeto3)
+                                                    .addComponent(btnAbrirProjeto2)
+                                                    .addComponent(btnAbrirProjeto1))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(btnNotificarAtor2)
+                                                    .addComponent(btnNotificarAtor3)
+                                                    .addComponent(btnNotificarAtor1)))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel6)
+                                                .addGap(57, 57, 57))))))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(428, 428, 428)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtOla)
+                    .addComponent(txtNomeUsuario)
+                    .addComponent(txtTituloProjetos)
+                    .addComponent(txtTituloData)
+                    .addComponent(txtData))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(98, 98, 98)
-                        .addComponent(jLabel6)
-                        .addGap(4, 4, 4)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnNotificarAtor1)
-                            .addComponent(btnAbrirProjeto1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnNotificarAtor2)
-                            .addComponent(btnAbrirProjeto2))
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                        .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel5)
+                                    .addGap(4, 4, 4)
+                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel6)
+                                    .addGap(4, 4, 4)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(btnNotificarAtor1)
+                                        .addComponent(btnAbrirProjeto1))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(btnNotificarAtor2)
+                                        .addComponent(btnAbrirProjeto2))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(btnNotificarAtor3)
+                                        .addComponent(btnAbrirProjeto3)))))
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnNotificarAtor3)
-                            .addComponent(btnAbrirProjeto3)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtOla)
-                            .addComponent(txtNomeUsuario)
-                            .addComponent(txtTituloProjetos)
-                            .addComponent(txtTituloData)
-                            .addComponent(txtData))
-                        .addGap(47, 47, 47)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addGap(4, 4, 4)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
-                .addGap(18, 18, 18)
-                .addComponent(btnNovoQuationario)
-                .addContainerGap(22, Short.MAX_VALUE))
+                            .addComponent(btnNovoQuationario)
+                            .addComponent(btnFechar))
+                        .addGap(21, 21, 21))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnNovoQuationarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNovoQuationarioMouseClicked
-        
+
     }//GEN-LAST:event_btnNovoQuationarioMouseClicked
 
     private void btnNovoQuationarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoQuationarioActionPerformed
-        CriarNovoProjetoView criarNovoProjeto = new CriarNovoProjetoView();
-        criarNovoProjeto.setVisible(true);
+        SelecionarModeloQuestionarioView selecionarModeloQuestionarioView = new SelecionarModeloQuestionarioView();
+        selecionarModeloQuestionarioView.setVisible(true);
     }//GEN-LAST:event_btnNovoQuationarioActionPerformed
+
+    private void btnAbrirProjeto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirProjeto1ActionPerformed
+        ManterPerguntasQuestionarioView perguntasQuestionarioView = new ManterPerguntasQuestionarioView();
+        perguntasQuestionarioView.setVisible(true);
+    }//GEN-LAST:event_btnAbrirProjeto1ActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnFecharActionPerformed
 
     /**
      * @param args the command line arguments
@@ -276,6 +349,8 @@ public class ListarQuestionariosView extends javax.swing.JFrame {
     private javax.swing.JButton btnAbrirProjeto1;
     private javax.swing.JButton btnAbrirProjeto2;
     private javax.swing.JButton btnAbrirProjeto3;
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnFechar;
     private javax.swing.JButton btnNotificarAtor1;
     private javax.swing.JButton btnNotificarAtor2;
     private javax.swing.JButton btnNotificarAtor3;
@@ -283,6 +358,9 @@ public class ListarQuestionariosView extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPaneTabelaProjetos;

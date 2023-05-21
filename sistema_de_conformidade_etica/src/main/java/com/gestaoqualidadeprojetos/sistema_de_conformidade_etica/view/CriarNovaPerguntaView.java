@@ -15,6 +15,8 @@ public class CriarNovaPerguntaView extends javax.swing.JFrame {
      */
     public CriarNovaPerguntaView() {
         initComponents();
+        setVisible(true);
+        this.setLocationRelativeTo(this.getParent());
     }
 
     /**
@@ -32,6 +34,7 @@ public class CriarNovaPerguntaView extends javax.swing.JFrame {
         labelFase = new javax.swing.JLabel();
         selectFaseProjeto = new javax.swing.JComboBox<>();
         btnSalvar = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,6 +52,19 @@ public class CriarNovaPerguntaView extends javax.swing.JFrame {
 
         btnSalvar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnSalvar.setText("Salvar Pergunta");
+        btnSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalvarActionPerformed(evt);
+            }
+        });
+
+        btnCancelar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -58,8 +74,11 @@ public class CriarNovaPerguntaView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(39, 39, 39)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnSalvar)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(btnCancelar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnSalvar))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(labelPergunta)
@@ -80,19 +99,31 @@ public class CriarNovaPerguntaView extends javax.swing.JFrame {
                 .addComponent(txtTituloCriarPergunta)
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtFieldNovaPergunta, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelPergunta))
+                    .addComponent(labelPergunta)
+                    .addComponent(txtFieldNovaPergunta, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelFase)
                     .addComponent(selectFaseProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(btnSalvar)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSalvar)
+                    .addComponent(btnCancelar))
+                .addGap(19, 19, 19))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+        dispose();
+        //ManterPerguntasQuestionarioView perguntasQuestionarioView = new ManterPerguntasQuestionarioView();
+        //perguntasQuestionarioView.setVisible(true);
+    }//GEN-LAST:event_btnSalvarActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,6 +161,7 @@ public class CriarNovaPerguntaView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnSalvar;
     private javax.swing.JLabel labelFase;
     private javax.swing.JLabel labelPergunta;
