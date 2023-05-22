@@ -36,12 +36,13 @@ public class ListarProjetosAdministradorView extends javax.swing.JFrame {
         txtData = new javax.swing.JLabel();
         jScrollPaneTabelaProjetos = new javax.swing.JScrollPane();
         tableProjetos = new javax.swing.JTable();
-        btnAbrirProjeto2 = new javax.swing.JButton();
-        btnAbrirProjeto3 = new javax.swing.JButton();
-        btnAbrirProjeto1 = new javax.swing.JButton();
         btnNovoProjeto = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
         btnFechar = new javax.swing.JButton();
+        menuBarProjetosAdmin = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        menuAbrir = new javax.swing.JMenuItem();
+        menuNotificar = new javax.swing.JMenuItem();
+        menuDashboard = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -82,17 +83,6 @@ public class ListarProjetosAdministradorView extends javax.swing.JFrame {
             tableProjetos.getColumnModel().getColumn(4).setResizable(false);
         }
 
-        btnAbrirProjeto2.setText("Abrir");
-
-        btnAbrirProjeto3.setText("Abrir");
-
-        btnAbrirProjeto1.setText("Abrir");
-        btnAbrirProjeto1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAbrirProjeto1ActionPerformed(evt);
-            }
-        });
-
         btnNovoProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnNovoProjeto.setText("Novo projeto");
         btnNovoProjeto.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -106,9 +96,6 @@ public class ListarProjetosAdministradorView extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel5.setText("Ações");
-
         btnFechar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnFechar.setText("Fechar");
         btnFechar.addActionListener(new java.awt.event.ActionListener() {
@@ -117,70 +104,70 @@ public class ListarProjetosAdministradorView extends javax.swing.JFrame {
             }
         });
 
+        jMenu1.setText("Ações");
+
+        menuAbrir.setText("Abrir");
+        menuAbrir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuAbrirActionPerformed(evt);
+            }
+        });
+        jMenu1.add(menuAbrir);
+
+        menuNotificar.setText("Notificar");
+        jMenu1.add(menuNotificar);
+
+        menuBarProjetosAdmin.add(jMenu1);
+
+        menuDashboard.setText("Ver Dashboard");
+        menuBarProjetosAdmin.add(menuDashboard);
+
+        setJMenuBar(menuBarProjetosAdmin);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(43, 43, 43)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnNovoProjeto)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnFechar)
-                        .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(txtOla)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtNomeUsuario)
-                        .addGap(237, 237, 237)
+                        .addGap(204, 204, 204)
                         .addComponent(txtTituloProjetos)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(199, 199, 199)
                         .addComponent(txtTituloData, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtData)
-                        .addGap(37, 37, 37))
-                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(txtData))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                                .addComponent(jLabel5)
-                                .addGap(48, 48, 48))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnAbrirProjeto2)
-                                    .addComponent(btnAbrirProjeto3)
-                                    .addComponent(btnAbrirProjeto1))
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(btnNovoProjeto)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(btnFechar))))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtOla)
-                    .addComponent(txtNomeUsuario)
-                    .addComponent(txtTituloProjetos)
-                    .addComponent(txtTituloData)
-                    .addComponent(txtData))
-                .addGap(56, 56, 56)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAbrirProjeto1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnAbrirProjeto2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnAbrirProjeto3)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtOla)
+                            .addComponent(txtNomeUsuario)
+                            .addComponent(txtTituloProjetos)
+                            .addComponent(txtTituloData)
+                            .addComponent(txtData))
+                        .addGap(134, 134, 134))
+                    .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnNovoProjeto)
                     .addComponent(btnFechar))
-                .addGap(26, 26, 26))
+                .addGap(41, 41, 41))
         );
 
         pack();
@@ -195,14 +182,14 @@ public class ListarProjetosAdministradorView extends javax.swing.JFrame {
         criarNovoProjeto.setVisible(true);
     }//GEN-LAST:event_btnNovoProjetoActionPerformed
 
-    private void btnAbrirProjeto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirProjeto1ActionPerformed
-        SelecionarFasesProjetoView selecionarFasesProjetoView = new SelecionarFasesProjetoView();
-        selecionarFasesProjetoView.setVisible(true);
-    }//GEN-LAST:event_btnAbrirProjeto1ActionPerformed
-
     private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
         dispose();
     }//GEN-LAST:event_btnFecharActionPerformed
+
+    private void menuAbrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAbrirActionPerformed
+        ListarQuestionariosView listarQuestionariosView = new ListarQuestionariosView();
+        listarQuestionariosView.setVisible(true);
+    }//GEN-LAST:event_menuAbrirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -241,13 +228,14 @@ public class ListarProjetosAdministradorView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAbrirProjeto1;
-    private javax.swing.JButton btnAbrirProjeto2;
-    private javax.swing.JButton btnAbrirProjeto3;
     private javax.swing.JButton btnFechar;
     private javax.swing.JButton btnNovoProjeto;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JScrollPane jScrollPaneTabelaProjetos;
+    private javax.swing.JMenuItem menuAbrir;
+    private javax.swing.JMenuBar menuBarProjetosAdmin;
+    private javax.swing.JMenu menuDashboard;
+    private javax.swing.JMenuItem menuNotificar;
     private javax.swing.JTable tableProjetos;
     private javax.swing.JLabel txtData;
     private javax.swing.JLabel txtNomeUsuario;
