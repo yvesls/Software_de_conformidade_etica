@@ -22,7 +22,10 @@ public class LoginView extends javax.swing.JFrame {
                 txtConfirmarSenha.setEnabled(true);
             } 
             else{
+                lblConfirmarSenha.setEnabled(false);
                 txtConfirmarSenha.setEnabled(false);
+                //lblConfirmarSenha.setVisible(false);
+                //txtConfirmarSenha.setVisible(false);
             }
     }
 
