@@ -47,6 +47,7 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
         tableProjetos = new javax.swing.JTable();
         btnFechar = new javax.swing.JButton();
         btnAbrirProjeto = new javax.swing.JButton();
+        btnVerDashboard = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -94,6 +95,14 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
                 btnAbrirProjetoActionPerformed(evt);
             }
         });
+
+        btnVerDashboard.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnVerDashboard.setText("Ver Dashboard");
+        btnVerDashboard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerDashboardActionPerformed(evt);
+            }
+        });
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -104,11 +113,15 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
                 .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.DEFAULT_SIZE, 682, Short.MAX_VALUE)
+                        .addGap(42, 42, 42))
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(btnFechar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAbrirProjeto))
-                    .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.DEFAULT_SIZE, 682, Short.MAX_VALUE))
-                .addGap(42, 42, 42))
+                        .addComponent(btnAbrirProjeto)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnVerDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(44, 44, 44))))
             .addComponent(txtTituloProjetos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -121,7 +134,8 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnFechar)
-                    .addComponent(btnAbrirProjeto))
+                    .addComponent(btnAbrirProjeto)
+                    .addComponent(btnVerDashboard))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -137,6 +151,11 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
         SelecionarFasesProjetoMembroEquipeView selecionarFasesProjetoMembroEquipeView = new SelecionarFasesProjetoMembroEquipeView();
         selecionarFasesProjetoMembroEquipeView.setVisible(true);
     }//GEN-LAST:event_btnAbrirProjetoActionPerformed
+
+    private void btnVerDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerDashboardActionPerformed
+        DashboardView dashboardView = new DashboardView();
+        dashboardView.setVisible(true);
+    }//GEN-LAST:event_btnVerDashboardActionPerformed
 
     /**
      * @param args the command line arguments
@@ -183,6 +202,7 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAbrirProjeto;
     private javax.swing.JButton btnFechar;
+    private javax.swing.JButton btnVerDashboard;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPaneTabelaProjetos;
     private javax.swing.JTable tableProjetos;

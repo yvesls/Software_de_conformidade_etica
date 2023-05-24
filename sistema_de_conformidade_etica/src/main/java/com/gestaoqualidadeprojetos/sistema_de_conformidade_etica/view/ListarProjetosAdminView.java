@@ -170,8 +170,8 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAbrirProjetosAdminActionPerformed
 
     private void btnVerDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerDashboardActionPerformed
-        /*DashboardView dashboardView = new DashboardView();
-        dashboardView.setVisible(true);*/
+        DashboardView dashboardView = new DashboardView();
+        dashboardView.setVisible(true);
     }//GEN-LAST:event_btnVerDashboardActionPerformed
 
     /**

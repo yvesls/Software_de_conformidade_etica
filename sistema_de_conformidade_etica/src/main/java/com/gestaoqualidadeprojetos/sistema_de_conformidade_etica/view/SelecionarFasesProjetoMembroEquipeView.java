@@ -151,8 +151,8 @@ public class SelecionarFasesProjetoMembroEquipeView extends javax.swing.JFrame {
 
     private void btnAbrirFaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirFaseActionPerformed
         dispose();
-        /*QuestionarioView questionarioView = new QuestionarioView();
-        questionarioView.setVisible(true);*/
+        QuestionarioView questionarioView = new QuestionarioView();
+        questionarioView.setVisible(true);
     }//GEN-LAST:event_btnAbrirFaseActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
