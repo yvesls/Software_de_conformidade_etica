@@ -138,7 +138,7 @@ public class LoginTermoAceitaçãoView extends javax.swing.JFrame {
 
     private void btnLogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogarActionPerformed
         // TODO add your handling code here:
-        TelaInicialAdminView telaInicial = new TelaInicialAdminView();
+        TelaInicialMembroEquipeView telaInicial = new TelaInicialMembroEquipeView();
         this.dispose();
         telaInicial.setVisible(true);
         JOptionPane.showMessageDialog(null, "Usuário criado com sucesso!", "Novo Usuário", WIDTH);

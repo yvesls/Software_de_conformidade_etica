@@ -1,6 +1,7 @@
 
 package com.gestaoqualidadeprojetos.sistema_de_conformidade_etica.view;
 
+import static java.awt.image.ImageObserver.HEIGHT;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -165,6 +166,8 @@ public class TelaInicialMembroEquipeView extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new TelaInicialMembroEquipeView().setVisible(true);
+                JOptionPane.showMessageDialog(null, "(mensagem caso a data limite se aproximar)\n\nAtenção!\nA data limite para o questionario do projeto x está chegando.\nVocê precisa responder.", "ATENÇÃO!", HEIGHT);
+
             }
         });
     }

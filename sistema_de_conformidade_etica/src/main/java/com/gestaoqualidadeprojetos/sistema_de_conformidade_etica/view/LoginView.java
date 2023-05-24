@@ -17,15 +17,16 @@ public class LoginView extends javax.swing.JFrame {
         this.setLocationRelativeTo(null); //abrir centralizado  
         this.dispose();
         //0=sim, 1=nao, outro=cancel
-            int primeiroAcesso = JOptionPane.showConfirmDialog(null, "É o primeiro acesso do usuário?", "SIMULANDO PRIMEIRO ACESSO", WIDTH);
+            int primeiroAcesso = JOptionPane.showConfirmDialog(null, "(essa verificação será interna)\n\nÉ o primeiro acesso do usuário?", "SIMULANDO PRIMEIRO ACESSO", WIDTH);
             if(primeiroAcesso == 0){
-                txtConfirmarSenha.setEnabled(true);
+                lblConfirmarSenha.setVisible(true);
+                txtConfirmarSenha.setVisible(true);
             } 
             else{
                 //lblConfirmarSenha.setEnabled(false);
                 //txtConfirmarSenha.setEnabled(false);
                 lblConfirmarSenha.setVisible(false);
-                txtConfirmarSenha.setVisible(false);
+                txtConfirmarSenha.setVisible(false); 
             }
     }
 
@@ -80,7 +81,6 @@ public class LoginView extends javax.swing.JFrame {
         lblConfirmarSenha.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         lblConfirmarSenha.setText("Confirmar");
 
-        txtConfirmarSenha.setEnabled(false);
         txtConfirmarSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtConfirmarSenhaActionPerformed(evt);
@@ -91,29 +91,24 @@ public class LoginView extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(30, 30, 30)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(15, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblEmail)
-                            .addComponent(lblSenha))
-                        .addGap(25, 25, 25)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
-                                .addComponent(lblConfirmarSenha)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtConfirmarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(txtEmail)))
+                    .addComponent(lblEmail)
+                    .addComponent(lblSenha)
+                    .addComponent(lblConfirmarSenha))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtEmail)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35)
+                        .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(30, 30, 30))
+                        .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtSenha)
+                    .addComponent(txtConfirmarSenha))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,15 +120,17 @@ public class LoginView extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblSenha)
-                    .addComponent(txtConfirmarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblConfirmarSenha))
-                .addGap(35, 35, 35)
+                    .addComponent(lblSenha))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnEntrar)
+                    .addComponent(lblConfirmarSenha)
+                    .addComponent(txtConfirmarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnFechar)
                     .addComponent(btnRegistrar)
-                    .addComponent(btnFechar))
-                .addContainerGap(25, Short.MAX_VALUE))
+                    .addComponent(btnEntrar))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         pack();
@@ -148,15 +145,22 @@ public class LoginView extends javax.swing.JFrame {
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         // TODO add your handling code here:
-        if(txtConfirmarSenha.isEnabled()){
+        if(txtConfirmarSenha.isVisible()){
             LoginTermoAceitaçãoView termoAceitação = new LoginTermoAceitaçãoView();
             this.dispose();
             termoAceitação.setVisible(true);     
         }
         else{
-            TelaInicialAdminView telaInicial = new TelaInicialAdminView();
-            this.dispose();
-            telaInicial.setVisible(true);
+            int analista = JOptionPane.showConfirmDialog(null, "(essa verificação será interna)\n\nO usuário é Analista?", "ANALISTA E DEMAIS SÃO TELAS DIFERENTES", WIDTH);
+            if(analista == 0){
+                TelaInicialAdminView telaInicial = new TelaInicialAdminView();
+                this.dispose();
+                telaInicial.setVisible(true);
+            }else{
+                TelaInicialMembroEquipeView telaInicial = new TelaInicialMembroEquipeView();
+                this.dispose();
+                telaInicial.setVisible(true); 
+            }
         }
             
     }//GEN-LAST:event_btnEntrarActionPerformed
