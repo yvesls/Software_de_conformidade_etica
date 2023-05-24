@@ -26,17 +26,20 @@ public class GraficoPorFaseView extends javax.swing.JFrame {
     
     public void criarGrafico(){
         DefaultCategoryDataset barra = new DefaultCategoryDataset();
-        barra.setValue(77, "Iniciação", "");
-        barra.setValue(82, "Requisitos", "");
-        barra.setValue(89, "Projeto", "");
-        barra.setValue(72, "Desenvolvimento", "");
-        barra.setValue(90, "Teste e verificação", "");
+        barra.setValue(59, "Cliente", "");
+        barra.setValue(70, "Desenvolvedor", "");
+        barra.setValue(93, "Arquiteto de software", "");
+        barra.setValue(100, "Gerente de projeto", "");
+        barra.setValue(70, "Líder técnico", "");
+        barra.setValue(100, "Analista de qualidade", "");
+         barra.setValue(82, "Total", "");
         
-        JFreeChart grafico = ChartFactory.createBarChart("Percentual por etapa do projeto", "Etapas", "Porcentagem de respostas 'Sim'", barra, PlotOrientation.VERTICAL, true, true, false);
+        JFreeChart grafico = ChartFactory.createBarChart("Percentual por agente", "Agentes", "Porcentagem de respostas 'Sim'", barra, PlotOrientation.VERTICAL, true, true, false);
         
         ChartPanel painel = new ChartPanel(grafico);
         painel.setSize(graficoPainel.getWidth(),graficoPainel.getHeight());
         painel.setVisible(true);
+        
         graficoPainel.add(painel);
         graficoPainel.validate();
     }
