@@ -36,21 +36,16 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jScrollPaneTabelaProjetos = new javax.swing.JScrollPane();
         tablePerguntasQuestionario = new javax.swing.JTable();
-        btnExcluirPergunta1 = new javax.swing.JButton();
-        labelAcoes = new javax.swing.JLabel();
-        btnEditarPergunta2 = new javax.swing.JButton();
-        btnEditarPergunta3 = new javax.swing.JButton();
-        btnEditarPergunta1 = new javax.swing.JButton();
-        btnDuplicarPergunta2 = new javax.swing.JButton();
-        btnDuplicarPergunta3 = new javax.swing.JButton();
-        btnDuplicarPergunta1 = new javax.swing.JButton();
-        btnExcluirPergunta2 = new javax.swing.JButton();
-        btnExcluirPergunta3 = new javax.swing.JButton();
         btnNovaPergunta = new javax.swing.JButton();
         labelStatus = new javax.swing.JLabel();
         txtStatusQuestionario = new javax.swing.JLabel();
         btnSalvar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
+        menuAcoesPerguntasQuestionario = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        menuAbrirPergunta = new javax.swing.JMenuItem();
+        menuDuplicarPergunta = new javax.swing.JMenuItem();
+        menuExcluirPergunta = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -96,32 +91,6 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
             tablePerguntasQuestionario.getColumnModel().getColumn(0).setMinWidth(50);
         }
 
-        btnExcluirPergunta1.setText("Excluir");
-
-        labelAcoes.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        labelAcoes.setText("Ações");
-
-        btnEditarPergunta2.setText("Abrir");
-
-        btnEditarPergunta3.setText("Abrir");
-
-        btnEditarPergunta1.setText("Abrir");
-
-        btnDuplicarPergunta2.setText("Duplicar");
-
-        btnDuplicarPergunta3.setText("Duplicar");
-
-        btnDuplicarPergunta1.setText("Duplicar");
-        btnDuplicarPergunta1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDuplicarPergunta1ActionPerformed(evt);
-            }
-        });
-
-        btnExcluirPergunta2.setText("Excluir");
-
-        btnExcluirPergunta3.setText("Excluir");
-
         btnNovaPergunta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnNovaPergunta.setText("Nova pergunta");
         btnNovaPergunta.addActionListener(new java.awt.event.ActionListener() {
@@ -152,6 +121,26 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
             }
         });
 
+        jMenu1.setText("Ações");
+
+        menuAbrirPergunta.setText("Abrir");
+        menuAbrirPergunta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuAbrirPerguntaActionPerformed(evt);
+            }
+        });
+        jMenu1.add(menuAbrirPergunta);
+
+        menuDuplicarPergunta.setText("Duplicar");
+        jMenu1.add(menuDuplicarPergunta);
+
+        menuExcluirPergunta.setText("Excluir");
+        jMenu1.add(menuExcluirPergunta);
+
+        menuAcoesPerguntasQuestionario.add(jMenu1);
+
+        setJMenuBar(menuAcoesPerguntasQuestionario);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -164,46 +153,6 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
                 .addContainerGap(56, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
-                                        .addGap(640, 640, 640))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 687, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(26, 26, 26)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(labelStatus)
-                                        .addGap(11, 11, 11)
-                                        .addComponent(txtStatusQuestionario))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(btnEditarPergunta2)
-                                            .addComponent(btnEditarPergunta3)
-                                            .addComponent(btnEditarPergunta1))
-                                        .addGap(12, 12, 12)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(btnDuplicarPergunta2)
-                                            .addComponent(btnDuplicarPergunta3)
-                                            .addComponent(btnDuplicarPergunta1))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(btnExcluirPergunta2)
-                                            .addComponent(btnExcluirPergunta3)
-                                            .addComponent(btnExcluirPergunta1)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(labelAcoes)
-                                        .addGap(100, 100, 100))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnNovaPergunta)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnCancelar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnSalvar)))
-                        .addGap(54, 54, 54))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(labelFase, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(selectFasePerguntaQuestionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -211,7 +160,25 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(selectFuncaoAtor, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(269, 269, 269))))
+                        .addGap(269, 269, 269))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 929, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel2)
+                                    .addGap(859, 859, 859))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(btnNovaPergunta)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(btnCancelar)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnSalvar)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(labelStatus)
+                                .addGap(11, 11, 11)
+                                .addComponent(txtStatusQuestionario)))
+                        .addGap(54, 54, 54))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -225,38 +192,14 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(selectFuncaoAtor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(labelAcoes)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnEditarPergunta1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnEditarPergunta2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnEditarPergunta3))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnDuplicarPergunta1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnDuplicarPergunta2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnDuplicarPergunta3))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnExcluirPergunta1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnExcluirPergunta2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnExcluirPergunta3)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelStatus)
                     .addComponent(txtStatusQuestionario))
-                .addGap(27, 27, 27)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnNovaPergunta)
                     .addComponent(btnSalvar)
@@ -270,10 +213,6 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
     private void selectFuncaoAtorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectFuncaoAtorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_selectFuncaoAtorActionPerformed
-
-    private void btnDuplicarPergunta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDuplicarPergunta1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnDuplicarPergunta1ActionPerformed
 
     private void btnNovaPerguntaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovaPerguntaActionPerformed
         CriarNovaPerguntaView criarNovaPerguntaView = new CriarNovaPerguntaView();
@@ -289,6 +228,11 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         dispose();
     }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void menuAbrirPerguntaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAbrirPerguntaActionPerformed
+        ListarQuestionariosView listarQuestionariosView = new ListarQuestionariosView();
+        listarQuestionariosView.setVisible(true);
+    }//GEN-LAST:event_menuAbrirPerguntaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -328,23 +272,18 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnDuplicarPergunta1;
-    private javax.swing.JButton btnDuplicarPergunta2;
-    private javax.swing.JButton btnDuplicarPergunta3;
-    private javax.swing.JButton btnEditarPergunta1;
-    private javax.swing.JButton btnEditarPergunta2;
-    private javax.swing.JButton btnEditarPergunta3;
-    private javax.swing.JButton btnExcluirPergunta1;
-    private javax.swing.JButton btnExcluirPergunta2;
-    private javax.swing.JButton btnExcluirPergunta3;
     private javax.swing.JButton btnNovaPergunta;
     private javax.swing.JButton btnSalvar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JScrollPane jScrollPaneTabelaProjetos;
-    private javax.swing.JLabel labelAcoes;
     private javax.swing.JLabel labelFase;
     private javax.swing.JLabel labelStatus;
+    private javax.swing.JMenuItem menuAbrirPergunta;
+    private javax.swing.JMenuBar menuAcoesPerguntasQuestionario;
+    private javax.swing.JMenuItem menuDuplicarPergunta;
+    private javax.swing.JMenuItem menuExcluirPergunta;
     private javax.swing.JComboBox<String> selectFasePerguntaQuestionario;
     private javax.swing.JComboBox<String> selectFuncaoAtor;
     private javax.swing.JTable tablePerguntasQuestionario;
