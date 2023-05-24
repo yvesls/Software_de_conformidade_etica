@@ -69,9 +69,9 @@ public class ConfirmacaoQuestionarioView extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(22, 22, 22)
                 .addComponent(jLabel2)
-                .addGap(12, 12, 12)
+                .addGap(30, 30, 30)
                 .addComponent(jLabel1)
                 .addGap(26, 26, 26)
                 .addComponent(jButton1)

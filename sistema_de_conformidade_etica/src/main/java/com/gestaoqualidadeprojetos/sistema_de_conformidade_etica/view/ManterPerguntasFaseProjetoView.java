@@ -62,7 +62,15 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
             new String [] {
                 "#", "Pergunta"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tablePerguntasQuestionario.setRowHeight(26);
         tablePerguntasQuestionario.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         tablePerguntasQuestionario.setShowGrid(true);
