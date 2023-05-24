@@ -66,7 +66,15 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
             new String [] {
                 "#", "Nome", "Data Abertura", "Data Limite", "Status"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tableProjetos.setRowHeight(26);
         tableProjetos.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         tableProjetos.setShowGrid(true);

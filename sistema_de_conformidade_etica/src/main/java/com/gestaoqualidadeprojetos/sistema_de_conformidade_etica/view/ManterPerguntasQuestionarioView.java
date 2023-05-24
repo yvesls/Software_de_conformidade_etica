@@ -60,7 +60,15 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
             new String [] {
                 "#", "Pergunta"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tablePerguntasQuestionario.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         tablePerguntasQuestionario.setShowGrid(true);
         tablePerguntasQuestionario.setSurrendersFocusOnKeystroke(true);

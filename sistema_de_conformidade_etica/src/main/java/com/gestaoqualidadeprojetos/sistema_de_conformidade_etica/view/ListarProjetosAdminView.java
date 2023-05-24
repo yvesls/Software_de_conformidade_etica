@@ -98,7 +98,15 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
             new String [] {
                 "#", "Nome", "Data Abertura", "Data Limite", "Status"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tableProjetos.setRowHeight(26);
         tableProjetos.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         tableProjetos.setShowGrid(true);
@@ -133,7 +141,7 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(txtTituloProjetos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 148, Short.MAX_VALUE)
+                .addGap(148, 148, 148)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnNovoProjeto)
                     .addComponent(btnFechar)
