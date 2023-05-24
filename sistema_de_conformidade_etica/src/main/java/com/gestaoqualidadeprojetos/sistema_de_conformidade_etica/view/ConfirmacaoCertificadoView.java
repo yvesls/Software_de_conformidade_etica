@@ -4,6 +4,8 @@
  */
 package com.gestaoqualidadeprojetos.sistema_de_conformidade_etica.view;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Note102
@@ -15,6 +17,8 @@ public class ConfirmacaoCertificadoView extends javax.swing.JFrame {
      */
     public ConfirmacaoCertificadoView() {
         initComponents();
+        this.setLocationRelativeTo( null );
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
     /**
