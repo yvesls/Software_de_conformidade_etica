@@ -129,7 +129,6 @@
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                 <TitledBorder justification="2" title="Bem-Vindo!">
-                  <Border PropertyName="innerBorder" info="null"/>
                   <Font PropertyName="font" name="Dialog" size="26" style="1"/>
                 </TitledBorder>
               </Border>
