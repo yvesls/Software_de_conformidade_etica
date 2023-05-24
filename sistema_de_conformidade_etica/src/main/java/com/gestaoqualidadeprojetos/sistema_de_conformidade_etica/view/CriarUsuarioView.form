@@ -98,7 +98,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="txtNome" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lblNome" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -121,7 +121,7 @@
                           <Component id="lblConfirmarSenha" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="35" max="32767" attributes="0"/>
+                  <EmptySpace pref="30" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -208,13 +208,13 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jScrollPane1" max="32767" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
+                      <Component id="jScrollPane1" pref="485" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
                           <Component id="checkAceito" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="btnCancelar" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="btnCancelar" min="-2" pref="80" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="btnCadastrar" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="btnCadastrar" min="-2" pref="91" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -225,14 +225,14 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" pref="241" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="206" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnCadastrar" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="checkAceito" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="22" max="32767" attributes="0"/>
+                  <EmptySpace pref="20" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -253,7 +253,10 @@
                   <Font name="Dialog" size="14" style="2"/>
                 </Property>
                 <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" value="&#xa;Eu declaro que estou ciente e concordo com os princ&#xed;pios &#xe9;ticos &#xa;estabelecidos para o desenvolvimento deste software. Estes princ&#xed;pios &#xa;t&#xea;m como objetivo garantir que o software desenvolvido atenda &#xe0;s &#xa;necessidades dos usu&#xe1;rios finais de maneira justa, levando em &#xa;considera&#xe7;&#xe3;o quest&#xf5;es &#xe9;ticas. Comprometo-me a respeitar e aplicar &#xa;esses princ&#xed;pios em todas as fases do projeto, desde a concep&#xe7;&#xe3;o at&#xe9; a &#xa;entrega final do produto.&#xa;&#xa;O Desenvolvimento de Software Orientado a &#xc9;tica &#xe9; uma abordagem &#xa;nova e pr&#xe1;tica para o desenvolvimento de software que preenche uma &#xa;lacuna e cria um v&#xed;nculo entre as habilidades &#xe9;ticas e profissionais, &#xa;propondo assim um processo de desenvolvimento de software mais &#xa;transparente e que traz uma melhor conscientiza&#xe7;&#xe3;o do riscos e &#xa;limita&#xe7;&#xf5;es no processo de desenvolvimento de software. &#xa;As quest&#xf5;es &#xe9;ticas torna-se, assim, parte do processo necess&#xe1;rio para&#xa;o desenvolvimento de produtos de Software de Qualidade.&#xa;&#xa;Os princ&#xed;pios &#xe9;ticos incluem, mas n&#xe3;o se limitam a:&#xa;&#xa;1. Privacidade;&#xa;2. Seguran&#xe7;a;&#xa;3. Acessibilidade;&#xa;4. Responsabilidade Social;&#xa;5. Transpar&#xea;ncia;&#xa;6. Honestidade.&#xa;&#xa;O software &#xe9;tico exige que os stakeholders reflitam. Ele serve como uma&#xa;ferramenta para aumentar a conscientiza&#xe7;&#xe3;o sobre as ramifica&#xe7;&#xf5;es &#xa;&#xe9;ticas do processo. As perguntas selecionadas devem ser apresentadas &#xa;&#xe0; todos os envolvidos de modo compreens&#xed;vel para que se possa obter &#xa;informa&#xe7;&#xf5;es e alinhamento.&#xa;&#xa;Ao aceitar este documento, declaro meu entendimento e concord&#xe2;ncia &#xa;com esses princ&#xed;pios &#xe9;ticos e comprometo-me a aderir a eles durante &#xa;todo o processo de desenvolvimento de software. Compreendo que &#xa;qualquer viola&#xe7;&#xe3;o desses princ&#xed;pios pode resultar em consequ&#xea;ncias &#xa;&#xe9;ticas e legais.&#xa;&#xa;&#xa;&#xa;Data/Hora: [SISTEMA]&#xa;"/>
+                <Property name="text" type="java.lang.String" value="&#xa;Eu declaro que estou ciente e concordo com os princ&#xed;pios &#xe9;ticos &#xa;estabelecidos para o desenvolvimento deste software. Estes princ&#xed;pios &#xa;t&#xea;m como objetivo garantir que o software desenvolvido atenda &#xe0;s &#xa;necessidades dos usu&#xe1;rios finais de maneira justa, levando em &#xa;considera&#xe7;&#xe3;o quest&#xf5;es &#xe9;ticas. Comprometo-me a respeitar e aplicar &#xa;esses princ&#xed;pios em todas as fases do projeto, desde a concep&#xe7;&#xe3;o at&#xe9; a &#xa;entrega final do produto.&#xa;&#xa;O Desenvolvimento de Software Orientado a &#xc9;tica &#xe9; uma abordagem &#xa;nova e pr&#xe1;tica para o desenvolvimento de software que preenche uma &#xa;lacuna e cria um v&#xed;nculo entre as habilidades &#xe9;ticas e profissionais, &#xa;propondo assim um processo de desenvolvimento de software mais &#xa;transparente e que traz uma melhor conscientiza&#xe7;&#xe3;o do riscos e &#xa;limita&#xe7;&#xf5;es no processo de desenvolvimento de software. &#xa;As quest&#xf5;es &#xe9;ticas torna-se, assim, parte do processo necess&#xe1;rio para&#xa;o desenvolvimento de produtos de Software de Qualidade.&#xa;&#xa;Os princ&#xed;pios &#xe9;ticos incluem, mas n&#xe3;o se limitam a:&#xa;&#xa;1. Privacidade;&#xa;2. Seguran&#xe7;a;&#xa;3. Acessibilidade;&#xa;4. Responsabilidade Social;&#xa;5. Transpar&#xea;ncia;&#xa;6. Honestidade.&#xa;&#xa;O software &#xe9;tico exige que os stakeholders reflitam. Ele serve como uma&#xa;ferramenta para aumentar a conscientiza&#xe7;&#xe3;o sobre as ramifica&#xe7;&#xf5;es &#xa;&#xe9;ticas do processo. As perguntas selecionadas devem ser apresentadas &#xa;&#xe0; todos os envolvidos de modo compreens&#xed;vel para que se possa obter &#xa;informa&#xe7;&#xf5;es e alinhamento.&#xa;&#xa;Ao aceitar este documento, declaro meu entendimento e concord&#xe2;ncia &#xa;com esses princ&#xed;pios &#xe9;ticos e comprometo-me a aderir a eles durante &#xa;todo o processo de desenvolvimento de software. Compreendo que &#xa;qualquer viola&#xe7;&#xe3;o desses princ&#xed;pios pode resultar em consequ&#xea;ncias &#xa;&#xe9;ticas e legais.&#xa;&#xa;&#xa;Data/Hora: [SISTEMA]&#xa;"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Default Cursor"/>
+                </Property>
               </Properties>
             </Component>
           </SubComponents>

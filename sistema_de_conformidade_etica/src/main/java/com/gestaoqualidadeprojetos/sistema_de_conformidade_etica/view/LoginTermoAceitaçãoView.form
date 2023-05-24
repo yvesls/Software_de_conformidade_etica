@@ -34,9 +34,9 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="29" max="32767" attributes="0"/>
+              <EmptySpace pref="10" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -66,7 +66,7 @@
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="checkAceito" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="btnCancelar" min="-2" pref="72" max="-2" attributes="0"/>
+                          <Component id="btnCancelar" min="-2" pref="80" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="btnLogar" min="-2" pref="72" max="-2" attributes="0"/>
                       </Group>
@@ -79,7 +79,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" pref="605" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="541" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnLogar" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -123,7 +123,7 @@
                   <Font name="Dialog" size="14" style="2"/>
                 </Property>
                 <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" value="&#xa;Eu declaro que estou ciente e concordo com os princ&#xed;pios &#xe9;ticos estabelecidos &#xa;para o desenvolvimento deste software. Estes princ&#xed;pios t&#xea;m como objetivo &#xa;garantir que o software desenvolvido atenda &#xe0;s necessidades dos usu&#xe1;rios finais &#xa;de maneira justa, levando em considera&#xe7;&#xe3;o quest&#xf5;es &#xe9;ticas. Comprometo-me a &#xa;respeitar e aplicar esses princ&#xed;pios em todas as fases do projeto, desde a &#xa;concep&#xe7;&#xe3;o at&#xe9; a entrega final do produto.&#xa;&#xa;O Desenvolvimento de Software Orientado a &#xc9;tica &#xe9; uma abordagem nova e &#xa;pr&#xe1;tica para o desenvolvimento de software que preenche uma lacuna e cria um &#xa;v&#xed;nculo entre as habilidades &#xe9;ticas e profissionais, propondo assim um processo &#xa;de desenvolvimento de software mais transparente e que traz uma melhor &#xa;conscientiza&#xe7;&#xe3;o do riscos e limita&#xe7;&#xf5;es no processo de desenvolvimento de &#xa;software. As quest&#xf5;es &#xe9;ticas torna-se, assim, parte do processo necess&#xe1;rio para &#xa;o desenvolvimento de produtos de Software de Qualidade.&#xa;&#xa;Os princ&#xed;pios &#xe9;ticos incluem, mas n&#xe3;o se limitam a:&#xa;&#xa;1. Privacidade;&#xa;2. Seguran&#xe7;a;&#xa;3. Acessibilidade;&#xa;4. Responsabilidade Social;&#xa;5. Transpar&#xea;ncia;&#xa;6. Honestidade.&#xa;&#xa;O software &#xe9;tico exige que os stakeholders reflitam. Ele serve como uma &#xa;ferramenta para aumentar a conscientiza&#xe7;&#xe3;o sobre as ramifica&#xe7;&#xf5;es &#xe9;ticas do &#xa;processo. As perguntas selecionadas devem ser apresentadas &#xe0; todos os &#xa;envolvidos de modo compreens&#xed;vel para que se possa obter informa&#xe7;&#xf5;es e &#xa;alinhamento.&#xa;&#xa;Ao aceitar este documento, declaro meu entendimento e concord&#xe2;ncia com &#xa;esses princ&#xed;pios &#xe9;ticos e comprometo-me a aderir a eles durante todo o processo&#xa;de desenvolvimento de software. Compreendo que qualquer viola&#xe7;&#xe3;o desses &#xa;princ&#xed;pios pode resultar em consequ&#xea;ncias &#xe9;ticas e legais.&#xa;&#xa;&#xa;&#xa;Data/Hora: [SISTEMA]&#xa;"/>
+                <Property name="text" type="java.lang.String" value="&#xa;Eu declaro que estou ciente e concordo com os princ&#xed;pios &#xe9;ticos estabelecidos &#xa;para o desenvolvimento deste software. Estes princ&#xed;pios t&#xea;m como objetivo &#xa;garantir que o software desenvolvido atenda &#xe0;s necessidades dos usu&#xe1;rios finais &#xa;de maneira justa, levando em considera&#xe7;&#xe3;o quest&#xf5;es &#xe9;ticas. Comprometo-me a &#xa;respeitar e aplicar esses princ&#xed;pios em todas as fases do projeto, desde a &#xa;concep&#xe7;&#xe3;o at&#xe9; a entrega final do produto.&#xa;&#xa;O Desenvolvimento de Software Orientado a &#xc9;tica &#xe9; uma abordagem nova e &#xa;pr&#xe1;tica para o desenvolvimento de software que preenche uma lacuna e cria um &#xa;v&#xed;nculo entre as habilidades &#xe9;ticas e profissionais, propondo assim um processo &#xa;de desenvolvimento de software mais transparente e que traz uma melhor &#xa;conscientiza&#xe7;&#xe3;o do riscos e limita&#xe7;&#xf5;es no processo de desenvolvimento de &#xa;software. As quest&#xf5;es &#xe9;ticas torna-se, assim, parte do processo necess&#xe1;rio para &#xa;o desenvolvimento de produtos de Software de Qualidade.&#xa;&#xa;Os princ&#xed;pios &#xe9;ticos incluem, mas n&#xe3;o se limitam a:&#xa;&#xa;1. Privacidade;&#xa;2. Seguran&#xe7;a;&#xa;3. Acessibilidade;&#xa;4. Responsabilidade Social;&#xa;5. Transpar&#xea;ncia;&#xa;6. Honestidade.&#xa;&#xa;O software &#xe9;tico exige que os stakeholders reflitam. Ele serve como uma &#xa;ferramenta para aumentar a conscientiza&#xe7;&#xe3;o sobre as ramifica&#xe7;&#xf5;es &#xe9;ticas do &#xa;processo. As perguntas selecionadas devem ser apresentadas &#xe0; todos os &#xa;envolvidos de modo compreens&#xed;vel para que se possa obter informa&#xe7;&#xf5;es e &#xa;alinhamento.&#xa;&#xa;Ao aceitar este documento, declaro meu entendimento e concord&#xe2;ncia com &#xa;esses princ&#xed;pios &#xe9;ticos e comprometo-me a aderir a eles durante todo o processo&#xa;de desenvolvimento de software. Compreendo que qualquer viola&#xe7;&#xe3;o desses &#xa;princ&#xed;pios pode resultar em consequ&#xea;ncias &#xe9;ticas e legais.&#xa;&#xa;&#xa;Data/Hora: [SISTEMA]&#xa;"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
                     <EtchetBorder/>

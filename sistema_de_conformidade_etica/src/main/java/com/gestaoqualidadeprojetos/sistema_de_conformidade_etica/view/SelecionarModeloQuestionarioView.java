@@ -38,7 +38,7 @@ public class SelecionarModeloQuestionarioView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         txtTituloSelecionarModeloQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        txtTituloSelecionarModeloQuestionario.setText("Selecionar modelo de questionário");
+        txtTituloSelecionarModeloQuestionario.setText("Selecionar Modelo de Questionário");
 
         labelQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         labelQuestionario.setText("Questionário:");
@@ -47,7 +47,7 @@ public class SelecionarModeloQuestionarioView extends javax.swing.JFrame {
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Padrão", "Sistema de padaria", "App para academia", "Rede social" }));
 
         btnImportarQuestionario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnImportarQuestionario.setText("Importar questionário");
+        btnImportarQuestionario.setText("Importar Questionário");
         btnImportarQuestionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnImportarQuestionarioActionPerformed(evt);
@@ -83,16 +83,17 @@ public class SelecionarModeloQuestionarioView extends javax.swing.JFrame {
                         .addGap(33, 33, 33)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnVoltar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnProximo))
-                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(labelQuestionario)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(30, 30, 30)
-                                .addComponent(btnImportarQuestionario)))))
-                .addGap(0, 50, Short.MAX_VALUE))
+                                .addComponent(btnImportarQuestionario))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnVoltar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnProximo)
+                                .addGap(1, 1, 1)))))
+                .addGap(0, 47, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,9 +107,9 @@ public class SelecionarModeloQuestionarioView extends javax.swing.JFrame {
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnProximo)
-                    .addComponent(btnVoltar))
-                .addContainerGap(26, Short.MAX_VALUE))
+                    .addComponent(btnVoltar)
+                    .addComponent(btnProximo))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         pack();
@@ -120,8 +121,8 @@ public class SelecionarModeloQuestionarioView extends javax.swing.JFrame {
 
     private void btnProximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProximoActionPerformed
         dispose();
-        ManterPerguntasQuestionarioView perguntasQuestionarioView = new ManterPerguntasQuestionarioView();
-        perguntasQuestionarioView.setVisible(true);
+        CriarNovaFaseView criarNovaFaseView = new CriarNovaFaseView();
+        criarNovaFaseView.setVisible(true);
     }//GEN-LAST:event_btnProximoActionPerformed
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
