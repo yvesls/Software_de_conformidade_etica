@@ -117,8 +117,8 @@ public class CriarNovaFaseView extends javax.swing.JFrame {
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         dispose();
-        SelecionarFasesProjetoAdminView selecionarFasesProjetoAdminView = new SelecionarFasesProjetoAdminView();
-        selecionarFasesProjetoAdminView.setVisible(true);
+        //SelecionarFasesProjetoAdminView selecionarFasesProjetoAdminView = new SelecionarFasesProjetoAdminView();
+        //selecionarFasesProjetoAdminView.setVisible(true);
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed

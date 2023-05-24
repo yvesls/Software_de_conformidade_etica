@@ -134,8 +134,8 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
 
     private void btnAbrirProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirProjetoActionPerformed
         dispose();
-        SelecionarFasesProjetoAdminView selecionarFasesProjetoView = new SelecionarFasesProjetoAdminView();
-        selecionarFasesProjetoView.setVisible(true);
+        SelecionarFasesProjetoMembroEquipeView selecionarFasesProjetoMembroEquipeView = new SelecionarFasesProjetoMembroEquipeView();
+        selecionarFasesProjetoMembroEquipeView.setVisible(true);
     }//GEN-LAST:event_btnAbrirProjetoActionPerformed
 
     /**

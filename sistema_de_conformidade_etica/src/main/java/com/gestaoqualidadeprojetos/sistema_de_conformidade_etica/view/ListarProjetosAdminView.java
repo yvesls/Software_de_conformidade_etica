@@ -82,6 +82,11 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
 
         btnVerDashboard.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnVerDashboard.setText("Ver Dashboard");
+        btnVerDashboard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerDashboardActionPerformed(evt);
+            }
+        });
 
         tableProjetos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tableProjetos.setModel(new javax.swing.table.DefaultTableModel(
@@ -163,6 +168,11 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         ListarPerguntasFaseProjeto listarQuestionariosView = new ListarPerguntasFaseProjeto();
         listarQuestionariosView.setVisible(true);
     }//GEN-LAST:event_btnAbrirProjetosAdminActionPerformed
+
+    private void btnVerDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerDashboardActionPerformed
+        /*DashboardView dashboardView = new DashboardView();
+        dashboardView.setVisible(true);*/
+    }//GEN-LAST:event_btnVerDashboardActionPerformed
 
     /**
      * @param args the command line arguments

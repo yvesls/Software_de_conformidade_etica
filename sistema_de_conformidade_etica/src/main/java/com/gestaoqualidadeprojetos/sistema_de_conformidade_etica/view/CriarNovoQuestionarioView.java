@@ -120,7 +120,7 @@ public class CriarNovoQuestionarioView extends javax.swing.JFrame {
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         dispose();
-        ManterQuesionariosView manterQuesionariosView = new ManterQuesionariosView();
+        ManterQuestionariosView manterQuesionariosView = new ManterQuestionariosView();
         manterQuesionariosView.setVisible(true);
     }//GEN-LAST:event_btnSalvarActionPerformed
 

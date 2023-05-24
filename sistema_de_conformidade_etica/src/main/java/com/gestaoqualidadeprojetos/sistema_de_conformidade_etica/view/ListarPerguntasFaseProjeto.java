@@ -87,7 +87,7 @@ public class ListarPerguntasFaseProjeto extends javax.swing.JFrame {
         jLabel3.setText("Fase Atual:");
 
         btnFechar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnFechar.setText("Fechar");
+        btnFechar.setText("Voltar");
         btnFechar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFecharActionPerformed(evt);
@@ -104,6 +104,11 @@ public class ListarPerguntasFaseProjeto extends javax.swing.JFrame {
 
         btnPublicarPerguntasFaseProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnPublicarPerguntasFaseProjeto.setText("Publicar Fase");
+        btnPublicarPerguntasFaseProjeto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPublicarPerguntasFaseProjetoActionPerformed(evt);
+            }
+        });
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton1.setText("Alterar Fase");
@@ -173,6 +178,8 @@ public class ListarPerguntasFaseProjeto extends javax.swing.JFrame {
 
     private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
         dispose();
+        SelecionarFasesProjetoAdminView selecionarFasesProjetoAdminView = new SelecionarFasesProjetoAdminView();
+        selecionarFasesProjetoAdminView.setVisible(true);
     }//GEN-LAST:event_btnFecharActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -186,6 +193,12 @@ public class ListarPerguntasFaseProjeto extends javax.swing.JFrame {
         ManterPerguntasFaseProjetoView manterPerguntasFaseProjetoView = new ManterPerguntasFaseProjetoView();
         manterPerguntasFaseProjetoView.setVisible(true);
     }//GEN-LAST:event_btnAbrirPerguntasQuestionarioActionPerformed
+
+    private void btnPublicarPerguntasFaseProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPublicarPerguntasFaseProjetoActionPerformed
+        dispose();
+        SelecionarFasesProjetoAdminView selecionarFasesProjetoAdminView = new SelecionarFasesProjetoAdminView();
+        selecionarFasesProjetoAdminView.setVisible(true);
+    }//GEN-LAST:event_btnPublicarPerguntasFaseProjetoActionPerformed
 
     /**
      * @param args the command line arguments

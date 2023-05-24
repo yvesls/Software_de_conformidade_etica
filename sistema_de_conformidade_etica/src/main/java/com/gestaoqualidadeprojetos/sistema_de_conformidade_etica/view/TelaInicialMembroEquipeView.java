@@ -9,12 +9,12 @@ import javax.swing.JOptionPane;
  *
  * @author lucas
  */
-public class TelaInicialView extends javax.swing.JFrame {
+public class TelaInicialMembroEquipeView extends javax.swing.JFrame {
 
     /**
      * Creates new form TelaInicialView
      */
-    public TelaInicialView() {
+    public TelaInicialMembroEquipeView() {
         initComponents();
         this.setExtendedState(this.MAXIMIZED_BOTH); //abrir maximizado
         this.setLocationRelativeTo(null);
@@ -45,7 +45,7 @@ public class TelaInicialView extends javax.swing.JFrame {
         txtInfoEtica.setLineWrap(true);
         txtInfoEtica.setRows(5);
         txtInfoEtica.setText("\nO Desenvolvimento de Software Orientado a Ética é uma abordagem nova e prática para o \ndesenvolvimento de software que preenche uma lacuna e cria um vínculo entre as habilidades\néticas e profissionais, propondo assim um processo de desenvolvimento de software mais\ntransparente e que traz uma melhor conscientização do riscos e limitações no processo de\ndesenvolvimento de software. As questões éticas torna-se, assim, parte do processo necessário\npara o desenvolvimento de produtos de Software de Qualidade.\n\nAlguns princípios éticos incluem: Privacidade; Segurança; Acessibilidade; Responsabilidade \nSocial; Transparência; Honestidade.\n\nO software ético exige que os colaboradores reflitam. Ele serve como uma ferramenta para\naumentar a conscientização sobre as ramificações éticas do processo. As perguntas \nselecionadas devem ser apresentadas à todos os envolvidos de modo compreensível para \nque se possa obter informações e alinhamento. Qualquer violação dos princípios pode resultar\nem consequências éticas e legais.\n");
-        txtInfoEtica.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "Bem-Vindo!", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 26))); // NOI18N
+        txtInfoEtica.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Bem-Vindo!", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 26))); // NOI18N
         txtInfoEtica.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jScrollPane1.setViewportView(txtInfoEtica);
 
@@ -132,7 +132,8 @@ public class TelaInicialView extends javax.swing.JFrame {
     }//GEN-LAST:event_itemMenuLogoutActionPerformed
 
     private void itemMenuAcessarProjetosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMenuAcessarProjetosActionPerformed
-        // TODO add your handling code here:
+        ListarProjetosMembroEquipeView listarProjetosMembroEquipeView = new ListarProjetosMembroEquipeView();
+        listarProjetosMembroEquipeView.setVisible(true);
     }//GEN-LAST:event_itemMenuAcessarProjetosActionPerformed
 
     public static void main(String args[]) {
@@ -149,20 +150,21 @@ public class TelaInicialView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaInicialView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaInicialMembroEquipeView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaInicialView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaInicialMembroEquipeView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaInicialView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaInicialMembroEquipeView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaInicialView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaInicialMembroEquipeView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaInicialView().setVisible(true);
+                new TelaInicialMembroEquipeView().setVisible(true);
             }
         });
     }

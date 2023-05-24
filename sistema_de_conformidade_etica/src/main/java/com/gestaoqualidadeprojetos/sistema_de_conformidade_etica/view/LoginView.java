@@ -154,7 +154,7 @@ public class LoginView extends javax.swing.JFrame {
             termoAceitação.setVisible(true);     
         }
         else{
-            TelaInicialView telaInicial = new TelaInicialView();
+            TelaInicialAdminView telaInicial = new TelaInicialAdminView();
             this.dispose();
             telaInicial.setVisible(true);
         }
