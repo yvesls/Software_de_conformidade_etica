@@ -30,6 +30,7 @@ public final class FaixaPorMembroView extends javax.swing.JFrame {
         criarGrafico();
         modoTelaCheia();
         centralizarTabela();
+        this.getContentPane().setLayout(null);
     }
     private void modoTelaCheia(){
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -56,13 +57,13 @@ public final class FaixaPorMembroView extends javax.swing.JFrame {
 
     public void criarGrafico(){
         DefaultCategoryDataset barra = new DefaultCategoryDataset();
-        barra.setValue(59, "Iniciação", "");
-        barra.setValue(54, "Requisitos", "");
-        barra.setValue(70, "Projeto", "");
-        barra.setValue(47, "Desenvolvimento", "");
-        barra.setValue(65, "Teste e verificação", "");
+        barra.setValue(59, "I - Iniciação", "");
+        barra.setValue(54, "II - Requisitos", "");
+        barra.setValue(70, "III - Projeto", "");
+        barra.setValue(47, "IV - Desenvolvimento", "");
+        barra.setValue(65, "V - Teste e verificação", "");
         
-        JFreeChart grafico = ChartFactory.createBarChart("Percentual por etapa do projeto", "Etapas", "Porcentagem de respostas 'Sim'", barra, PlotOrientation.HORIZONTAL, true, true, false);
+        JFreeChart grafico = ChartFactory.createBarChart("Percentual por etapa do projeto", "Etapas", "Porcentagem de respostas 'Sim'", barra, PlotOrientation.VERTICAL, true, true, false);
         
         ChartPanel painel = new ChartPanel(grafico);
         painel.setSize(graficoPainel.getWidth(),graficoPainel.getHeight());
@@ -179,7 +180,7 @@ public final class FaixaPorMembroView extends javax.swing.JFrame {
                 {"< 45", "E"}
             },
             new String [] {
-                "CPE (%)", "CFE"
+                "CPEM (%)", "CFEM"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -249,7 +250,7 @@ public final class FaixaPorMembroView extends javax.swing.JFrame {
                 .addComponent(jLabel18)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel19)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(216, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -307,18 +308,15 @@ public final class FaixaPorMembroView extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(68, 68, 68)
+                .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(11, 11, 11)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -327,7 +325,7 @@ public final class FaixaPorMembroView extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
-                .addGap(12, 12, 12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel13)
@@ -361,13 +359,13 @@ public final class FaixaPorMembroView extends javax.swing.JFrame {
         jLabel16.setText("<html><p>FPME - Faixa percentual mínima por etapa</p></html>");
 
         jLabel20.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel20.setText("<html><p>CP - Classificação percentual</p></html>");
+        jLabel20.setText("<html><p>CPE - Classificação percentual por etapa</p></html>");
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel21.setText("<html><p>CPE - Classificação percentual estabelecida</p></html>");
+        jLabel21.setText("<html><p>CPEM - Classificação percentual estabelecida para o membro</p></html>");
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel22.setText("<html><p>CFE - Classificação por faixa equivalente</p></html>");
+        jLabel22.setText("<html><p>CFEM - Classificação por faixa equivalente para o membro</p></html>");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -414,7 +412,7 @@ public final class FaixaPorMembroView extends javax.swing.JFrame {
                 {"Testes e Verificação", "B", ">= 75", "A", "90"}
             },
             new String [] {
-                "Etapa", "CMP (%)", "FPME (%)", "Classificação", "CP (%)"
+                "Etapa", "CME (%)", "FPME (%)", "Classificação", "CPE (%)"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -487,8 +485,8 @@ public final class FaixaPorMembroView extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 662, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 674, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(graficoPainel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -511,7 +509,7 @@ public final class FaixaPorMembroView extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(8, 8, 8))

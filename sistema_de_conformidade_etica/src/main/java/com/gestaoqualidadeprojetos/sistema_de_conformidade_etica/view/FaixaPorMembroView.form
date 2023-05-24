@@ -114,8 +114,8 @@
                               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="jScrollPane3" min="-2" pref="662" max="-2" attributes="0"/>
-                                      <EmptySpace pref="54" max="32767" attributes="0"/>
+                                      <Component id="jScrollPane3" min="-2" pref="674" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
                                       <Component id="jScrollPane1" min="-2" pref="313" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="graficoPainel" max="32767" attributes="0"/>
@@ -148,7 +148,7 @@
                   <Group type="102" attributes="0">
                       <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanel4" max="32767" attributes="0"/>
+                      <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jButton1" min="-2" pref="34" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
@@ -216,14 +216,14 @@
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="2" rowCount="5">
-                <Column editable="false" title="CPE (%)" type="java.lang.Object">
+                <Column editable="false" title="CPEM (%)" type="java.lang.Object">
                   <Data value="90 - 100"/>
                   <Data value="75 - 89"/>
                   <Data value="60 - 74"/>
                   <Data value="45 - 59"/>
                   <Data value="&lt; 45"/>
                 </Column>
-                <Column editable="false" title="CFE" type="java.lang.Object">
+                <Column editable="false" title="CFEM" type="java.lang.Object">
                   <Data value="A"/>
                   <Data value="B"/>
                   <Data value="C"/>
@@ -262,7 +262,7 @@
                   <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="216" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -388,21 +388,16 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel2" alignment="1" min="-2" pref="60" max="-2" attributes="0"/>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jLabel15" alignment="1" min="-2" pref="37" max="-2" attributes="0"/>
-                              <Component id="jLabel14" alignment="1" min="-2" pref="37" max="-2" attributes="0"/>
-                              <Component id="jLabel13" alignment="1" min="-2" pref="37" max="-2" attributes="0"/>
-                              <Component id="jLabel11" alignment="1" min="-2" pref="37" max="-2" attributes="0"/>
-                              <Component id="jLabel3" alignment="1" min="-2" pref="37" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="jLabel2" max="32767" attributes="0"/>
+                      <Component id="jLabel3" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jLabel11" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jLabel13" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jLabel14" max="32767" attributes="0"/>
+                      <Component id="jLabel15" alignment="0" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -413,7 +408,7 @@
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
@@ -593,7 +588,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="12" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;p&gt;CP - Classifica&#xe7;&#xe3;o percentual&lt;/p&gt;&lt;/html&gt;"/>
+            <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;p&gt;CPE - Classifica&#xe7;&#xe3;o percentual por etapa&lt;/p&gt;&lt;/html&gt;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel21">
@@ -601,7 +596,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="12" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;p&gt;CPE - Classifica&#xe7;&#xe3;o percentual estabelecida&lt;/p&gt;&lt;/html&gt;"/>
+            <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;p&gt;CPEM - Classifica&#xe7;&#xe3;o percentual estabelecida para o membro&lt;/p&gt;&lt;/html&gt;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel22">
@@ -609,7 +604,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="12" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;p&gt;CFE - Classifica&#xe7;&#xe3;o por faixa equivalente&lt;/p&gt;&lt;/html&gt;"/>
+            <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;p&gt;CFEM - Classifica&#xe7;&#xe3;o por faixa equivalente para o membro&lt;/p&gt;&lt;/html&gt;"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -632,7 +627,7 @@
                   <Data value="Desenvolvimento"/>
                   <Data value="Testes e Verifica&#xe7;&#xe3;o"/>
                 </Column>
-                <Column editable="false" title="CMP (%)" type="java.lang.Object">
+                <Column editable="false" title="CME (%)" type="java.lang.Object">
                   <Data value="B"/>
                   <Data value="B"/>
                   <Data value="B"/>
@@ -653,7 +648,7 @@
                   <Data value="C"/>
                   <Data value="A"/>
                 </Column>
-                <Column editable="false" title="CP (%)" type="java.lang.Object">
+                <Column editable="false" title="CPE (%)" type="java.lang.Object">
                   <Data value="77"/>
                   <Data value="82"/>
                   <Data value="89"/>
