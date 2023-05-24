@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.gestaoqualidadeprojetos.sistema_de_conformidade_etica.view;
-import com.gestaoqualidadeprojetos.sistema_de_conformidade_etica.view.CriarNovoProjetoView;
+import javax.swing.SwingConstants;
+import javax.swing.table.DefaultTableCellRenderer;
 
 /**
  *
@@ -18,6 +19,17 @@ public class ListarProjetosAdministradorView extends javax.swing.JFrame {
         initComponents();
         setVisible(true);
         this.setLocationRelativeTo(this.getParent());
+        centralizarTabela();
+    }
+    
+    public void centralizarTabela() {
+        DefaultTableCellRenderer centralizado = new DefaultTableCellRenderer();
+	centralizado.setHorizontalAlignment(SwingConstants.CENTER);
+	int i = 0;
+	while (i < this.tableProjetos.getColumnCount()) {
+            this.tableProjetos.getColumnModel().getColumn(i).setCellRenderer(centralizado);
+            i++;
+	}
     }
 
     /**
@@ -70,6 +82,7 @@ public class ListarProjetosAdministradorView extends javax.swing.JFrame {
                 "#", "Nome", "Data Abertura", "Data Limite", "Status"
             }
         ));
+        tableProjetos.setRowHeight(26);
         tableProjetos.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         tableProjetos.setShowGrid(true);
         tableProjetos.setSurrendersFocusOnKeystroke(true);
