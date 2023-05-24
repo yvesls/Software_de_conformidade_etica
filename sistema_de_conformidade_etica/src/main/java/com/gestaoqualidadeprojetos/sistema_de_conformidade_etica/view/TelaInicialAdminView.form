@@ -104,7 +104,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane1" pref="748" max="32767" attributes="0"/>
+              <Component id="jScrollPane1" pref="753" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -139,7 +139,7 @@
             <Property name="text" type="java.lang.String" value="&#xa;O Desenvolvimento de Software Orientado a &#xc9;tica &#xe9; uma abordagem nova e pr&#xe1;tica para o &#xa;desenvolvimento de software que preenche uma lacuna e cria um v&#xed;nculo entre as habilidades&#xa;&#xe9;ticas e profissionais, propondo assim um processo de desenvolvimento de software mais&#xa;transparente e que traz uma melhor conscientiza&#xe7;&#xe3;o do riscos e limita&#xe7;&#xf5;es no processo de&#xa;desenvolvimento de software. As quest&#xf5;es &#xe9;ticas torna-se, assim, parte do processo necess&#xe1;rio&#xa;para o desenvolvimento de produtos de Software de Qualidade.&#xa;&#xa;Alguns princ&#xed;pios &#xe9;ticos incluem: Privacidade; Seguran&#xe7;a; Acessibilidade; Responsabilidade &#xa;Social; Transpar&#xea;ncia; Honestidade.&#xa;&#xa;O software &#xe9;tico exige que os colaboradores reflitam. Ele serve como uma ferramenta para&#xa;aumentar a conscientiza&#xe7;&#xe3;o sobre as ramifica&#xe7;&#xf5;es &#xe9;ticas do processo. As perguntas &#xa;selecionadas devem ser apresentadas &#xe0; todos os envolvidos de modo compreens&#xed;vel para &#xa;que se possa obter informa&#xe7;&#xf5;es e alinhamento. Qualquer viola&#xe7;&#xe3;o dos princ&#xed;pios pode resultar&#xa;em consequ&#xea;ncias &#xe9;ticas e legais.&#xa;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder justification="2" title="Bem-Vindo!">
+                <TitledBorder justification="2" title="Bem-Vindo, Analista de Qualidade!">
                   <Font PropertyName="font" name="Dialog" size="26" style="1"/>
                 </TitledBorder>
               </Border>
@@ -148,6 +148,9 @@
               <Color id="Text Cursor"/>
             </Property>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Bem-Vindo, Analista de Qualidade!"/>
+          </AccessibilityProperties>
         </Component>
       </SubComponents>
     </Container>

@@ -152,6 +152,8 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
 
     private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
         dispose();
+        TelaInicialMembroEquipeView telaInicialMembroEquipeView = new TelaInicialMembroEquipeView();
+        telaInicialMembroEquipeView.setVisible(true);
     }//GEN-LAST:event_btnFecharActionPerformed
 
     private void btnAbrirProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirProjetoActionPerformed
@@ -161,8 +163,8 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAbrirProjetoActionPerformed
 
     private void btnVerDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerDashboardActionPerformed
-        DashboardView dashboardView = new DashboardView();
-        dashboardView.setVisible(true);
+        DashboardMembroEquipeView dashboardMembroEquipeView = new DashboardMembroEquipeView();
+        dashboardMembroEquipeView.setVisible(true);
     }//GEN-LAST:event_btnVerDashboardActionPerformed
 
     /**

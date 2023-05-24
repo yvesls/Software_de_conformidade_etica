@@ -75,6 +75,8 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
         jScrollPaneTabelaProjetos.setViewportView(tablePerguntasQuestionario);
         if (tablePerguntasQuestionario.getColumnModel().getColumnCount() > 0) {
             tablePerguntasQuestionario.getColumnModel().getColumn(0).setMinWidth(50);
+            tablePerguntasQuestionario.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tablePerguntasQuestionario.getColumnModel().getColumn(0).setMaxWidth(10);
         }
 
         btnNovaPergunta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N

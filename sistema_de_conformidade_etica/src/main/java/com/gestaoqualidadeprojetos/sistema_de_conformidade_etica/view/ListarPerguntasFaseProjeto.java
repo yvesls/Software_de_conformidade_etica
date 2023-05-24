@@ -81,6 +81,15 @@ public class ListarPerguntasFaseProjeto extends javax.swing.JFrame {
         tableProjetos.setShowGrid(true);
         tableProjetos.setSurrendersFocusOnKeystroke(true);
         jScrollPaneTabelaProjetos.setViewportView(tableProjetos);
+        if (tableProjetos.getColumnModel().getColumnCount() > 0) {
+            tableProjetos.getColumnModel().getColumn(0).setMinWidth(50);
+            tableProjetos.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tableProjetos.getColumnModel().getColumn(0).setMaxWidth(50);
+            tableProjetos.getColumnModel().getColumn(1).setPreferredWidth(100);
+            tableProjetos.getColumnModel().getColumn(2).setPreferredWidth(20);
+            tableProjetos.getColumnModel().getColumn(3).setPreferredWidth(20);
+            tableProjetos.getColumnModel().getColumn(4).setPreferredWidth(5);
+        }
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("Perguntas:");

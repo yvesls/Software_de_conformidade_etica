@@ -170,6 +170,8 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
 
     private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
         dispose();
+        TelaInicialAdminView telaInicialAdminView = new TelaInicialAdminView();
+        telaInicialAdminView.setVisible(true);
     }//GEN-LAST:event_btnFecharActionPerformed
 
     private void btnAbrirProjetosAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirProjetosAdminActionPerformed
@@ -178,7 +180,7 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAbrirProjetosAdminActionPerformed
 
     private void btnVerDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerDashboardActionPerformed
-        DashboardView dashboardView = new DashboardView();
+        DashboardAdminView dashboardView = new DashboardAdminView();
         dashboardView.setVisible(true);
     }//GEN-LAST:event_btnVerDashboardActionPerformed
 

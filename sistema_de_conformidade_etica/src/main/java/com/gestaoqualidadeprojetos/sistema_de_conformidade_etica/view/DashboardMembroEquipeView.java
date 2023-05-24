@@ -21,12 +21,12 @@ import org.jfree.data.category.DefaultCategoryDataset;
  *
  * @author Note102
  */
-public class DashboardView extends javax.swing.JFrame {
+public class DashboardMembroEquipeView extends javax.swing.JFrame {
 
     /**
      * Creates new form DashboardView
      */
-    public DashboardView() {
+    public DashboardMembroEquipeView() {
         initComponents();
         this.setLocationRelativeTo( null );
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -119,7 +119,6 @@ public class DashboardView extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         graficoPainel = new javax.swing.JPanel();
@@ -271,15 +270,6 @@ public class DashboardView extends javax.swing.JFrame {
         setExtendedState(1);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton1.setText("Emitir certificado");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1107, 687, -1, 41));
-
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Dashboard");
@@ -408,7 +398,7 @@ public class DashboardView extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 695, -1, -1));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 710, -1, -1));
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -638,10 +628,6 @@ public class DashboardView extends javax.swing.JFrame {
         new FaixaPorMembroView().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new ConfirmacaoCertificadoView().setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void viewGraficoMembroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewGraficoMembroActionPerformed
         this.viewGraficoMembro.setVisible(false);
         this.viewGraficoEtapa.setVisible(true);
@@ -657,6 +643,8 @@ public class DashboardView extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         this.setVisible(false);
+        ListarProjetosMembroEquipeView listarProjetosMembroEquipeView  = new ListarProjetosMembroEquipeView();
+        listarProjetosMembroEquipeView.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void viewGraficoEtapaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewGraficoEtapaActionPerformed
@@ -682,20 +670,21 @@ public class DashboardView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DashboardView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DashboardMembroEquipeView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DashboardView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DashboardMembroEquipeView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DashboardView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DashboardMembroEquipeView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DashboardView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DashboardMembroEquipeView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-               DashboardView view = new DashboardView();
+               DashboardMembroEquipeView view = new DashboardMembroEquipeView();
                view.setVisible(true);
                //view.criarGrafico(); //aqui não está aparecendo o gráfico
             }
@@ -704,7 +693,6 @@ public class DashboardView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel graficoPainel;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;

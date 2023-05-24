@@ -323,8 +323,9 @@ public class QuestionarioView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonFecharActionPerformed
 
     private void jButtonConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfirmarActionPerformed
-        // TODO add your handling code here:
-        
+        dispose();
+        ListarProjetosMembroEquipeView listarProjetosMembroEquipeView = new ListarProjetosMembroEquipeView();
+        listarProjetosMembroEquipeView.setVisible(true);
     }//GEN-LAST:event_jButtonConfirmarActionPerformed
 
     private void jButtonAnexoJustificativaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnexoJustificativaActionPerformed

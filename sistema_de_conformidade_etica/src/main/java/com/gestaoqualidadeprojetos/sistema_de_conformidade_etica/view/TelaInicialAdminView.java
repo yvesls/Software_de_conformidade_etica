@@ -46,9 +46,10 @@ public class TelaInicialAdminView extends javax.swing.JFrame {
         txtInfoEtica.setLineWrap(true);
         txtInfoEtica.setRows(5);
         txtInfoEtica.setText("\nO Desenvolvimento de Software Orientado a Ética é uma abordagem nova e prática para o \ndesenvolvimento de software que preenche uma lacuna e cria um vínculo entre as habilidades\néticas e profissionais, propondo assim um processo de desenvolvimento de software mais\ntransparente e que traz uma melhor conscientização do riscos e limitações no processo de\ndesenvolvimento de software. As questões éticas torna-se, assim, parte do processo necessário\npara o desenvolvimento de produtos de Software de Qualidade.\n\nAlguns princípios éticos incluem: Privacidade; Segurança; Acessibilidade; Responsabilidade \nSocial; Transparência; Honestidade.\n\nO software ético exige que os colaboradores reflitam. Ele serve como uma ferramenta para\naumentar a conscientização sobre as ramificações éticas do processo. As perguntas \nselecionadas devem ser apresentadas à todos os envolvidos de modo compreensível para \nque se possa obter informações e alinhamento. Qualquer violação dos princípios pode resultar\nem consequências éticas e legais.\n");
-        txtInfoEtica.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Bem-Vindo!", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 26))); // NOI18N
+        txtInfoEtica.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Bem-Vindo, Analista de Qualidade!", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 26))); // NOI18N
         txtInfoEtica.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jScrollPane1.setViewportView(txtInfoEtica);
+        txtInfoEtica.getAccessibleContext().setAccessibleName("Bem-Vindo, Analista de Qualidade!");
 
         menuProjetos.setText("Projetos");
         menuProjetos.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -108,7 +109,7 @@ public class TelaInicialAdminView extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 748, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 753, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
