@@ -160,6 +160,7 @@ public class LoginView extends javax.swing.JFrame {
                 TelaInicialMembroEquipeView telaInicial = new TelaInicialMembroEquipeView();
                 this.dispose();
                 telaInicial.setVisible(true); 
+                JOptionPane.showMessageDialog(null, "(mensagem caso a data limite se aproximar)\n\nAtenção!\nA data limite para o questionario do projeto x está chegando.\nVocê precisa responder.", "ATENÇÃO!", HEIGHT);
             }
         }
             
