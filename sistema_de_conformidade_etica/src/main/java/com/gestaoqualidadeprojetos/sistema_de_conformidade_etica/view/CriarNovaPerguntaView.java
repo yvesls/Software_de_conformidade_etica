@@ -17,6 +17,7 @@ public class CriarNovaPerguntaView extends javax.swing.JFrame {
         initComponents();
         setVisible(true);
         this.setLocationRelativeTo(this.getParent());
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
     }
 
     /**

@@ -17,6 +17,8 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
         initComponents();
         setVisible(true);
         this.setLocationRelativeTo(this.getParent());
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
+
     }
 
     /**
@@ -195,7 +197,7 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVoltarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        //dispose();
+        this.dispose();
         CriarNovaFaseView criarNovaFaseView = new CriarNovaFaseView();
         criarNovaFaseView.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -205,6 +207,7 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        this.dispose();
         CriarNovoQuestionarioView criarNovoQuestionarioView = new CriarNovoQuestionarioView();
         criarNovoQuestionarioView.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -214,7 +217,7 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        
+        this.dispose();
         ManterPerguntasQuestionarioView manterPerguntasQuestionarioView = new ManterPerguntasQuestionarioView();
         manterPerguntasQuestionarioView.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed

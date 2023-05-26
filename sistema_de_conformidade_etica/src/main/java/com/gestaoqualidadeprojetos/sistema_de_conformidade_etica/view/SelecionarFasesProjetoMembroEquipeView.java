@@ -17,6 +17,7 @@ public class SelecionarFasesProjetoMembroEquipeView extends javax.swing.JFrame {
         initComponents();
         setVisible(true);
         this.setLocationRelativeTo(this.getParent());
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
     }
 
     /**
@@ -157,7 +158,7 @@ public class SelecionarFasesProjetoMembroEquipeView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAbrirFaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirFaseActionPerformed
-        dispose();
+        this.dispose();
         QuestionarioView questionarioView = new QuestionarioView();
         questionarioView.setVisible(true);
     }//GEN-LAST:event_btnAbrirFaseActionPerformed
@@ -167,7 +168,7 @@ public class SelecionarFasesProjetoMembroEquipeView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
-        dispose();
+        this.dispose();
         ListarProjetosMembroEquipeView listarProjetosMembroEquipeView = new ListarProjetosMembroEquipeView();
         listarProjetosMembroEquipeView.setVisible(true);
     }//GEN-LAST:event_btnVoltarActionPerformed

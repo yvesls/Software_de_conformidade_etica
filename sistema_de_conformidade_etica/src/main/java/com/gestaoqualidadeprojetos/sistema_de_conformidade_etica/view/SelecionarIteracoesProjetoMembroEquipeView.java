@@ -138,7 +138,7 @@ public class SelecionarIteracoesProjetoMembroEquipeView extends javax.swing.JFra
 
     private void btnAbrirFaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirFaseActionPerformed
         dispose();
-        ListarPerguntasFaseProjeto listarQuestionariosView = new ListarPerguntasFaseProjeto();
+        ListarPerguntasFaseProjetoView listarQuestionariosView = new ListarPerguntasFaseProjetoView();
         listarQuestionariosView.setVisible(true);
     }//GEN-LAST:event_btnAbrirFaseActionPerformed
 

@@ -17,6 +17,8 @@ public class CriarNovaFaseView extends javax.swing.JFrame {
         initComponents();
         setVisible(true);
         this.setLocationRelativeTo(this.getParent());
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
+
     }
 
     /**
@@ -116,13 +118,16 @@ public class CriarNovaFaseView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-        dispose();
-        //SelecionarFasesProjetoAdminView selecionarFasesProjetoAdminView = new SelecionarFasesProjetoAdminView();
-        //selecionarFasesProjetoAdminView.setVisible(true);
+        this.dispose();
+        SelecionarFasesProjetoAdminView selecionarFasesProjetoAdminView = new SelecionarFasesProjetoAdminView();
+        selecionarFasesProjetoAdminView.setVisible(true);
+        
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        dispose();
+        this.dispose();
+        //SelecionarFasesProjetoAdminView selecionarFasesProjetoAdminView = new SelecionarFasesProjetoAdminView();
+        //selecionarFasesProjetoAdminView.setVisible(true);
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     /**

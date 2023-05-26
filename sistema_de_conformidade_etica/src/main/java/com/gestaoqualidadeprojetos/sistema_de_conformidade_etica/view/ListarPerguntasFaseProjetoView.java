@@ -9,15 +9,17 @@ import com.gestaoqualidadeprojetos.sistema_de_conformidade_etica.view.CriarNovoP
  *
  * @author Gabriel
  */
-public class ListarPerguntasFaseProjeto extends javax.swing.JFrame {
+public class ListarPerguntasFaseProjetoView extends javax.swing.JFrame {
 
     /**
      * Creates new form ListarProjetosView
      */
-    public ListarPerguntasFaseProjeto() {
+    public ListarPerguntasFaseProjetoView() {
         initComponents();
         setVisible(true);
         this.setLocationRelativeTo(this.getParent());
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
+
     }
 
     /**
@@ -193,9 +195,9 @@ public class ListarPerguntasFaseProjeto extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
-        dispose();
-        SelecionarFasesProjetoAdminView selecionarFasesProjetoAdminView = new SelecionarFasesProjetoAdminView();
-        selecionarFasesProjetoAdminView.setVisible(true);
+        this.dispose();
+        ListarProjetosAdminView listarProjetosAdminView = new ListarProjetosAdminView();
+        listarProjetosAdminView.setVisible(true);
     }//GEN-LAST:event_btnFecharActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -205,13 +207,13 @@ public class ListarPerguntasFaseProjeto extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnAbrirPerguntasQuestionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirPerguntasQuestionarioActionPerformed
-        dispose();
+        this.dispose();
         ManterPerguntasFaseProjetoView manterPerguntasFaseProjetoView = new ManterPerguntasFaseProjetoView();
         manterPerguntasFaseProjetoView.setVisible(true);
     }//GEN-LAST:event_btnAbrirPerguntasQuestionarioActionPerformed
 
     private void btnPublicarPerguntasFaseProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPublicarPerguntasFaseProjetoActionPerformed
-        dispose();
+        this.dispose();
         SelecionarFasesProjetoAdminView selecionarFasesProjetoAdminView = new SelecionarFasesProjetoAdminView();
         selecionarFasesProjetoAdminView.setVisible(true);
     }//GEN-LAST:event_btnPublicarPerguntasFaseProjetoActionPerformed
@@ -233,14 +235,30 @@ public class ListarPerguntasFaseProjeto extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ListarPerguntasFaseProjeto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ListarPerguntasFaseProjetoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ListarPerguntasFaseProjeto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ListarPerguntasFaseProjetoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ListarPerguntasFaseProjeto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ListarPerguntasFaseProjetoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ListarPerguntasFaseProjeto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ListarPerguntasFaseProjetoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -261,7 +279,7 @@ public class ListarPerguntasFaseProjeto extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ListarPerguntasFaseProjeto().setVisible(true);
+                new ListarPerguntasFaseProjetoView().setVisible(true);
             }
         });
     }

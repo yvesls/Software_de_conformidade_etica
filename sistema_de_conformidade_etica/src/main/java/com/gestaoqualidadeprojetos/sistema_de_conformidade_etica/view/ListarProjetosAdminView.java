@@ -20,6 +20,8 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         setVisible(true);
         this.setLocationRelativeTo(this.getParent());
         centralizarTabela();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
+
     }
     
     public void centralizarTabela() {
@@ -163,23 +165,25 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNovoProjetoMouseClicked
 
     private void btnNovoProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoProjetoActionPerformed
-        dispose();
+        this.dispose();
         CriarNovoProjetoView criarNovoProjeto = new CriarNovoProjetoView();
         criarNovoProjeto.setVisible(true);
     }//GEN-LAST:event_btnNovoProjetoActionPerformed
 
     private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
-        dispose();
-        TelaInicialAdminView telaInicialAdminView = new TelaInicialAdminView();
-        telaInicialAdminView.setVisible(true);
+        this.dispose();
+        //TelaInicialAdminView telaInicialAdminView = new TelaInicialAdminView();
+        //telaInicialAdminView.setVisible(true);
     }//GEN-LAST:event_btnFecharActionPerformed
 
     private void btnAbrirProjetosAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirProjetosAdminActionPerformed
-        ListarPerguntasFaseProjeto listarQuestionariosView = new ListarPerguntasFaseProjeto();
-        listarQuestionariosView.setVisible(true);
+        this.dispose();
+        ListarPerguntasFaseProjetoView listarPerguntasFaseProjetoView = new ListarPerguntasFaseProjetoView();
+        listarPerguntasFaseProjetoView.setVisible(true);
     }//GEN-LAST:event_btnAbrirProjetosAdminActionPerformed
 
     private void btnVerDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerDashboardActionPerformed
+        this.dispose();
         DashboardAdminView dashboardView = new DashboardAdminView();
         dashboardView.setVisible(true);
     }//GEN-LAST:event_btnVerDashboardActionPerformed
