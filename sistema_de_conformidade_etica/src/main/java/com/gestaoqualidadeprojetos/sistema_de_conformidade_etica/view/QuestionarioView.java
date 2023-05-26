@@ -23,6 +23,7 @@ public class QuestionarioView extends javax.swing.JFrame {
     public QuestionarioView() {
         initComponents();
         modoTelaCheia();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
     }
 
     private void modoTelaCheia(){
@@ -319,7 +320,9 @@ public class QuestionarioView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonAnteriorActionPerformed
 
     private void jButtonFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFecharActionPerformed
-        this.setVisible(false);
+        this.dispose();
+        SelecionarFasesProjetoMembroEquipeView selecionarFasesProjetoMembroEquipeView = new SelecionarFasesProjetoMembroEquipeView();
+        selecionarFasesProjetoMembroEquipeView.setVisible(true);
     }//GEN-LAST:event_jButtonFecharActionPerformed
 
     private void jButtonConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfirmarActionPerformed

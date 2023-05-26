@@ -17,6 +17,8 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
         initComponents();
         setVisible(true);
         this.setLocationRelativeTo(this.getParent());
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
+
     }
 
     /**
@@ -291,13 +293,15 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
     }//GEN-LAST:event_selectFuncaoAtor6ActionPerformed
 
     private void btnSalvarProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarProjetoActionPerformed
-        dispose();
+        this.dispose();
         SelecionarModeloQuestionarioView selecionarModeloQuestionarioView = new SelecionarModeloQuestionarioView();
         selecionarModeloQuestionarioView.setVisible(true);
     }//GEN-LAST:event_btnSalvarProjetoActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        dispose();
+        this.dispose();
+        ListarProjetosAdminView listarProjetosAdminView = new ListarProjetosAdminView();
+        listarProjetosAdminView.setVisible(true);
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void inputEmailAtor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputEmailAtor1ActionPerformed

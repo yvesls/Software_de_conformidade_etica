@@ -17,6 +17,8 @@ public class SelecionarFasesProjetoAdminView extends javax.swing.JFrame {
         initComponents();
         setVisible(true);
         this.setLocationRelativeTo(this.getParent());
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
+
     }
 
     /**
@@ -151,7 +153,7 @@ public class SelecionarFasesProjetoAdminView extends javax.swing.JFrame {
 
     private void btnAbrirFaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirFaseActionPerformed
         dispose();
-        ListarPerguntasFaseProjeto listarQuestionariosView = new ListarPerguntasFaseProjeto();
+        ListarPerguntasFaseProjetoView listarQuestionariosView = new ListarPerguntasFaseProjetoView();
         listarQuestionariosView.setVisible(true);
     }//GEN-LAST:event_btnAbrirFaseActionPerformed
 
@@ -160,13 +162,13 @@ public class SelecionarFasesProjetoAdminView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
-        dispose();
-        ListarProjetosAdminView listarProjetosAdminView = new ListarProjetosAdminView();
-        listarProjetosAdminView.setVisible(true);
+        this.dispose();
+        ListarPerguntasFaseProjetoView listarQuestionariosView = new ListarPerguntasFaseProjetoView();
+        listarQuestionariosView.setVisible(true);
     }//GEN-LAST:event_btnVoltarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        //dispose();
+        this.dispose();
         CriarNovaFaseView criarNovaFaseView = new CriarNovaFaseView();
         criarNovaFaseView.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed

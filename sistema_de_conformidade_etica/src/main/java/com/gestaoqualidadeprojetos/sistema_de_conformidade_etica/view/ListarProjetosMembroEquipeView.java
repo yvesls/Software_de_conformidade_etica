@@ -21,6 +21,7 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
         setVisible(true);
         this.setLocationRelativeTo(this.getParent());
         centralizarTabela();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
     }
     
     public void centralizarTabela() {
@@ -151,18 +152,19 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
-        dispose();
-        TelaInicialMembroEquipeView telaInicialMembroEquipeView = new TelaInicialMembroEquipeView();
-        telaInicialMembroEquipeView.setVisible(true);
+        this.dispose();
+        //TelaInicialMembroEquipeView telaInicialMembroEquipeView = new TelaInicialMembroEquipeView();
+        //telaInicialMembroEquipeView.setVisible(true);        
     }//GEN-LAST:event_btnFecharActionPerformed
 
     private void btnAbrirProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirProjetoActionPerformed
-        dispose();
+        this.dispose();
         SelecionarFasesProjetoMembroEquipeView selecionarFasesProjetoMembroEquipeView = new SelecionarFasesProjetoMembroEquipeView();
         selecionarFasesProjetoMembroEquipeView.setVisible(true);
     }//GEN-LAST:event_btnAbrirProjetoActionPerformed
 
     private void btnVerDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerDashboardActionPerformed
+        this.dispose();
         DashboardMembroEquipeView dashboardMembroEquipeView = new DashboardMembroEquipeView();
         dashboardMembroEquipeView.setVisible(true);
     }//GEN-LAST:event_btnVerDashboardActionPerformed

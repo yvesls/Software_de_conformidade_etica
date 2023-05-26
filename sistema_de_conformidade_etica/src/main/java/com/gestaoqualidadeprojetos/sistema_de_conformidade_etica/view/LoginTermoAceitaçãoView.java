@@ -130,9 +130,9 @@ public class LoginTermoAceitaçãoView extends javax.swing.JFrame {
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
-        LoginView login = new LoginView();
+        //this.setVisible(false);
         this.dispose();
+        LoginView login = new LoginView();
         login.setVisible(true);
     }//GEN-LAST:event_btnCancelarActionPerformed
 

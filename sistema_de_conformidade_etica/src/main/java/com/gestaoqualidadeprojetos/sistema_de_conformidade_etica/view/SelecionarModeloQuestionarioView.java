@@ -17,6 +17,8 @@ public class SelecionarModeloQuestionarioView extends javax.swing.JFrame {
         initComponents();
         setVisible(true);
         this.setLocationRelativeTo(this.getParent());
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
+
     }
 
     /**
@@ -120,13 +122,15 @@ public class SelecionarModeloQuestionarioView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnImportarQuestionarioActionPerformed
 
     private void btnProximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProximoActionPerformed
-        dispose();
+        this.dispose();
         CriarNovaFaseView criarNovaFaseView = new CriarNovaFaseView();
         criarNovaFaseView.setVisible(true);
     }//GEN-LAST:event_btnProximoActionPerformed
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
-        dispose();
+        this.dispose();
+        CriarNovoProjetoView criarNovoProjeto = new CriarNovoProjetoView();
+        criarNovoProjeto.setVisible(true);
     }//GEN-LAST:event_btnVoltarActionPerformed
 
     /**
