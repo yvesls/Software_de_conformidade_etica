@@ -17,6 +17,7 @@ public class ConfirmacaoCertificadoView extends javax.swing.JFrame {
      */
     public ConfirmacaoCertificadoView() {
         initComponents();
+        setResizable(false);
         this.setLocationRelativeTo( null );
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }

@@ -14,8 +14,10 @@ public class CriarUsuarioView extends javax.swing.JFrame {
      */
     public CriarUsuarioView() {
         initComponents();
+        setResizable(false);
         this.setLocationRelativeTo(null); //abrir centralizado
         this.dispose();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
     }
 
     @SuppressWarnings("unchecked")

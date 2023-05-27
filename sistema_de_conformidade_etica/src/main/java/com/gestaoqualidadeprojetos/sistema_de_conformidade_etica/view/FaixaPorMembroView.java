@@ -32,7 +32,6 @@ public final class FaixaPorMembroView extends javax.swing.JFrame {
         centralizarTabela();
         this.getContentPane().setLayout(null);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
-
     }
     private void modoTelaCheia(){
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);

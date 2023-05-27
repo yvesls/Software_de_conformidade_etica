@@ -18,7 +18,6 @@ public class SelecionarFasesProjetoAdminView extends javax.swing.JFrame {
         setVisible(true);
         this.setLocationRelativeTo(this.getParent());
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
-
     }
 
     /**

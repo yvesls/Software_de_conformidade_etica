@@ -16,6 +16,7 @@ public class CriarNovoQuestionarioView extends javax.swing.JFrame {
     public CriarNovoQuestionarioView() {
         initComponents();
         setVisible(true);
+        setResizable(false);
         this.setLocationRelativeTo(this.getParent());
     }
 

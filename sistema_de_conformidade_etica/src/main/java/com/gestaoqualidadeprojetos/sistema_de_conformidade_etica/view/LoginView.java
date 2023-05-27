@@ -14,20 +14,9 @@ public class LoginView extends javax.swing.JFrame {
      */
     public LoginView() {
         initComponents();
+        setResizable(false);
         this.setLocationRelativeTo(null); //abrir centralizado  
         this.dispose();
-        //0=sim, 1=nao, outro=cancel
-            int primeiroAcesso = JOptionPane.showConfirmDialog(null, "(essa verificação será interna)\n\nÉ o primeiro acesso do usuário?", "SIMULANDO PRIMEIRO ACESSO", WIDTH);
-            if(primeiroAcesso == 0){
-                lblConfirmarSenha.setVisible(true);
-                txtConfirmarSenha.setVisible(true);
-            } 
-            else{
-                //lblConfirmarSenha.setEnabled(false);
-                //txtConfirmarSenha.setEnabled(false);
-                lblConfirmarSenha.setVisible(false);
-                txtConfirmarSenha.setVisible(false); 
-            }
     }
 
     @SuppressWarnings("unchecked")
@@ -39,10 +28,8 @@ public class LoginView extends javax.swing.JFrame {
         txtEmail = new javax.swing.JTextField();
         txtSenha = new javax.swing.JPasswordField();
         btnEntrar = new javax.swing.JButton();
-        btnRegistrar = new javax.swing.JButton();
         btnFechar = new javax.swing.JButton();
-        lblConfirmarSenha = new javax.swing.JLabel();
-        txtConfirmarSenha = new javax.swing.JPasswordField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
@@ -62,14 +49,6 @@ public class LoginView extends javax.swing.JFrame {
             }
         });
 
-        btnRegistrar.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        btnRegistrar.setText("Registrar");
-        btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistrarActionPerformed(evt);
-            }
-        });
-
         btnFechar.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         btnFechar.setText("Fechar");
         btnFechar.addActionListener(new java.awt.event.ActionListener() {
@@ -78,102 +57,67 @@ public class LoginView extends javax.swing.JFrame {
             }
         });
 
-        lblConfirmarSenha.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        lblConfirmarSenha.setText("Confirmar");
-
-        txtConfirmarSenha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtConfirmarSenhaActionPerformed(evt);
-            }
-        });
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Fazer login");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lblEmail)
-                    .addComponent(lblSenha)
-                    .addComponent(lblConfirmarSenha))
+                    .addComponent(lblSenha))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtEmail)
-                    .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(btnFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35)
-                        .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
                         .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(txtSenha)
-                    .addComponent(txtConfirmarSenha))
-                .addContainerGap(15, Short.MAX_VALUE))
+                    .addComponent(txtSenha, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtEmail, javax.swing.GroupLayout.Alignment.LEADING))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(159, 159, 159)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(154, 154, 154))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(19, 19, 19)
+                .addComponent(jLabel1)
+                .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblEmail)
-                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblEmail))
+                .addGap(16, 16, 16)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblSenha)
+                    .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblSenha))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblConfirmarSenha)
-                    .addComponent(txtConfirmarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnFechar)
-                    .addComponent(btnRegistrar)
                     .addComponent(btnEntrar))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
-        // TODO add your handling code here:
-        CriarUsuarioView criarUsuario = new CriarUsuarioView();
-        this.dispose();
-        criarUsuario.setVisible(true);
-    }//GEN-LAST:event_btnRegistrarActionPerformed
-
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         // TODO add your handling code here:
-        if(txtConfirmarSenha.isVisible()){
-            LoginTermoAceitaçãoView termoAceitação = new LoginTermoAceitaçãoView();
-            this.dispose();
-            termoAceitação.setVisible(true);     
-        }
-        else{
-            int analista = JOptionPane.showConfirmDialog(null, "(essa verificação será interna)\n\nO usuário é Analista?", "ANALISTA E DEMAIS SÃO TELAS DIFERENTES", WIDTH);
-            if(analista == 0){
-                TelaInicialAdminView telaInicial = new TelaInicialAdminView();
-                this.dispose();
-                telaInicial.setVisible(true);
-            }else{
-                TelaInicialMembroEquipeView telaInicial = new TelaInicialMembroEquipeView();
-                this.dispose();
-                telaInicial.setVisible(true); 
-                JOptionPane.showMessageDialog(null, "(mensagem caso a data limite se aproximar)\n\nAtenção!\nA data limite para o questionario do projeto x está chegando.\nVocê precisa responder.", "ATENÇÃO!", HEIGHT);
-            }
-        }
-            
+        this.dispose();
+        TelaInicialAdminView telaInicial = new TelaInicialAdminView();
+        telaInicial.setVisible(true);
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_btnFecharActionPerformed
-
-    private void txtConfirmarSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtConfirmarSenhaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtConfirmarSenhaActionPerformed
 
    
     public static void main(String args[]) {
@@ -211,11 +155,9 @@ public class LoginView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEntrar;
     private javax.swing.JButton btnFechar;
-    private javax.swing.JButton btnRegistrar;
-    private javax.swing.JLabel lblConfirmarSenha;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblSenha;
-    private javax.swing.JPasswordField txtConfirmarSenha;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JPasswordField txtSenha;
     // End of variables declaration//GEN-END:variables

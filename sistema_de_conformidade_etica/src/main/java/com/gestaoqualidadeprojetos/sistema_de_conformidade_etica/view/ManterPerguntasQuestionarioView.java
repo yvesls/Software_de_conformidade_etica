@@ -19,7 +19,6 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
         this.setExtendedState(this.MAXIMIZED_BOTH);
         //this.setLocationRelativeTo(this.getParent());
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
-
     }
 
     /**

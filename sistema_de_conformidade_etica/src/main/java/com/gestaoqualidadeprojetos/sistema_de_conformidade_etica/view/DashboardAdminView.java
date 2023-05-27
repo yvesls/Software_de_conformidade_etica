@@ -36,6 +36,7 @@ public class DashboardAdminView extends javax.swing.JFrame {
         this.getContentPane().setLayout(null);
         this.viewGraficoEtapa.setVisible(false);
         this.criarGrafico();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
     }
     
     private void modoTelaCheia(){

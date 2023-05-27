@@ -148,9 +148,6 @@
               <Color id="Text Cursor"/>
             </Property>
           </Properties>
-          <AccessibilityProperties>
-            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Bem-Vindo, Analista de Qualidade!"/>
-          </AccessibilityProperties>
         </Component>
       </SubComponents>
     </Container>

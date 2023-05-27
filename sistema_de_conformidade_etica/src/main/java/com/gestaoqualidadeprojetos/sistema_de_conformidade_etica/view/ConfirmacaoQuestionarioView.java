@@ -17,6 +17,7 @@ public class ConfirmacaoQuestionarioView extends javax.swing.JFrame {
      */
     public ConfirmacaoQuestionarioView() {
         initComponents();
+        setResizable(false);
         this.setLocationRelativeTo( null );
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }

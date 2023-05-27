@@ -49,7 +49,6 @@ public class TelaInicialAdminView extends javax.swing.JFrame {
         txtInfoEtica.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Bem-Vindo, Analista de Qualidade!", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 26))); // NOI18N
         txtInfoEtica.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jScrollPane1.setViewportView(txtInfoEtica);
-        txtInfoEtica.getAccessibleContext().setAccessibleName("Bem-Vindo, Analista de Qualidade!");
 
         menuProjetos.setText("Projetos");
         menuProjetos.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -134,9 +133,7 @@ public class TelaInicialAdminView extends javax.swing.JFrame {
         int querSair = JOptionPane.showConfirmDialog(null, "Quer realmente sair?", "SAIR", WIDTH); //0=sim, 1=nao, outro=cancel
         if(querSair == 0){
             this.setVisible(false);
-            LoginView login = new LoginView();
             this.dispose();
-            login.setVisible(true);
         }
         else if(querSair != 0); //continua na tela            ;
         

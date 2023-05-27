@@ -15,6 +15,7 @@ public class LoginTermoAceitaçãoView extends javax.swing.JFrame {
      */
     public LoginTermoAceitaçãoView() {
         initComponents();
+        setResizable(false);
         this.setLocationRelativeTo(null);
         this.dispose();
     }

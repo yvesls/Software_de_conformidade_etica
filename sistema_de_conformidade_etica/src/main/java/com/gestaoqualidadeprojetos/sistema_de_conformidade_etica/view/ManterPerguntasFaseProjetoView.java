@@ -18,7 +18,6 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
         setVisible(true);
         this.setExtendedState(this.MAXIMIZED_BOTH);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
-
        // this.setLocationRelativeTo(this.getParent());
     }
 
