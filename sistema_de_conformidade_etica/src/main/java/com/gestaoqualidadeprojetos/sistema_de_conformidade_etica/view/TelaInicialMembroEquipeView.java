@@ -126,7 +126,7 @@ public class TelaInicialMembroEquipeView extends javax.swing.JFrame {
             this.setVisible(false);
             LoginView login = new LoginView();
             this.dispose();
-            login.setVisible(true);
+            //login.setVisible(true);
         }
         else if(querSair != 0); //continua na tela            ;
         

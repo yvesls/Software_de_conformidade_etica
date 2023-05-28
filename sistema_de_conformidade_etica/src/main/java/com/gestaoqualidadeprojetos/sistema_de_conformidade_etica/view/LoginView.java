@@ -41,6 +41,8 @@ public class LoginView extends javax.swing.JFrame {
         lblSenha.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         lblSenha.setText("Senha");
 
+        txtEmail.setText("user");
+
         btnEntrar.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         btnEntrar.setText("Entrar");
         btnEntrar.addActionListener(new java.awt.event.ActionListener() {
@@ -109,9 +111,18 @@ public class LoginView extends javax.swing.JFrame {
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         // TODO add your handling code here:
-        this.dispose();
-        TelaInicialAdminView telaInicial = new TelaInicialAdminView();
-        telaInicial.setVisible(true);
+        String email = txtEmail.getText();
+
+        if (email.equals("user")) {
+            TelaInicialMembroEquipeView telaInicial = new TelaInicialMembroEquipeView();
+            this.dispose();
+            telaInicial.setVisible(true);
+        } 
+        else if (email.equals("admin")) {
+            TelaInicialAdminView telaInicial = new TelaInicialAdminView();
+            this.dispose();
+            telaInicial.setVisible(true);
+        }
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed

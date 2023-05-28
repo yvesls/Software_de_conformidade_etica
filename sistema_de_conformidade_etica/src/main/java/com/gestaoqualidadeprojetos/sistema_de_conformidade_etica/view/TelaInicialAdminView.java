@@ -131,12 +131,12 @@ public class TelaInicialAdminView extends javax.swing.JFrame {
     private void itemMenuLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMenuLogoutActionPerformed
         // TODO add your handling code here:
         int querSair = JOptionPane.showConfirmDialog(null, "Quer realmente sair?", "SAIR", WIDTH); //0=sim, 1=nao, outro=cancel
-        if(querSair == 0){
+        if (querSair == 0) {
             this.setVisible(false);
+            LoginView login = new LoginView();
             this.dispose();
-        }
-        else if(querSair != 0); //continua na tela            ;
-        
+            //login.setVisible(true);
+        } else if (querSair != 0); //continua na tela
     }//GEN-LAST:event_itemMenuLogoutActionPerformed
 
     private void itemMenuAcessarProjetosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMenuAcessarProjetosActionPerformed

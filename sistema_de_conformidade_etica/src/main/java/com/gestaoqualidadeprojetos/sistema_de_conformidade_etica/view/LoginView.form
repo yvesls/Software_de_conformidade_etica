@@ -95,6 +95,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtEmail">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="user"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JPasswordField" name="txtSenha">
     </Component>
