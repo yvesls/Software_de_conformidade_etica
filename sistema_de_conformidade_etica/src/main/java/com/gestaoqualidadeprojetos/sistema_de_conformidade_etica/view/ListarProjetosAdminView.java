@@ -41,10 +41,11 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         txtTituloProjetos = new javax.swing.JLabel();
         btnNovoProjeto = new javax.swing.JButton();
         btnFechar = new javax.swing.JButton();
-        btnAbrirProjetosAdmin = new javax.swing.JButton();
+        ConfigurarProjetosAdmin = new javax.swing.JButton();
         btnVerDashboard = new javax.swing.JButton();
         jScrollPaneTabelaProjetos = new javax.swing.JScrollPane();
         tableProjetos = new javax.swing.JTable();
+        btnAbrirProjeto = new javax.swing.JButton();
         menuBarProjetosAdmin = new javax.swing.JMenuBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -74,11 +75,11 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
             }
         });
 
-        btnAbrirProjetosAdmin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnAbrirProjetosAdmin.setText("Abrir Projeto");
-        btnAbrirProjetosAdmin.addActionListener(new java.awt.event.ActionListener() {
+        ConfigurarProjetosAdmin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        ConfigurarProjetosAdmin.setText("Configurar Projeto");
+        ConfigurarProjetosAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAbrirProjetosAdminActionPerformed(evt);
+                ConfigurarProjetosAdminActionPerformed(evt);
             }
         });
 
@@ -115,6 +116,13 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         tableProjetos.setSurrendersFocusOnKeystroke(true);
         jScrollPaneTabelaProjetos.setViewportView(tableProjetos);
 
+        btnAbrirProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnAbrirProjeto.setText("Abrir Projeto");
+        btnAbrirProjeto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAbrirProjetoActionPerformed(evt);
+            }
+        });
         setJMenuBar(menuBarProjetosAdmin);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -127,15 +135,17 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
                 .addComponent(btnNovoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnFechar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 246, Short.MAX_VALUE)
-                .addComponent(btnAbrirProjetosAdmin)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 146, Short.MAX_VALUE)
+                .addComponent(ConfigurarProjetosAdmin)
+                .addGap(18, 18, 18)
+                .addComponent(btnAbrirProjeto)
+                .addGap(18, 18, 18)
                 .addComponent(btnVerDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(47, 47, 47)
-                    .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.DEFAULT_SIZE, 682, Short.MAX_VALUE)
+                    .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.DEFAULT_SIZE, 759, Short.MAX_VALUE)
                     .addGap(48, 48, 48)))
         );
         layout.setVerticalGroup(
@@ -143,18 +153,19 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(txtTituloProjetos)
-                .addGap(148, 148, 148)
+                .addGap(146, 146, 146)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnNovoProjeto)
                     .addComponent(btnFechar)
-                    .addComponent(btnAbrirProjetosAdmin)
-                    .addComponent(btnVerDashboard))
-                .addGap(14, 14, 14))
+                    .addComponent(ConfigurarProjetosAdmin)
+                    .addComponent(btnVerDashboard)
+                    .addComponent(btnAbrirProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(13, 13, 13))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(70, 70, 70)
                     .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(56, Short.MAX_VALUE)))
+                    .addContainerGap(59, Short.MAX_VALUE)))
         );
 
         pack();
@@ -176,17 +187,23 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         //telaInicialAdminView.setVisible(true);
     }//GEN-LAST:event_btnFecharActionPerformed
 
-    private void btnAbrirProjetosAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirProjetosAdminActionPerformed
+    private void ConfigurarProjetosAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfigurarProjetosAdminActionPerformed
         this.dispose();
         ListarPerguntasFaseProjetoView listarPerguntasFaseProjetoView = new ListarPerguntasFaseProjetoView();
         listarPerguntasFaseProjetoView.setVisible(true);
-    }//GEN-LAST:event_btnAbrirProjetosAdminActionPerformed
+    }//GEN-LAST:event_ConfigurarProjetosAdminActionPerformed
 
     private void btnVerDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerDashboardActionPerformed
         this.dispose();
         DashboardAdminView dashboardView = new DashboardAdminView();
         dashboardView.setVisible(true);
     }//GEN-LAST:event_btnVerDashboardActionPerformed
+
+    private void btnAbrirProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirProjetoActionPerformed
+        this.dispose();
+        SelecionarFasesProjetoMembroEquipeView selecionarFasesProjetoMembroEquipeView = new SelecionarFasesProjetoMembroEquipeView();
+        selecionarFasesProjetoMembroEquipeView.setVisible(true);
+    }//GEN-LAST:event_btnAbrirProjetoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -227,7 +244,8 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAbrirProjetosAdmin;
+    private javax.swing.JButton ConfigurarProjetosAdmin;
+    private javax.swing.JButton btnAbrirProjeto;
     private javax.swing.JButton btnFechar;
     private javax.swing.JButton btnNovoProjeto;
     private javax.swing.JButton btnVerDashboard;

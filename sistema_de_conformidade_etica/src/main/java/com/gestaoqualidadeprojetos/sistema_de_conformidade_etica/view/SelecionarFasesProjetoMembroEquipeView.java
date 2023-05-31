@@ -55,7 +55,7 @@ public class SelecionarFasesProjetoMembroEquipeView extends javax.swing.JFrame {
         txtTituloSelecionarModeloQuestionario.setText("Sistema de Padaria");
 
         btnAbrirFase.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnAbrirFase.setText("Responder Questionário");
+        btnAbrirFase.setText("Abrir Questionário");
         btnAbrirFase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAbrirFaseActionPerformed(evt);
@@ -63,7 +63,7 @@ public class SelecionarFasesProjetoMembroEquipeView extends javax.swing.JFrame {
         });
 
         labelFaseAtual.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        labelFaseAtual.setText("Fases do Projeto:");
+        labelFaseAtual.setText("Iterações do Projeto:");
 
         btnVoltar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnVoltar.setText("Voltar");
@@ -75,13 +75,13 @@ public class SelecionarFasesProjetoMembroEquipeView extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Iniciação", "Fechada"},
-                {"Requisitos", "Fechada"},
-                {"Projeto", "Fechada"},
-                {"Desenvolvimento", "Aberta"}
+                {"Sprint 1", "Fechada"},
+                {"Sprint 2", "Fechada"},
+                {"Sprint 3", "Fechada"},
+                {"Sprint 4", "Aberta"}
             },
             new String [] {
-                "Fase", "Status"
+                "Iteração", "Status"
             }
         ) {
             Class[] types = new Class [] {
@@ -105,11 +105,11 @@ public class SelecionarFasesProjetoMembroEquipeView extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText("Fase Atual:");
+        jLabel3.setText("Iteração Atual:");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel2.setText("Desenvolvimento");
+        jLabel2.setText("Sprint 4");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -117,7 +117,7 @@ public class SelecionarFasesProjetoMembroEquipeView extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(txtTituloSelecionarModeloQuestionario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(43, 43, 43)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,12 +128,12 @@ public class SelecionarFasesProjetoMembroEquipeView extends javax.swing.JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(btnVoltar))
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addContainerGap()
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(41, Short.MAX_VALUE))
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -170,8 +170,7 @@ public class SelecionarFasesProjetoMembroEquipeView extends javax.swing.JFrame {
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
         this.dispose();
-        ListarProjetosMembroEquipeView listarProjetosMembroEquipeView = new ListarProjetosMembroEquipeView();
-        listarProjetosMembroEquipeView.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnVoltarActionPerformed
 
     /**

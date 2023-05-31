@@ -123,7 +123,7 @@ public class SelecionarModeloQuestionarioView extends javax.swing.JFrame {
 
     private void btnProximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProximoActionPerformed
         this.dispose();
-        CriarNovaFaseView criarNovaFaseView = new CriarNovaFaseView();
+        CriarNovaIteracaoView criarNovaFaseView = new CriarNovaIteracaoView();
         criarNovaFaseView.setVisible(true);
     }//GEN-LAST:event_btnProximoActionPerformed
 

@@ -84,7 +84,7 @@
           <Font name="Segoe UI" size="18" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Criar Nova Fase"/>
+        <Property name="text" type="java.lang.String" value="Criar Nova Itera&#xe7;&#xe3;o"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="labelPergunta">
