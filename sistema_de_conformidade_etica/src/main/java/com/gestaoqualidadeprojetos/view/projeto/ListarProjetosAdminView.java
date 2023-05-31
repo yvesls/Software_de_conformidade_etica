@@ -6,6 +6,7 @@ package com.gestaoqualidadeprojetos.view.projeto;
 import com.gestaoqualidadeprojetos.view.fase.AbrirFasesProjetoMembroEquipeView;
 import com.gestaoqualidadeprojetos.view.dashboard.DashboardAdminView;
 import com.gestaoqualidadeprojetos.view.pergunta.ListarPerguntasFaseProjetoView;
+import com.gestaoqualidadeprojetos.view.pergunta.ListarPerguntasMembroProjetoFaseIteracaoView;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
 
@@ -136,19 +137,19 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(46, 46, 46)
                 .addComponent(btnNovoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnFechar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 146, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 159, Short.MAX_VALUE)
                 .addComponent(ConfigurarProjetosAdmin)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnAbrirProjeto)
-                .addGap(18, 18, 18)
+                .addGap(12, 12, 12)
                 .addComponent(btnVerDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(47, 47, 47)
-                    .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.DEFAULT_SIZE, 759, Short.MAX_VALUE)
+                    .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.DEFAULT_SIZE, 767, Short.MAX_VALUE)
                     .addGap(48, 48, 48)))
         );
         layout.setVerticalGroup(
@@ -162,7 +163,7 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
                     .addComponent(btnFechar)
                     .addComponent(ConfigurarProjetosAdmin)
                     .addComponent(btnVerDashboard)
-                    .addComponent(btnAbrirProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnAbrirProjeto))
                 .addGap(13, 13, 13))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -192,8 +193,8 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
 
     private void ConfigurarProjetosAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfigurarProjetosAdminActionPerformed
         this.dispose();
-        ListarPerguntasFaseProjetoView listarPerguntasFaseProjetoView = new ListarPerguntasFaseProjetoView();
-        listarPerguntasFaseProjetoView.setVisible(true);
+        ListarPerguntasMembroProjetoFaseIteracaoView listarPerguntasMembroProjetoFaseIteracaoView = new ListarPerguntasMembroProjetoFaseIteracaoView();
+        listarPerguntasMembroProjetoFaseIteracaoView.setVisible(true);
     }//GEN-LAST:event_ConfigurarProjetosAdminActionPerformed
 
     private void btnVerDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerDashboardActionPerformed
