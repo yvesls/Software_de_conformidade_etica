@@ -33,57 +33,38 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
     private void initComponents() {
 
         txtTituloPerguntasQuestionario = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jScrollPaneTabelaProjetos = new javax.swing.JScrollPane();
-        tablePerguntasQuestionario = new javax.swing.JTable();
         btnNovaPergunta = new javax.swing.JButton();
         labelStatus = new javax.swing.JLabel();
         txtStatusQuestionario = new javax.swing.JLabel();
         btnSalvar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
         btnSalvar1 = new javax.swing.JButton();
+        abasMembrosEquipe = new javax.swing.JTabbedPane();
+        cliente = new javax.swing.JPanel();
+        perguntasFaseAtualCliente = new javax.swing.JScrollPane();
+        tablePerguntasFaseAtualCliente = new javax.swing.JTable();
+        desenvolvedor = new javax.swing.JPanel();
+        perguntasFaseAtualDesenvolvedor = new javax.swing.JScrollPane();
+        tablePerguntasFaseAtualDesenvolvedor = new javax.swing.JTable();
+        arquitetoSoftware = new javax.swing.JPanel();
+        perguntasFaseAtualArquitetoSoftware = new javax.swing.JScrollPane();
+        tablePerguntasFaseAtualArquitetoSoftware = new javax.swing.JTable();
+        gerenteProjeto = new javax.swing.JPanel();
+        perguntasFaseAtualProjeto = new javax.swing.JScrollPane();
+        tablePerguntasFaseAtualProjeto = new javax.swing.JTable();
+        liderTecnico = new javax.swing.JPanel();
+        perguntasFaseAtualLiderTecnico = new javax.swing.JScrollPane();
+        tablePerguntasFaseAtualLiderTecnico = new javax.swing.JTable();
+        analistaQualidadee = new javax.swing.JPanel();
+        perguntasFaseAtualAnalistaQualidade = new javax.swing.JScrollPane();
+        tablePerguntasFaseAtualAnalistaQualidade = new javax.swing.JTable();
         menuAcoesPerguntasQuestionario = new javax.swing.JMenuBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         txtTituloPerguntasQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txtTituloPerguntasQuestionario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtTituloPerguntasQuestionario.setText("Perguntas da Fase");
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel2.setText("Perguntas:");
-
-        tablePerguntasQuestionario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        tablePerguntasQuestionario.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"01", "Você entendeu os objetivos do software?"},
-                {"02", "Você está disposto a fornecer feedback para a equipe de desenvolvimento durante todo o processo?"},
-                {"03", "Foi determinado quem toma as decisões em nome da sua empresa?"}
-            },
-            new String [] {
-                "#", "Pergunta"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        tablePerguntasQuestionario.setRowHeight(26);
-        tablePerguntasQuestionario.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        tablePerguntasQuestionario.setShowGrid(true);
-        tablePerguntasQuestionario.setSurrendersFocusOnKeystroke(true);
-        jScrollPaneTabelaProjetos.setViewportView(tablePerguntasQuestionario);
-        if (tablePerguntasQuestionario.getColumnModel().getColumnCount() > 0) {
-            tablePerguntasQuestionario.getColumnModel().getColumn(0).setMinWidth(50);
-            tablePerguntasQuestionario.getColumnModel().getColumn(0).setPreferredWidth(10);
-            tablePerguntasQuestionario.getColumnModel().getColumn(0).setMaxWidth(50);
-        }
+        txtTituloPerguntasQuestionario.setText("Perguntas da Etapa");
 
         btnNovaPergunta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnNovaPergunta.setText("Nova pergunta");
@@ -115,13 +96,6 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel4.setText("Participante:");
-
-        jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Desenvolvedor", "Arquiteto de Software", "Gerente de Projeto", "Líder Técnico", "Analista de Qualidade" }));
-
         btnSalvar1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnSalvar1.setText("Salvar");
         btnSalvar1.addActionListener(new java.awt.event.ActionListener() {
@@ -129,6 +103,293 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
                 btnSalvar1ActionPerformed(evt);
             }
         });
+
+        abasMembrosEquipe.setToolTipText("");
+        abasMembrosEquipe.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        abasMembrosEquipe.setName("Fases da Iteração"); // NOI18N
+
+        tablePerguntasFaseAtualCliente.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tablePerguntasFaseAtualCliente.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"01", "Você entendeu os objetivos do software?"},
+                {"02", "Você está disposto a fornecer feedback para a equipe de desenvolvimento durante todo o processo?"},
+                {"03", "Foi determinado quem toma as decisões em nome da sua empresa?"}
+            },
+            new String [] {
+                "#", "Pergunta"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tablePerguntasFaseAtualCliente.setRowHeight(26);
+        tablePerguntasFaseAtualCliente.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tablePerguntasFaseAtualCliente.setShowGrid(true);
+        tablePerguntasFaseAtualCliente.setSurrendersFocusOnKeystroke(true);
+        perguntasFaseAtualCliente.setViewportView(tablePerguntasFaseAtualCliente);
+        if (tablePerguntasFaseAtualCliente.getColumnModel().getColumnCount() > 0) {
+            tablePerguntasFaseAtualCliente.getColumnModel().getColumn(0).setMinWidth(50);
+            tablePerguntasFaseAtualCliente.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tablePerguntasFaseAtualCliente.getColumnModel().getColumn(0).setMaxWidth(50);
+        }
+
+        javax.swing.GroupLayout clienteLayout = new javax.swing.GroupLayout(cliente);
+        cliente.setLayout(clienteLayout);
+        clienteLayout.setHorizontalGroup(
+            clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clienteLayout.createSequentialGroup()
+                .addComponent(perguntasFaseAtualCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        clienteLayout.setVerticalGroup(
+            clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(clienteLayout.createSequentialGroup()
+                .addComponent(perguntasFaseAtualCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 76, Short.MAX_VALUE))
+        );
+
+        abasMembrosEquipe.addTab("Cliente", cliente);
+
+        tablePerguntasFaseAtualDesenvolvedor.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tablePerguntasFaseAtualDesenvolvedor.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"01", "Você entendeu os objetivos do software?"},
+                {"02", "Você está disposto a fornecer feedback para a equipe de desenvolvimento durante todo o processo?"},
+                {"03", "Foi determinado quem toma as decisões em nome da sua empresa?"}
+            },
+            new String [] {
+                "#", "Pergunta"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tablePerguntasFaseAtualDesenvolvedor.setRowHeight(26);
+        tablePerguntasFaseAtualDesenvolvedor.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tablePerguntasFaseAtualDesenvolvedor.setShowGrid(true);
+        tablePerguntasFaseAtualDesenvolvedor.setSurrendersFocusOnKeystroke(true);
+        perguntasFaseAtualDesenvolvedor.setViewportView(tablePerguntasFaseAtualDesenvolvedor);
+        if (tablePerguntasFaseAtualDesenvolvedor.getColumnModel().getColumnCount() > 0) {
+            tablePerguntasFaseAtualDesenvolvedor.getColumnModel().getColumn(0).setMinWidth(50);
+            tablePerguntasFaseAtualDesenvolvedor.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tablePerguntasFaseAtualDesenvolvedor.getColumnModel().getColumn(0).setMaxWidth(50);
+        }
+
+        javax.swing.GroupLayout desenvolvedorLayout = new javax.swing.GroupLayout(desenvolvedor);
+        desenvolvedor.setLayout(desenvolvedorLayout);
+        desenvolvedorLayout.setHorizontalGroup(
+            desenvolvedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, desenvolvedorLayout.createSequentialGroup()
+                .addComponent(perguntasFaseAtualDesenvolvedor, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        desenvolvedorLayout.setVerticalGroup(
+            desenvolvedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(desenvolvedorLayout.createSequentialGroup()
+                .addComponent(perguntasFaseAtualDesenvolvedor, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 76, Short.MAX_VALUE))
+        );
+
+        abasMembrosEquipe.addTab("Desenvolvedor", desenvolvedor);
+
+        tablePerguntasFaseAtualArquitetoSoftware.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tablePerguntasFaseAtualArquitetoSoftware.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"01", "Você entendeu os objetivos do software?"},
+                {"02", "Você está disposto a fornecer feedback para a equipe de desenvolvimento durante todo o processo?"},
+                {"03", "Foi determinado quem toma as decisões em nome da sua empresa?"}
+            },
+            new String [] {
+                "#", "Pergunta"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tablePerguntasFaseAtualArquitetoSoftware.setRowHeight(26);
+        tablePerguntasFaseAtualArquitetoSoftware.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tablePerguntasFaseAtualArquitetoSoftware.setShowGrid(true);
+        tablePerguntasFaseAtualArquitetoSoftware.setSurrendersFocusOnKeystroke(true);
+        perguntasFaseAtualArquitetoSoftware.setViewportView(tablePerguntasFaseAtualArquitetoSoftware);
+        if (tablePerguntasFaseAtualArquitetoSoftware.getColumnModel().getColumnCount() > 0) {
+            tablePerguntasFaseAtualArquitetoSoftware.getColumnModel().getColumn(0).setMinWidth(50);
+            tablePerguntasFaseAtualArquitetoSoftware.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tablePerguntasFaseAtualArquitetoSoftware.getColumnModel().getColumn(0).setMaxWidth(50);
+        }
+
+        javax.swing.GroupLayout arquitetoSoftwareLayout = new javax.swing.GroupLayout(arquitetoSoftware);
+        arquitetoSoftware.setLayout(arquitetoSoftwareLayout);
+        arquitetoSoftwareLayout.setHorizontalGroup(
+            arquitetoSoftwareLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, arquitetoSoftwareLayout.createSequentialGroup()
+                .addComponent(perguntasFaseAtualArquitetoSoftware, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        arquitetoSoftwareLayout.setVerticalGroup(
+            arquitetoSoftwareLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(arquitetoSoftwareLayout.createSequentialGroup()
+                .addComponent(perguntasFaseAtualArquitetoSoftware, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 76, Short.MAX_VALUE))
+        );
+
+        abasMembrosEquipe.addTab("Arquiteto de Software", arquitetoSoftware);
+
+        tablePerguntasFaseAtualProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tablePerguntasFaseAtualProjeto.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"01", "Você entendeu os objetivos do software?"},
+                {"02", "Você está disposto a fornecer feedback para a equipe de desenvolvimento durante todo o processo?"},
+                {"03", "Foi determinado quem toma as decisões em nome da sua empresa?"}
+            },
+            new String [] {
+                "#", "Pergunta"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tablePerguntasFaseAtualProjeto.setRowHeight(26);
+        tablePerguntasFaseAtualProjeto.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tablePerguntasFaseAtualProjeto.setShowGrid(true);
+        tablePerguntasFaseAtualProjeto.setSurrendersFocusOnKeystroke(true);
+        perguntasFaseAtualProjeto.setViewportView(tablePerguntasFaseAtualProjeto);
+        if (tablePerguntasFaseAtualProjeto.getColumnModel().getColumnCount() > 0) {
+            tablePerguntasFaseAtualProjeto.getColumnModel().getColumn(0).setMinWidth(50);
+            tablePerguntasFaseAtualProjeto.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tablePerguntasFaseAtualProjeto.getColumnModel().getColumn(0).setMaxWidth(50);
+        }
+
+        javax.swing.GroupLayout gerenteProjetoLayout = new javax.swing.GroupLayout(gerenteProjeto);
+        gerenteProjeto.setLayout(gerenteProjetoLayout);
+        gerenteProjetoLayout.setHorizontalGroup(
+            gerenteProjetoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gerenteProjetoLayout.createSequentialGroup()
+                .addComponent(perguntasFaseAtualProjeto, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        gerenteProjetoLayout.setVerticalGroup(
+            gerenteProjetoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(gerenteProjetoLayout.createSequentialGroup()
+                .addComponent(perguntasFaseAtualProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 76, Short.MAX_VALUE))
+        );
+
+        abasMembrosEquipe.addTab("Gerente de Projeto", gerenteProjeto);
+
+        tablePerguntasFaseAtualLiderTecnico.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tablePerguntasFaseAtualLiderTecnico.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"01", "Você entendeu os objetivos do software?"},
+                {"02", "Você está disposto a fornecer feedback para a equipe de desenvolvimento durante todo o processo?"},
+                {"03", "Foi determinado quem toma as decisões em nome da sua empresa?"}
+            },
+            new String [] {
+                "#", "Pergunta"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tablePerguntasFaseAtualLiderTecnico.setRowHeight(26);
+        tablePerguntasFaseAtualLiderTecnico.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tablePerguntasFaseAtualLiderTecnico.setShowGrid(true);
+        tablePerguntasFaseAtualLiderTecnico.setSurrendersFocusOnKeystroke(true);
+        perguntasFaseAtualLiderTecnico.setViewportView(tablePerguntasFaseAtualLiderTecnico);
+        if (tablePerguntasFaseAtualLiderTecnico.getColumnModel().getColumnCount() > 0) {
+            tablePerguntasFaseAtualLiderTecnico.getColumnModel().getColumn(0).setMinWidth(50);
+            tablePerguntasFaseAtualLiderTecnico.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tablePerguntasFaseAtualLiderTecnico.getColumnModel().getColumn(0).setMaxWidth(50);
+        }
+
+        javax.swing.GroupLayout liderTecnicoLayout = new javax.swing.GroupLayout(liderTecnico);
+        liderTecnico.setLayout(liderTecnicoLayout);
+        liderTecnicoLayout.setHorizontalGroup(
+            liderTecnicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, liderTecnicoLayout.createSequentialGroup()
+                .addComponent(perguntasFaseAtualLiderTecnico, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        liderTecnicoLayout.setVerticalGroup(
+            liderTecnicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(liderTecnicoLayout.createSequentialGroup()
+                .addComponent(perguntasFaseAtualLiderTecnico, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 76, Short.MAX_VALUE))
+        );
+
+        abasMembrosEquipe.addTab("Líder Técnico", liderTecnico);
+
+        tablePerguntasFaseAtualAnalistaQualidade.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tablePerguntasFaseAtualAnalistaQualidade.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"01", "Você entendeu os objetivos do software?"},
+                {"02", "Você está disposto a fornecer feedback para a equipe de desenvolvimento durante todo o processo?"},
+                {"03", "Foi determinado quem toma as decisões em nome da sua empresa?"}
+            },
+            new String [] {
+                "#", "Pergunta"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tablePerguntasFaseAtualAnalistaQualidade.setRowHeight(26);
+        tablePerguntasFaseAtualAnalistaQualidade.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tablePerguntasFaseAtualAnalistaQualidade.setShowGrid(true);
+        tablePerguntasFaseAtualAnalistaQualidade.setSurrendersFocusOnKeystroke(true);
+        perguntasFaseAtualAnalistaQualidade.setViewportView(tablePerguntasFaseAtualAnalistaQualidade);
+        if (tablePerguntasFaseAtualAnalistaQualidade.getColumnModel().getColumnCount() > 0) {
+            tablePerguntasFaseAtualAnalistaQualidade.getColumnModel().getColumn(0).setMinWidth(50);
+            tablePerguntasFaseAtualAnalistaQualidade.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tablePerguntasFaseAtualAnalistaQualidade.getColumnModel().getColumn(0).setMaxWidth(50);
+        }
+
+        javax.swing.GroupLayout analistaQualidadeeLayout = new javax.swing.GroupLayout(analistaQualidadee);
+        analistaQualidadee.setLayout(analistaQualidadeeLayout);
+        analistaQualidadeeLayout.setHorizontalGroup(
+            analistaQualidadeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, analistaQualidadeeLayout.createSequentialGroup()
+                .addComponent(perguntasFaseAtualAnalistaQualidade, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        analistaQualidadeeLayout.setVerticalGroup(
+            analistaQualidadeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(analistaQualidadeeLayout.createSequentialGroup()
+                .addComponent(perguntasFaseAtualAnalistaQualidade, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 76, Short.MAX_VALUE))
+        );
+
+        abasMembrosEquipe.addTab("Analista de Qualidade", analistaQualidadee);
+
         setJMenuBar(menuAcoesPerguntasQuestionario);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -137,50 +398,32 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(txtTituloPerguntasQuestionario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(387, Short.MAX_VALUE)
-                .addComponent(jLabel4)
-                .addGap(18, 18, 18)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 385, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(65, 65, 65)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(btnNovaPergunta)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnCancelar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnSalvar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnSalvar1))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(btnNovaPergunta)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnCancelar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnSalvar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnSalvar1)))
-                        .addContainerGap())))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(labelStatus)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtStatusQuestionario)
-                .addContainerGap())
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(labelStatus)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtStatusQuestionario))
+                    .addComponent(abasMembrosEquipe))
+                .addGap(65, 65, 65))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(txtTituloPerguntasQuestionario)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(16, 16, 16)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPaneTabelaProjetos, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(25, 25, 25)
+                .addComponent(abasMembrosEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(203, 203, 203)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelStatus)
                     .addComponent(txtStatusQuestionario))
@@ -192,8 +435,10 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnSalvar)
                         .addComponent(btnSalvar1)))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
+
+        abasMembrosEquipe.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -205,13 +450,13 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         dispose();
-        ListarPerguntasFaseProjetoView listarQuestionariosView = new ListarPerguntasFaseProjetoView();
+        ListarPerguntasEtapaIteracaoProjetoView listarQuestionariosView = new ListarPerguntasEtapaIteracaoProjetoView();
         listarQuestionariosView.setVisible(true);
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         this.dispose();
-        ListarPerguntasFaseProjetoView listarQuestionariosView = new ListarPerguntasFaseProjetoView();
+        ListarPerguntasEtapaIteracaoProjetoView listarQuestionariosView = new ListarPerguntasEtapaIteracaoProjetoView();
         listarQuestionariosView.setVisible(true);
     }//GEN-LAST:event_btnCancelarActionPerformed
 
@@ -248,6 +493,18 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -258,17 +515,31 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTabbedPane abasMembrosEquipe;
+    private javax.swing.JPanel analistaQualidadee;
+    private javax.swing.JPanel arquitetoSoftware;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnNovaPergunta;
     private javax.swing.JButton btnSalvar;
     private javax.swing.JButton btnSalvar1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JScrollPane jScrollPaneTabelaProjetos;
+    private javax.swing.JPanel cliente;
+    private javax.swing.JPanel desenvolvedor;
+    private javax.swing.JPanel gerenteProjeto;
     private javax.swing.JLabel labelStatus;
+    private javax.swing.JPanel liderTecnico;
     private javax.swing.JMenuBar menuAcoesPerguntasQuestionario;
-    private javax.swing.JTable tablePerguntasQuestionario;
+    private javax.swing.JScrollPane perguntasFaseAtualAnalistaQualidade;
+    private javax.swing.JScrollPane perguntasFaseAtualArquitetoSoftware;
+    private javax.swing.JScrollPane perguntasFaseAtualCliente;
+    private javax.swing.JScrollPane perguntasFaseAtualDesenvolvedor;
+    private javax.swing.JScrollPane perguntasFaseAtualLiderTecnico;
+    private javax.swing.JScrollPane perguntasFaseAtualProjeto;
+    private javax.swing.JTable tablePerguntasFaseAtualAnalistaQualidade;
+    private javax.swing.JTable tablePerguntasFaseAtualArquitetoSoftware;
+    private javax.swing.JTable tablePerguntasFaseAtualCliente;
+    private javax.swing.JTable tablePerguntasFaseAtualDesenvolvedor;
+    private javax.swing.JTable tablePerguntasFaseAtualLiderTecnico;
+    private javax.swing.JTable tablePerguntasFaseAtualProjeto;
     private javax.swing.JLabel txtStatusQuestionario;
     private javax.swing.JLabel txtTituloPerguntasQuestionario;
     // End of variables declaration//GEN-END:variables

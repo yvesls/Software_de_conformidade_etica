@@ -5,8 +5,8 @@
 package com.gestaoqualidadeprojetos.view.projeto;
 import com.gestaoqualidadeprojetos.view.fase.AbrirFasesProjetoMembroEquipeView;
 import com.gestaoqualidadeprojetos.view.dashboard.DashboardAdminView;
-import com.gestaoqualidadeprojetos.view.pergunta.ListarPerguntasFaseProjetoView;
-import com.gestaoqualidadeprojetos.view.pergunta.ListarPerguntasMembroProjetoFaseIteracaoView;
+import com.gestaoqualidadeprojetos.view.pergunta.ListarPerguntasEtapaIteracaoProjetoView;
+import com.gestaoqualidadeprojetos.view.pergunta.ListarPerguntasEtapaIteracaoProjetoView;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
 
@@ -193,7 +193,7 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
 
     private void ConfigurarProjetosAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfigurarProjetosAdminActionPerformed
         this.dispose();
-        ListarPerguntasMembroProjetoFaseIteracaoView listarPerguntasMembroProjetoFaseIteracaoView = new ListarPerguntasMembroProjetoFaseIteracaoView();
+        ListarPerguntasEtapaIteracaoProjetoView listarPerguntasMembroProjetoFaseIteracaoView = new ListarPerguntasEtapaIteracaoProjetoView();
         listarPerguntasMembroProjetoFaseIteracaoView.setVisible(true);
     }//GEN-LAST:event_ConfigurarProjetosAdminActionPerformed
 

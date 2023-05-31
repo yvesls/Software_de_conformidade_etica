@@ -4,7 +4,7 @@
  */
 package com.gestaoqualidadeprojetos.view.iteracao;
 
-import com.gestaoqualidadeprojetos.view.pergunta.ListarPerguntasFaseProjetoView;
+import com.gestaoqualidadeprojetos.view.pergunta.ListarPerguntasEtapaIteracaoProjetoView;
 
 /**
  *
@@ -18,6 +18,7 @@ public class AbrirIteracaoProjetoAdminView extends javax.swing.JFrame {
     public AbrirIteracaoProjetoAdminView() {
         initComponents();
         setVisible(true);
+        setResizable(false);
         this.setLocationRelativeTo(this.getParent());
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
     }
@@ -36,9 +37,17 @@ public class AbrirIteracaoProjetoAdminView extends javax.swing.JFrame {
         btnAbrirFase = new javax.swing.JButton();
         labelFaseAtual = new javax.swing.JLabel();
         btnVoltar = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
+        abasIteracoes = new javax.swing.JTabbedPane();
+        iteracaoAberta = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tabelaIteracaoAberta = new javax.swing.JTable();
+        iteracaoFechada = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tabelaIteracaoFechada = new javax.swing.JTable();
+        iteracaoRascunho = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        tabelaIteracaoRascunho = new javax.swing.JTable();
 
         btnCancelar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnCancelar.setText("Cancelar");
@@ -63,6 +72,7 @@ public class AbrirIteracaoProjetoAdminView extends javax.swing.JFrame {
         });
 
         labelFaseAtual.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        labelFaseAtual.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelFaseAtual.setText("Iterações do Projeto");
 
         btnVoltar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -73,13 +83,57 @@ public class AbrirIteracaoProjetoAdminView extends javax.swing.JFrame {
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton1.setText("Criar Nova");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        abasIteracoes.setToolTipText("");
+        abasIteracoes.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        abasIteracoes.setName("Fases da Iteração"); // NOI18N
+
+        tabelaIteracaoAberta.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"Sprint 3", "Fechada"}
+            },
+            new String [] {
+                "Iteração", "Status"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        tabelaIteracaoAberta.setRowHeight(26);
+        tabelaIteracaoAberta.setShowGrid(true);
+        jScrollPane3.setViewportView(tabelaIteracaoAberta);
+
+        javax.swing.GroupLayout iteracaoAbertaLayout = new javax.swing.GroupLayout(iteracaoAberta);
+        iteracaoAberta.setLayout(iteracaoAbertaLayout);
+        iteracaoAbertaLayout.setHorizontalGroup(
+            iteracaoAbertaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
+        );
+        iteracaoAbertaLayout.setVerticalGroup(
+            iteracaoAbertaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(iteracaoAbertaLayout.createSequentialGroup()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        abasIteracoes.addTab("Abertas", iteracaoAberta);
+
+        tabelaIteracaoFechada.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"Sprint 1", "Fechada"},
-                {"Sprint 2", "Fechada"},
-                {"Sprint 3", "Fechada"},
-                {"Sprint 4", "Aberta"},
-                {"Sprint 5", "Rascunho"}
+                {"Sprint 2", "Fechada"}
             },
             new String [] {
                 "Iteração", "Status"
@@ -100,56 +154,98 @@ public class AbrirIteracaoProjetoAdminView extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jTable1.setRowHeight(26);
-        jTable1.setShowGrid(true);
-        jScrollPane1.setViewportView(jTable1);
+        tabelaIteracaoFechada.setRowHeight(26);
+        tabelaIteracaoFechada.setShowGrid(true);
+        jScrollPane2.setViewportView(tabelaIteracaoFechada);
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton1.setText("Criar Nova");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        javax.swing.GroupLayout iteracaoFechadaLayout = new javax.swing.GroupLayout(iteracaoFechada);
+        iteracaoFechada.setLayout(iteracaoFechadaLayout);
+        iteracaoFechadaLayout.setHorizontalGroup(
+            iteracaoFechadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(iteracaoFechadaLayout.createSequentialGroup()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        iteracaoFechadaLayout.setVerticalGroup(
+            iteracaoFechadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(iteracaoFechadaLayout.createSequentialGroup()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        abasIteracoes.addTab("Fechadas", iteracaoFechada);
+
+        tabelaIteracaoRascunho.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"Sprint 4", "Rascunho"},
+                {"Sprint 5", "Rascunho"},
+                {"Sprint 6", "Rascunho"}
+            },
+            new String [] {
+                "Iteração", "Status"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
             }
         });
+        tabelaIteracaoRascunho.setRowHeight(26);
+        tabelaIteracaoRascunho.setShowGrid(true);
+        jScrollPane4.setViewportView(tabelaIteracaoRascunho);
+
+        javax.swing.GroupLayout iteracaoRascunhoLayout = new javax.swing.GroupLayout(iteracaoRascunho);
+        iteracaoRascunho.setLayout(iteracaoRascunhoLayout);
+        iteracaoRascunhoLayout.setHorizontalGroup(
+            iteracaoRascunhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
+        );
+        iteracaoRascunhoLayout.setVerticalGroup(
+            iteracaoRascunhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(iteracaoRascunhoLayout.createSequentialGroup()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        abasIteracoes.addTab("Rascunhos", iteracaoRascunho);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(txtTituloSelecionarModeloQuestionario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(labelFaseAtual, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(25, 25, 25)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(abasIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnAbrirFase)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnVoltar))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(178, 178, 178)
-                        .addComponent(labelFaseAtual)))
-                .addContainerGap(51, Short.MAX_VALUE))
+                        .addComponent(btnAbrirFase)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton1)
+                        .addGap(97, 97, 97)
+                        .addComponent(btnVoltar)))
+                .addGap(25, 25, 25))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
+                .addGap(25, 25, 25)
                 .addComponent(txtTituloSelecionarModeloQuestionario)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(10, 10, 10)
                 .addComponent(labelFaseAtual)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(20, 20, 20)
+                .addComponent(abasIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnVoltar)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnAbrirFase)
                         .addComponent(jButton1)))
-                .addGap(20, 20, 20))
+                .addGap(15, 15, 15))
         );
 
         pack();
@@ -157,7 +253,7 @@ public class AbrirIteracaoProjetoAdminView extends javax.swing.JFrame {
 
     private void btnAbrirFaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirFaseActionPerformed
         dispose();
-        ListarPerguntasFaseProjetoView listarQuestionariosView = new ListarPerguntasFaseProjetoView();
+        ListarPerguntasEtapaIteracaoProjetoView listarQuestionariosView = new ListarPerguntasEtapaIteracaoProjetoView();
         listarQuestionariosView.setVisible(true);
     }//GEN-LAST:event_btnAbrirFaseActionPerformed
 
@@ -167,7 +263,7 @@ public class AbrirIteracaoProjetoAdminView extends javax.swing.JFrame {
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
         this.dispose();
-        ListarPerguntasFaseProjetoView listarQuestionariosView = new ListarPerguntasFaseProjetoView();
+        ListarPerguntasEtapaIteracaoProjetoView listarQuestionariosView = new ListarPerguntasEtapaIteracaoProjetoView();
         listarQuestionariosView.setVisible(true);
     }//GEN-LAST:event_btnVoltarActionPerformed
 
@@ -458,6 +554,774 @@ public class AbrirIteracaoProjetoAdminView extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -468,13 +1332,119 @@ public class AbrirIteracaoProjetoAdminView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTabbedPane abasFasesIteracao;
+    private javax.swing.JTabbedPane abasFasesIteracao1;
+    private javax.swing.JTabbedPane abasFasesIteracao2;
+    private javax.swing.JTabbedPane abasFasesIteracao3;
+    private javax.swing.JTabbedPane abasFasesIteracao4;
+    private javax.swing.JTabbedPane abasFasesIteracao5;
+    private javax.swing.JTabbedPane abasFasesIteracao6;
+    private javax.swing.JTabbedPane abasFasesIteracao7;
+    private javax.swing.JTabbedPane abasFasesIteracao8;
+    private javax.swing.JTabbedPane abasIteracoes;
+    private javax.swing.JTabbedPane abasMembrosEquipe;
+    private javax.swing.JTabbedPane abasMembrosEquipe1;
+    private javax.swing.JPanel analistaQualidadee;
+    private javax.swing.JPanel analistaQualidadee1;
+    private javax.swing.JPanel arquitetoSoftware;
+    private javax.swing.JPanel arquitetoSoftware1;
     private javax.swing.JButton btnAbrirFase;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnVoltar;
+    private javax.swing.JPanel cliente;
+    private javax.swing.JPanel cliente1;
+    private javax.swing.JPanel desenvolvedor;
+    private javax.swing.JPanel desenvolvedor1;
+    private javax.swing.JScrollPane desenvolvimentoPerguntasProjeto;
+    private javax.swing.JScrollPane desenvolvimentoPerguntasProjeto1;
+    private javax.swing.JPanel faseDesenvolvimento;
+    private javax.swing.JPanel faseDesenvolvimento1;
+    private javax.swing.JPanel faseIniciacao;
+    private javax.swing.JPanel faseIniciacao1;
+    private javax.swing.JPanel faseIniciacao2;
+    private javax.swing.JPanel faseIniciacao3;
+    private javax.swing.JPanel faseIniciacao4;
+    private javax.swing.JPanel faseIniciacao5;
+    private javax.swing.JPanel faseIniciacao6;
+    private javax.swing.JPanel faseIniciacao7;
+    private javax.swing.JPanel faseIniciacao8;
+    private javax.swing.JPanel faseProjeto;
+    private javax.swing.JPanel faseProjeto1;
+    private javax.swing.JPanel faseRequisitos;
+    private javax.swing.JPanel faseRequisitos1;
+    private javax.swing.JPanel faseTesteVerificacao;
+    private javax.swing.JPanel faseTesteVerificacao1;
+    private javax.swing.JPanel gerenteProjeto;
+    private javax.swing.JPanel gerenteProjeto1;
+    private javax.swing.JScrollPane iniciacaoPerguntasProjeto;
+    private javax.swing.JScrollPane iniciacaoPerguntasProjeto1;
+    private javax.swing.JScrollPane iniciacaoPerguntasProjeto2;
+    private javax.swing.JScrollPane iniciacaoPerguntasProjeto3;
+    private javax.swing.JScrollPane iniciacaoPerguntasProjeto4;
+    private javax.swing.JScrollPane iniciacaoPerguntasProjeto5;
+    private javax.swing.JScrollPane iniciacaoPerguntasProjeto6;
+    private javax.swing.JScrollPane iniciacaoPerguntasProjeto7;
+    private javax.swing.JScrollPane iniciacaoPerguntasProjeto8;
+    private javax.swing.JPanel iteracaoAberta;
+    private javax.swing.JPanel iteracaoFechada;
+    private javax.swing.JPanel iteracaoRascunho;
     private javax.swing.JButton jButton1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JLabel labelFaseAtual;
+    private javax.swing.JPanel liderTecnico;
+    private javax.swing.JPanel liderTecnico1;
+    private javax.swing.JScrollPane perguntasFaseAtualAnalistaQualidade;
+    private javax.swing.JScrollPane perguntasFaseAtualAnalistaQualidade1;
+    private javax.swing.JScrollPane perguntasFaseAtualArquitetoSoftware;
+    private javax.swing.JScrollPane perguntasFaseAtualArquitetoSoftware1;
+    private javax.swing.JScrollPane perguntasFaseAtualCliente;
+    private javax.swing.JScrollPane perguntasFaseAtualCliente1;
+    private javax.swing.JScrollPane perguntasFaseAtualDesenvolvedor;
+    private javax.swing.JScrollPane perguntasFaseAtualDesenvolvedor1;
+    private javax.swing.JScrollPane perguntasFaseAtualLiderTecnico;
+    private javax.swing.JScrollPane perguntasFaseAtualLiderTecnico1;
+    private javax.swing.JScrollPane perguntasFaseAtualProjeto;
+    private javax.swing.JScrollPane perguntasFaseAtualProjeto1;
+    private javax.swing.JScrollPane projetoPerguntasProjeto;
+    private javax.swing.JScrollPane projetoPerguntasProjeto1;
+    private javax.swing.JScrollPane requisitosPerguntasProjeto;
+    private javax.swing.JScrollPane requisitosPerguntasProjeto1;
+    private javax.swing.JTable tabelaIteracaoAberta;
+    private javax.swing.JTable tabelaIteracaoFechada;
+    private javax.swing.JTable tabelaIteracaoRascunho;
+    private javax.swing.JTable tableDesenvolvimentoPerguntasProjeto;
+    private javax.swing.JTable tableDesenvolvimentoPerguntasProjeto1;
+    private javax.swing.JTable tableIniciacaoPerguntasProjeto;
+    private javax.swing.JTable tableIniciacaoPerguntasProjeto1;
+    private javax.swing.JTable tableIniciacaoPerguntasProjeto2;
+    private javax.swing.JTable tableIniciacaoPerguntasProjeto3;
+    private javax.swing.JTable tableIniciacaoPerguntasProjeto4;
+    private javax.swing.JTable tableIniciacaoPerguntasProjeto5;
+    private javax.swing.JTable tableIniciacaoPerguntasProjeto6;
+    private javax.swing.JTable tableIniciacaoPerguntasProjeto7;
+    private javax.swing.JTable tableIniciacaoPerguntasProjeto8;
+    private javax.swing.JTable tablePerguntasFaseAtualAnalistaQualidade;
+    private javax.swing.JTable tablePerguntasFaseAtualAnalistaQualidade1;
+    private javax.swing.JTable tablePerguntasFaseAtualArquitetoSoftware;
+    private javax.swing.JTable tablePerguntasFaseAtualArquitetoSoftware1;
+    private javax.swing.JTable tablePerguntasFaseAtualCliente;
+    private javax.swing.JTable tablePerguntasFaseAtualCliente1;
+    private javax.swing.JTable tablePerguntasFaseAtualDesenvolvedor;
+    private javax.swing.JTable tablePerguntasFaseAtualDesenvolvedor1;
+    private javax.swing.JTable tablePerguntasFaseAtualLiderTecnico;
+    private javax.swing.JTable tablePerguntasFaseAtualLiderTecnico1;
+    private javax.swing.JTable tablePerguntasFaseAtualProjeto;
+    private javax.swing.JTable tablePerguntasFaseAtualProjeto1;
+    private javax.swing.JTable tableProjetoPerguntasProjeto;
+    private javax.swing.JTable tableProjetoPerguntasProjeto1;
+    private javax.swing.JTable tableRequisitosPerguntasProjeto;
+    private javax.swing.JTable tableRequisitosPerguntasProjeto1;
+    private javax.swing.JTable tableTesteVerificacaoPerguntasProjeto;
+    private javax.swing.JTable tableTesteVerificacaoPerguntasProjeto1;
+    private javax.swing.JScrollPane testeVerificacaoPerguntasProjeto;
+    private javax.swing.JScrollPane testeVerificacaoPerguntasProjeto1;
     private javax.swing.JLabel txtTituloSelecionarModeloQuestionario;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,7 +4,6 @@
  */
 package com.gestaoqualidadeprojetos.view.projeto;
 
-import com.gestaoqualidadeprojetos.view.DefinirClassificacaoAceitacao;
 import com.gestaoqualidadeprojetos.view.projeto.ListarProjetosAdminView;
 import javax.swing.JFrame;
 

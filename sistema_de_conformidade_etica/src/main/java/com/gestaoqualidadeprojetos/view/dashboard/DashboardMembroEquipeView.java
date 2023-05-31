@@ -4,7 +4,6 @@
  */
 package com.gestaoqualidadeprojetos.view.dashboard;
 
-import com.gestaoqualidadeprojetos.view.FaixaPorMembroView;
 import com.gestaoqualidadeprojetos.view.projeto.ListarProjetosMembroEquipeView;
 import java.awt.Color;
 import javax.swing.JFrame;

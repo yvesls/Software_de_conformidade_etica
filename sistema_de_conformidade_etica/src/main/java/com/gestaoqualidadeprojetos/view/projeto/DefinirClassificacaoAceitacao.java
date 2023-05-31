@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.gestaoqualidadeprojetos.view;
+package com.gestaoqualidadeprojetos.view.projeto;
 
 import com.gestaoqualidadeprojetos.view.projeto.CriarNovoProjetoView;
 import com.gestaoqualidadeprojetos.view.questionario.SelecionarModeloQuestionarioView;

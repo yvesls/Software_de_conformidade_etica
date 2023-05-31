@@ -186,7 +186,7 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         dispose();
-        ListarPerguntasFaseProjetoView listarQuestionariosView = new ListarPerguntasFaseProjetoView();
+        ListarPerguntasEtapaIteracaoProjetoView listarQuestionariosView = new ListarPerguntasEtapaIteracaoProjetoView();
         listarQuestionariosView.setVisible(true);
     }//GEN-LAST:event_btnSalvarActionPerformed
 
