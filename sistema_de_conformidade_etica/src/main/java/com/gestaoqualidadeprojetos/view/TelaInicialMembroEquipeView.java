@@ -40,10 +40,12 @@ public class TelaInicialMembroEquipeView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu");
 
+        jMenuBar1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
         menuProjetos.setText("Projetos");
         menuProjetos.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
 
-        itemMenuAcessarProjetos.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        itemMenuAcessarProjetos.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         itemMenuAcessarProjetos.setText("Acessar projetos");
         itemMenuAcessarProjetos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,7 +59,7 @@ public class TelaInicialMembroEquipeView extends javax.swing.JFrame {
         menuAvisos.setText("Avisos");
         menuAvisos.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
 
-        itemMenuVerAvisos.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        itemMenuVerAvisos.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         itemMenuVerAvisos.setText("Ver Avisos");
         itemMenuVerAvisos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,6 +73,7 @@ public class TelaInicialMembroEquipeView extends javax.swing.JFrame {
         menuSair.setText("Sair");
         menuSair.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
 
+        itemMenuLogout.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         itemMenuLogout.setText("Logout");
         itemMenuLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

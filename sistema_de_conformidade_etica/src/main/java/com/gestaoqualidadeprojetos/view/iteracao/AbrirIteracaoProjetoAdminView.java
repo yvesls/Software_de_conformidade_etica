@@ -95,9 +95,14 @@ public class AbrirIteracaoProjetoAdminView extends javax.swing.JFrame {
         abasIteracoes.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         abasIteracoes.setName("Fases da Iteração"); // NOI18N
 
+        tabelaIteracaoAberta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tabelaIteracaoAberta.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Sprint 3", "Fechada"}
+                {"Sprint 3", "Fechada"},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
                 "Iteração", "Status"
@@ -119,21 +124,25 @@ public class AbrirIteracaoProjetoAdminView extends javax.swing.JFrame {
         iteracaoAberta.setLayout(iteracaoAbertaLayout);
         iteracaoAbertaLayout.setHorizontalGroup(
             iteracaoAbertaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 383, Short.MAX_VALUE)
         );
         iteracaoAbertaLayout.setVerticalGroup(
             iteracaoAbertaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(iteracaoAbertaLayout.createSequentialGroup()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         abasIteracoes.addTab("Abertas", iteracaoAberta);
 
+        tabelaIteracaoFechada.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tabelaIteracaoFechada.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"Sprint 1", "Fechada"},
-                {"Sprint 2", "Fechada"}
+                {"Sprint 2", "Fechada"},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
                 "Iteração", "Status"
@@ -154,6 +163,7 @@ public class AbrirIteracaoProjetoAdminView extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tabelaIteracaoFechada.setPreferredSize(new java.awt.Dimension(155, 130));
         tabelaIteracaoFechada.setRowHeight(26);
         tabelaIteracaoFechada.setShowGrid(true);
         jScrollPane2.setViewportView(tabelaIteracaoFechada);
@@ -169,17 +179,20 @@ public class AbrirIteracaoProjetoAdminView extends javax.swing.JFrame {
         iteracaoFechadaLayout.setVerticalGroup(
             iteracaoFechadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(iteracaoFechadaLayout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         abasIteracoes.addTab("Fechadas", iteracaoFechada);
 
+        tabelaIteracaoRascunho.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tabelaIteracaoRascunho.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"Sprint 4", "Rascunho"},
                 {"Sprint 5", "Rascunho"},
-                {"Sprint 6", "Rascunho"}
+                {"Sprint 6", "Rascunho"},
+                {null, null},
+                {null, null}
             },
             new String [] {
                 "Iteração", "Status"
@@ -206,8 +219,8 @@ public class AbrirIteracaoProjetoAdminView extends javax.swing.JFrame {
         iteracaoRascunhoLayout.setVerticalGroup(
             iteracaoRascunhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(iteracaoRascunhoLayout.createSequentialGroup()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         abasIteracoes.addTab("Rascunhos", iteracaoRascunho);
@@ -238,8 +251,8 @@ public class AbrirIteracaoProjetoAdminView extends javax.swing.JFrame {
                 .addGap(10, 10, 10)
                 .addComponent(labelFaseAtual)
                 .addGap(20, 20, 20)
-                .addComponent(abasIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(abasIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnVoltar)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1332,59 +1345,10 @@ public class AbrirIteracaoProjetoAdminView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTabbedPane abasFasesIteracao;
-    private javax.swing.JTabbedPane abasFasesIteracao1;
-    private javax.swing.JTabbedPane abasFasesIteracao2;
-    private javax.swing.JTabbedPane abasFasesIteracao3;
-    private javax.swing.JTabbedPane abasFasesIteracao4;
-    private javax.swing.JTabbedPane abasFasesIteracao5;
-    private javax.swing.JTabbedPane abasFasesIteracao6;
-    private javax.swing.JTabbedPane abasFasesIteracao7;
-    private javax.swing.JTabbedPane abasFasesIteracao8;
     private javax.swing.JTabbedPane abasIteracoes;
-    private javax.swing.JTabbedPane abasMembrosEquipe;
-    private javax.swing.JTabbedPane abasMembrosEquipe1;
-    private javax.swing.JPanel analistaQualidadee;
-    private javax.swing.JPanel analistaQualidadee1;
-    private javax.swing.JPanel arquitetoSoftware;
-    private javax.swing.JPanel arquitetoSoftware1;
     private javax.swing.JButton btnAbrirFase;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnVoltar;
-    private javax.swing.JPanel cliente;
-    private javax.swing.JPanel cliente1;
-    private javax.swing.JPanel desenvolvedor;
-    private javax.swing.JPanel desenvolvedor1;
-    private javax.swing.JScrollPane desenvolvimentoPerguntasProjeto;
-    private javax.swing.JScrollPane desenvolvimentoPerguntasProjeto1;
-    private javax.swing.JPanel faseDesenvolvimento;
-    private javax.swing.JPanel faseDesenvolvimento1;
-    private javax.swing.JPanel faseIniciacao;
-    private javax.swing.JPanel faseIniciacao1;
-    private javax.swing.JPanel faseIniciacao2;
-    private javax.swing.JPanel faseIniciacao3;
-    private javax.swing.JPanel faseIniciacao4;
-    private javax.swing.JPanel faseIniciacao5;
-    private javax.swing.JPanel faseIniciacao6;
-    private javax.swing.JPanel faseIniciacao7;
-    private javax.swing.JPanel faseIniciacao8;
-    private javax.swing.JPanel faseProjeto;
-    private javax.swing.JPanel faseProjeto1;
-    private javax.swing.JPanel faseRequisitos;
-    private javax.swing.JPanel faseRequisitos1;
-    private javax.swing.JPanel faseTesteVerificacao;
-    private javax.swing.JPanel faseTesteVerificacao1;
-    private javax.swing.JPanel gerenteProjeto;
-    private javax.swing.JPanel gerenteProjeto1;
-    private javax.swing.JScrollPane iniciacaoPerguntasProjeto;
-    private javax.swing.JScrollPane iniciacaoPerguntasProjeto1;
-    private javax.swing.JScrollPane iniciacaoPerguntasProjeto2;
-    private javax.swing.JScrollPane iniciacaoPerguntasProjeto3;
-    private javax.swing.JScrollPane iniciacaoPerguntasProjeto4;
-    private javax.swing.JScrollPane iniciacaoPerguntasProjeto5;
-    private javax.swing.JScrollPane iniciacaoPerguntasProjeto6;
-    private javax.swing.JScrollPane iniciacaoPerguntasProjeto7;
-    private javax.swing.JScrollPane iniciacaoPerguntasProjeto8;
     private javax.swing.JPanel iteracaoAberta;
     private javax.swing.JPanel iteracaoFechada;
     private javax.swing.JPanel iteracaoRascunho;
@@ -1393,58 +1357,9 @@ public class AbrirIteracaoProjetoAdminView extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JLabel labelFaseAtual;
-    private javax.swing.JPanel liderTecnico;
-    private javax.swing.JPanel liderTecnico1;
-    private javax.swing.JScrollPane perguntasFaseAtualAnalistaQualidade;
-    private javax.swing.JScrollPane perguntasFaseAtualAnalistaQualidade1;
-    private javax.swing.JScrollPane perguntasFaseAtualArquitetoSoftware;
-    private javax.swing.JScrollPane perguntasFaseAtualArquitetoSoftware1;
-    private javax.swing.JScrollPane perguntasFaseAtualCliente;
-    private javax.swing.JScrollPane perguntasFaseAtualCliente1;
-    private javax.swing.JScrollPane perguntasFaseAtualDesenvolvedor;
-    private javax.swing.JScrollPane perguntasFaseAtualDesenvolvedor1;
-    private javax.swing.JScrollPane perguntasFaseAtualLiderTecnico;
-    private javax.swing.JScrollPane perguntasFaseAtualLiderTecnico1;
-    private javax.swing.JScrollPane perguntasFaseAtualProjeto;
-    private javax.swing.JScrollPane perguntasFaseAtualProjeto1;
-    private javax.swing.JScrollPane projetoPerguntasProjeto;
-    private javax.swing.JScrollPane projetoPerguntasProjeto1;
-    private javax.swing.JScrollPane requisitosPerguntasProjeto;
-    private javax.swing.JScrollPane requisitosPerguntasProjeto1;
     private javax.swing.JTable tabelaIteracaoAberta;
     private javax.swing.JTable tabelaIteracaoFechada;
     private javax.swing.JTable tabelaIteracaoRascunho;
-    private javax.swing.JTable tableDesenvolvimentoPerguntasProjeto;
-    private javax.swing.JTable tableDesenvolvimentoPerguntasProjeto1;
-    private javax.swing.JTable tableIniciacaoPerguntasProjeto;
-    private javax.swing.JTable tableIniciacaoPerguntasProjeto1;
-    private javax.swing.JTable tableIniciacaoPerguntasProjeto2;
-    private javax.swing.JTable tableIniciacaoPerguntasProjeto3;
-    private javax.swing.JTable tableIniciacaoPerguntasProjeto4;
-    private javax.swing.JTable tableIniciacaoPerguntasProjeto5;
-    private javax.swing.JTable tableIniciacaoPerguntasProjeto6;
-    private javax.swing.JTable tableIniciacaoPerguntasProjeto7;
-    private javax.swing.JTable tableIniciacaoPerguntasProjeto8;
-    private javax.swing.JTable tablePerguntasFaseAtualAnalistaQualidade;
-    private javax.swing.JTable tablePerguntasFaseAtualAnalistaQualidade1;
-    private javax.swing.JTable tablePerguntasFaseAtualArquitetoSoftware;
-    private javax.swing.JTable tablePerguntasFaseAtualArquitetoSoftware1;
-    private javax.swing.JTable tablePerguntasFaseAtualCliente;
-    private javax.swing.JTable tablePerguntasFaseAtualCliente1;
-    private javax.swing.JTable tablePerguntasFaseAtualDesenvolvedor;
-    private javax.swing.JTable tablePerguntasFaseAtualDesenvolvedor1;
-    private javax.swing.JTable tablePerguntasFaseAtualLiderTecnico;
-    private javax.swing.JTable tablePerguntasFaseAtualLiderTecnico1;
-    private javax.swing.JTable tablePerguntasFaseAtualProjeto;
-    private javax.swing.JTable tablePerguntasFaseAtualProjeto1;
-    private javax.swing.JTable tableProjetoPerguntasProjeto;
-    private javax.swing.JTable tableProjetoPerguntasProjeto1;
-    private javax.swing.JTable tableRequisitosPerguntasProjeto;
-    private javax.swing.JTable tableRequisitosPerguntasProjeto1;
-    private javax.swing.JTable tableTesteVerificacaoPerguntasProjeto;
-    private javax.swing.JTable tableTesteVerificacaoPerguntasProjeto1;
-    private javax.swing.JScrollPane testeVerificacaoPerguntasProjeto;
-    private javax.swing.JScrollPane testeVerificacaoPerguntasProjeto1;
     private javax.swing.JLabel txtTituloSelecionarModeloQuestionario;
     // End of variables declaration//GEN-END:variables
 }
