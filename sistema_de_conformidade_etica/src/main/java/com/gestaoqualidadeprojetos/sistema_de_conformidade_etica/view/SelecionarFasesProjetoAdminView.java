@@ -53,7 +53,7 @@ public class SelecionarFasesProjetoAdminView extends javax.swing.JFrame {
         txtTituloSelecionarModeloQuestionario.setText("Sistema de Padaria");
 
         btnAbrirFase.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnAbrirFase.setText("Abrir Fase");
+        btnAbrirFase.setText("Abrir Iteração");
         btnAbrirFase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAbrirFaseActionPerformed(evt);
@@ -61,7 +61,7 @@ public class SelecionarFasesProjetoAdminView extends javax.swing.JFrame {
         });
 
         labelFaseAtual.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        labelFaseAtual.setText("Fases do Projeto:");
+        labelFaseAtual.setText("Iterações do Projeto:");
 
         btnVoltar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnVoltar.setText("Voltar");
@@ -73,14 +73,14 @@ public class SelecionarFasesProjetoAdminView extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Iniciação", "Fechada"},
-                {"Requisitos", "Fechada"},
-                {"Projeto", "Fechada"},
-                {"Desenvolvimento", "Aberta"},
-                {"Teste e Verificação", "Rascunho"}
+                {"Sprint 1", "Fechada"},
+                {"Sprint 2", "Fechada"},
+                {"Sprint 3", "Fechada"},
+                {"Sprint 4", "Aberta"},
+                {"Sprint 5", "Rascunho"}
             },
             new String [] {
-                "Fase", "Status"
+                "Iteração", "Status"
             }
         ) {
             Class[] types = new Class [] {

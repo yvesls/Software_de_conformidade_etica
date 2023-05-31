@@ -93,7 +93,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Abrir Fase"/>
+        <Property name="text" type="java.lang.String" value="Abrir Itera&#xe7;&#xe3;o"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAbrirFaseActionPerformed"/>
@@ -104,7 +104,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="14" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Fases do Projeto:"/>
+        <Property name="text" type="java.lang.String" value="Itera&#xe7;&#xf5;es do Projeto:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnVoltar">
@@ -129,12 +129,12 @@
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="2" rowCount="5">
-                <Column editable="false" title="Fase" type="java.lang.String">
-                  <Data value="Inicia&#xe7;&#xe3;o"/>
-                  <Data value="Requisitos"/>
-                  <Data value="Projeto"/>
-                  <Data value="Desenvolvimento"/>
-                  <Data value="Teste e Verifica&#xe7;&#xe3;o"/>
+                <Column editable="false" title="Itera&#xe7;&#xe3;o" type="java.lang.String">
+                  <Data value="Sprint 1"/>
+                  <Data value="Sprint 2"/>
+                  <Data value="Sprint 3"/>
+                  <Data value="Sprint 4"/>
+                  <Data value="Sprint 5"/>
                 </Column>
                 <Column editable="false" title="Status" type="java.lang.String">
                   <Data value="Fechada"/>
