@@ -5,8 +5,8 @@
 package com.gestaoqualidadeprojetos.view.projeto;
 import com.gestaoqualidadeprojetos.view.fase.AbrirFasesProjetoMembroEquipeView;
 import com.gestaoqualidadeprojetos.view.dashboard.DashboardAdminView;
-import com.gestaoqualidadeprojetos.view.pergunta.ListarPerguntasEtapaIteracaoProjetoView;
-import com.gestaoqualidadeprojetos.view.pergunta.ListarPerguntasEtapaIteracaoProjetoView;
+import com.gestaoqualidadeprojetos.view.iteracao.ListarPerguntasEtapaIteracaoProjetoView;
+import com.gestaoqualidadeprojetos.view.iteracao.ListarPerguntasEtapaIteracaoProjetoView;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
 
@@ -53,18 +53,19 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         jScrollPaneTabelaProjetosAbertos = new javax.swing.JScrollPane();
         tableProjetosAbertos = new javax.swing.JTable();
         projetosFechados = new javax.swing.JPanel();
-        jScrollPaneTabelaProjetosFechados = new javax.swing.JScrollPane();
-        tableProjetosFechados = new javax.swing.JTable();
+        jScrollPaneTabelaProjetosAbertos2 = new javax.swing.JScrollPane();
+        tableProjetosAbertos2 = new javax.swing.JTable();
         projetosRascunhos = new javax.swing.JPanel();
-        jScrollPaneTabelaProjetosRascunho = new javax.swing.JScrollPane();
-        tableProjetosRascunho = new javax.swing.JTable();
+        jScrollPaneTabelaProjetosAbertos4 = new javax.swing.JScrollPane();
+        tableProjetosAbertos4 = new javax.swing.JTable();
         menuBarProjetosAdmin = new javax.swing.JMenuBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Todos os Projetos");
 
         txtTituloProjetos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txtTituloProjetos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtTituloProjetos.setText("Projetos");
+        txtTituloProjetos.setText("Todos os Projetos");
 
         btnNovoProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnNovoProjeto.setText("Novo Projeto");
@@ -88,7 +89,7 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         });
 
         ConfigurarProjetosAdmin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        ConfigurarProjetosAdmin.setText("Configurar Projeto");
+        ConfigurarProjetosAdmin.setText("Configurar");
         ConfigurarProjetosAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ConfigurarProjetosAdminActionPerformed(evt);
@@ -104,7 +105,7 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         });
 
         btnAbrirProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnAbrirProjeto.setText("Abrir Projeto");
+        btnAbrirProjeto.setText("Abrir");
         btnAbrirProjeto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAbrirProjetoActionPerformed(evt);
@@ -118,12 +119,19 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         tableProjetosAbertos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tableProjetosAbertos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"02", "Sistema de Padaria", "15/05/2023", "15/07/2023", "Aberto"},
-                {"03", "App para Academia", "26/05/2023", "30/07/2023", null},
+                {"02", "Sistema de Padaria", "15/05/2023", "15/07/2023", "30/07/2023"},
+                {"03", "App para Academia", "26/05/2023", "30/07/2023", "15/08/2023"},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
                 {null, null, null, null, null}
             },
             new String [] {
-                "#", "Nome", "Data Abertura", "Data Limite", "Status"
+                "#", "Nome", "Data Abertura", "Data Limite", "Data Final"
             }
         ) {
             Class[] types = new Class [] {
@@ -139,12 +147,6 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         tableProjetosAbertos.setShowGrid(true);
         tableProjetosAbertos.setSurrendersFocusOnKeystroke(true);
         jScrollPaneTabelaProjetosAbertos.setViewportView(tableProjetosAbertos);
-        if (tableProjetosAbertos.getColumnModel().getColumnCount() > 0) {
-            tableProjetosAbertos.getColumnModel().getColumn(0).setMinWidth(40);
-            tableProjetosAbertos.getColumnModel().getColumn(0).setPreferredWidth(40);
-            tableProjetosAbertos.getColumnModel().getColumn(0).setMaxWidth(30);
-            tableProjetosAbertos.getColumnModel().getColumn(1).setPreferredWidth(300);
-        }
 
         javax.swing.GroupLayout projetosAbertosLayout = new javax.swing.GroupLayout(projetosAbertos);
         projetosAbertos.setLayout(projetosAbertosLayout);
@@ -155,21 +157,27 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         projetosAbertosLayout.setVerticalGroup(
             projetosAbertosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(projetosAbertosLayout.createSequentialGroup()
-                .addComponent(jScrollPaneTabelaProjetosAbertos, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 76, Short.MAX_VALUE))
+                .addComponent(jScrollPaneTabelaProjetosAbertos, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 4, Short.MAX_VALUE))
         );
 
         abasMembrosEquipe.addTab("Abertos", projetosAbertos);
 
-        tableProjetosFechados.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        tableProjetosFechados.setModel(new javax.swing.table.DefaultTableModel(
+        tableProjetosAbertos2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tableProjetosAbertos2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"01", "Rede Social", "15/03/2023", "15/05/2023", "Fechado"},
+                {"01", "Sistema de Matrícula", "15/05/2023", "15/06/2023", "30/06/2023"},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null}
             },
             new String [] {
-                "#", "Nome", "Data Abertura", "Data Limite", "Status"
+                "#", "Nome", "Data Abertura", "Data Limite", "Data Final"
             }
         ) {
             Class[] types = new Class [] {
@@ -180,42 +188,42 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        tableProjetosFechados.setRowHeight(26);
-        tableProjetosFechados.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        tableProjetosFechados.setShowGrid(true);
-        tableProjetosFechados.setSurrendersFocusOnKeystroke(true);
-        jScrollPaneTabelaProjetosFechados.setViewportView(tableProjetosFechados);
-        if (tableProjetosFechados.getColumnModel().getColumnCount() > 0) {
-            tableProjetosFechados.getColumnModel().getColumn(0).setMinWidth(40);
-            tableProjetosFechados.getColumnModel().getColumn(0).setPreferredWidth(40);
-            tableProjetosFechados.getColumnModel().getColumn(0).setMaxWidth(30);
-            tableProjetosFechados.getColumnModel().getColumn(1).setPreferredWidth(300);
-        }
+        tableProjetosAbertos2.setRowHeight(26);
+        tableProjetosAbertos2.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tableProjetosAbertos2.setShowGrid(true);
+        tableProjetosAbertos2.setSurrendersFocusOnKeystroke(true);
+        jScrollPaneTabelaProjetosAbertos2.setViewportView(tableProjetosAbertos2);
 
         javax.swing.GroupLayout projetosFechadosLayout = new javax.swing.GroupLayout(projetosFechados);
         projetosFechados.setLayout(projetosFechadosLayout);
         projetosFechadosLayout.setHorizontalGroup(
             projetosFechadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPaneTabelaProjetosFechados, javax.swing.GroupLayout.DEFAULT_SIZE, 850, Short.MAX_VALUE)
+            .addComponent(jScrollPaneTabelaProjetosAbertos2, javax.swing.GroupLayout.DEFAULT_SIZE, 850, Short.MAX_VALUE)
         );
         projetosFechadosLayout.setVerticalGroup(
             projetosFechadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(projetosFechadosLayout.createSequentialGroup()
-                .addComponent(jScrollPaneTabelaProjetosFechados, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 76, Short.MAX_VALUE))
+                .addComponent(jScrollPaneTabelaProjetosAbertos2, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 4, Short.MAX_VALUE))
         );
 
         abasMembrosEquipe.addTab("Fechados", projetosFechados);
 
-        tableProjetosRascunho.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        tableProjetosRascunho.setModel(new javax.swing.table.DefaultTableModel(
+        tableProjetosAbertos4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tableProjetosAbertos4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"04", "Sistema de Padaria", "", "", "Rascunho"},
+                {"", "Rede social", "", "", "30/07/2023"},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null}
             },
             new String [] {
-                "#", "Nome", "Data Abertura", "Data Limite", "Status"
+                "#", "Nome", "Data Abertura", "Data Limite", "Data Final"
             }
         ) {
             Class[] types = new Class [] {
@@ -226,29 +234,23 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        tableProjetosRascunho.setRowHeight(26);
-        tableProjetosRascunho.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        tableProjetosRascunho.setShowGrid(true);
-        tableProjetosRascunho.setSurrendersFocusOnKeystroke(true);
-        jScrollPaneTabelaProjetosRascunho.setViewportView(tableProjetosRascunho);
-        if (tableProjetosRascunho.getColumnModel().getColumnCount() > 0) {
-            tableProjetosRascunho.getColumnModel().getColumn(0).setMinWidth(40);
-            tableProjetosRascunho.getColumnModel().getColumn(0).setPreferredWidth(40);
-            tableProjetosRascunho.getColumnModel().getColumn(0).setMaxWidth(30);
-            tableProjetosRascunho.getColumnModel().getColumn(1).setPreferredWidth(300);
-        }
+        tableProjetosAbertos4.setRowHeight(26);
+        tableProjetosAbertos4.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tableProjetosAbertos4.setShowGrid(true);
+        tableProjetosAbertos4.setSurrendersFocusOnKeystroke(true);
+        jScrollPaneTabelaProjetosAbertos4.setViewportView(tableProjetosAbertos4);
 
         javax.swing.GroupLayout projetosRascunhosLayout = new javax.swing.GroupLayout(projetosRascunhos);
         projetosRascunhos.setLayout(projetosRascunhosLayout);
         projetosRascunhosLayout.setHorizontalGroup(
             projetosRascunhosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPaneTabelaProjetosRascunho, javax.swing.GroupLayout.DEFAULT_SIZE, 850, Short.MAX_VALUE)
+            .addComponent(jScrollPaneTabelaProjetosAbertos4, javax.swing.GroupLayout.DEFAULT_SIZE, 850, Short.MAX_VALUE)
         );
         projetosRascunhosLayout.setVerticalGroup(
             projetosRascunhosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(projetosRascunhosLayout.createSequentialGroup()
-                .addComponent(jScrollPaneTabelaProjetosRascunho, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 76, Short.MAX_VALUE))
+                .addComponent(jScrollPaneTabelaProjetosAbertos4, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 4, Short.MAX_VALUE))
         );
 
         abasMembrosEquipe.addTab("Rascunhos", projetosRascunhos);
@@ -265,25 +267,25 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnNovoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnFechar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(ConfigurarProjetosAdmin)
-                        .addGap(12, 12, 12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnAbrirProjeto)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnVerDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ConfigurarProjetosAdmin)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnVerDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnFechar))
                     .addComponent(abasMembrosEquipe))
                 .addGap(65, 65, 65))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addGap(35, 35, 35)
                 .addComponent(txtTituloProjetos)
-                .addGap(18, 18, 18)
-                .addComponent(abasMembrosEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(193, 193, 193)
+                .addGap(35, 35, 35)
+                .addComponent(abasMembrosEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnNovoProjeto)
                     .addComponent(btnFechar)
@@ -376,15 +378,15 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
     private javax.swing.JButton btnNovoProjeto;
     private javax.swing.JButton btnVerDashboard;
     private javax.swing.JScrollPane jScrollPaneTabelaProjetosAbertos;
-    private javax.swing.JScrollPane jScrollPaneTabelaProjetosFechados;
-    private javax.swing.JScrollPane jScrollPaneTabelaProjetosRascunho;
+    private javax.swing.JScrollPane jScrollPaneTabelaProjetosAbertos2;
+    private javax.swing.JScrollPane jScrollPaneTabelaProjetosAbertos4;
     private javax.swing.JMenuBar menuBarProjetosAdmin;
     private javax.swing.JPanel projetosAbertos;
     private javax.swing.JPanel projetosFechados;
     private javax.swing.JPanel projetosRascunhos;
     private javax.swing.JTable tableProjetosAbertos;
-    private javax.swing.JTable tableProjetosFechados;
-    private javax.swing.JTable tableProjetosRascunho;
+    private javax.swing.JTable tableProjetosAbertos2;
+    private javax.swing.JTable tableProjetosAbertos4;
     private javax.swing.JLabel txtTituloProjetos;
     // End of variables declaration//GEN-END:variables
 }

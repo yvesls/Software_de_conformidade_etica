@@ -69,6 +69,7 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
         inputEmailAtor18 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Criar Novo Projeto");
 
         txtTituloProjetos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txtTituloProjetos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

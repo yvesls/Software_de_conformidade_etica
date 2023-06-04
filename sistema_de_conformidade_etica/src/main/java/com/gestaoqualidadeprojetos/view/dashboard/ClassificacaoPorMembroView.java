@@ -20,12 +20,12 @@ import org.jfree.data.category.DefaultCategoryDataset;
  *
  * @author Note102
  */
-public final class FaixaPorMembroView extends javax.swing.JFrame {
+public final class ClassificacaoPorMembroView extends javax.swing.JFrame {
 
     /**
      * Creates new form FaixaPorAgenteView
      */
-    public FaixaPorMembroView() {
+    public ClassificacaoPorMembroView() {
         initComponents();
         criarGrafico();
         modoTelaCheia();
@@ -148,6 +148,7 @@ public final class FaixaPorMembroView extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTable2);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Tabela de Classificação ");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -556,20 +557,22 @@ public final class FaixaPorMembroView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FaixaPorMembroView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ClassificacaoPorMembroView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FaixaPorMembroView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ClassificacaoPorMembroView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FaixaPorMembroView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ClassificacaoPorMembroView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FaixaPorMembroView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ClassificacaoPorMembroView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new FaixaPorMembroView().setVisible(true);
+            new ClassificacaoPorMembroView().setVisible(true);
         });
     }
 

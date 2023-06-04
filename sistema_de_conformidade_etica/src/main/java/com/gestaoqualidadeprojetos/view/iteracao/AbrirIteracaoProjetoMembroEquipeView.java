@@ -4,8 +4,6 @@
  */
 package com.gestaoqualidadeprojetos.view.iteracao;
 
-import com.gestaoqualidadeprojetos.view.pergunta.ListarPerguntasEtapaIteracaoProjetoView;
-
 /**
  *
  * @author Gabriel
@@ -54,6 +52,7 @@ public class AbrirIteracaoProjetoMembroEquipeView extends javax.swing.JFrame {
         });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Iterações do Projeto");
 
         txtTituloSelecionarModeloQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txtTituloSelecionarModeloQuestionario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

@@ -61,10 +61,11 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
         });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Manter Questionários");
 
         txtTituloSelecionarModeloQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txtTituloSelecionarModeloQuestionario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtTituloSelecionarModeloQuestionario.setText("Questionários");
+        txtTituloSelecionarModeloQuestionario.setText("Todos os Questionários");
 
         btnVoltar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnVoltar.setText("Voltar");
@@ -268,9 +269,9 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
                         .addComponent(jButton5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnVoltar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnVoltar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton4))
@@ -496,11 +497,6 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTabbedPane abasMembrosEquipe;
-    private javax.swing.JTabbedPane abasMembrosEquipe1;
-    private javax.swing.JTabbedPane abasMembrosEquipe2;
-    private javax.swing.JTabbedPane abasMembrosEquipe3;
-    private javax.swing.JTabbedPane abasMembrosEquipe4;
     private javax.swing.JTabbedPane abasMembrosEquipe5;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnVoltar;
@@ -512,57 +508,12 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPaneTabelaProjetosAbertos;
-    private javax.swing.JScrollPane jScrollPaneTabelaProjetosAbertos1;
-    private javax.swing.JScrollPane jScrollPaneTabelaProjetosAbertos2;
-    private javax.swing.JScrollPane jScrollPaneTabelaProjetosAbertos3;
-    private javax.swing.JScrollPane jScrollPaneTabelaProjetosAbertos4;
-    private javax.swing.JScrollPane jScrollPaneTabelaProjetosFechados;
-    private javax.swing.JScrollPane jScrollPaneTabelaProjetosFechados1;
-    private javax.swing.JScrollPane jScrollPaneTabelaProjetosFechados2;
-    private javax.swing.JScrollPane jScrollPaneTabelaProjetosFechados3;
-    private javax.swing.JScrollPane jScrollPaneTabelaProjetosFechados4;
-    private javax.swing.JScrollPane jScrollPaneTabelaProjetosRascunho;
-    private javax.swing.JScrollPane jScrollPaneTabelaProjetosRascunho1;
-    private javax.swing.JScrollPane jScrollPaneTabelaProjetosRascunho2;
-    private javax.swing.JScrollPane jScrollPaneTabelaProjetosRascunho3;
-    private javax.swing.JScrollPane jScrollPaneTabelaProjetosRascunho4;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
-    private javax.swing.JPanel projetosAbertos;
-    private javax.swing.JPanel projetosAbertos1;
-    private javax.swing.JPanel projetosAbertos2;
-    private javax.swing.JPanel projetosAbertos3;
-    private javax.swing.JPanel projetosAbertos4;
     private javax.swing.JPanel projetosAbertos5;
-    private javax.swing.JPanel projetosFechados;
-    private javax.swing.JPanel projetosFechados1;
-    private javax.swing.JPanel projetosFechados2;
-    private javax.swing.JPanel projetosFechados3;
-    private javax.swing.JPanel projetosFechados4;
     private javax.swing.JPanel projetosFechados5;
-    private javax.swing.JPanel projetosRascunhos;
-    private javax.swing.JPanel projetosRascunhos1;
-    private javax.swing.JPanel projetosRascunhos2;
-    private javax.swing.JPanel projetosRascunhos3;
-    private javax.swing.JPanel projetosRascunhos4;
     private javax.swing.JPanel projetosRascunhos5;
-    private javax.swing.JTable tableProjetosAbertos;
-    private javax.swing.JTable tableProjetosAbertos1;
-    private javax.swing.JTable tableProjetosAbertos2;
-    private javax.swing.JTable tableProjetosAbertos3;
-    private javax.swing.JTable tableProjetosAbertos4;
-    private javax.swing.JTable tableProjetosFechados;
-    private javax.swing.JTable tableProjetosFechados1;
-    private javax.swing.JTable tableProjetosFechados2;
-    private javax.swing.JTable tableProjetosFechados3;
-    private javax.swing.JTable tableProjetosFechados4;
-    private javax.swing.JTable tableProjetosRascunho;
-    private javax.swing.JTable tableProjetosRascunho1;
-    private javax.swing.JTable tableProjetosRascunho2;
-    private javax.swing.JTable tableProjetosRascunho3;
-    private javax.swing.JTable tableProjetosRascunho4;
     private javax.swing.JLabel txtTituloSelecionarModeloQuestionario;
     // End of variables declaration//GEN-END:variables
 }

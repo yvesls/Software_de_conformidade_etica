@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.gestaoqualidadeprojetos.view.pergunta;
+package com.gestaoqualidadeprojetos.view.iteracao;
 import com.gestaoqualidadeprojetos.view.iteracao.AbrirIteracaoProjetoAdminView;
+import com.gestaoqualidadeprojetos.view.pergunta.ManterPerguntasFaseProjetoView;
 import com.gestaoqualidadeprojetos.view.projeto.ListarProjetosAdminView;
 import com.gestaoqualidadeprojetos.view.projeto.CriarNovoProjetoView;
 
@@ -58,10 +59,11 @@ public class ListarPerguntasEtapaIteracaoProjetoView extends javax.swing.JFrame 
         menuBarQuestionarios = new javax.swing.JMenuBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Lista de Perguntas do Projeto");
 
         txtTituloProjetos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txtTituloProjetos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtTituloProjetos.setText("Sistema de Padaria");
+        txtTituloProjetos.setText("Projeto: Sistema de Padaria");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("Iteração:");
@@ -437,21 +439,21 @@ public class ListarPerguntasEtapaIteracaoProjetoView extends javax.swing.JFrame 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(35, 35, 35)
                 .addComponent(txtTituloProjetos)
-                .addGap(15, 15, 15)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2))
-                .addGap(15, 15, 15)
+                .addGap(20, 20, 20)
                 .addComponent(abasFasesIteracao, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnPublicarPerguntasFaseProjeto)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnAbrirPerguntasQuestionario)
                         .addComponent(btnFechar)))
-                .addGap(19, 19, 19))
+                .addGap(20, 20, 20))
         );
 
         abasFasesIteracao.getAccessibleContext().setAccessibleName("");

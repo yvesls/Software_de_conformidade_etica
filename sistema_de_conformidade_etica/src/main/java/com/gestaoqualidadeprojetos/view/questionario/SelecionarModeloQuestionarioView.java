@@ -41,6 +41,7 @@ public class SelecionarModeloQuestionarioView extends javax.swing.JFrame {
         btnVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Selecionar Modelo de Questionário");
 
         txtTituloSelecionarModeloQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txtTituloSelecionarModeloQuestionario.setText("Selecionar Modelo de Questionário");

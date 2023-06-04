@@ -29,7 +29,12 @@ public class TelaInicialAdminView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuBar1 = new javax.swing.JMenuBar();
+        jSeparatorBarraNotificacoes = new javax.swing.JSeparator();
+        jLabelUsuario = new javax.swing.JLabel();
+        txtUsuarioLogado = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jMenuBar = new javax.swing.JMenuBar();
         menuProjetos = new javax.swing.JMenu();
         itemMenuAcessarProjetos = new javax.swing.JMenuItem();
         itemMenuAcessarQuestionarios = new javax.swing.JMenuItem();
@@ -39,9 +44,21 @@ public class TelaInicialAdminView extends javax.swing.JFrame {
         itemMenuLogout = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Menu");
+        setTitle("Tela Inicial");
 
-        jMenuBar1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabelUsuario.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabelUsuario.setText("Usuário:");
+
+        txtUsuarioLogado.setText("Nome do Administrador");
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel1.setText("Notificações:");
+
+        jLabel2.setText("+3");
+
+        jMenuBar.setToolTipText("");
+        jMenuBar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jMenuBar.setName("Tela Inicial"); // NOI18N
 
         menuProjetos.setText("Projetos");
         menuProjetos.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -64,7 +81,7 @@ public class TelaInicialAdminView extends javax.swing.JFrame {
         });
         menuProjetos.add(itemMenuAcessarQuestionarios);
 
-        jMenuBar1.add(menuProjetos);
+        jMenuBar.add(menuProjetos);
 
         menuAvisos.setText("Avisos");
         menuAvisos.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -78,7 +95,7 @@ public class TelaInicialAdminView extends javax.swing.JFrame {
         });
         menuAvisos.add(itemMenuVerAvisos);
 
-        jMenuBar1.add(menuAvisos);
+        jMenuBar.add(menuAvisos);
 
         menuSair.setText("Sair");
         menuSair.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -92,19 +109,38 @@ public class TelaInicialAdminView extends javax.swing.JFrame {
         });
         menuSair.add(itemMenuLogout);
 
-        jMenuBar1.add(menuSair);
+        jMenuBar.add(menuSair);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(jMenuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 765, Short.MAX_VALUE)
+            .addComponent(jSeparatorBarraNotificacoes)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabelUsuario)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtUsuarioLogado)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 449, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 386, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(356, Short.MAX_VALUE)
+                .addComponent(jSeparatorBarraNotificacoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelUsuario)
+                    .addComponent(txtUsuarioLogado)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
+                .addContainerGap())
         );
 
         pack();
@@ -175,9 +211,14 @@ public class TelaInicialAdminView extends javax.swing.JFrame {
     private javax.swing.JMenuItem itemMenuAcessarQuestionarios;
     private javax.swing.JMenuItem itemMenuLogout;
     private javax.swing.JMenuItem itemMenuVerAvisos;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabelUsuario;
+    private javax.swing.JMenuBar jMenuBar;
+    private javax.swing.JSeparator jSeparatorBarraNotificacoes;
     private javax.swing.JMenu menuAvisos;
     private javax.swing.JMenu menuProjetos;
     private javax.swing.JMenu menuSair;
+    private javax.swing.JLabel txtUsuarioLogado;
     // End of variables declaration//GEN-END:variables
 }

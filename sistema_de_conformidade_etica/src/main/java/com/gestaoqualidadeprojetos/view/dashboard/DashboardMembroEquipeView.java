@@ -269,6 +269,7 @@ public class DashboardMembroEquipeView extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Dashboard do Projeto");
         setExtendedState(1);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -627,7 +628,7 @@ public class DashboardMembroEquipeView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        new FaixaPorMembroView().setVisible(true);
+        new ClassificacaoPorMembroView().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void viewGraficoMembroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewGraficoMembroActionPerformed

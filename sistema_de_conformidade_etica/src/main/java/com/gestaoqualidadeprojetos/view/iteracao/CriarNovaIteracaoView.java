@@ -40,6 +40,7 @@ public class CriarNovaIteracaoView extends javax.swing.JFrame {
         txtStatusQuestionario = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Criar Nova Iteração");
 
         txtTituloCriarPergunta.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txtTituloCriarPergunta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

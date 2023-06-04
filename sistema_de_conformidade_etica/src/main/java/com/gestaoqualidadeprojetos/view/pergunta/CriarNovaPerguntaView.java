@@ -33,12 +33,11 @@ public class CriarNovaPerguntaView extends javax.swing.JFrame {
         txtTituloCriarPergunta = new javax.swing.JLabel();
         labelPergunta = new javax.swing.JLabel();
         txtFieldNovaPergunta = new javax.swing.JTextField();
-        labelFase = new javax.swing.JLabel();
-        selectFaseProjeto = new javax.swing.JComboBox<>();
         btnSalvar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Criar Nova Pergunta");
 
         txtTituloCriarPergunta.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txtTituloCriarPergunta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -46,12 +45,6 @@ public class CriarNovaPerguntaView extends javax.swing.JFrame {
 
         labelPergunta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         labelPergunta.setText("Pergunta:");
-
-        labelFase.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        labelFase.setText("Fase:");
-
-        selectFaseProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        selectFaseProjeto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Iniciação", "Requisitos", "Projeto", "Desenvolvimento", "Teste e Verificação" }));
 
         btnSalvar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnSalvar.setText("Salvar Pergunta");
@@ -74,21 +67,17 @@ public class CriarNovaPerguntaView extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnCancelar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnSalvar))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelPergunta)
-                            .addComponent(labelFase))
+                        .addComponent(labelPergunta)
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(selectFaseProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtFieldNovaPergunta, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 46, Short.MAX_VALUE))
+                        .addComponent(txtFieldNovaPergunta, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 40, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(txtTituloCriarPergunta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -96,21 +85,17 @@ public class CriarNovaPerguntaView extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addGap(20, 20, 20)
                 .addComponent(txtTituloCriarPergunta)
-                .addGap(18, 18, 18)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelPergunta)
                     .addComponent(txtFieldNovaPergunta, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelFase)
-                    .addComponent(selectFaseProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSalvar)
                     .addComponent(btnCancelar))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
         );
 
         pack();
@@ -164,9 +149,7 @@ public class CriarNovaPerguntaView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnSalvar;
-    private javax.swing.JLabel labelFase;
     private javax.swing.JLabel labelPergunta;
-    private javax.swing.JComboBox<String> selectFaseProjeto;
     private javax.swing.JTextField txtFieldNovaPergunta;
     private javax.swing.JLabel txtTituloCriarPergunta;
     // End of variables declaration//GEN-END:variables

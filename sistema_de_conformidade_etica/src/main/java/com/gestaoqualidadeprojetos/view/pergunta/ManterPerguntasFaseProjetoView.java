@@ -4,6 +4,7 @@
  */
 package com.gestaoqualidadeprojetos.view.pergunta;
 
+import com.gestaoqualidadeprojetos.view.iteracao.ListarPerguntasEtapaIteracaoProjetoView;
 import com.gestaoqualidadeprojetos.view.pergunta.CriarNovaPerguntaView;
 
 /**
@@ -61,6 +62,7 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
         menuAcoesPerguntasQuestionario = new javax.swing.JMenuBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Manter Perguntas da Etapa");
 
         txtTituloPerguntasQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txtTituloPerguntasQuestionario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

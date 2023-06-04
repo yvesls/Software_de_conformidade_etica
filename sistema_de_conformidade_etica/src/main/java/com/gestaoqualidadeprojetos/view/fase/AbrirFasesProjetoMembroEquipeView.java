@@ -65,13 +65,14 @@ public class AbrirFasesProjetoMembroEquipeView extends javax.swing.JFrame {
         });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Fases da Iteração");
 
         txtTituloSelecionarModeloQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txtTituloSelecionarModeloQuestionario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtTituloSelecionarModeloQuestionario.setText("Sistema de Padaria");
+        txtTituloSelecionarModeloQuestionario.setText("Projeto: Sistema de Padaria");
 
         btnAbrirQuestionario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnAbrirQuestionario.setText("Abrir Questionário");
+        btnAbrirQuestionario.setText("Responder Questionário");
         btnAbrirQuestionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAbrirQuestionarioActionPerformed(evt);
@@ -379,15 +380,15 @@ public class AbrirFasesProjetoMembroEquipeView extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(35, 35, 35)
                 .addComponent(txtTituloSelecionarModeloQuestionario)
-                .addGap(15, 15, 15)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jLabel2))
-                .addGap(5, 5, 5)
+                .addGap(20, 20, 20)
                 .addComponent(labelFaseAtual, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(20, 20, 20)
                 .addComponent(abasFasesIteracao, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

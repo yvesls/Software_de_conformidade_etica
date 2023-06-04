@@ -38,7 +38,7 @@ public class TelaInicialMembroEquipeView extends javax.swing.JFrame {
         itemMenuLogout = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Menu");
+        setTitle("Tela Inicial");
 
         jMenuBar1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
