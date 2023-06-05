@@ -43,7 +43,8 @@ public class LoginView extends javax.swing.JFrame {
         lblSenha.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         lblSenha.setText("Senha");
 
-        txtEmail.setText("user");
+        txtEmail.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtEmail.setText("admin");
 
         btnEntrar.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         btnEntrar.setText("Entrar");
