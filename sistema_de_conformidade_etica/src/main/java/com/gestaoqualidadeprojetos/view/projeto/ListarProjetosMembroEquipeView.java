@@ -3,10 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.gestaoqualidadeprojetos.view.projeto;
-import com.gestaoqualidadeprojetos.view.fase.AbrirFasesProjetoMembroEquipeView;
+import com.gestaoqualidadeprojetos.view.gerenciamento.GerenciarIteracoesProjeto;
 import com.gestaoqualidadeprojetos.view.dashboard.DashboardAdminView;
-import com.gestaoqualidadeprojetos.view.iteracao.ListarPerguntasEtapaIteracaoProjetoView;
-import com.gestaoqualidadeprojetos.view.iteracao.ListarPerguntasEtapaIteracaoProjetoView;
+import com.gestaoqualidadeprojetos.view.gerenciamento.GerenciarEtapasIteracao;
+import com.gestaoqualidadeprojetos.view.gerenciamento.GerenciarEtapasIteracao;
+import com.gestaoqualidadeprojetos.view.questionario.QuestionarioView;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
 
@@ -45,8 +46,7 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
         txtTituloProjetos = new javax.swing.JLabel();
         btnFechar = new javax.swing.JButton();
         btnVerDashboard = new javax.swing.JButton();
-        btnAbrirProjeto = new javax.swing.JButton();
-        projetosAbertos = new javax.swing.JPanel();
+        btnAbrirQuestionario = new javax.swing.JButton();
         jScrollPaneTabelaProjetosAbertos = new javax.swing.JScrollPane();
         tableProjetosAbertos = new javax.swing.JTable();
         menuBarProjetosAdmin = new javax.swing.JMenuBar();
@@ -74,45 +74,34 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
             }
         });
 
-        btnAbrirProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnAbrirProjeto.setText("Abrir Projeto");
-        btnAbrirProjeto.addActionListener(new java.awt.event.ActionListener() {
+        btnAbrirQuestionario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnAbrirQuestionario.setText("Responder Questionário");
+        btnAbrirQuestionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAbrirProjetoActionPerformed(evt);
+                btnAbrirQuestionarioActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout projetosAbertosLayout = new javax.swing.GroupLayout(projetosAbertos);
-        projetosAbertos.setLayout(projetosAbertosLayout);
-        projetosAbertosLayout.setHorizontalGroup(
-            projetosAbertosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 909, Short.MAX_VALUE)
-        );
-        projetosAbertosLayout.setVerticalGroup(
-            projetosAbertosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 275, Short.MAX_VALUE)
-        );
 
         tableProjetosAbertos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tableProjetosAbertos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"02", "Sistema de Padaria", "15/05/2023", "15/07/2023", "30/07/2023"},
-                {"03", "App para Academia", "26/05/2023", "30/07/2023", "15/08/2023"},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {"01", "Sistema de Padaria", "15/05/2023", "15/07/2023", "30/07/2023", "Aberto"},
+                {"02", "App para Academia", "01/05/2023", "30/05/2023", "05/06/2023", "Fechado"},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "#", "Nome", "Data Abertura", "Data Limite", "Data Final"
+                "#", "Nome", "Data Abertura", "Data Limite", "Data Final", "Status"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -137,36 +126,27 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPaneTabelaProjetosAbertos, javax.swing.GroupLayout.DEFAULT_SIZE, 909, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnFechar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 590, Short.MAX_VALUE)
-                        .addComponent(btnAbrirProjeto)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnVerDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnAbrirQuestionario)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnVerDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnFechar)))
                 .addGap(65, 65, 65))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(65, Short.MAX_VALUE)
-                    .addComponent(projetosAbertos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(65, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(35, 35, 35)
                 .addComponent(txtTituloProjetos)
                 .addGap(35, 35, 35)
                 .addComponent(jScrollPaneTabelaProjetosAbertos, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnFechar)
-                    .addComponent(btnVerDashboard)
-                    .addComponent(btnAbrirProjeto))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnAbrirQuestionario)
+                        .addComponent(btnVerDashboard))
+                    .addComponent(btnFechar))
                 .addGap(20, 20, 20))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(85, Short.MAX_VALUE)
-                    .addComponent(projetosAbertos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(72, Short.MAX_VALUE)))
         );
 
         pack();
@@ -184,11 +164,11 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
         dashboardView.setVisible(true);
     }//GEN-LAST:event_btnVerDashboardActionPerformed
 
-    private void btnAbrirProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirProjetoActionPerformed
+    private void btnAbrirQuestionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirQuestionarioActionPerformed
         this.dispose();
-        AbrirFasesProjetoMembroEquipeView selecionarFasesProjetoMembroEquipeView = new AbrirFasesProjetoMembroEquipeView();
-        selecionarFasesProjetoMembroEquipeView.setVisible(true);
-    }//GEN-LAST:event_btnAbrirProjetoActionPerformed
+        QuestionarioView questionarioView = new QuestionarioView();
+        questionarioView.setVisible(true);
+    }//GEN-LAST:event_btnAbrirQuestionarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -241,12 +221,11 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAbrirProjeto;
+    private javax.swing.JButton btnAbrirQuestionario;
     private javax.swing.JButton btnFechar;
     private javax.swing.JButton btnVerDashboard;
     private javax.swing.JScrollPane jScrollPaneTabelaProjetosAbertos;
     private javax.swing.JMenuBar menuBarProjetosAdmin;
-    private javax.swing.JPanel projetosAbertos;
     private javax.swing.JTable tableProjetosAbertos;
     private javax.swing.JLabel txtTituloProjetos;
     // End of variables declaration//GEN-END:variables

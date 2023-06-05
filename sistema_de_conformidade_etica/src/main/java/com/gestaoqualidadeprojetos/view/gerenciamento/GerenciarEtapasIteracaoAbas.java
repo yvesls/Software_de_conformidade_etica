@@ -2,18 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.gestaoqualidadeprojetos.view.iteracao;
+package com.gestaoqualidadeprojetos.view.gerenciamento;
+import com.gestaoqualidadeprojetos.view.projeto.ListarProjetosAdminView;
+import com.gestaoqualidadeprojetos.view.projeto.CriarNovoProjetoView;
 
 /**
  *
  * @author Gabriel
  */
-public class AbrirIteracaoProjetoMembroEquipeView extends javax.swing.JFrame {
+public class GerenciarEtapasIteracaoAbas extends javax.swing.JFrame {
 
     /**
-     * Creates new form SelecionarModeloQuestionarioView
+     * Creates new form ListarProjetosView
      */
-    public AbrirIteracaoProjetoMembroEquipeView() {
+    public GerenciarEtapasIteracaoAbas() {
         initComponents();
         setVisible(true);
         setResizable(false);
@@ -30,114 +32,81 @@ public class AbrirIteracaoProjetoMembroEquipeView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnCancelar = new javax.swing.JButton();
+        btnFechar = new javax.swing.JButton();
+        btnAbrirPerguntasQuestionario = new javax.swing.JButton();
+        btnPublicarPerguntasFaseProjeto = new javax.swing.JButton();
+        abasFasesIteracao = new javax.swing.JTabbedPane();
+        faseIniciacao = new javax.swing.JPanel();
+        iniciacaoPerguntasProjeto = new javax.swing.JScrollPane();
+        tableIniciacaoPerguntasProjeto = new javax.swing.JTable();
+        faseRequisitos = new javax.swing.JPanel();
+        requisitosPerguntasProjeto = new javax.swing.JScrollPane();
+        tableRequisitosPerguntasProjeto = new javax.swing.JTable();
+        faseProjeto = new javax.swing.JPanel();
+        projetoPerguntasProjeto = new javax.swing.JScrollPane();
+        tableProjetoPerguntasProjeto = new javax.swing.JTable();
+        faseDesenvolvimento = new javax.swing.JPanel();
+        desenvolvimentoPerguntasProjeto = new javax.swing.JScrollPane();
+        tableDesenvolvimentoPerguntasProjeto = new javax.swing.JTable();
+        faseTesteVerificacao = new javax.swing.JPanel();
+        testeVerificacaoPerguntasProjeto = new javax.swing.JScrollPane();
+        tableTesteVerificacaoPerguntasProjeto = new javax.swing.JTable();
         txtTituloSelecionarModeloQuestionario = new javax.swing.JLabel();
-        btnAbrirFase = new javax.swing.JButton();
-        labelFaseAtual = new javax.swing.JLabel();
-        btnVoltar = new javax.swing.JButton();
-        abasIteracoes = new javax.swing.JTabbedPane();
-        iteracaoAberta = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        tabelaIteracaoAberta = new javax.swing.JTable();
-        iteracaoFechada = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        tabelaIteracaoFechada = new javax.swing.JTable();
-
-        btnCancelar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnCancelar.setText("Cancelar");
-        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancelarActionPerformed(evt);
-            }
-        });
+        txtTituloSelecionarModeloQuestionario1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        menuBarQuestionarios = new javax.swing.JMenuBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Iterações do Projeto");
+        setTitle("Gerenciar Etapas das Iterações do Projeto");
 
-        txtTituloSelecionarModeloQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        txtTituloSelecionarModeloQuestionario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtTituloSelecionarModeloQuestionario.setText("Sistema de Padaria");
-
-        btnAbrirFase.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnAbrirFase.setText("Abrir Iteração");
-        btnAbrirFase.addActionListener(new java.awt.event.ActionListener() {
+        btnFechar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnFechar.setText("Voltar");
+        btnFechar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAbrirFaseActionPerformed(evt);
+                btnFecharActionPerformed(evt);
             }
         });
 
-        labelFaseAtual.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        labelFaseAtual.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelFaseAtual.setText("Iterações do Projeto");
-
-        btnVoltar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnVoltar.setText("Voltar");
-        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+        btnAbrirPerguntasQuestionario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnAbrirPerguntasQuestionario.setText("Abrir Perguntas");
+        btnAbrirPerguntasQuestionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVoltarActionPerformed(evt);
+                btnAbrirPerguntasQuestionarioActionPerformed(evt);
             }
         });
 
-        abasIteracoes.setToolTipText("");
-        abasIteracoes.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        abasIteracoes.setName("Fases da Iteração"); // NOI18N
+        btnPublicarPerguntasFaseProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnPublicarPerguntasFaseProjeto.setText("Salvar");
+        btnPublicarPerguntasFaseProjeto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPublicarPerguntasFaseProjetoActionPerformed(evt);
+            }
+        });
 
-        tabelaIteracaoAberta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        tabelaIteracaoAberta.setModel(new javax.swing.table.DefaultTableModel(
+        abasFasesIteracao.setToolTipText("");
+        abasFasesIteracao.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        abasFasesIteracao.setName("Fases da Iteração"); // NOI18N
+
+        tableIniciacaoPerguntasProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tableIniciacaoPerguntasProjeto.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Sprint 3", "Fechada"},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {"01", "Cliente", "15/05/2023", "20/05/2023", "Fechado"},
+                {"02", "Desenvolvedor", "15/05/2023", "20/05/2023", "Fechado"},
+                {"03", "Arquiteto de Software", "15/05/2023", "15/06/2023", "Aberto"},
+                {"04", "Gerente de Projeto", "15/05/2023", "15/06/2023", "Aberto"},
+                {"05", "Líder Técnico", "", "", "Rascunho"},
+                {"06", "Analista de Qualidade", "", "", "Rascunho"}
             },
             new String [] {
-                "Iteração", "Status"
+                "#", "Participante", "Data Abertura", "Data Limite", "Status"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        tabelaIteracaoAberta.setRowHeight(26);
-        tabelaIteracaoAberta.setShowGrid(true);
-        jScrollPane3.setViewportView(tabelaIteracaoAberta);
-
-        javax.swing.GroupLayout iteracaoAbertaLayout = new javax.swing.GroupLayout(iteracaoAberta);
-        iteracaoAberta.setLayout(iteracaoAbertaLayout);
-        iteracaoAbertaLayout.setHorizontalGroup(
-            iteracaoAbertaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
-        );
-        iteracaoAbertaLayout.setVerticalGroup(
-            iteracaoAbertaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-        );
-
-        abasIteracoes.addTab("Abertas", iteracaoAberta);
-
-        tabelaIteracaoFechada.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        tabelaIteracaoFechada.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"Sprint 1", "Fechada"},
-                {"Sprint 2", "Fechada"},
-                {null, null},
-                {null, null},
-                {null, null}
-            },
-            new String [] {
-                "Iteração", "Status"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false
+                false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -148,73 +117,364 @@ public class AbrirIteracaoProjetoMembroEquipeView extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        tabelaIteracaoFechada.setRowHeight(26);
-        tabelaIteracaoFechada.setShowGrid(true);
-        jScrollPane2.setViewportView(tabelaIteracaoFechada);
+        tableIniciacaoPerguntasProjeto.setRowHeight(26);
+        tableIniciacaoPerguntasProjeto.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tableIniciacaoPerguntasProjeto.setShowGrid(true);
+        tableIniciacaoPerguntasProjeto.setSurrendersFocusOnKeystroke(true);
+        iniciacaoPerguntasProjeto.setViewportView(tableIniciacaoPerguntasProjeto);
+        if (tableIniciacaoPerguntasProjeto.getColumnModel().getColumnCount() > 0) {
+            tableIniciacaoPerguntasProjeto.getColumnModel().getColumn(0).setMinWidth(50);
+            tableIniciacaoPerguntasProjeto.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tableIniciacaoPerguntasProjeto.getColumnModel().getColumn(0).setMaxWidth(50);
+            tableIniciacaoPerguntasProjeto.getColumnModel().getColumn(1).setPreferredWidth(100);
+            tableIniciacaoPerguntasProjeto.getColumnModel().getColumn(2).setPreferredWidth(20);
+            tableIniciacaoPerguntasProjeto.getColumnModel().getColumn(3).setPreferredWidth(20);
+            tableIniciacaoPerguntasProjeto.getColumnModel().getColumn(4).setPreferredWidth(5);
+        }
 
-        javax.swing.GroupLayout iteracaoFechadaLayout = new javax.swing.GroupLayout(iteracaoFechada);
-        iteracaoFechada.setLayout(iteracaoFechadaLayout);
-        iteracaoFechadaLayout.setHorizontalGroup(
-            iteracaoFechadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 383, Short.MAX_VALUE)
+        javax.swing.GroupLayout faseIniciacaoLayout = new javax.swing.GroupLayout(faseIniciacao);
+        faseIniciacao.setLayout(faseIniciacaoLayout);
+        faseIniciacaoLayout.setHorizontalGroup(
+            faseIniciacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(iniciacaoPerguntasProjeto, javax.swing.GroupLayout.DEFAULT_SIZE, 748, Short.MAX_VALUE)
         );
-        iteracaoFechadaLayout.setVerticalGroup(
-            iteracaoFechadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+        faseIniciacaoLayout.setVerticalGroup(
+            faseIniciacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(faseIniciacaoLayout.createSequentialGroup()
+                .addComponent(iniciacaoPerguntasProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
 
-        abasIteracoes.addTab("Fechadas", iteracaoFechada);
+        abasFasesIteracao.addTab("Iniciação", faseIniciacao);
+
+        tableRequisitosPerguntasProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tableRequisitosPerguntasProjeto.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"01", "Cliente", "15/05/2023", "20/05/2023", "Fechado"},
+                {"02", "Desenvolvedor", "15/05/2023", "20/05/2023", "Fechado"},
+                {"03", "Arquiteto de Software", "15/05/2023", "15/06/2023", "Aberto"},
+                {"04", "Gerente de Projeto", "15/05/2023", "15/06/2023", "Aberto"},
+                {"05", "Líder Técnico", "", "", "Rascunho"},
+                {"06", "Analista de Qualidade", "", "", "Rascunho"}
+            },
+            new String [] {
+                "#", "Participante", "Data Abertura", "Data Limite", "Status"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tableRequisitosPerguntasProjeto.setRowHeight(26);
+        tableRequisitosPerguntasProjeto.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tableRequisitosPerguntasProjeto.setShowGrid(true);
+        tableRequisitosPerguntasProjeto.setSurrendersFocusOnKeystroke(true);
+        requisitosPerguntasProjeto.setViewportView(tableRequisitosPerguntasProjeto);
+        if (tableRequisitosPerguntasProjeto.getColumnModel().getColumnCount() > 0) {
+            tableRequisitosPerguntasProjeto.getColumnModel().getColumn(0).setMinWidth(50);
+            tableRequisitosPerguntasProjeto.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tableRequisitosPerguntasProjeto.getColumnModel().getColumn(0).setMaxWidth(50);
+            tableRequisitosPerguntasProjeto.getColumnModel().getColumn(1).setPreferredWidth(100);
+            tableRequisitosPerguntasProjeto.getColumnModel().getColumn(2).setPreferredWidth(20);
+            tableRequisitosPerguntasProjeto.getColumnModel().getColumn(3).setPreferredWidth(20);
+            tableRequisitosPerguntasProjeto.getColumnModel().getColumn(4).setPreferredWidth(5);
+        }
+
+        javax.swing.GroupLayout faseRequisitosLayout = new javax.swing.GroupLayout(faseRequisitos);
+        faseRequisitos.setLayout(faseRequisitosLayout);
+        faseRequisitosLayout.setHorizontalGroup(
+            faseRequisitosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(faseRequisitosLayout.createSequentialGroup()
+                .addComponent(requisitosPerguntasProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 746, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 2, Short.MAX_VALUE))
+        );
+        faseRequisitosLayout.setVerticalGroup(
+            faseRequisitosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, faseRequisitosLayout.createSequentialGroup()
+                .addComponent(requisitosPerguntasProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        abasFasesIteracao.addTab("Requisitos", faseRequisitos);
+
+        tableProjetoPerguntasProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tableProjetoPerguntasProjeto.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"01", "Cliente", "15/05/2023", "20/05/2023", "Fechado"},
+                {"02", "Desenvolvedor", "15/05/2023", "20/05/2023", "Fechado"},
+                {"03", "Arquiteto de Software", "15/05/2023", "15/06/2023", "Aberto"},
+                {"04", "Gerente de Projeto", "15/05/2023", "15/06/2023", "Aberto"},
+                {"05", "Líder Técnico", "", "", "Rascunho"},
+                {"06", "Analista de Qualidade", "", "", "Rascunho"}
+            },
+            new String [] {
+                "#", "Participante", "Data Abertura", "Data Limite", "Status"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tableProjetoPerguntasProjeto.setRowHeight(26);
+        tableProjetoPerguntasProjeto.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tableProjetoPerguntasProjeto.setShowGrid(true);
+        tableProjetoPerguntasProjeto.setSurrendersFocusOnKeystroke(true);
+        projetoPerguntasProjeto.setViewportView(tableProjetoPerguntasProjeto);
+        if (tableProjetoPerguntasProjeto.getColumnModel().getColumnCount() > 0) {
+            tableProjetoPerguntasProjeto.getColumnModel().getColumn(0).setMinWidth(50);
+            tableProjetoPerguntasProjeto.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tableProjetoPerguntasProjeto.getColumnModel().getColumn(0).setMaxWidth(50);
+            tableProjetoPerguntasProjeto.getColumnModel().getColumn(1).setPreferredWidth(100);
+            tableProjetoPerguntasProjeto.getColumnModel().getColumn(2).setPreferredWidth(20);
+            tableProjetoPerguntasProjeto.getColumnModel().getColumn(3).setPreferredWidth(20);
+            tableProjetoPerguntasProjeto.getColumnModel().getColumn(4).setPreferredWidth(5);
+        }
+
+        javax.swing.GroupLayout faseProjetoLayout = new javax.swing.GroupLayout(faseProjeto);
+        faseProjeto.setLayout(faseProjetoLayout);
+        faseProjetoLayout.setHorizontalGroup(
+            faseProjetoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(faseProjetoLayout.createSequentialGroup()
+                .addComponent(projetoPerguntasProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 746, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 2, Short.MAX_VALUE))
+        );
+        faseProjetoLayout.setVerticalGroup(
+            faseProjetoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, faseProjetoLayout.createSequentialGroup()
+                .addComponent(projetoPerguntasProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        abasFasesIteracao.addTab("Projeto", faseProjeto);
+
+        tableDesenvolvimentoPerguntasProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tableDesenvolvimentoPerguntasProjeto.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"01", "Cliente", "15/05/2023", "20/05/2023", "Fechado"},
+                {"02", "Desenvolvedor", "15/05/2023", "20/05/2023", "Fechado"},
+                {"03", "Arquiteto de Software", "15/05/2023", "15/06/2023", "Aberto"},
+                {"04", "Gerente de Projeto", "15/05/2023", "15/06/2023", "Aberto"},
+                {"05", "Líder Técnico", "", "", "Rascunho"},
+                {"06", "Analista de Qualidade", "", "", "Rascunho"}
+            },
+            new String [] {
+                "#", "Participante", "Data Abertura", "Data Limite", "Status"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tableDesenvolvimentoPerguntasProjeto.setRowHeight(26);
+        tableDesenvolvimentoPerguntasProjeto.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tableDesenvolvimentoPerguntasProjeto.setShowGrid(true);
+        tableDesenvolvimentoPerguntasProjeto.setSurrendersFocusOnKeystroke(true);
+        desenvolvimentoPerguntasProjeto.setViewportView(tableDesenvolvimentoPerguntasProjeto);
+        if (tableDesenvolvimentoPerguntasProjeto.getColumnModel().getColumnCount() > 0) {
+            tableDesenvolvimentoPerguntasProjeto.getColumnModel().getColumn(0).setMinWidth(50);
+            tableDesenvolvimentoPerguntasProjeto.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tableDesenvolvimentoPerguntasProjeto.getColumnModel().getColumn(0).setMaxWidth(50);
+            tableDesenvolvimentoPerguntasProjeto.getColumnModel().getColumn(1).setPreferredWidth(100);
+            tableDesenvolvimentoPerguntasProjeto.getColumnModel().getColumn(2).setPreferredWidth(20);
+            tableDesenvolvimentoPerguntasProjeto.getColumnModel().getColumn(3).setPreferredWidth(20);
+            tableDesenvolvimentoPerguntasProjeto.getColumnModel().getColumn(4).setPreferredWidth(5);
+        }
+
+        javax.swing.GroupLayout faseDesenvolvimentoLayout = new javax.swing.GroupLayout(faseDesenvolvimento);
+        faseDesenvolvimento.setLayout(faseDesenvolvimentoLayout);
+        faseDesenvolvimentoLayout.setHorizontalGroup(
+            faseDesenvolvimentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(faseDesenvolvimentoLayout.createSequentialGroup()
+                .addComponent(desenvolvimentoPerguntasProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 746, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 2, Short.MAX_VALUE))
+        );
+        faseDesenvolvimentoLayout.setVerticalGroup(
+            faseDesenvolvimentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, faseDesenvolvimentoLayout.createSequentialGroup()
+                .addComponent(desenvolvimentoPerguntasProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        abasFasesIteracao.addTab("Desenvolvimento", faseDesenvolvimento);
+
+        tableTesteVerificacaoPerguntasProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tableTesteVerificacaoPerguntasProjeto.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"01", "Cliente", "15/05/2023", "20/05/2023", "Fechado"},
+                {"02", "Desenvolvedor", "15/05/2023", "20/05/2023", "Fechado"},
+                {"03", "Arquiteto de Software", "15/05/2023", "15/06/2023", "Aberto"},
+                {"04", "Gerente de Projeto", "15/05/2023", "15/06/2023", "Aberto"},
+                {"05", "Líder Técnico", "", "", "Rascunho"},
+                {"06", "Analista de Qualidade", "", "", "Rascunho"}
+            },
+            new String [] {
+                "#", "Participante", "Data Abertura", "Data Limite", "Status"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tableTesteVerificacaoPerguntasProjeto.setRowHeight(26);
+        tableTesteVerificacaoPerguntasProjeto.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tableTesteVerificacaoPerguntasProjeto.setShowGrid(true);
+        tableTesteVerificacaoPerguntasProjeto.setSurrendersFocusOnKeystroke(true);
+        testeVerificacaoPerguntasProjeto.setViewportView(tableTesteVerificacaoPerguntasProjeto);
+        if (tableTesteVerificacaoPerguntasProjeto.getColumnModel().getColumnCount() > 0) {
+            tableTesteVerificacaoPerguntasProjeto.getColumnModel().getColumn(0).setMinWidth(50);
+            tableTesteVerificacaoPerguntasProjeto.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tableTesteVerificacaoPerguntasProjeto.getColumnModel().getColumn(0).setMaxWidth(50);
+            tableTesteVerificacaoPerguntasProjeto.getColumnModel().getColumn(1).setPreferredWidth(100);
+            tableTesteVerificacaoPerguntasProjeto.getColumnModel().getColumn(2).setPreferredWidth(20);
+            tableTesteVerificacaoPerguntasProjeto.getColumnModel().getColumn(3).setPreferredWidth(20);
+            tableTesteVerificacaoPerguntasProjeto.getColumnModel().getColumn(4).setPreferredWidth(5);
+        }
+
+        javax.swing.GroupLayout faseTesteVerificacaoLayout = new javax.swing.GroupLayout(faseTesteVerificacao);
+        faseTesteVerificacao.setLayout(faseTesteVerificacaoLayout);
+        faseTesteVerificacaoLayout.setHorizontalGroup(
+            faseTesteVerificacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(faseTesteVerificacaoLayout.createSequentialGroup()
+                .addComponent(testeVerificacaoPerguntasProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 746, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 2, Short.MAX_VALUE))
+        );
+        faseTesteVerificacaoLayout.setVerticalGroup(
+            faseTesteVerificacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(faseTesteVerificacaoLayout.createSequentialGroup()
+                .addComponent(testeVerificacaoPerguntasProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        abasFasesIteracao.addTab("Teste e Verificação", faseTesteVerificacao);
+
+        txtTituloSelecionarModeloQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        txtTituloSelecionarModeloQuestionario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtTituloSelecionarModeloQuestionario.setText("Projeto: ");
+
+        txtTituloSelecionarModeloQuestionario1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtTituloSelecionarModeloQuestionario1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtTituloSelecionarModeloQuestionario1.setText("Sistema de Padaria");
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel3.setText("Etapas da Iteração:");
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel2.setText("Sprint 4");
+        setJMenuBar(menuBarQuestionarios);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtTituloSelecionarModeloQuestionario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(labelFaseAtual, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(abasIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addGap(65, 65, 65)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnAbrirFase)
-                        .addGap(199, 199, 199)
-                        .addComponent(btnVoltar)))
-                .addGap(25, 25, 25))
+                        .addComponent(btnAbrirPerguntasQuestionario)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnPublicarPerguntasFaseProjeto))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(txtTituloSelecionarModeloQuestionario)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtTituloSelecionarModeloQuestionario1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnFechar)
+                        .addComponent(abasFasesIteracao, javax.swing.GroupLayout.PREFERRED_SIZE, 748, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(txtTituloSelecionarModeloQuestionario)
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtTituloSelecionarModeloQuestionario)
+                    .addComponent(txtTituloSelecionarModeloQuestionario1))
                 .addGap(10, 10, 10)
-                .addComponent(labelFaseAtual)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel2))
                 .addGap(20, 20, 20)
-                .addComponent(abasIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnVoltar)
-                    .addComponent(btnAbrirFase))
-                .addGap(15, 15, 15))
+                .addComponent(abasFasesIteracao, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAbrirPerguntasQuestionario)
+                    .addComponent(btnPublicarPerguntasFaseProjeto)
+                    .addComponent(btnFechar))
+                .addGap(20, 20, 20))
         );
+
+        abasFasesIteracao.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAbrirFaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirFaseActionPerformed
-        dispose();
-        ListarPerguntasEtapaIteracaoProjetoView listarQuestionariosView = new ListarPerguntasEtapaIteracaoProjetoView();
-        listarQuestionariosView.setVisible(true);
-    }//GEN-LAST:event_btnAbrirFaseActionPerformed
-
-    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        dispose();
-    }//GEN-LAST:event_btnCancelarActionPerformed
-
-    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+    private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
         this.dispose();
-        ListarPerguntasEtapaIteracaoProjetoView listarQuestionariosView = new ListarPerguntasEtapaIteracaoProjetoView();
-        listarQuestionariosView.setVisible(true);
-    }//GEN-LAST:event_btnVoltarActionPerformed
+        //GerenciarIteracoesProjeto gerenciarIteracoesProjeto = new GerenciarIteracoesProjeto();
+        //gerenciarIteracoesProjeto.setVisible(true);
+    }//GEN-LAST:event_btnFecharActionPerformed
+
+    private void btnAbrirPerguntasQuestionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirPerguntasQuestionarioActionPerformed
+        this.dispose();
+        ManterPerguntasEtapaProjetoView manterPerguntasFaseProjetoView = new ManterPerguntasEtapaProjetoView();
+        manterPerguntasFaseProjetoView.setVisible(true);
+    }//GEN-LAST:event_btnAbrirPerguntasQuestionarioActionPerformed
+
+    private void btnPublicarPerguntasFaseProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPublicarPerguntasFaseProjetoActionPerformed
+        this.dispose();
+        //GerenciarIteracoesProjeto gerenciarIteracoesProjeto = new GerenciarIteracoesProjeto();
+        //gerenciarIteracoesProjeto.setVisible(true);
+    }//GEN-LAST:event_btnPublicarPerguntasFaseProjetoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -233,13 +493,13 @@ public class AbrirIteracaoProjetoMembroEquipeView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AbrirIteracaoProjetoMembroEquipeView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GerenciarEtapasIteracaoAbas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AbrirIteracaoProjetoMembroEquipeView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GerenciarEtapasIteracaoAbas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AbrirIteracaoProjetoMembroEquipeView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GerenciarEtapasIteracaoAbas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AbrirIteracaoProjetoMembroEquipeView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GerenciarEtapasIteracaoAbas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -4341,23 +4601,35 @@ public class AbrirIteracaoProjetoMembroEquipeView extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AbrirIteracaoProjetoMembroEquipeView().setVisible(true);
+                new GerenciarEtapasIteracaoAbas().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTabbedPane abasIteracoes;
-    private javax.swing.JButton btnAbrirFase;
-    private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnVoltar;
-    private javax.swing.JPanel iteracaoAberta;
-    private javax.swing.JPanel iteracaoFechada;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JLabel labelFaseAtual;
-    private javax.swing.JTable tabelaIteracaoAberta;
-    private javax.swing.JTable tabelaIteracaoFechada;
+    private javax.swing.JTabbedPane abasFasesIteracao;
+    private javax.swing.JButton btnAbrirPerguntasQuestionario;
+    private javax.swing.JButton btnFechar;
+    private javax.swing.JButton btnPublicarPerguntasFaseProjeto;
+    private javax.swing.JScrollPane desenvolvimentoPerguntasProjeto;
+    private javax.swing.JPanel faseDesenvolvimento;
+    private javax.swing.JPanel faseIniciacao;
+    private javax.swing.JPanel faseProjeto;
+    private javax.swing.JPanel faseRequisitos;
+    private javax.swing.JPanel faseTesteVerificacao;
+    private javax.swing.JScrollPane iniciacaoPerguntasProjeto;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JMenuBar menuBarQuestionarios;
+    private javax.swing.JScrollPane projetoPerguntasProjeto;
+    private javax.swing.JScrollPane requisitosPerguntasProjeto;
+    private javax.swing.JTable tableDesenvolvimentoPerguntasProjeto;
+    private javax.swing.JTable tableIniciacaoPerguntasProjeto;
+    private javax.swing.JTable tableProjetoPerguntasProjeto;
+    private javax.swing.JTable tableRequisitosPerguntasProjeto;
+    private javax.swing.JTable tableTesteVerificacaoPerguntasProjeto;
+    private javax.swing.JScrollPane testeVerificacaoPerguntasProjeto;
     private javax.swing.JLabel txtTituloSelecionarModeloQuestionario;
+    private javax.swing.JLabel txtTituloSelecionarModeloQuestionario1;
     // End of variables declaration//GEN-END:variables
 }

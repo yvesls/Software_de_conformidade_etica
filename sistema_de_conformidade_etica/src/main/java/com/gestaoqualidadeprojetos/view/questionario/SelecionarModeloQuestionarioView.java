@@ -4,7 +4,8 @@
  */
 package com.gestaoqualidadeprojetos.view.questionario;
 
-import com.gestaoqualidadeprojetos.view.iteracao.CriarNovaIteracaoView;
+import com.gestaoqualidadeprojetos.view.gerenciamento.GerenciarIteracoesProjeto;
+import com.gestaoqualidadeprojetos.view.gerenciamento.CriarNovaIteracaoView;
 import com.gestaoqualidadeprojetos.view.projeto.CriarNovoProjetoView;
 
 /**
@@ -127,8 +128,8 @@ public class SelecionarModeloQuestionarioView extends javax.swing.JFrame {
 
     private void btnProximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProximoActionPerformed
         this.dispose();
-        CriarNovaIteracaoView criarNovaFaseView = new CriarNovaIteracaoView();
-        criarNovaFaseView.setVisible(true);
+        GerenciarIteracoesProjeto gerenciarIteracoesProjeto = new GerenciarIteracoesProjeto();
+        gerenciarIteracoesProjeto.setVisible(true);
     }//GEN-LAST:event_btnProximoActionPerformed
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed

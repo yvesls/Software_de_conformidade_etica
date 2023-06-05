@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.gestaoqualidadeprojetos.view.pergunta;
+package com.gestaoqualidadeprojetos.view.gerenciamento;
 
 /**
  *
  * @author Gabriel
  */
-public class CriarNovaPerguntaView extends javax.swing.JFrame {
+public class EditarPerguntaView extends javax.swing.JFrame {
 
     /**
      * Creates new form CriarNovaPerguntaView
      */
-    public CriarNovaPerguntaView() {
+    public EditarPerguntaView() {
         initComponents();
         setVisible(true);
         setResizable(false);
@@ -41,10 +41,18 @@ public class CriarNovaPerguntaView extends javax.swing.JFrame {
 
         txtTituloCriarPergunta.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txtTituloCriarPergunta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtTituloCriarPergunta.setText("Criar Nova Pergunta");
+        txtTituloCriarPergunta.setText("Editar Pergunta");
 
         labelPergunta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         labelPergunta.setText("Pergunta:");
+
+        txtFieldNovaPergunta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtFieldNovaPergunta.setText("Você entendeu os objetivos do software?");
+        txtFieldNovaPergunta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFieldNovaPerguntaActionPerformed(evt);
+            }
+        });
 
         btnSalvar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnSalvar.setText("Salvar Pergunta");
@@ -111,6 +119,10 @@ public class CriarNovaPerguntaView extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btnCancelarActionPerformed
 
+    private void txtFieldNovaPerguntaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldNovaPerguntaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFieldNovaPerguntaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -128,20 +140,21 @@ public class CriarNovaPerguntaView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CriarNovaPerguntaView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditarPerguntaView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CriarNovaPerguntaView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditarPerguntaView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CriarNovaPerguntaView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditarPerguntaView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CriarNovaPerguntaView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditarPerguntaView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CriarNovaPerguntaView().setVisible(true);
+                new EditarPerguntaView().setVisible(true);
             }
         });
     }

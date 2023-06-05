@@ -29,6 +29,11 @@ public class TelaInicialMembroEquipeView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jSeparatorBarraNotificacoes = new javax.swing.JSeparator();
+        jLabelUsuario = new javax.swing.JLabel();
+        txtUsuarioLogado = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         menuProjetos = new javax.swing.JMenu();
         itemMenuAcessarProjetos = new javax.swing.JMenuItem();
@@ -40,13 +45,25 @@ public class TelaInicialMembroEquipeView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Inicial");
 
+        jLabelUsuario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabelUsuario.setText("Usuário:");
+
+        txtUsuarioLogado.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtUsuarioLogado.setText("Cliente");
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setText("Notificações:");
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setText("+3");
+
         jMenuBar1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         menuProjetos.setText("Projetos");
         menuProjetos.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
 
         itemMenuAcessarProjetos.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        itemMenuAcessarProjetos.setText("Acessar projetos");
+        itemMenuAcessarProjetos.setText("Acessar Projetos");
         itemMenuAcessarProjetos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 itemMenuAcessarProjetosActionPerformed(evt);
@@ -90,11 +107,30 @@ public class TelaInicialMembroEquipeView extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
+            .addComponent(jSeparatorBarraNotificacoes)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabelUsuario)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtUsuarioLogado)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 511, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 386, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(352, Short.MAX_VALUE)
+                .addComponent(jSeparatorBarraNotificacoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelUsuario)
+                    .addComponent(txtUsuarioLogado)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
+                .addContainerGap())
         );
 
         pack();
@@ -161,9 +197,14 @@ public class TelaInicialMembroEquipeView extends javax.swing.JFrame {
     private javax.swing.JMenuItem itemMenuAcessarProjetos;
     private javax.swing.JMenuItem itemMenuLogout;
     private javax.swing.JMenuItem itemMenuVerAvisos;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabelUsuario;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JSeparator jSeparatorBarraNotificacoes;
     private javax.swing.JMenu menuAvisos;
     private javax.swing.JMenu menuProjetos;
     private javax.swing.JMenu menuSair;
+    private javax.swing.JLabel txtUsuarioLogado;
     // End of variables declaration//GEN-END:variables
 }

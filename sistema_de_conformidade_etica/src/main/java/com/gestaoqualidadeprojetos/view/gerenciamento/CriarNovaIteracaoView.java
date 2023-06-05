@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.gestaoqualidadeprojetos.view.iteracao;
+package com.gestaoqualidadeprojetos.view.gerenciamento;
 
 /**
  *
@@ -65,6 +65,9 @@ public class CriarNovaIteracaoView extends javax.swing.JFrame {
             }
         });
 
+        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField1.setText("Sprint 5");
+
         labelStatus.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         labelStatus.setText("Status:");
 
@@ -109,7 +112,7 @@ public class CriarNovaIteracaoView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtStatusQuestionario)
                     .addComponent(labelStatus))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCancelar)
                     .addComponent(btnSalvar))
@@ -121,15 +124,10 @@ public class CriarNovaIteracaoView extends javax.swing.JFrame {
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         this.dispose();
-        AbrirIteracaoProjetoAdminView selecionarFasesProjetoAdminView = new AbrirIteracaoProjetoAdminView();
-        selecionarFasesProjetoAdminView.setVisible(true);
-        
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         this.dispose();
-        //SelecionarFasesProjetoAdminView selecionarFasesProjetoAdminView = new SelecionarFasesProjetoAdminView();
-        //selecionarFasesProjetoAdminView.setVisible(true);
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     /**

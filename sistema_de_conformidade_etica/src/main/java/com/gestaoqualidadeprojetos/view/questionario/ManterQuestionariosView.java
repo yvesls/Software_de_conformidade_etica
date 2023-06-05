@@ -4,8 +4,7 @@
  */
 package com.gestaoqualidadeprojetos.view.questionario;
 
-import com.gestaoqualidadeprojetos.view.iteracao.CriarNovaIteracaoView;
-import com.gestaoqualidadeprojetos.view.pergunta.ManterPerguntasQuestionarioView;
+import com.gestaoqualidadeprojetos.view.gerenciamento.CriarNovaIteracaoView;
 
 /**
  *
@@ -19,7 +18,7 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
     public ManterQuestionariosView() {
         initComponents();
         setVisible(true);
-        setResizable(false);
+        //setResizable(false);
         this.setLocationRelativeTo(this.getParent());
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
     }
@@ -49,8 +48,8 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
         projetosRascunhos5 = new javax.swing.JPanel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTable5 = new javax.swing.JTable();
 
         btnCancelar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnCancelar.setText("Cancelar");
@@ -62,6 +61,7 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Manter Questionários");
+        setPreferredSize(new java.awt.Dimension(1000, 510));
 
         txtTituloSelecionarModeloQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txtTituloSelecionarModeloQuestionario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -122,18 +122,26 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
         jTable2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Questionário Padrão", "01/04/2023", "Publicado"},
-                {"Sistema de Padaria", "15/05/2023", "Publicado"}
+                {"02", "Questionário Padrão", "01/04/2023"},
+                {"03", "Sistema de Padaria", "15/05/2023"},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Nome", "Data", "Status"
+                "#", "Nome", "Data"
             }
         ) {
             Class[] types = new Class [] {
                 java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false
+                true, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -148,9 +156,13 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
         jTable2.setShowGrid(true);
         jScrollPane2.setViewportView(jTable2);
         if (jTable2.getColumnModel().getColumnCount() > 0) {
-            jTable2.getColumnModel().getColumn(0).setPreferredWidth(300);
-            jTable2.getColumnModel().getColumn(1).setPreferredWidth(5);
-            jTable2.getColumnModel().getColumn(2).setPreferredWidth(5);
+            jTable2.getColumnModel().getColumn(0).setMinWidth(35);
+            jTable2.getColumnModel().getColumn(0).setPreferredWidth(35);
+            jTable2.getColumnModel().getColumn(0).setMaxWidth(15);
+            jTable2.getColumnModel().getColumn(1).setPreferredWidth(300);
+            jTable2.getColumnModel().getColumn(2).setMinWidth(100);
+            jTable2.getColumnModel().getColumn(2).setPreferredWidth(100);
+            jTable2.getColumnModel().getColumn(2).setMaxWidth(150);
         }
 
         javax.swing.GroupLayout projetosAbertos5Layout = new javax.swing.GroupLayout(projetosAbertos5);
@@ -158,14 +170,14 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
         projetosAbertos5Layout.setHorizontalGroup(
             projetosAbertos5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(projetosAbertos5Layout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 635, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 842, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         projetosAbertos5Layout.setVerticalGroup(
             projetosAbertos5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(projetosAbertos5Layout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         abasMembrosEquipe5.addTab("Publicados", projetosAbertos5);
@@ -173,10 +185,19 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
         jTable3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Questionário Fechado", "01/04/2023", "Fechado"}
+                {"01", "Questionário Fechado", "01/04/2023"},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Nome", "Data", "Status"
+                "", "Nome", "Data"
             }
         ) {
             Class[] types = new Class [] {
@@ -191,35 +212,44 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
         jTable3.setShowGrid(true);
         jScrollPane3.setViewportView(jTable3);
         if (jTable3.getColumnModel().getColumnCount() > 0) {
-            jTable3.getColumnModel().getColumn(0).setPreferredWidth(300);
-            jTable3.getColumnModel().getColumn(1).setPreferredWidth(5);
-            jTable3.getColumnModel().getColumn(2).setPreferredWidth(5);
+            jTable3.getColumnModel().getColumn(0).setMinWidth(35);
+            jTable3.getColumnModel().getColumn(0).setPreferredWidth(35);
+            jTable3.getColumnModel().getColumn(0).setMaxWidth(50);
+            jTable3.getColumnModel().getColumn(1).setPreferredWidth(300);
+            jTable3.getColumnModel().getColumn(2).setMinWidth(100);
+            jTable3.getColumnModel().getColumn(2).setPreferredWidth(100);
+            jTable3.getColumnModel().getColumn(2).setMaxWidth(150);
         }
 
         javax.swing.GroupLayout projetosFechados5Layout = new javax.swing.GroupLayout(projetosFechados5);
         projetosFechados5.setLayout(projetosFechados5Layout);
         projetosFechados5Layout.setHorizontalGroup(
             projetosFechados5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(projetosFechados5Layout.createSequentialGroup()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 635, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 842, Short.MAX_VALUE)
         );
         projetosFechados5Layout.setVerticalGroup(
             projetosFechados5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(projetosFechados5Layout.createSequentialGroup()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
         );
 
         abasMembrosEquipe5.addTab("Fechados", projetosFechados5);
 
-        jTable4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+        jTable5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTable5.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Questionário de Rascunho", "01/04/2023", "Rascunho"}
+                {"", "Questionário de Rascunho", ""},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Nome", "Data", "Status"
+                "", "Nome", "Data"
             }
         ) {
             Class[] types = new Class [] {
@@ -230,28 +260,28 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jTable4.setRowHeight(26);
-        jTable4.setShowGrid(true);
-        jScrollPane4.setViewportView(jTable4);
-        if (jTable4.getColumnModel().getColumnCount() > 0) {
-            jTable4.getColumnModel().getColumn(0).setPreferredWidth(300);
-            jTable4.getColumnModel().getColumn(1).setPreferredWidth(5);
-            jTable4.getColumnModel().getColumn(2).setPreferredWidth(5);
+        jTable5.setRowHeight(26);
+        jTable5.setShowGrid(true);
+        jScrollPane5.setViewportView(jTable5);
+        if (jTable5.getColumnModel().getColumnCount() > 0) {
+            jTable5.getColumnModel().getColumn(0).setMinWidth(35);
+            jTable5.getColumnModel().getColumn(0).setPreferredWidth(35);
+            jTable5.getColumnModel().getColumn(0).setMaxWidth(50);
+            jTable5.getColumnModel().getColumn(1).setPreferredWidth(300);
+            jTable5.getColumnModel().getColumn(2).setMinWidth(100);
+            jTable5.getColumnModel().getColumn(2).setPreferredWidth(100);
+            jTable5.getColumnModel().getColumn(2).setMaxWidth(150);
         }
 
         javax.swing.GroupLayout projetosRascunhos5Layout = new javax.swing.GroupLayout(projetosRascunhos5);
         projetosRascunhos5.setLayout(projetosRascunhos5Layout);
         projetosRascunhos5Layout.setHorizontalGroup(
             projetosRascunhos5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(projetosRascunhos5Layout.createSequentialGroup()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 635, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 842, Short.MAX_VALUE)
         );
         projetosRascunhos5Layout.setVerticalGroup(
             projetosRascunhos5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(projetosRascunhos5Layout.createSequentialGroup()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
         );
 
         abasMembrosEquipe5.addTab("Rascunhos", projetosRascunhos5);
@@ -263,6 +293,7 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(65, 65, 65)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(abasMembrosEquipe5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -270,30 +301,31 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnVoltar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton4))
-                    .addComponent(abasMembrosEquipe5, javax.swing.GroupLayout.PREFERRED_SIZE, 633, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 65, Short.MAX_VALUE))
-            .addComponent(txtTituloSelecionarModeloQuestionario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnVoltar)))
+                .addContainerGap(65, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(txtTituloSelecionarModeloQuestionario, javax.swing.GroupLayout.PREFERRED_SIZE, 951, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(35, 35, 35)
                 .addComponent(txtTituloSelecionarModeloQuestionario)
-                .addGap(25, 25, 25)
-                .addComponent(abasMembrosEquipe5, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addGap(35, 35, 35)
+                .addComponent(abasMembrosEquipe5, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
                     .addComponent(jButton3)
-                    .addComponent(jButton1)
-                    .addComponent(btnVoltar)
                     .addComponent(jButton4)
-                    .addComponent(jButton5))
+                    .addComponent(btnVoltar)
+                    .addComponent(jButton1)
+                    .addComponent(jButton5)
+                    .addComponent(jButton2))
                 .addGap(20, 20, 20))
         );
 
@@ -319,7 +351,7 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        this.dispose();
+        //this.dispose();
         CriarNovoQuestionarioView criarNovoQuestionarioView = new CriarNovoQuestionarioView();
         criarNovoQuestionarioView.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -329,7 +361,7 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        this.dispose();
+        //this.dispose();
         ManterPerguntasQuestionarioView manterPerguntasQuestionarioView = new ManterPerguntasQuestionarioView();
         manterPerguntasQuestionarioView.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
@@ -507,10 +539,10 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
-    private javax.swing.JTable jTable4;
+    private javax.swing.JTable jTable5;
     private javax.swing.JPanel projetosAbertos5;
     private javax.swing.JPanel projetosFechados5;
     private javax.swing.JPanel projetosRascunhos5;

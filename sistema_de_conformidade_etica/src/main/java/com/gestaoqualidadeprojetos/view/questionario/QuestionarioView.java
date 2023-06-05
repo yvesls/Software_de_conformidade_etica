@@ -4,7 +4,7 @@
  */
 package com.gestaoqualidadeprojetos.view.questionario;
 
-import com.gestaoqualidadeprojetos.view.fase.AbrirFasesProjetoMembroEquipeView;
+import com.gestaoqualidadeprojetos.view.gerenciamento.GerenciarIteracoesProjeto;
 import com.gestaoqualidadeprojetos.view.projeto.ListarProjetosMembroEquipeView;
 import java.awt.Color;
 import javax.swing.BorderFactory;
@@ -321,7 +321,7 @@ public class QuestionarioView extends javax.swing.JFrame {
 
     private void jButtonFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFecharActionPerformed
         this.dispose();
-        AbrirFasesProjetoMembroEquipeView selecionarFasesProjetoMembroEquipeView = new AbrirFasesProjetoMembroEquipeView();
+        GerenciarIteracoesProjeto selecionarFasesProjetoMembroEquipeView = new GerenciarIteracoesProjeto();
         selecionarFasesProjetoMembroEquipeView.setVisible(true);
     }//GEN-LAST:event_jButtonFecharActionPerformed
 

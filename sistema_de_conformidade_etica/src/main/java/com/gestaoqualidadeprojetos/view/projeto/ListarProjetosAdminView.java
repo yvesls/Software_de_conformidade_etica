@@ -3,10 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.gestaoqualidadeprojetos.view.projeto;
-import com.gestaoqualidadeprojetos.view.fase.AbrirFasesProjetoMembroEquipeView;
+import com.gestaoqualidadeprojetos.view.gerenciamento.GerenciarIteracoesProjeto;
 import com.gestaoqualidadeprojetos.view.dashboard.DashboardAdminView;
-import com.gestaoqualidadeprojetos.view.iteracao.ListarPerguntasEtapaIteracaoProjetoView;
-import com.gestaoqualidadeprojetos.view.iteracao.ListarPerguntasEtapaIteracaoProjetoView;
+import com.gestaoqualidadeprojetos.view.gerenciamento.GerenciarEtapasIteracao;
+import com.gestaoqualidadeprojetos.view.gerenciamento.GerenciarEtapasIteracao;
+import com.gestaoqualidadeprojetos.view.questionario.QuestionarioView;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
 
@@ -45,7 +46,6 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         txtTituloProjetos = new javax.swing.JLabel();
         btnNovoProjeto = new javax.swing.JButton();
         btnFechar = new javax.swing.JButton();
-        ConfigurarProjetosAdmin = new javax.swing.JButton();
         btnVerDashboard = new javax.swing.JButton();
         btnAbrirProjeto = new javax.swing.JButton();
         abasMembrosEquipe = new javax.swing.JTabbedPane();
@@ -58,6 +58,7 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         projetosRascunhos = new javax.swing.JPanel();
         jScrollPaneTabelaProjetosAbertos4 = new javax.swing.JScrollPane();
         tableProjetosAbertos4 = new javax.swing.JTable();
+        btnAbrirQuestionario = new javax.swing.JButton();
         menuBarProjetosAdmin = new javax.swing.JMenuBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -85,14 +86,6 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         btnFechar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFecharActionPerformed(evt);
-            }
-        });
-
-        ConfigurarProjetosAdmin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        ConfigurarProjetosAdmin.setText("Configurar");
-        ConfigurarProjetosAdmin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ConfigurarProjetosAdminActionPerformed(evt);
             }
         });
 
@@ -158,7 +151,7 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
             projetosAbertosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(projetosAbertosLayout.createSequentialGroup()
                 .addComponent(jScrollPaneTabelaProjetosAbertos, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 4, Short.MAX_VALUE))
+                .addGap(0, 6, Short.MAX_VALUE))
         );
 
         abasMembrosEquipe.addTab("Abertos", projetosAbertos);
@@ -167,6 +160,7 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         tableProjetosAbertos2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"01", "Sistema de Matrícula", "15/05/2023", "15/06/2023", "30/06/2023"},
+                {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -204,7 +198,7 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
             projetosFechadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(projetosFechadosLayout.createSequentialGroup()
                 .addComponent(jScrollPaneTabelaProjetosAbertos2, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 4, Short.MAX_VALUE))
+                .addGap(0, 6, Short.MAX_VALUE))
         );
 
         abasMembrosEquipe.addTab("Fechados", projetosFechados);
@@ -213,6 +207,7 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         tableProjetosAbertos4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"", "Rede social", "", "", "30/07/2023"},
+                {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -249,12 +244,19 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         projetosRascunhosLayout.setVerticalGroup(
             projetosRascunhosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(projetosRascunhosLayout.createSequentialGroup()
-                .addComponent(jScrollPaneTabelaProjetosAbertos4, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 4, Short.MAX_VALUE))
+                .addComponent(jScrollPaneTabelaProjetosAbertos4, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         abasMembrosEquipe.addTab("Rascunhos", projetosRascunhos);
 
+        btnAbrirQuestionario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnAbrirQuestionario.setText("Responder Questionário");
+        btnAbrirQuestionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAbrirQuestionarioActionPerformed(evt);
+            }
+        });
         setJMenuBar(menuBarProjetosAdmin);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -262,7 +264,7 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(txtTituloProjetos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addGap(65, 65, 65)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -270,10 +272,10 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnAbrirProjeto)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ConfigurarProjetosAdmin)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnVerDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnAbrirQuestionario)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnVerDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnFechar))
                     .addComponent(abasMembrosEquipe))
                 .addGap(65, 65, 65))
@@ -284,15 +286,15 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
                 .addGap(35, 35, 35)
                 .addComponent(txtTituloProjetos)
                 .addGap(35, 35, 35)
-                .addComponent(abasMembrosEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
+                .addComponent(abasMembrosEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnNovoProjeto)
                     .addComponent(btnFechar)
-                    .addComponent(ConfigurarProjetosAdmin)
-                    .addComponent(btnVerDashboard)
-                    .addComponent(btnAbrirProjeto))
-                .addGap(13, 13, 13))
+                    .addComponent(btnAbrirProjeto)
+                    .addComponent(btnAbrirQuestionario)
+                    .addComponent(btnVerDashboard))
+                .addGap(20, 20, 20))
         );
 
         pack();
@@ -314,12 +316,6 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         //telaInicialAdminView.setVisible(true);
     }//GEN-LAST:event_btnFecharActionPerformed
 
-    private void ConfigurarProjetosAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfigurarProjetosAdminActionPerformed
-        this.dispose();
-        ListarPerguntasEtapaIteracaoProjetoView listarPerguntasMembroProjetoFaseIteracaoView = new ListarPerguntasEtapaIteracaoProjetoView();
-        listarPerguntasMembroProjetoFaseIteracaoView.setVisible(true);
-    }//GEN-LAST:event_ConfigurarProjetosAdminActionPerformed
-
     private void btnVerDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerDashboardActionPerformed
         this.dispose();
         DashboardAdminView dashboardView = new DashboardAdminView();
@@ -328,9 +324,15 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
 
     private void btnAbrirProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirProjetoActionPerformed
         this.dispose();
-        AbrirFasesProjetoMembroEquipeView selecionarFasesProjetoMembroEquipeView = new AbrirFasesProjetoMembroEquipeView();
+        GerenciarIteracoesProjeto selecionarFasesProjetoMembroEquipeView = new GerenciarIteracoesProjeto();
         selecionarFasesProjetoMembroEquipeView.setVisible(true);
     }//GEN-LAST:event_btnAbrirProjetoActionPerformed
+
+    private void btnAbrirQuestionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirQuestionarioActionPerformed
+        this.dispose();
+        QuestionarioView questionarioView = new QuestionarioView();
+        questionarioView.setVisible(true);
+    }//GEN-LAST:event_btnAbrirQuestionarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -371,9 +373,9 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ConfigurarProjetosAdmin;
     private javax.swing.JTabbedPane abasMembrosEquipe;
     private javax.swing.JButton btnAbrirProjeto;
+    private javax.swing.JButton btnAbrirQuestionario;
     private javax.swing.JButton btnFechar;
     private javax.swing.JButton btnNovoProjeto;
     private javax.swing.JButton btnVerDashboard;

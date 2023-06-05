@@ -2,26 +2,26 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.gestaoqualidadeprojetos.view.pergunta;
+package com.gestaoqualidadeprojetos.view.gerenciamento;
 
-import com.gestaoqualidadeprojetos.view.iteracao.ListarPerguntasEtapaIteracaoProjetoView;
-import com.gestaoqualidadeprojetos.view.pergunta.CriarNovaPerguntaView;
+import com.gestaoqualidadeprojetos.view.gerenciamento.GerenciarEtapasIteracao;
+import com.gestaoqualidadeprojetos.view.gerenciamento.CriarNovaPerguntaView;
 
 /**
  *
  * @author Gabriel
  */
-public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
+public class ManterPerguntasEtapaProjetoAbas extends javax.swing.JFrame {
 
     /**
      * Creates new form PerguntasQuestionarioView
      */
-    public ManterPerguntasFaseProjetoView() {
+    public ManterPerguntasEtapaProjetoAbas() {
         initComponents();
         setVisible(true);
-        this.setExtendedState(this.MAXIMIZED_BOTH);
+        //this.setExtendedState(this.MAXIMIZED_BOTH);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
-       // this.setLocationRelativeTo(this.getParent());
+       this.setLocationRelativeTo(this.getParent());
     }
 
     /**
@@ -37,36 +37,38 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
         btnNovaPergunta = new javax.swing.JButton();
         labelStatus = new javax.swing.JLabel();
         txtStatusQuestionario = new javax.swing.JLabel();
-        btnSalvar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         btnSalvar1 = new javax.swing.JButton();
         abasMembrosEquipe = new javax.swing.JTabbedPane();
         cliente = new javax.swing.JPanel();
-        perguntasFaseAtualCliente = new javax.swing.JScrollPane();
-        tablePerguntasFaseAtualCliente = new javax.swing.JTable();
+        perguntasFaseAtualDesenvolvedor1 = new javax.swing.JScrollPane();
+        tablePerguntasFaseAtualDesenvolvedor1 = new javax.swing.JTable();
         desenvolvedor = new javax.swing.JPanel();
         perguntasFaseAtualDesenvolvedor = new javax.swing.JScrollPane();
         tablePerguntasFaseAtualDesenvolvedor = new javax.swing.JTable();
         arquitetoSoftware = new javax.swing.JPanel();
-        perguntasFaseAtualArquitetoSoftware = new javax.swing.JScrollPane();
-        tablePerguntasFaseAtualArquitetoSoftware = new javax.swing.JTable();
+        perguntasFaseAtualDesenvolvedor2 = new javax.swing.JScrollPane();
+        tablePerguntasFaseAtualDesenvolvedor2 = new javax.swing.JTable();
         gerenteProjeto = new javax.swing.JPanel();
-        perguntasFaseAtualProjeto = new javax.swing.JScrollPane();
-        tablePerguntasFaseAtualProjeto = new javax.swing.JTable();
+        perguntasFaseAtualDesenvolvedor3 = new javax.swing.JScrollPane();
+        tablePerguntasFaseAtualDesenvolvedor3 = new javax.swing.JTable();
         liderTecnico = new javax.swing.JPanel();
-        perguntasFaseAtualLiderTecnico = new javax.swing.JScrollPane();
-        tablePerguntasFaseAtualLiderTecnico = new javax.swing.JTable();
+        perguntasFaseAtualDesenvolvedor4 = new javax.swing.JScrollPane();
+        tablePerguntasFaseAtualDesenvolvedor4 = new javax.swing.JTable();
         analistaQualidadee = new javax.swing.JPanel();
-        perguntasFaseAtualAnalistaQualidade = new javax.swing.JScrollPane();
-        tablePerguntasFaseAtualAnalistaQualidade = new javax.swing.JTable();
+        perguntasFaseAtualDesenvolvedor5 = new javax.swing.JScrollPane();
+        tablePerguntasFaseAtualDesenvolvedor5 = new javax.swing.JTable();
+        txtTituloPerguntasQuestionario1 = new javax.swing.JLabel();
+        btnEditarPergunta = new javax.swing.JButton();
+        btnNovaPergunta2 = new javax.swing.JButton();
         menuAcoesPerguntasQuestionario = new javax.swing.JMenuBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Manter Perguntas da Etapa");
 
         txtTituloPerguntasQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        txtTituloPerguntasQuestionario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtTituloPerguntasQuestionario.setText("Perguntas da Etapa");
+        txtTituloPerguntasQuestionario.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        txtTituloPerguntasQuestionario.setText("Perguntas da Etapa:");
 
         btnNovaPergunta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnNovaPergunta.setText("Nova pergunta");
@@ -81,14 +83,6 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
 
         txtStatusQuestionario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtStatusQuestionario.setText("Rascunho");
-
-        btnSalvar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnSalvar.setText("Publicar Perguntas");
-        btnSalvar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalvarActionPerformed(evt);
-            }
-        });
 
         btnCancelar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnCancelar.setText("Voltar");
@@ -110,34 +104,33 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
         abasMembrosEquipe.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         abasMembrosEquipe.setName("Fases da Iteração"); // NOI18N
 
-        tablePerguntasFaseAtualCliente.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        tablePerguntasFaseAtualCliente.setModel(new javax.swing.table.DefaultTableModel(
+        tablePerguntasFaseAtualDesenvolvedor1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tablePerguntasFaseAtualDesenvolvedor1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"01", "Você entendeu os objetivos do software?"},
                 {"02", "Você está disposto a fornecer feedback para a equipe de desenvolvimento durante todo o processo?"},
-                {"03", "Foi determinado quem toma as decisões em nome da sua empresa?"}
+                {"03", "Foi determinado quem toma as decisões em nome da sua empresa?"},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
                 "#", "Pergunta"
             }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        tablePerguntasFaseAtualCliente.setRowHeight(26);
-        tablePerguntasFaseAtualCliente.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        tablePerguntasFaseAtualCliente.setShowGrid(true);
-        tablePerguntasFaseAtualCliente.setSurrendersFocusOnKeystroke(true);
-        perguntasFaseAtualCliente.setViewportView(tablePerguntasFaseAtualCliente);
-        if (tablePerguntasFaseAtualCliente.getColumnModel().getColumnCount() > 0) {
-            tablePerguntasFaseAtualCliente.getColumnModel().getColumn(0).setMinWidth(50);
-            tablePerguntasFaseAtualCliente.getColumnModel().getColumn(0).setPreferredWidth(10);
-            tablePerguntasFaseAtualCliente.getColumnModel().getColumn(0).setMaxWidth(50);
+        ));
+        tablePerguntasFaseAtualDesenvolvedor1.setRowHeight(26);
+        tablePerguntasFaseAtualDesenvolvedor1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tablePerguntasFaseAtualDesenvolvedor1.setShowGrid(true);
+        tablePerguntasFaseAtualDesenvolvedor1.setSurrendersFocusOnKeystroke(true);
+        perguntasFaseAtualDesenvolvedor1.setViewportView(tablePerguntasFaseAtualDesenvolvedor1);
+        if (tablePerguntasFaseAtualDesenvolvedor1.getColumnModel().getColumnCount() > 0) {
+            tablePerguntasFaseAtualDesenvolvedor1.getColumnModel().getColumn(0).setMinWidth(50);
+            tablePerguntasFaseAtualDesenvolvedor1.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tablePerguntasFaseAtualDesenvolvedor1.getColumnModel().getColumn(0).setMaxWidth(50);
         }
 
         javax.swing.GroupLayout clienteLayout = new javax.swing.GroupLayout(cliente);
@@ -145,14 +138,14 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
         clienteLayout.setHorizontalGroup(
             clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clienteLayout.createSequentialGroup()
-                .addComponent(perguntasFaseAtualCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
+                .addComponent(perguntasFaseAtualDesenvolvedor1, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
                 .addContainerGap())
         );
         clienteLayout.setVerticalGroup(
             clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(clienteLayout.createSequentialGroup()
-                .addComponent(perguntasFaseAtualCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 76, Short.MAX_VALUE))
+                .addComponent(perguntasFaseAtualDesenvolvedor1, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         abasMembrosEquipe.addTab("Cliente", cliente);
@@ -162,7 +155,14 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
             new Object [][] {
                 {"01", "Você entendeu os objetivos do software?"},
                 {"02", "Você está disposto a fornecer feedback para a equipe de desenvolvimento durante todo o processo?"},
-                {"03", "Foi determinado quem toma as decisões em nome da sua empresa?"}
+                {"03", "Foi determinado quem toma as decisões em nome da sua empresa?"},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
                 "#", "Pergunta"
@@ -198,18 +198,25 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
         desenvolvedorLayout.setVerticalGroup(
             desenvolvedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(desenvolvedorLayout.createSequentialGroup()
-                .addComponent(perguntasFaseAtualDesenvolvedor, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 76, Short.MAX_VALUE))
+                .addComponent(perguntasFaseAtualDesenvolvedor, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         abasMembrosEquipe.addTab("Desenvolvedor", desenvolvedor);
 
-        tablePerguntasFaseAtualArquitetoSoftware.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        tablePerguntasFaseAtualArquitetoSoftware.setModel(new javax.swing.table.DefaultTableModel(
+        tablePerguntasFaseAtualDesenvolvedor2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tablePerguntasFaseAtualDesenvolvedor2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"01", "Você entendeu os objetivos do software?"},
                 {"02", "Você está disposto a fornecer feedback para a equipe de desenvolvimento durante todo o processo?"},
-                {"03", "Foi determinado quem toma as decisões em nome da sua empresa?"}
+                {"03", "Foi determinado quem toma as decisões em nome da sua empresa?"},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
                 "#", "Pergunta"
@@ -223,15 +230,15 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        tablePerguntasFaseAtualArquitetoSoftware.setRowHeight(26);
-        tablePerguntasFaseAtualArquitetoSoftware.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        tablePerguntasFaseAtualArquitetoSoftware.setShowGrid(true);
-        tablePerguntasFaseAtualArquitetoSoftware.setSurrendersFocusOnKeystroke(true);
-        perguntasFaseAtualArquitetoSoftware.setViewportView(tablePerguntasFaseAtualArquitetoSoftware);
-        if (tablePerguntasFaseAtualArquitetoSoftware.getColumnModel().getColumnCount() > 0) {
-            tablePerguntasFaseAtualArquitetoSoftware.getColumnModel().getColumn(0).setMinWidth(50);
-            tablePerguntasFaseAtualArquitetoSoftware.getColumnModel().getColumn(0).setPreferredWidth(10);
-            tablePerguntasFaseAtualArquitetoSoftware.getColumnModel().getColumn(0).setMaxWidth(50);
+        tablePerguntasFaseAtualDesenvolvedor2.setRowHeight(26);
+        tablePerguntasFaseAtualDesenvolvedor2.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tablePerguntasFaseAtualDesenvolvedor2.setShowGrid(true);
+        tablePerguntasFaseAtualDesenvolvedor2.setSurrendersFocusOnKeystroke(true);
+        perguntasFaseAtualDesenvolvedor2.setViewportView(tablePerguntasFaseAtualDesenvolvedor2);
+        if (tablePerguntasFaseAtualDesenvolvedor2.getColumnModel().getColumnCount() > 0) {
+            tablePerguntasFaseAtualDesenvolvedor2.getColumnModel().getColumn(0).setMinWidth(50);
+            tablePerguntasFaseAtualDesenvolvedor2.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tablePerguntasFaseAtualDesenvolvedor2.getColumnModel().getColumn(0).setMaxWidth(50);
         }
 
         javax.swing.GroupLayout arquitetoSoftwareLayout = new javax.swing.GroupLayout(arquitetoSoftware);
@@ -239,24 +246,31 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
         arquitetoSoftwareLayout.setHorizontalGroup(
             arquitetoSoftwareLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, arquitetoSoftwareLayout.createSequentialGroup()
-                .addComponent(perguntasFaseAtualArquitetoSoftware, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
+                .addComponent(perguntasFaseAtualDesenvolvedor2, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
                 .addContainerGap())
         );
         arquitetoSoftwareLayout.setVerticalGroup(
             arquitetoSoftwareLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(arquitetoSoftwareLayout.createSequentialGroup()
-                .addComponent(perguntasFaseAtualArquitetoSoftware, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 76, Short.MAX_VALUE))
+                .addComponent(perguntasFaseAtualDesenvolvedor2, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         abasMembrosEquipe.addTab("Arquiteto de Software", arquitetoSoftware);
 
-        tablePerguntasFaseAtualProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        tablePerguntasFaseAtualProjeto.setModel(new javax.swing.table.DefaultTableModel(
+        tablePerguntasFaseAtualDesenvolvedor3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tablePerguntasFaseAtualDesenvolvedor3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"01", "Você entendeu os objetivos do software?"},
                 {"02", "Você está disposto a fornecer feedback para a equipe de desenvolvimento durante todo o processo?"},
-                {"03", "Foi determinado quem toma as decisões em nome da sua empresa?"}
+                {"03", "Foi determinado quem toma as decisões em nome da sua empresa?"},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
                 "#", "Pergunta"
@@ -270,15 +284,15 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        tablePerguntasFaseAtualProjeto.setRowHeight(26);
-        tablePerguntasFaseAtualProjeto.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        tablePerguntasFaseAtualProjeto.setShowGrid(true);
-        tablePerguntasFaseAtualProjeto.setSurrendersFocusOnKeystroke(true);
-        perguntasFaseAtualProjeto.setViewportView(tablePerguntasFaseAtualProjeto);
-        if (tablePerguntasFaseAtualProjeto.getColumnModel().getColumnCount() > 0) {
-            tablePerguntasFaseAtualProjeto.getColumnModel().getColumn(0).setMinWidth(50);
-            tablePerguntasFaseAtualProjeto.getColumnModel().getColumn(0).setPreferredWidth(10);
-            tablePerguntasFaseAtualProjeto.getColumnModel().getColumn(0).setMaxWidth(50);
+        tablePerguntasFaseAtualDesenvolvedor3.setRowHeight(26);
+        tablePerguntasFaseAtualDesenvolvedor3.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tablePerguntasFaseAtualDesenvolvedor3.setShowGrid(true);
+        tablePerguntasFaseAtualDesenvolvedor3.setSurrendersFocusOnKeystroke(true);
+        perguntasFaseAtualDesenvolvedor3.setViewportView(tablePerguntasFaseAtualDesenvolvedor3);
+        if (tablePerguntasFaseAtualDesenvolvedor3.getColumnModel().getColumnCount() > 0) {
+            tablePerguntasFaseAtualDesenvolvedor3.getColumnModel().getColumn(0).setMinWidth(50);
+            tablePerguntasFaseAtualDesenvolvedor3.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tablePerguntasFaseAtualDesenvolvedor3.getColumnModel().getColumn(0).setMaxWidth(50);
         }
 
         javax.swing.GroupLayout gerenteProjetoLayout = new javax.swing.GroupLayout(gerenteProjeto);
@@ -286,24 +300,31 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
         gerenteProjetoLayout.setHorizontalGroup(
             gerenteProjetoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gerenteProjetoLayout.createSequentialGroup()
-                .addComponent(perguntasFaseAtualProjeto, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
+                .addComponent(perguntasFaseAtualDesenvolvedor3, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
                 .addContainerGap())
         );
         gerenteProjetoLayout.setVerticalGroup(
             gerenteProjetoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(gerenteProjetoLayout.createSequentialGroup()
-                .addComponent(perguntasFaseAtualProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 76, Short.MAX_VALUE))
+                .addComponent(perguntasFaseAtualDesenvolvedor3, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         abasMembrosEquipe.addTab("Gerente de Projeto", gerenteProjeto);
 
-        tablePerguntasFaseAtualLiderTecnico.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        tablePerguntasFaseAtualLiderTecnico.setModel(new javax.swing.table.DefaultTableModel(
+        tablePerguntasFaseAtualDesenvolvedor4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tablePerguntasFaseAtualDesenvolvedor4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"01", "Você entendeu os objetivos do software?"},
                 {"02", "Você está disposto a fornecer feedback para a equipe de desenvolvimento durante todo o processo?"},
-                {"03", "Foi determinado quem toma as decisões em nome da sua empresa?"}
+                {"03", "Foi determinado quem toma as decisões em nome da sua empresa?"},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
                 "#", "Pergunta"
@@ -317,15 +338,15 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        tablePerguntasFaseAtualLiderTecnico.setRowHeight(26);
-        tablePerguntasFaseAtualLiderTecnico.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        tablePerguntasFaseAtualLiderTecnico.setShowGrid(true);
-        tablePerguntasFaseAtualLiderTecnico.setSurrendersFocusOnKeystroke(true);
-        perguntasFaseAtualLiderTecnico.setViewportView(tablePerguntasFaseAtualLiderTecnico);
-        if (tablePerguntasFaseAtualLiderTecnico.getColumnModel().getColumnCount() > 0) {
-            tablePerguntasFaseAtualLiderTecnico.getColumnModel().getColumn(0).setMinWidth(50);
-            tablePerguntasFaseAtualLiderTecnico.getColumnModel().getColumn(0).setPreferredWidth(10);
-            tablePerguntasFaseAtualLiderTecnico.getColumnModel().getColumn(0).setMaxWidth(50);
+        tablePerguntasFaseAtualDesenvolvedor4.setRowHeight(26);
+        tablePerguntasFaseAtualDesenvolvedor4.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tablePerguntasFaseAtualDesenvolvedor4.setShowGrid(true);
+        tablePerguntasFaseAtualDesenvolvedor4.setSurrendersFocusOnKeystroke(true);
+        perguntasFaseAtualDesenvolvedor4.setViewportView(tablePerguntasFaseAtualDesenvolvedor4);
+        if (tablePerguntasFaseAtualDesenvolvedor4.getColumnModel().getColumnCount() > 0) {
+            tablePerguntasFaseAtualDesenvolvedor4.getColumnModel().getColumn(0).setMinWidth(50);
+            tablePerguntasFaseAtualDesenvolvedor4.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tablePerguntasFaseAtualDesenvolvedor4.getColumnModel().getColumn(0).setMaxWidth(50);
         }
 
         javax.swing.GroupLayout liderTecnicoLayout = new javax.swing.GroupLayout(liderTecnico);
@@ -333,24 +354,31 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
         liderTecnicoLayout.setHorizontalGroup(
             liderTecnicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, liderTecnicoLayout.createSequentialGroup()
-                .addComponent(perguntasFaseAtualLiderTecnico, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
+                .addComponent(perguntasFaseAtualDesenvolvedor4, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
                 .addContainerGap())
         );
         liderTecnicoLayout.setVerticalGroup(
             liderTecnicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(liderTecnicoLayout.createSequentialGroup()
-                .addComponent(perguntasFaseAtualLiderTecnico, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 76, Short.MAX_VALUE))
+                .addComponent(perguntasFaseAtualDesenvolvedor4, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         abasMembrosEquipe.addTab("Líder Técnico", liderTecnico);
 
-        tablePerguntasFaseAtualAnalistaQualidade.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        tablePerguntasFaseAtualAnalistaQualidade.setModel(new javax.swing.table.DefaultTableModel(
+        tablePerguntasFaseAtualDesenvolvedor5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tablePerguntasFaseAtualDesenvolvedor5.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"01", "Você entendeu os objetivos do software?"},
                 {"02", "Você está disposto a fornecer feedback para a equipe de desenvolvimento durante todo o processo?"},
-                {"03", "Foi determinado quem toma as decisões em nome da sua empresa?"}
+                {"03", "Foi determinado quem toma as decisões em nome da sua empresa?"},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
                 "#", "Pergunta"
@@ -364,15 +392,15 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        tablePerguntasFaseAtualAnalistaQualidade.setRowHeight(26);
-        tablePerguntasFaseAtualAnalistaQualidade.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        tablePerguntasFaseAtualAnalistaQualidade.setShowGrid(true);
-        tablePerguntasFaseAtualAnalistaQualidade.setSurrendersFocusOnKeystroke(true);
-        perguntasFaseAtualAnalistaQualidade.setViewportView(tablePerguntasFaseAtualAnalistaQualidade);
-        if (tablePerguntasFaseAtualAnalistaQualidade.getColumnModel().getColumnCount() > 0) {
-            tablePerguntasFaseAtualAnalistaQualidade.getColumnModel().getColumn(0).setMinWidth(50);
-            tablePerguntasFaseAtualAnalistaQualidade.getColumnModel().getColumn(0).setPreferredWidth(10);
-            tablePerguntasFaseAtualAnalistaQualidade.getColumnModel().getColumn(0).setMaxWidth(50);
+        tablePerguntasFaseAtualDesenvolvedor5.setRowHeight(26);
+        tablePerguntasFaseAtualDesenvolvedor5.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tablePerguntasFaseAtualDesenvolvedor5.setShowGrid(true);
+        tablePerguntasFaseAtualDesenvolvedor5.setSurrendersFocusOnKeystroke(true);
+        perguntasFaseAtualDesenvolvedor5.setViewportView(tablePerguntasFaseAtualDesenvolvedor5);
+        if (tablePerguntasFaseAtualDesenvolvedor5.getColumnModel().getColumnCount() > 0) {
+            tablePerguntasFaseAtualDesenvolvedor5.getColumnModel().getColumn(0).setMinWidth(50);
+            tablePerguntasFaseAtualDesenvolvedor5.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tablePerguntasFaseAtualDesenvolvedor5.getColumnModel().getColumn(0).setMaxWidth(50);
         }
 
         javax.swing.GroupLayout analistaQualidadeeLayout = new javax.swing.GroupLayout(analistaQualidadee);
@@ -380,52 +408,78 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
         analistaQualidadeeLayout.setHorizontalGroup(
             analistaQualidadeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, analistaQualidadeeLayout.createSequentialGroup()
-                .addComponent(perguntasFaseAtualAnalistaQualidade, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
+                .addComponent(perguntasFaseAtualDesenvolvedor5, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
                 .addContainerGap())
         );
         analistaQualidadeeLayout.setVerticalGroup(
             analistaQualidadeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(analistaQualidadeeLayout.createSequentialGroup()
-                .addComponent(perguntasFaseAtualAnalistaQualidade, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 76, Short.MAX_VALUE))
+                .addComponent(perguntasFaseAtualDesenvolvedor5, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         abasMembrosEquipe.addTab("Analista de Qualidade", analistaQualidadee);
 
+        txtTituloPerguntasQuestionario1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtTituloPerguntasQuestionario1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txtTituloPerguntasQuestionario1.setText("Iniciação");
+
+        btnEditarPergunta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnEditarPergunta.setText("Editar");
+        btnEditarPergunta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarPerguntaActionPerformed(evt);
+            }
+        });
+
+        btnNovaPergunta2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnNovaPergunta2.setText("Excluir");
+        btnNovaPergunta2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNovaPergunta2ActionPerformed(evt);
+            }
+        });
         setJMenuBar(menuAcoesPerguntasQuestionario);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtTituloPerguntasQuestionario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(65, 65, 65)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnNovaPergunta)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnCancelar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnSalvar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnSalvar1))
+                    .addComponent(abasMembrosEquipe)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(labelStatus)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(12, 12, 12)
                         .addComponent(txtStatusQuestionario))
-                    .addComponent(abasMembrosEquipe))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnNovaPergunta)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnEditarPergunta)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnNovaPergunta2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnSalvar1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnCancelar)))
                 .addGap(65, 65, 65))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(txtTituloPerguntasQuestionario, javax.swing.GroupLayout.PREFERRED_SIZE, 578, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(txtTituloPerguntasQuestionario1, javax.swing.GroupLayout.PREFERRED_SIZE, 457, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(txtTituloPerguntasQuestionario)
-                .addGap(25, 25, 25)
-                .addComponent(abasMembrosEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(203, 203, 203)
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtTituloPerguntasQuestionario)
+                    .addComponent(txtTituloPerguntasQuestionario1))
+                .addGap(35, 35, 35)
+                .addComponent(abasMembrosEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelStatus)
                     .addComponent(txtStatusQuestionario))
@@ -433,11 +487,12 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnNovaPergunta)
-                        .addComponent(btnCancelar))
+                        .addComponent(btnEditarPergunta)
+                        .addComponent(btnNovaPergunta2))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnSalvar)
-                        .addComponent(btnSalvar1)))
-                .addContainerGap(50, Short.MAX_VALUE))
+                        .addComponent(btnSalvar1)
+                        .addComponent(btnCancelar)))
+                .addGap(20, 20, 20))
         );
 
         abasMembrosEquipe.getAccessibleContext().setAccessibleName("");
@@ -450,21 +505,22 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
         criarNovaPerguntaView.setVisible(true);
     }//GEN-LAST:event_btnNovaPerguntaActionPerformed
 
-    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-        dispose();
-        ListarPerguntasEtapaIteracaoProjetoView listarQuestionariosView = new ListarPerguntasEtapaIteracaoProjetoView();
-        listarQuestionariosView.setVisible(true);
-    }//GEN-LAST:event_btnSalvarActionPerformed
-
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         this.dispose();
-        ListarPerguntasEtapaIteracaoProjetoView listarQuestionariosView = new ListarPerguntasEtapaIteracaoProjetoView();
-        listarQuestionariosView.setVisible(true);
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnSalvar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvar1ActionPerformed
-        // TODO add your handling code here:
+        dispose();
     }//GEN-LAST:event_btnSalvar1ActionPerformed
+
+    private void btnEditarPerguntaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarPerguntaActionPerformed
+        EditarPerguntaView editarPerguntaView = new EditarPerguntaView();
+        editarPerguntaView.setVisible(true);
+    }//GEN-LAST:event_btnEditarPerguntaActionPerformed
+
+    private void btnNovaPergunta2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovaPergunta2ActionPerformed
+        
+    }//GEN-LAST:event_btnNovaPergunta2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -483,14 +539,62 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ManterPerguntasFaseProjetoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ManterPerguntasEtapaProjetoAbas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ManterPerguntasFaseProjetoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ManterPerguntasEtapaProjetoAbas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ManterPerguntasFaseProjetoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ManterPerguntasEtapaProjetoAbas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ManterPerguntasFaseProjetoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ManterPerguntasEtapaProjetoAbas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -511,7 +615,7 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ManterPerguntasFaseProjetoView().setVisible(true);
+                new ManterPerguntasEtapaProjetoAbas().setVisible(true);
             }
         });
     }
@@ -521,8 +625,9 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
     private javax.swing.JPanel analistaQualidadee;
     private javax.swing.JPanel arquitetoSoftware;
     private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnEditarPergunta;
     private javax.swing.JButton btnNovaPergunta;
-    private javax.swing.JButton btnSalvar;
+    private javax.swing.JButton btnNovaPergunta2;
     private javax.swing.JButton btnSalvar1;
     private javax.swing.JPanel cliente;
     private javax.swing.JPanel desenvolvedor;
@@ -530,19 +635,20 @@ public class ManterPerguntasFaseProjetoView extends javax.swing.JFrame {
     private javax.swing.JLabel labelStatus;
     private javax.swing.JPanel liderTecnico;
     private javax.swing.JMenuBar menuAcoesPerguntasQuestionario;
-    private javax.swing.JScrollPane perguntasFaseAtualAnalistaQualidade;
-    private javax.swing.JScrollPane perguntasFaseAtualArquitetoSoftware;
-    private javax.swing.JScrollPane perguntasFaseAtualCliente;
     private javax.swing.JScrollPane perguntasFaseAtualDesenvolvedor;
-    private javax.swing.JScrollPane perguntasFaseAtualLiderTecnico;
-    private javax.swing.JScrollPane perguntasFaseAtualProjeto;
-    private javax.swing.JTable tablePerguntasFaseAtualAnalistaQualidade;
-    private javax.swing.JTable tablePerguntasFaseAtualArquitetoSoftware;
-    private javax.swing.JTable tablePerguntasFaseAtualCliente;
+    private javax.swing.JScrollPane perguntasFaseAtualDesenvolvedor1;
+    private javax.swing.JScrollPane perguntasFaseAtualDesenvolvedor2;
+    private javax.swing.JScrollPane perguntasFaseAtualDesenvolvedor3;
+    private javax.swing.JScrollPane perguntasFaseAtualDesenvolvedor4;
+    private javax.swing.JScrollPane perguntasFaseAtualDesenvolvedor5;
     private javax.swing.JTable tablePerguntasFaseAtualDesenvolvedor;
-    private javax.swing.JTable tablePerguntasFaseAtualLiderTecnico;
-    private javax.swing.JTable tablePerguntasFaseAtualProjeto;
+    private javax.swing.JTable tablePerguntasFaseAtualDesenvolvedor1;
+    private javax.swing.JTable tablePerguntasFaseAtualDesenvolvedor2;
+    private javax.swing.JTable tablePerguntasFaseAtualDesenvolvedor3;
+    private javax.swing.JTable tablePerguntasFaseAtualDesenvolvedor4;
+    private javax.swing.JTable tablePerguntasFaseAtualDesenvolvedor5;
     private javax.swing.JLabel txtStatusQuestionario;
     private javax.swing.JLabel txtTituloPerguntasQuestionario;
+    private javax.swing.JLabel txtTituloPerguntasQuestionario1;
     // End of variables declaration//GEN-END:variables
 }

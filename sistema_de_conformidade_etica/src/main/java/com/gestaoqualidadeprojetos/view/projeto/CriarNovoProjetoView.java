@@ -5,6 +5,7 @@
 package com.gestaoqualidadeprojetos.view.projeto;
 
 import com.gestaoqualidadeprojetos.view.projeto.ListarProjetosAdminView;
+import com.gestaoqualidadeprojetos.view.questionario.SelecionarModeloQuestionarioView;
 import javax.swing.JFrame;
 
 /**
@@ -491,8 +492,8 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
 
     private void btnSalvarProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarProjetoActionPerformed
         this.dispose();
-        DefinirClassificacaoAceitacao definirClassificacaoAceitacao = new DefinirClassificacaoAceitacao();
-        definirClassificacaoAceitacao.setVisible(true);
+        SelecionarModeloQuestionarioView selecionarModeloQuestionarioView = new SelecionarModeloQuestionarioView();
+        selecionarModeloQuestionarioView.setVisible(true);
     }//GEN-LAST:event_btnSalvarProjetoActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed

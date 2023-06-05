@@ -46,14 +46,16 @@ public class TelaInicialAdminView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Inicial");
 
-        jLabelUsuario.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabelUsuario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabelUsuario.setText("Usuário:");
 
+        txtUsuarioLogado.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtUsuarioLogado.setText("Nome do Administrador");
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("Notificações:");
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("+3");
 
         jMenuBar.setToolTipText("");
@@ -64,7 +66,7 @@ public class TelaInicialAdminView extends javax.swing.JFrame {
         menuProjetos.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
 
         itemMenuAcessarProjetos.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        itemMenuAcessarProjetos.setText("Acessar projetos");
+        itemMenuAcessarProjetos.setText("Acessar Projetos");
         itemMenuAcessarProjetos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 itemMenuAcessarProjetosActionPerformed(evt);
@@ -73,7 +75,7 @@ public class TelaInicialAdminView extends javax.swing.JFrame {
         menuProjetos.add(itemMenuAcessarProjetos);
 
         itemMenuAcessarQuestionarios.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        itemMenuAcessarQuestionarios.setText("Acessar questionários");
+        itemMenuAcessarQuestionarios.setText("Acessar Questionários");
         itemMenuAcessarQuestionarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 itemMenuAcessarQuestionariosActionPerformed(evt);
@@ -123,7 +125,7 @@ public class TelaInicialAdminView extends javax.swing.JFrame {
                 .addComponent(jLabelUsuario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtUsuarioLogado)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 449, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 412, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -132,7 +134,7 @@ public class TelaInicialAdminView extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(356, Short.MAX_VALUE)
+                .addContainerGap(352, Short.MAX_VALUE)
                 .addComponent(jSeparatorBarraNotificacoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(5, 5, 5)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
