@@ -159,13 +159,13 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnFecharActionPerformed
 
     private void btnVerDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerDashboardActionPerformed
-        this.dispose();
+        //this.dispose();
         DashboardAdminView dashboardView = new DashboardAdminView();
         dashboardView.setVisible(true);
     }//GEN-LAST:event_btnVerDashboardActionPerformed
 
     private void btnAbrirQuestionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirQuestionarioActionPerformed
-        this.dispose();
+        //this.dispose();
         QuestionarioView questionarioView = new QuestionarioView();
         questionarioView.setVisible(true);
     }//GEN-LAST:event_btnAbrirQuestionarioActionPerformed

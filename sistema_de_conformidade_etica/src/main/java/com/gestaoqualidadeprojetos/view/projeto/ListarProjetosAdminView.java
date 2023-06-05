@@ -317,19 +317,19 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnFecharActionPerformed
 
     private void btnVerDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerDashboardActionPerformed
-        this.dispose();
+        //this.dispose();
         DashboardAdminView dashboardView = new DashboardAdminView();
         dashboardView.setVisible(true);
     }//GEN-LAST:event_btnVerDashboardActionPerformed
 
     private void btnAbrirProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirProjetoActionPerformed
-        this.dispose();
+        //this.dispose();
         GerenciarIteracoesProjeto selecionarFasesProjetoMembroEquipeView = new GerenciarIteracoesProjeto();
         selecionarFasesProjetoMembroEquipeView.setVisible(true);
     }//GEN-LAST:event_btnAbrirProjetoActionPerformed
 
     private void btnAbrirQuestionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirQuestionarioActionPerformed
-        this.dispose();
+        //this.dispose();
         QuestionarioView questionarioView = new QuestionarioView();
         questionarioView.setVisible(true);
     }//GEN-LAST:event_btnAbrirQuestionarioActionPerformed

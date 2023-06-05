@@ -348,8 +348,8 @@ public class GerenciarIteracoesProjeto extends javax.swing.JFrame {
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
         this.dispose();
-        ListarProjetosAdminView listarProjetosAdminView = new ListarProjetosAdminView();
-        listarProjetosAdminView.setVisible(false);
+        //ListarProjetosAdminView listarProjetosAdminView = new ListarProjetosAdminView();
+        //listarProjetosAdminView.setVisible(false);
     }//GEN-LAST:event_btnVoltarActionPerformed
 
     private void btnVoltar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltar1ActionPerformed
