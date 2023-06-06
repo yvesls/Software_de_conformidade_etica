@@ -74,11 +74,11 @@ public class GerenciarIteracoesProjeto extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Iteração Atual:");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel2.setText("Sprint 4");
 
@@ -274,16 +274,16 @@ public class GerenciarIteracoesProjeto extends javax.swing.JFrame {
             }
         });
 
-        txtTituloSelecionarModeloQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        txtTituloSelecionarModeloQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         txtTituloSelecionarModeloQuestionario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtTituloSelecionarModeloQuestionario.setText("Projeto: ");
 
-        txtTituloSelecionarModeloQuestionario1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtTituloSelecionarModeloQuestionario1.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txtTituloSelecionarModeloQuestionario1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtTituloSelecionarModeloQuestionario1.setText("Sistema de Padaria");
 
         btnVoltar2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnVoltar2.setText("Abrir Etapa");
+        btnVoltar2.setText("Abrir Questionário");
         btnVoltar2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVoltar2ActionPerformed(evt);

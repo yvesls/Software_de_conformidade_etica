@@ -43,20 +43,17 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txtTituloProjetos = new javax.swing.JLabel();
         btnFechar = new javax.swing.JButton();
         btnVerDashboard = new javax.swing.JButton();
         btnAbrirQuestionario = new javax.swing.JButton();
         jScrollPaneTabelaProjetosAbertos = new javax.swing.JScrollPane();
         tableProjetosAbertos = new javax.swing.JTable();
+        jTextFieldBuscarProjeto = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         menuBarProjetosAdmin = new javax.swing.JMenuBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Todos os Projetos");
-
-        txtTituloProjetos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        txtTituloProjetos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtTituloProjetos.setText("Todos os Projetos");
 
         btnFechar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnFechar.setText("Fechar");
@@ -85,23 +82,23 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
         tableProjetosAbertos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tableProjetosAbertos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"01", "Sistema de Padaria", "15/05/2023", "15/07/2023", "30/07/2023", "Aberto"},
-                {"02", "App para Academia", "01/05/2023", "30/05/2023", "05/06/2023", "Fechado"},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {"02", "Sistema de Padaria", "15/05/2023", "15/07/2023", "30/07/2023"},
+                {"03", "App para Academia", "26/05/2023", "30/07/2023", "15/08/2023"},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "#", "Nome", "Data Abertura", "Data Limite", "Data Final", "Status"
+                "#", "Nome", "Data Abertura", "Data Limite", "Data Final"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -114,31 +111,49 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
         tableProjetosAbertos.setSurrendersFocusOnKeystroke(true);
         jScrollPaneTabelaProjetosAbertos.setViewportView(tableProjetosAbertos);
 
+        jTextFieldBuscarProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextFieldBuscarProjeto.setText("Nome do projeto");
+        jTextFieldBuscarProjeto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldBuscarProjetoActionPerformed(evt);
+            }
+        });
+
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton1.setText("Buscar");
         setJMenuBar(menuBarProjetosAdmin);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtTituloProjetos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPaneTabelaProjetosAbertos, javax.swing.GroupLayout.DEFAULT_SIZE, 909, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnAbrirQuestionario)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextFieldBuscarProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnVerDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnFechar)))
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(65, 65, 65)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnAbrirQuestionario)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnVerDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 523, Short.MAX_VALUE)
+                                .addComponent(btnFechar))
+                            .addComponent(jScrollPaneTabelaProjetosAbertos, javax.swing.GroupLayout.DEFAULT_SIZE, 909, Short.MAX_VALUE))))
                 .addGap(65, 65, 65))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addComponent(txtTituloProjetos)
-                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldBuscarProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
+                .addGap(20, 20, 20)
                 .addComponent(jScrollPaneTabelaProjetosAbertos, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,6 +184,10 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
         QuestionarioView questionarioView = new QuestionarioView();
         questionarioView.setVisible(true);
     }//GEN-LAST:event_btnAbrirQuestionarioActionPerformed
+
+    private void jTextFieldBuscarProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldBuscarProjetoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldBuscarProjetoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,9 +243,10 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
     private javax.swing.JButton btnAbrirQuestionario;
     private javax.swing.JButton btnFechar;
     private javax.swing.JButton btnVerDashboard;
+    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPaneTabelaProjetosAbertos;
+    private javax.swing.JTextField jTextFieldBuscarProjeto;
     private javax.swing.JMenuBar menuBarProjetosAdmin;
     private javax.swing.JTable tableProjetosAbertos;
-    private javax.swing.JLabel txtTituloProjetos;
     // End of variables declaration//GEN-END:variables
 }

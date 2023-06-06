@@ -234,7 +234,7 @@
           <Font name="Segoe UI" size="16" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Preencha os dados do seu Projeto"/>
+        <Property name="text" type="java.lang.String" value="Preencha os dados do novo Projeto"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnSalvarProjeto">
@@ -682,11 +682,12 @@
           <Font name="Segoe UI" size="14" style="0"/>
         </Property>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
+          <StringArray count="5">
             <StringItem index="0" value="Padr&#xe3;o"/>
             <StringItem index="1" value="Sistema de padaria"/>
             <StringItem index="2" value="App para academia"/>
             <StringItem index="3" value="Rede social"/>
+            <StringItem index="4" value="Importar Question&#xe1;rio"/>
           </StringArray>
         </Property>
       </Properties>

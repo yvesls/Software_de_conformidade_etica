@@ -33,7 +33,6 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
         txtTituloPerguntasQuestionario = new javax.swing.JLabel();
         btnNovaPergunta = new javax.swing.JButton();
         labelStatus = new javax.swing.JLabel();
-        txtStatusQuestionario = new javax.swing.JLabel();
         btnSalvar1 = new javax.swing.JButton();
         btnFechar = new javax.swing.JButton();
         btnEditarPergunta = new javax.swing.JButton();
@@ -43,6 +42,7 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
         jScrollPaneTabelaProjetos6 = new javax.swing.JScrollPane();
         tablePerguntasQuestionario6 = new javax.swing.JTable();
         txtTituloPerguntasQuestionario1 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox<>();
         menuAcoesPerguntasQuestionario = new javax.swing.JMenuBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -53,7 +53,7 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
         txtTituloPerguntasQuestionario.setText("Questionário:");
 
         btnNovaPergunta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnNovaPergunta.setText("Nova pergunta");
+        btnNovaPergunta.setText("Nova Pergunta");
         btnNovaPergunta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNovaPerguntaActionPerformed(evt);
@@ -63,11 +63,8 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
         labelStatus.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         labelStatus.setText("Status:");
 
-        txtStatusQuestionario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txtStatusQuestionario.setText("Publicado");
-
         btnSalvar1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnSalvar1.setText("Salvar");
+        btnSalvar1.setText("Salvar Perguntas");
         btnSalvar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalvar1ActionPerformed(evt);
@@ -83,7 +80,7 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
         });
 
         btnEditarPergunta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnEditarPergunta.setText("Editar");
+        btnEditarPergunta.setText("Editar Pergunta");
         btnEditarPergunta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarPerguntaActionPerformed(evt);
@@ -145,6 +142,9 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
         txtTituloPerguntasQuestionario1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtTituloPerguntasQuestionario1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtTituloPerguntasQuestionario1.setText("Questionário Padrão");
+
+        jComboBox2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rascunho", "Publicado" }));
         setJMenuBar(menuAcoesPerguntasQuestionario);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -166,22 +166,23 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(labelStatus)
-                                .addGap(11, 11, 11)
-                                .addComponent(txtStatusQuestionario))
+                            .addComponent(jScrollPaneTabelaProjetos6)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(btnNovaPergunta)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnEditarPergunta)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnExcluirPergunta)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 589, Short.MAX_VALUE)
-                                .addComponent(btnFechar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnSalvar1))
-                            .addComponent(jScrollPaneTabelaProjetos6))
+                                .addGap(32, 469, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(labelStatus)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(btnSalvar1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btnFechar)))))
                         .addGap(65, 65, 65))))
         );
         layout.setVerticalGroup(
@@ -200,8 +201,8 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelStatus)
-                    .addComponent(txtStatusQuestionario))
-                .addGap(20, 20, 20)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnSalvar1)
@@ -283,12 +284,12 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
     private javax.swing.JButton btnNovaPergunta;
     private javax.swing.JButton btnSalvar1;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPaneTabelaProjetos6;
     private javax.swing.JLabel labelStatus;
     private javax.swing.JMenuBar menuAcoesPerguntasQuestionario;
     private javax.swing.JTable tablePerguntasQuestionario6;
-    private javax.swing.JLabel txtStatusQuestionario;
     private javax.swing.JLabel txtTituloPerguntasQuestionario;
     private javax.swing.JLabel txtTituloPerguntasQuestionario1;
     // End of variables declaration//GEN-END:variables

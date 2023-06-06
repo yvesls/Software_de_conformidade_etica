@@ -6,7 +6,6 @@ package com.gestaoqualidadeprojetos.view.dashboard;
 
 import com.gestaoqualidadeprojetos.view.projeto.CriarNovoProjetoView;
 import com.gestaoqualidadeprojetos.view.projeto.CriarNovoProjetoView;
-import com.gestaoqualidadeprojetos.view.questionario.SelecionarModeloQuestionarioView;
 import javax.swing.JFrame;
 
 /**
@@ -69,7 +68,7 @@ public class DefinirClassificacaoAceitacao extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Definição de Classificação do Projeto");
 
-        txtTituloProjetos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        txtTituloProjetos.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         txtTituloProjetos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtTituloProjetos.setText("Definir Classificação de Aceitação");
 
@@ -328,7 +327,7 @@ public class DefinirClassificacaoAceitacao extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnSalvarProjeto)
                     .addComponent(btnCancelar))
@@ -340,8 +339,7 @@ public class DefinirClassificacaoAceitacao extends javax.swing.JFrame {
 
     private void btnSalvarProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarProjetoActionPerformed
         this.dispose();
-        SelecionarModeloQuestionarioView selecionarModeloQuestionarioView = new SelecionarModeloQuestionarioView();
-        selecionarModeloQuestionarioView.setVisible(true);
+        
     }//GEN-LAST:event_btnSalvarProjetoActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed

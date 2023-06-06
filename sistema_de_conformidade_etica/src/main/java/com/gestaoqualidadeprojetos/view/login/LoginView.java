@@ -37,16 +37,16 @@ public class LoginView extends javax.swing.JFrame {
         setTitle("Login");
         setSize(new java.awt.Dimension(465, 230));
 
-        lblEmail.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        lblEmail.setText("Email");
+        lblEmail.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblEmail.setText("Email:");
 
-        lblSenha.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        lblSenha.setText("Senha");
+        lblSenha.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblSenha.setText("Senha:");
 
         txtEmail.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtEmail.setText("admin");
 
-        btnEntrar.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        btnEntrar.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnEntrar.setText("Entrar");
         btnEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,7 +54,7 @@ public class LoginView extends javax.swing.JFrame {
             }
         });
 
-        btnFechar.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        btnFechar.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnFechar.setText("Fechar");
         btnFechar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,7 +64,7 @@ public class LoginView extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Fazer login");
+        jLabel1.setText("Faça login para entrar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -78,8 +78,8 @@ public class LoginView extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(btnFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
+                        .addComponent(btnFechar)
+                        .addGap(112, 112, 112)
                         .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(txtSenha, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtEmail, javax.swing.GroupLayout.Alignment.LEADING))
@@ -106,7 +106,7 @@ public class LoginView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnFechar)
                     .addComponent(btnEntrar))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pack();

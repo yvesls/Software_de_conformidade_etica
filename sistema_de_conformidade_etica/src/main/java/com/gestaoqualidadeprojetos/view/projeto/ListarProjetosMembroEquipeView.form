@@ -29,17 +29,26 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="txtTituloProjetos" alignment="1" max="32767" attributes="0"/>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="65" pref="65" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPaneTabelaProjetosAbertos" pref="909" max="32767" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="btnAbrirQuestionario" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnVerDashboard" min="-2" pref="125" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="btnFechar" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextFieldBuscarProjeto" min="-2" pref="186" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="65" pref="65" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="btnAbrirQuestionario" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="btnVerDashboard" min="-2" pref="125" max="-2" attributes="0"/>
+                              <EmptySpace pref="523" max="32767" attributes="0"/>
+                              <Component id="btnFechar" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jScrollPaneTabelaProjetosAbertos" alignment="0" pref="909" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
               <EmptySpace min="65" pref="65" max="-2" attributes="0"/>
@@ -50,8 +59,11 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-              <Component id="txtTituloProjetos" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jTextFieldBuscarProjeto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Component id="jScrollPaneTabelaProjetosAbertos" min="-2" pref="286" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -67,15 +79,6 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="txtTituloProjetos">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="18" style="1"/>
-        </Property>
-        <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Todos os Projetos"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JButton" name="btnFechar">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -122,10 +125,10 @@
               <Font name="Segoe UI" size="14" style="0"/>
             </Property>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="6" rowCount="10">
+              <Table columnCount="5" rowCount="10">
                 <Column editable="true" title="#" type="java.lang.String">
-                  <Data value="01"/>
                   <Data value="02"/>
+                  <Data value="03"/>
                   <Data value="null"/>
                   <Data value="null"/>
                   <Data value="null"/>
@@ -149,7 +152,7 @@
                 </Column>
                 <Column editable="true" title="Data Abertura" type="java.lang.String">
                   <Data value="15/05/2023"/>
-                  <Data value="01/05/2023"/>
+                  <Data value="26/05/2023"/>
                   <Data value="null"/>
                   <Data value="null"/>
                   <Data value="null"/>
@@ -161,7 +164,7 @@
                 </Column>
                 <Column editable="true" title="Data Limite" type="java.lang.String">
                   <Data value="15/07/2023"/>
-                  <Data value="30/05/2023"/>
+                  <Data value="30/07/2023"/>
                   <Data value="null"/>
                   <Data value="null"/>
                   <Data value="null"/>
@@ -173,19 +176,7 @@
                 </Column>
                 <Column editable="true" title="Data Final" type="java.lang.String">
                   <Data value="30/07/2023"/>
-                  <Data value="05/06/2023"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                </Column>
-                <Column editable="true" title="Status" type="java.lang.String">
-                  <Data value="Aberto"/>
-                  <Data value="Fechado"/>
+                  <Data value="15/08/2023"/>
                   <Data value="null"/>
                   <Data value="null"/>
                   <Data value="null"/>
@@ -224,11 +215,6 @@
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
               </TableColumnModel>
             </Property>
             <Property name="rowHeight" type="int" value="26"/>
@@ -242,5 +228,24 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JTextField" name="jTextFieldBuscarProjeto">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Nome do projeto"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldBuscarProjetoActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Buscar"/>
+      </Properties>
+    </Component>
   </SubComponents>
 </Form>

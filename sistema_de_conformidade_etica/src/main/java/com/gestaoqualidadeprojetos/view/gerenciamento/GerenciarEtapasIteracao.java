@@ -57,7 +57,7 @@ public class GerenciarEtapasIteracao extends javax.swing.JFrame {
         });
 
         btnAbrirPerguntasQuestionario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnAbrirPerguntasQuestionario.setText("Abrir Perguntas");
+        btnAbrirPerguntasQuestionario.setText("Gerenciar Perguntas");
         btnAbrirPerguntasQuestionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAbrirPerguntasQuestionarioActionPerformed(evt);
@@ -80,11 +80,11 @@ public class GerenciarEtapasIteracao extends javax.swing.JFrame {
         txtTituloSelecionarModeloQuestionario1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtTituloSelecionarModeloQuestionario1.setText("Sistema de Padaria");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Iteração:");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel2.setText("Sprint 4");
 
@@ -125,11 +125,11 @@ public class GerenciarEtapasIteracao extends javax.swing.JFrame {
             tableIniciacaoPerguntasProjeto1.getColumnModel().getColumn(4).setPreferredWidth(5);
         }
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel5.setText("Etapa:");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel6.setText("Iniciação");
         setJMenuBar(menuBarQuestionarios);
@@ -182,7 +182,7 @@ public class GerenciarEtapasIteracao extends javax.swing.JFrame {
                     .addComponent(jLabel6))
                 .addGap(20, 20, 20)
                 .addComponent(iniciacaoPerguntasProjeto1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAbrirPerguntasQuestionario)
                     .addComponent(btnPublicarPerguntasFaseProjeto)

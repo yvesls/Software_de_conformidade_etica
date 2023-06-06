@@ -6,7 +6,6 @@ package com.gestaoqualidadeprojetos.view.projeto;
 
 import com.gestaoqualidadeprojetos.view.gerenciamento.GerenciarIteracoesProjeto;
 import com.gestaoqualidadeprojetos.view.projeto.ListarProjetosAdminView;
-import com.gestaoqualidadeprojetos.view.questionario.SelecionarModeloQuestionarioView;
 import javax.swing.JFrame;
 
 /**
@@ -77,7 +76,7 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
 
         txtTituloProjetos.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         txtTituloProjetos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtTituloProjetos.setText("Preencha os dados do seu Projeto");
+        txtTituloProjetos.setText("Preencha os dados do novo Projeto");
 
         btnSalvarProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnSalvarProjeto.setText("Próximo");
@@ -315,7 +314,7 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
         labelQuestionario.setText("Selecione o Questionário Modelo:");
 
         jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Padrão", "Sistema de padaria", "App para academia", "Rede social" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Padrão", "Sistema de padaria", "App para academia", "Rede social", "Importar Questionário" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

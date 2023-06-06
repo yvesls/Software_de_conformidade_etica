@@ -43,15 +43,15 @@ public class ManterPerguntasEtapaProjetoView extends javax.swing.JFrame {
         btnEditarPergunta = new javax.swing.JButton();
         btnNovaPergunta2 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
         perguntasFaseAtualDesenvolvedor6 = new javax.swing.JScrollPane();
         tablePerguntasFaseAtualDesenvolvedor6 = new javax.swing.JTable();
+        txtTituloPerguntasQuestionario2 = new javax.swing.JLabel();
         menuAcoesPerguntasQuestionario = new javax.swing.JMenuBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Manter Perguntas da Etapa");
 
-        txtTituloPerguntasQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        txtTituloPerguntasQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         txtTituloPerguntasQuestionario.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         txtTituloPerguntasQuestionario.setText("Perguntas da Etapa:");
 
@@ -85,7 +85,7 @@ public class ManterPerguntasEtapaProjetoView extends javax.swing.JFrame {
             }
         });
 
-        txtTituloPerguntasQuestionario1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtTituloPerguntasQuestionario1.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txtTituloPerguntasQuestionario1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         txtTituloPerguntasQuestionario1.setText("Iniciação");
 
@@ -105,17 +105,9 @@ public class ManterPerguntasEtapaProjetoView extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel4.setText("Participante:");
-
-        jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Desenvolvedor", "Arquiteto de Software", "Gerente de Projeto", "Líder Técnico", "Analista de Qualidade" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
 
         tablePerguntasFaseAtualDesenvolvedor6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tablePerguntasFaseAtualDesenvolvedor6.setModel(new javax.swing.table.DefaultTableModel(
@@ -154,24 +146,18 @@ public class ManterPerguntasEtapaProjetoView extends javax.swing.JFrame {
             tablePerguntasFaseAtualDesenvolvedor6.getColumnModel().getColumn(0).setMaxWidth(50);
         }
 
+        txtTituloPerguntasQuestionario2.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        txtTituloPerguntasQuestionario2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txtTituloPerguntasQuestionario2.setText("Cliente");
         setJMenuBar(menuAcoesPerguntasQuestionario);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(txtTituloPerguntasQuestionario, javax.swing.GroupLayout.PREFERRED_SIZE, 578, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(txtTituloPerguntasQuestionario1, javax.swing.GroupLayout.PREFERRED_SIZE, 457, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(65, 65, 65)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -188,11 +174,20 @@ public class ManterPerguntasEtapaProjetoView extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 507, Short.MAX_VALUE)
                                 .addComponent(btnSalvar1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnCancelar)))
+                                .addComponent(btnCancelar))
+                            .addComponent(perguntasFaseAtualDesenvolvedor6, javax.swing.GroupLayout.DEFAULT_SIZE, 917, Short.MAX_VALUE))
                         .addGap(65, 65, 65))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(perguntasFaseAtualDesenvolvedor6, javax.swing.GroupLayout.DEFAULT_SIZE, 917, Short.MAX_VALUE)
-                        .addGap(65, 65, 65))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtTituloPerguntasQuestionario)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtTituloPerguntasQuestionario1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtTituloPerguntasQuestionario2)))
+                        .addContainerGap(778, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,11 +196,11 @@ public class ManterPerguntasEtapaProjetoView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtTituloPerguntasQuestionario)
                     .addComponent(txtTituloPerguntasQuestionario1))
-                .addGap(35, 35, 35)
+                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addGap(20, 20, 20)
+                    .addComponent(jLabel4)
+                    .addComponent(txtTituloPerguntasQuestionario2))
+                .addGap(23, 23, 23)
                 .addComponent(perguntasFaseAtualDesenvolvedor6, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -247,10 +242,6 @@ public class ManterPerguntasEtapaProjetoView extends javax.swing.JFrame {
     private void btnNovaPergunta2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovaPergunta2ActionPerformed
         
     }//GEN-LAST:event_btnNovaPergunta2ActionPerformed
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -324,7 +315,6 @@ public class ManterPerguntasEtapaProjetoView extends javax.swing.JFrame {
     private javax.swing.JButton btnNovaPergunta;
     private javax.swing.JButton btnNovaPergunta2;
     private javax.swing.JButton btnSalvar1;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel labelStatus;
     private javax.swing.JMenuBar menuAcoesPerguntasQuestionario;
@@ -333,5 +323,6 @@ public class ManterPerguntasEtapaProjetoView extends javax.swing.JFrame {
     private javax.swing.JLabel txtStatusQuestionario;
     private javax.swing.JLabel txtTituloPerguntasQuestionario;
     private javax.swing.JLabel txtTituloPerguntasQuestionario1;
+    private javax.swing.JLabel txtTituloPerguntasQuestionario2;
     // End of variables declaration//GEN-END:variables
 }

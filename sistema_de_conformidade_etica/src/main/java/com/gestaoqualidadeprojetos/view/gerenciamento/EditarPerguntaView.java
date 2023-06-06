@@ -37,11 +37,11 @@ public class EditarPerguntaView extends javax.swing.JFrame {
         btnCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Criar Nova Pergunta");
+        setTitle("Editar Pergunta");
 
         txtTituloCriarPergunta.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txtTituloCriarPergunta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtTituloCriarPergunta.setText("Editar Pergunta");
+        txtTituloCriarPergunta.setText("Faça as alterações na Pergunta");
 
         labelPergunta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         labelPergunta.setText("Pergunta:");
@@ -55,7 +55,7 @@ public class EditarPerguntaView extends javax.swing.JFrame {
         });
 
         btnSalvar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnSalvar.setText("Salvar Pergunta");
+        btnSalvar.setText("Salvar");
         btnSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalvarActionPerformed(evt);
@@ -93,9 +93,9 @@ public class EditarPerguntaView extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(35, 35, 35)
                 .addComponent(txtTituloCriarPergunta)
-                .addGap(20, 20, 20)
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelPergunta)
                     .addComponent(txtFieldNovaPergunta, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
