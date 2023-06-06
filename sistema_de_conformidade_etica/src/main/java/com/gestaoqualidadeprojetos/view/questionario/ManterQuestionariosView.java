@@ -33,7 +33,6 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
     private void initComponents() {
 
         btnCancelar = new javax.swing.JButton();
-        txtTituloSelecionarModeloQuestionario = new javax.swing.JLabel();
         btnVoltar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -44,12 +43,10 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
         projetosAbertos5 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
-        projetosFechados5 = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
         projetosRascunhos5 = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTable5 = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
 
         btnCancelar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnCancelar.setText("Cancelar");
@@ -61,11 +58,7 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Manter Questionários");
-        setPreferredSize(new java.awt.Dimension(1000, 510));
-
-        txtTituloSelecionarModeloQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        txtTituloSelecionarModeloQuestionario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtTituloSelecionarModeloQuestionario.setText("Todos os Questionários");
+        setPreferredSize(new java.awt.Dimension(1000, 460));
 
         btnVoltar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnVoltar.setText("Voltar");
@@ -134,7 +127,7 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String [] {
-                "#", "Nome", "Data"
+                "#", "Nome", "Data de criação"
             }
         ) {
             Class[] types = new Class [] {
@@ -160,8 +153,8 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
             jTable2.getColumnModel().getColumn(0).setPreferredWidth(35);
             jTable2.getColumnModel().getColumn(0).setMaxWidth(15);
             jTable2.getColumnModel().getColumn(1).setPreferredWidth(300);
-            jTable2.getColumnModel().getColumn(2).setMinWidth(100);
-            jTable2.getColumnModel().getColumn(2).setPreferredWidth(100);
+            jTable2.getColumnModel().getColumn(2).setMinWidth(150);
+            jTable2.getColumnModel().getColumn(2).setPreferredWidth(150);
             jTable2.getColumnModel().getColumn(2).setMaxWidth(150);
         }
 
@@ -182,58 +175,6 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
 
         abasMembrosEquipe5.addTab("Publicados", projetosAbertos5);
 
-        jTable3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"01", "Questionário Fechado", "01/04/2023"},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "", "Nome", "Data"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jTable3.setRowHeight(26);
-        jTable3.setShowGrid(true);
-        jScrollPane3.setViewportView(jTable3);
-        if (jTable3.getColumnModel().getColumnCount() > 0) {
-            jTable3.getColumnModel().getColumn(0).setMinWidth(35);
-            jTable3.getColumnModel().getColumn(0).setPreferredWidth(35);
-            jTable3.getColumnModel().getColumn(0).setMaxWidth(50);
-            jTable3.getColumnModel().getColumn(1).setPreferredWidth(300);
-            jTable3.getColumnModel().getColumn(2).setMinWidth(100);
-            jTable3.getColumnModel().getColumn(2).setPreferredWidth(100);
-            jTable3.getColumnModel().getColumn(2).setMaxWidth(150);
-        }
-
-        javax.swing.GroupLayout projetosFechados5Layout = new javax.swing.GroupLayout(projetosFechados5);
-        projetosFechados5.setLayout(projetosFechados5Layout);
-        projetosFechados5Layout.setHorizontalGroup(
-            projetosFechados5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 842, Short.MAX_VALUE)
-        );
-        projetosFechados5Layout.setVerticalGroup(
-            projetosFechados5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
-        );
-
-        abasMembrosEquipe5.addTab("Fechados", projetosFechados5);
-
         jTable5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTable5.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -249,7 +190,7 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String [] {
-                "", "Nome", "Data"
+                "#", "Nome", "Data de criação"
             }
         ) {
             Class[] types = new Class [] {
@@ -268,8 +209,8 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
             jTable5.getColumnModel().getColumn(0).setPreferredWidth(35);
             jTable5.getColumnModel().getColumn(0).setMaxWidth(50);
             jTable5.getColumnModel().getColumn(1).setPreferredWidth(300);
-            jTable5.getColumnModel().getColumn(2).setMinWidth(100);
-            jTable5.getColumnModel().getColumn(2).setPreferredWidth(100);
+            jTable5.getColumnModel().getColumn(2).setMinWidth(150);
+            jTable5.getColumnModel().getColumn(2).setPreferredWidth(150);
             jTable5.getColumnModel().getColumn(2).setMaxWidth(150);
         }
 
@@ -285,6 +226,10 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
         );
 
         abasMembrosEquipe5.addTab("Rascunhos", projetosRascunhos5);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Todos os Questionários");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -307,18 +252,16 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnVoltar)))
                 .addContainerGap(65, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(txtTituloSelecionarModeloQuestionario, javax.swing.GroupLayout.PREFERRED_SIZE, 951, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addComponent(txtTituloSelecionarModeloQuestionario)
-                .addGap(35, 35, 35)
+                .addComponent(jLabel1)
+                .addGap(20, 20, 20)
                 .addComponent(abasMembrosEquipe5, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
                     .addComponent(jButton4)
@@ -537,15 +480,12 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable5;
     private javax.swing.JPanel projetosAbertos5;
-    private javax.swing.JPanel projetosFechados5;
     private javax.swing.JPanel projetosRascunhos5;
-    private javax.swing.JLabel txtTituloSelecionarModeloQuestionario;
     // End of variables declaration//GEN-END:variables
 }

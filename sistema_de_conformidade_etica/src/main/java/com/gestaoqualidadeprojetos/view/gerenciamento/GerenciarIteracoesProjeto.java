@@ -42,11 +42,11 @@ public class GerenciarIteracoesProjeto extends javax.swing.JFrame {
         iteracao1 = new javax.swing.JScrollPane();
         tableEquipe1 = new javax.swing.JTable();
         projetoIteracao2 = new javax.swing.JPanel();
-        iteracao5 = new javax.swing.JScrollPane();
-        tableEquipe5 = new javax.swing.JTable();
+        iteracao2 = new javax.swing.JScrollPane();
+        tableEquipe2 = new javax.swing.JTable();
         projetoIteracao3 = new javax.swing.JPanel();
-        iteracao6 = new javax.swing.JScrollPane();
-        tableEquipe6 = new javax.swing.JTable();
+        iteracao3 = new javax.swing.JScrollPane();
+        tableEquipe3 = new javax.swing.JTable();
         projetoIteracao4 = new javax.swing.JPanel();
         iteracao7 = new javax.swing.JScrollPane();
         tableEquipe7 = new javax.swing.JTable();
@@ -89,11 +89,11 @@ public class GerenciarIteracoesProjeto extends javax.swing.JFrame {
         tableEquipe1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tableEquipe1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"01", "Iniciação", "15/05/2023", "30/05/2023", "Fechado"},
-                {"02", "Requisitos", "15/05/2023", "30/05/2023", "Fechado"},
-                {"03", "Projeto", "15/05/2023", "30/05/2023", "Fechado"},
-                {"04", "Desenvolvimento", "15/05/2023", "30/05/2023", "Fechado"},
-                {"05", "Teste e Verficação", "15/05/2023", "30/05/2023", "Fechado"}
+                {"01", "Iniciação", "15/05/2023", "30/05/2023", "Respondido"},
+                {"02", "Requisitos", "15/05/2023", "30/05/2023", "Respondido"},
+                {"03", "Projeto", "15/05/2023", "30/05/2023", "Respondido"},
+                {"04", "Desenvolvimento", "15/05/2023", "30/05/2023", "Respondido"},
+                {"05", "Teste e Verficação", "15/05/2023", "30/05/2023", "Respondido"}
             },
             new String [] {
                 "#", "Participante", "Data Abertura", "Data Limite", "Status"
@@ -131,14 +131,14 @@ public class GerenciarIteracoesProjeto extends javax.swing.JFrame {
 
         abasFasesIteracao.addTab("Sprint 1", projetoIteracao1);
 
-        tableEquipe5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        tableEquipe5.setModel(new javax.swing.table.DefaultTableModel(
+        tableEquipe2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tableEquipe2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"01", "Iniciação", "15/05/2023", "30/05/2023", "Fechado"},
-                {"02", "Requisitos", "15/05/2023", "30/05/2023", "Fechado"},
-                {"03", "Projeto", "15/05/2023", "30/05/2023", "Fechado"},
-                {"04", "Desenvolvimento", "15/05/2023", "30/05/2023", "Fechado"},
-                {"05", "Teste e Verficação", "15/05/2023", "30/05/2023", "Fechado"}
+                {"01", "Iniciação", "15/05/2023", "30/05/2023", "Respondido"},
+                {"02", "Requisitos", "15/05/2023", "30/05/2023", "Respondido"},
+                {"03", "Projeto", "15/05/2023", "30/05/2023", "Respondido"},
+                {"04", "Desenvolvimento", "15/05/2023", "30/05/2023", "Respondido"},
+                {"05", "Teste e Verficação", "15/05/2023", "30/05/2023", "Respondido"}
             },
             new String [] {
                 "#", "Participante", "Data Abertura", "Data Limite", "Status"
@@ -152,38 +152,38 @@ public class GerenciarIteracoesProjeto extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        tableEquipe5.setRowHeight(26);
-        tableEquipe5.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        tableEquipe5.setShowGrid(true);
-        tableEquipe5.setSurrendersFocusOnKeystroke(true);
-        iteracao5.setViewportView(tableEquipe5);
-        if (tableEquipe5.getColumnModel().getColumnCount() > 0) {
-            tableEquipe5.getColumnModel().getColumn(0).setMinWidth(30);
-            tableEquipe5.getColumnModel().getColumn(0).setPreferredWidth(30);
-            tableEquipe5.getColumnModel().getColumn(0).setMaxWidth(10);
+        tableEquipe2.setRowHeight(26);
+        tableEquipe2.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tableEquipe2.setShowGrid(true);
+        tableEquipe2.setSurrendersFocusOnKeystroke(true);
+        iteracao2.setViewportView(tableEquipe2);
+        if (tableEquipe2.getColumnModel().getColumnCount() > 0) {
+            tableEquipe2.getColumnModel().getColumn(0).setMinWidth(30);
+            tableEquipe2.getColumnModel().getColumn(0).setPreferredWidth(30);
+            tableEquipe2.getColumnModel().getColumn(0).setMaxWidth(10);
         }
 
         javax.swing.GroupLayout projetoIteracao2Layout = new javax.swing.GroupLayout(projetoIteracao2);
         projetoIteracao2.setLayout(projetoIteracao2Layout);
         projetoIteracao2Layout.setHorizontalGroup(
             projetoIteracao2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(iteracao5, javax.swing.GroupLayout.DEFAULT_SIZE, 757, Short.MAX_VALUE)
+            .addComponent(iteracao2, javax.swing.GroupLayout.DEFAULT_SIZE, 757, Short.MAX_VALUE)
         );
         projetoIteracao2Layout.setVerticalGroup(
             projetoIteracao2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(iteracao5, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
+            .addComponent(iteracao2, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
         );
 
         abasFasesIteracao.addTab("Sprint 2", projetoIteracao2);
 
-        tableEquipe6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        tableEquipe6.setModel(new javax.swing.table.DefaultTableModel(
+        tableEquipe3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tableEquipe3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"01", "Iniciação", "15/05/2023", "30/05/2023", "Fechado"},
-                {"02", "Requisitos", "15/05/2023", "30/05/2023", "Fechado"},
-                {"03", "Projeto", "15/05/2023", "30/05/2023", "Fechado"},
-                {"04", "Desenvolvimento", "15/05/2023", "30/05/2023", "Fechado"},
-                {"05", "Teste e Verficação", "15/05/2023", "30/05/2023", "Fechado"}
+                {"01", "Iniciação", "15/05/2023", "30/05/2023", "Respondido"},
+                {"02", "Requisitos", "15/05/2023", "30/05/2023", "Respondido"},
+                {"03", "Projeto", "15/05/2023", "30/05/2023", "Respondido"},
+                {"04", "Desenvolvimento", "15/05/2023", "30/05/2023", "Respondido"},
+                {"05", "Teste e Verficação", "15/05/2023", "30/05/2023", "Respondido"}
             },
             new String [] {
                 "#", "Participante", "Data Abertura", "Data Limite", "Status"
@@ -197,26 +197,26 @@ public class GerenciarIteracoesProjeto extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        tableEquipe6.setRowHeight(26);
-        tableEquipe6.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        tableEquipe6.setShowGrid(true);
-        tableEquipe6.setSurrendersFocusOnKeystroke(true);
-        iteracao6.setViewportView(tableEquipe6);
-        if (tableEquipe6.getColumnModel().getColumnCount() > 0) {
-            tableEquipe6.getColumnModel().getColumn(0).setMinWidth(30);
-            tableEquipe6.getColumnModel().getColumn(0).setPreferredWidth(30);
-            tableEquipe6.getColumnModel().getColumn(0).setMaxWidth(10);
+        tableEquipe3.setRowHeight(26);
+        tableEquipe3.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tableEquipe3.setShowGrid(true);
+        tableEquipe3.setSurrendersFocusOnKeystroke(true);
+        iteracao3.setViewportView(tableEquipe3);
+        if (tableEquipe3.getColumnModel().getColumnCount() > 0) {
+            tableEquipe3.getColumnModel().getColumn(0).setMinWidth(30);
+            tableEquipe3.getColumnModel().getColumn(0).setPreferredWidth(30);
+            tableEquipe3.getColumnModel().getColumn(0).setMaxWidth(10);
         }
 
         javax.swing.GroupLayout projetoIteracao3Layout = new javax.swing.GroupLayout(projetoIteracao3);
         projetoIteracao3.setLayout(projetoIteracao3Layout);
         projetoIteracao3Layout.setHorizontalGroup(
             projetoIteracao3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(iteracao6, javax.swing.GroupLayout.DEFAULT_SIZE, 757, Short.MAX_VALUE)
+            .addComponent(iteracao3, javax.swing.GroupLayout.DEFAULT_SIZE, 757, Short.MAX_VALUE)
         );
         projetoIteracao3Layout.setVerticalGroup(
             projetoIteracao3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(iteracao6, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
+            .addComponent(iteracao3, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
         );
 
         abasFasesIteracao.addTab("Sprint 3", projetoIteracao3);
@@ -531,8 +531,8 @@ public class GerenciarIteracoesProjeto extends javax.swing.JFrame {
     private javax.swing.JButton btnVoltar1;
     private javax.swing.JButton btnVoltar2;
     private javax.swing.JScrollPane iteracao1;
-    private javax.swing.JScrollPane iteracao5;
-    private javax.swing.JScrollPane iteracao6;
+    private javax.swing.JScrollPane iteracao2;
+    private javax.swing.JScrollPane iteracao3;
     private javax.swing.JScrollPane iteracao7;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -541,8 +541,8 @@ public class GerenciarIteracoesProjeto extends javax.swing.JFrame {
     private javax.swing.JPanel projetoIteracao3;
     private javax.swing.JPanel projetoIteracao4;
     private javax.swing.JTable tableEquipe1;
-    private javax.swing.JTable tableEquipe5;
-    private javax.swing.JTable tableEquipe6;
+    private javax.swing.JTable tableEquipe2;
+    private javax.swing.JTable tableEquipe3;
     private javax.swing.JTable tableEquipe7;
     private javax.swing.JLabel txtTituloSelecionarModeloQuestionario;
     private javax.swing.JLabel txtTituloSelecionarModeloQuestionario1;

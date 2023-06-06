@@ -59,6 +59,8 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         jScrollPaneTabelaProjetosAbertos4 = new javax.swing.JScrollPane();
         tableProjetosAbertos4 = new javax.swing.JTable();
         btnAbrirQuestionario = new javax.swing.JButton();
+        jTextFieldBuscarProjeto = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         menuBarProjetosAdmin = new javax.swing.JMenuBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -206,8 +208,8 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         tableProjetosAbertos4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tableProjetosAbertos4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"", "Rede social", "", "", "30/07/2023"},
-                {null, null, null, null, null},
+                {"", "Rede social", "", "", ""},
+                {null, null, null, null, ""},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -257,6 +259,10 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
                 btnAbrirQuestionarioActionPerformed(evt);
             }
         });
+
+        jTextFieldBuscarProjeto.setText("Buscar projeto");
+
+        jButton1.setText("Buscar");
         setJMenuBar(menuBarProjetosAdmin);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -264,20 +270,27 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(txtTituloProjetos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnNovoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextFieldBuscarProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnAbrirProjeto)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnAbrirQuestionario)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnVerDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnFechar))
-                    .addComponent(abasMembrosEquipe))
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(65, 65, 65)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnNovoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnAbrirProjeto)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnAbrirQuestionario)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnVerDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnFechar))
+                            .addComponent(abasMembrosEquipe))))
                 .addGap(65, 65, 65))
         );
         layout.setVerticalGroup(
@@ -285,7 +298,11 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addComponent(txtTituloProjetos)
-                .addGap(35, 35, 35)
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldBuscarProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
+                .addGap(20, 20, 20)
                 .addComponent(abasMembrosEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -379,9 +396,11 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
     private javax.swing.JButton btnFechar;
     private javax.swing.JButton btnNovoProjeto;
     private javax.swing.JButton btnVerDashboard;
+    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPaneTabelaProjetosAbertos;
     private javax.swing.JScrollPane jScrollPaneTabelaProjetosAbertos2;
     private javax.swing.JScrollPane jScrollPaneTabelaProjetosAbertos4;
+    private javax.swing.JTextField jTextFieldBuscarProjeto;
     private javax.swing.JMenuBar menuBarProjetosAdmin;
     private javax.swing.JPanel projetosAbertos;
     private javax.swing.JPanel projetosFechados;

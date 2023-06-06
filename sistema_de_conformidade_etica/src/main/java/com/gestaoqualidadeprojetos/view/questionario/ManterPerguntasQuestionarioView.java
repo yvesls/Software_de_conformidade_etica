@@ -48,9 +48,9 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Manter Perguntas do Questionário");
 
-        txtTituloPerguntasQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        txtTituloPerguntasQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         txtTituloPerguntasQuestionario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtTituloPerguntasQuestionario.setText("Perguntas do Questionário:");
+        txtTituloPerguntasQuestionario.setText("Questionário:");
 
         btnNovaPergunta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnNovaPergunta.setText("Nova pergunta");
@@ -142,7 +142,7 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
             tablePerguntasQuestionario6.getColumnModel().getColumn(0).setMaxWidth(10);
         }
 
-        txtTituloPerguntasQuestionario1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtTituloPerguntasQuestionario1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtTituloPerguntasQuestionario1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtTituloPerguntasQuestionario1.setText("Questionário Padrão");
         setJMenuBar(menuAcoesPerguntasQuestionario);

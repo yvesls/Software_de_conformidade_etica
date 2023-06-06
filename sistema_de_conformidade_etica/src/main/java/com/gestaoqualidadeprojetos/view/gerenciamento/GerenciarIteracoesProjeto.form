@@ -201,11 +201,11 @@
                           <Data value="30/05/2023"/>
                         </Column>
                         <Column editable="true" title="Status" type="java.lang.String">
-                          <Data value="Fechado"/>
-                          <Data value="Fechado"/>
-                          <Data value="Fechado"/>
-                          <Data value="Fechado"/>
-                          <Data value="Fechado"/>
+                          <Data value="Respondido"/>
+                          <Data value="Respondido"/>
+                          <Data value="Respondido"/>
+                          <Data value="Respondido"/>
+                          <Data value="Respondido"/>
                         </Column>
                       </Table>
                     </Property>
@@ -263,24 +263,24 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="iteracao5" alignment="0" pref="757" max="32767" attributes="0"/>
+                  <Component id="iteracao2" alignment="0" pref="757" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="iteracao5" alignment="0" pref="158" max="32767" attributes="0"/>
+                  <Component id="iteracao2" alignment="0" pref="158" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Container class="javax.swing.JScrollPane" name="iteracao5">
+            <Container class="javax.swing.JScrollPane" name="iteracao2">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
               </AuxValues>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="tableEquipe5">
+                <Component class="javax.swing.JTable" name="tableEquipe2">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="14" style="0"/>
@@ -316,11 +316,11 @@
                           <Data value="30/05/2023"/>
                         </Column>
                         <Column editable="true" title="Status" type="java.lang.String">
-                          <Data value="Fechado"/>
-                          <Data value="Fechado"/>
-                          <Data value="Fechado"/>
-                          <Data value="Fechado"/>
-                          <Data value="Fechado"/>
+                          <Data value="Respondido"/>
+                          <Data value="Respondido"/>
+                          <Data value="Respondido"/>
+                          <Data value="Respondido"/>
+                          <Data value="Respondido"/>
                         </Column>
                       </Table>
                     </Property>
@@ -378,24 +378,24 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="iteracao6" alignment="0" pref="757" max="32767" attributes="0"/>
+                  <Component id="iteracao3" alignment="0" pref="757" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="iteracao6" alignment="0" pref="158" max="32767" attributes="0"/>
+                  <Component id="iteracao3" alignment="0" pref="158" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Container class="javax.swing.JScrollPane" name="iteracao6">
+            <Container class="javax.swing.JScrollPane" name="iteracao3">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
               </AuxValues>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="tableEquipe6">
+                <Component class="javax.swing.JTable" name="tableEquipe3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="14" style="0"/>
@@ -431,11 +431,11 @@
                           <Data value="30/05/2023"/>
                         </Column>
                         <Column editable="true" title="Status" type="java.lang.String">
-                          <Data value="Fechado"/>
-                          <Data value="Fechado"/>
-                          <Data value="Fechado"/>
-                          <Data value="Fechado"/>
-                          <Data value="Fechado"/>
+                          <Data value="Respondido"/>
+                          <Data value="Respondido"/>
+                          <Data value="Respondido"/>
+                          <Data value="Respondido"/>
+                          <Data value="Respondido"/>
                         </Column>
                       </Table>
                     </Property>

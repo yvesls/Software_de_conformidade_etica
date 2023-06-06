@@ -44,7 +44,7 @@ public class SelecionarModeloQuestionarioView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Selecionar Modelo de Questionário");
 
-        txtTituloSelecionarModeloQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        txtTituloSelecionarModeloQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         txtTituloSelecionarModeloQuestionario.setText("Selecionar Modelo de Questionário");
 
         labelQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -116,7 +116,7 @@ public class SelecionarModeloQuestionarioView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnVoltar)
                     .addComponent(btnProximo))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pack();
