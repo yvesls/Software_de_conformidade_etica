@@ -8,8 +8,12 @@ import com.gestaoqualidadeprojetos.view.dashboard.DashboardAdminView;
 import com.gestaoqualidadeprojetos.view.gerenciamento.GerenciarEtapasIteracao;
 import com.gestaoqualidadeprojetos.view.gerenciamento.GerenciarEtapasIteracao;
 import com.gestaoqualidadeprojetos.view.questionario.QuestionarioView;
+import javax.swing.DefaultCellEditor;
+import javax.swing.JComboBox;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 
 /**
  *
@@ -26,15 +30,18 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         this.setLocationRelativeTo(this.getParent());
         centralizarTabela();
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
-
+        
+        // Adicionar o selectStatusProjeto como editor de célula na coluna "Status"
+        JComboBox<String> comboBoxEditor = new JComboBox<>(new String[]{"Aberto", "Concluído", "Arquivado", "Rascunho"});
+        tableProjetos.getColumnModel().getColumn(5).setCellEditor(new DefaultCellEditor(comboBoxEditor));
     }
     
     public void centralizarTabela() {
         DefaultTableCellRenderer centralizado = new DefaultTableCellRenderer();
 	centralizado.setHorizontalAlignment(SwingConstants.CENTER);
 	int i = 0;
-	while (i < this.tableProjetosAbertos.getColumnCount()) {
-            this.tableProjetosAbertos.getColumnModel().getColumn(i).setCellRenderer(centralizado);
+	while (i < this.tableProjetos.getColumnCount()) {
+            this.tableProjetos.getColumnModel().getColumn(i).setCellRenderer(centralizado);
             i++;
 	}
     }
@@ -43,6 +50,7 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        selectStatusProjeto = new javax.swing.JComboBox<>();
         btnNovoProjeto = new javax.swing.JButton();
         btnFechar = new javax.swing.JButton();
         btnVerDashboard = new javax.swing.JButton();
@@ -51,8 +59,11 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         jTextFieldBuscarProjeto = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jScrollPaneTabelaProjetosAbertos = new javax.swing.JScrollPane();
-        tableProjetosAbertos = new javax.swing.JTable();
+        tableProjetos = new javax.swing.JTable();
         menuBarProjetosAdmin = new javax.swing.JMenuBar();
+
+        selectStatusProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        selectStatusProjeto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aberto", "Concluído", "Arquivado", "Rascunho" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Todos os Projetos");
@@ -108,14 +119,14 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton1.setText("Buscar");
 
-        tableProjetosAbertos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        tableProjetosAbertos.setModel(new javax.swing.table.DefaultTableModel(
+        tableProjetos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tableProjetos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"01", "Sistema de Padaria", "15/05/2023", "15/07/2023", "30/07/2023", "Aberto"},
                 {"02", "App para Academia", "26/05/2023", "30/07/2023", "15/08/2023", "Aberto"},
-                {"03", "Rede Social", "01/05/2023", "30/05/2023", "05/06/2023", "Fechado"},
-                {"04", "Projeto de Rascunho", "", null, null, "Rascunho"},
-                {null, null, null, null, null, null},
+                {"03", "Rede Social", "01/05/2023", "30/05/2023", "05/06/2023", "Concluído"},
+                {"04", "Projeto Arquivado", "01/04/2023", "30/04/2023", "05/05/2023", "Arquivado"},
+                {"05", "Projeto de Rascunho", "", null, null, "Rascunho"},
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -123,28 +134,29 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "#", "Nome", "Data Abertura", "Data Limite", "Data Final", "Status"
+                "#", "Nome", "Data de Abertura", "Previsão de Conclusão", "Data de Conclusão", "Status"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
         });
-        tableProjetosAbertos.setRowHeight(26);
-        tableProjetosAbertos.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        tableProjetosAbertos.setShowGrid(true);
-        tableProjetosAbertos.setSurrendersFocusOnKeystroke(true);
-        jScrollPaneTabelaProjetosAbertos.setViewportView(tableProjetosAbertos);
-        if (tableProjetosAbertos.getColumnModel().getColumnCount() > 0) {
-            tableProjetosAbertos.getColumnModel().getColumn(0).setMinWidth(50);
-            tableProjetosAbertos.getColumnModel().getColumn(0).setPreferredWidth(50);
-            tableProjetosAbertos.getColumnModel().getColumn(0).setMaxWidth(75);
-            tableProjetosAbertos.getColumnModel().getColumn(1).setMinWidth(150);
-            tableProjetosAbertos.getColumnModel().getColumn(1).setPreferredWidth(200);
+        tableProjetos.setRowHeight(26);
+        tableProjetos.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tableProjetos.setShowGrid(true);
+        tableProjetos.setSurrendersFocusOnKeystroke(true);
+        jScrollPaneTabelaProjetosAbertos.setViewportView(tableProjetos);
+        if (tableProjetos.getColumnModel().getColumnCount() > 0) {
+            tableProjetos.getColumnModel().getColumn(0).setMinWidth(50);
+            tableProjetos.getColumnModel().getColumn(0).setPreferredWidth(50);
+            tableProjetos.getColumnModel().getColumn(0).setMaxWidth(75);
+            tableProjetos.getColumnModel().getColumn(1).setMinWidth(150);
+            tableProjetos.getColumnModel().getColumn(1).setPreferredWidth(200);
+            tableProjetos.getColumnModel().getColumn(5).setResizable(false);
         }
 
         setJMenuBar(menuBarProjetosAdmin);
@@ -280,6 +292,7 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPaneTabelaProjetosAbertos;
     private javax.swing.JTextField jTextFieldBuscarProjeto;
     private javax.swing.JMenuBar menuBarProjetosAdmin;
-    private javax.swing.JTable tableProjetosAbertos;
+    private javax.swing.JComboBox<String> selectStatusProjeto;
+    private javax.swing.JTable tableProjetos;
     // End of variables declaration//GEN-END:variables
 }

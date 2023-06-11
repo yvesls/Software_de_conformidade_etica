@@ -32,7 +32,6 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
 
         txtTituloPerguntasQuestionario = new javax.swing.JLabel();
         btnNovaPergunta = new javax.swing.JButton();
-        labelStatus = new javax.swing.JLabel();
         btnSalvar1 = new javax.swing.JButton();
         btnFechar = new javax.swing.JButton();
         btnEditarPergunta = new javax.swing.JButton();
@@ -42,7 +41,8 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
         jScrollPaneTabelaProjetos6 = new javax.swing.JScrollPane();
         tablePerguntasQuestionario6 = new javax.swing.JTable();
         txtTituloPerguntasQuestionario1 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jLabel5 = new javax.swing.JLabel();
+        selectIteracao = new javax.swing.JComboBox<>();
         menuAcoesPerguntasQuestionario = new javax.swing.JMenuBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -59,9 +59,6 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
                 btnNovaPerguntaActionPerformed(evt);
             }
         });
-
-        labelStatus.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        labelStatus.setText("Status:");
 
         btnSalvar1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnSalvar1.setText("Salvar Perguntas");
@@ -141,10 +138,14 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
 
         txtTituloPerguntasQuestionario1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtTituloPerguntasQuestionario1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtTituloPerguntasQuestionario1.setText("Questionário Padrão");
+        txtTituloPerguntasQuestionario1.setText("Sistema de Padaria");
 
-        jComboBox2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rascunho", "Publicado" }));
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel5.setText("Iteração:");
+
+        selectIteracao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        selectIteracao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sprint 1", "Sprint 2", "Sprint 3", "Sprint 4" }));
         setJMenuBar(menuAcoesPerguntasQuestionario);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -152,19 +153,10 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addGap(64, 64, 64)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtTituloPerguntasQuestionario)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtTituloPerguntasQuestionario1)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPaneTabelaProjetos6)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -173,17 +165,30 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
                                 .addComponent(btnEditarPergunta)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnExcluirPergunta)
-                                .addGap(32, 469, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(labelStatus)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(btnSalvar1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btnFechar)))))
-                        .addGap(65, 65, 65))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnSalvar1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnFechar)))
+                        .addGap(65, 65, 65))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtTituloPerguntasQuestionario)
+                                    .addComponent(jLabel5))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addGap(49, 49, 49)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(830, 830, 830))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(selectIteracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtTituloPerguntasQuestionario1))
+                                .addGap(0, 0, Short.MAX_VALUE))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,17 +197,17 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtTituloPerguntasQuestionario)
                     .addComponent(txtTituloPerguntasQuestionario1))
-                .addGap(20, 20, 20)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(selectIteracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
-                .addGap(20, 20, 20)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPaneTabelaProjetos6, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelStatus)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnSalvar1)
@@ -284,11 +289,11 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
     private javax.swing.JButton btnNovaPergunta;
     private javax.swing.JButton btnSalvar1;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPaneTabelaProjetos6;
-    private javax.swing.JLabel labelStatus;
     private javax.swing.JMenuBar menuAcoesPerguntasQuestionario;
+    private javax.swing.JComboBox<String> selectIteracao;
     private javax.swing.JTable tablePerguntasQuestionario6;
     private javax.swing.JLabel txtTituloPerguntasQuestionario;
     private javax.swing.JLabel txtTituloPerguntasQuestionario1;

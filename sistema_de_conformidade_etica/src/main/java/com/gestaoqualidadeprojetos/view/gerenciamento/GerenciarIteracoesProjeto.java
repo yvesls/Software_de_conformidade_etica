@@ -42,18 +42,20 @@ public class GerenciarIteracoesProjeto extends javax.swing.JFrame {
         iteracao1 = new javax.swing.JScrollPane();
         tableEquipe1 = new javax.swing.JTable();
         projetoIteracao2 = new javax.swing.JPanel();
-        iteracao2 = new javax.swing.JScrollPane();
-        tableEquipe2 = new javax.swing.JTable();
+        iteracao4 = new javax.swing.JScrollPane();
+        tableEquipe4 = new javax.swing.JTable();
         projetoIteracao3 = new javax.swing.JPanel();
-        iteracao3 = new javax.swing.JScrollPane();
-        tableEquipe3 = new javax.swing.JTable();
+        iteracao5 = new javax.swing.JScrollPane();
+        tableEquipe5 = new javax.swing.JTable();
         projetoIteracao4 = new javax.swing.JPanel();
-        iteracao7 = new javax.swing.JScrollPane();
-        tableEquipe7 = new javax.swing.JTable();
-        btnVoltar1 = new javax.swing.JButton();
+        iteracao6 = new javax.swing.JScrollPane();
+        tableEquipe6 = new javax.swing.JTable();
+        btnNovaIteracao = new javax.swing.JButton();
         txtTituloSelecionarModeloQuestionario = new javax.swing.JLabel();
         txtTituloSelecionarModeloQuestionario1 = new javax.swing.JLabel();
-        btnVoltar2 = new javax.swing.JButton();
+        btnAbrirQuestionario = new javax.swing.JButton();
+        btnNovaEtapa = new javax.swing.JButton();
+        btnAumentarPrazo = new javax.swing.JButton();
 
         btnCancelar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnCancelar.setText("Cancelar");
@@ -89,22 +91,29 @@ public class GerenciarIteracoesProjeto extends javax.swing.JFrame {
         tableEquipe1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tableEquipe1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"01", "Iniciação", "15/05/2023", "30/05/2023", "Respondido"},
-                {"02", "Requisitos", "15/05/2023", "30/05/2023", "Respondido"},
-                {"03", "Projeto", "15/05/2023", "30/05/2023", "Respondido"},
-                {"04", "Desenvolvimento", "15/05/2023", "30/05/2023", "Respondido"},
-                {"05", "Teste e Verficação", "15/05/2023", "30/05/2023", "Respondido"}
+                {"01", "Iniciação", "15/03/2023", "30/03/2023", "Respondido (20/03/2023)"},
+                {"02", "Requisitos", "15/03/2023", "30/03/2023", "Respondido (20/03/2023)"},
+                {"03", "Projeto", "15/03/2023", "30/03/2023", "Respondido (20/03/2023)"},
+                {"04", "Desenvolvimento", "15/03/2023", "30/03/2023", "Respondido (20/03/2023)"},
+                {"05", "Teste e Verficação", "15/03/2023", "30/03/2023", "Respondido (20/03/2023)"}
             },
             new String [] {
-                "#", "Participante", "Data Abertura", "Data Limite", "Status"
+                "#", "Participante", "Data Abertura", "Prazo para Resposta", "Status"
             }
         ) {
             Class[] types = new Class [] {
                 java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
+            boolean[] canEdit = new boolean [] {
+                false, false, true, true, true
+            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
         tableEquipe1.setRowHeight(26);
@@ -116,6 +125,8 @@ public class GerenciarIteracoesProjeto extends javax.swing.JFrame {
             tableEquipe1.getColumnModel().getColumn(0).setMinWidth(30);
             tableEquipe1.getColumnModel().getColumn(0).setPreferredWidth(30);
             tableEquipe1.getColumnModel().getColumn(0).setMaxWidth(10);
+            tableEquipe1.getColumnModel().getColumn(4).setMinWidth(100);
+            tableEquipe1.getColumnModel().getColumn(4).setPreferredWidth(100);
         }
 
         javax.swing.GroupLayout projetoIteracao1Layout = new javax.swing.GroupLayout(projetoIteracao1);
@@ -131,146 +142,173 @@ public class GerenciarIteracoesProjeto extends javax.swing.JFrame {
 
         abasFasesIteracao.addTab("Sprint 1", projetoIteracao1);
 
-        tableEquipe2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        tableEquipe2.setModel(new javax.swing.table.DefaultTableModel(
+        tableEquipe4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tableEquipe4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"01", "Iniciação", "15/05/2023", "30/05/2023", "Respondido"},
-                {"02", "Requisitos", "15/05/2023", "30/05/2023", "Respondido"},
-                {"03", "Projeto", "15/05/2023", "30/05/2023", "Respondido"},
-                {"04", "Desenvolvimento", "15/05/2023", "30/05/2023", "Respondido"},
-                {"05", "Teste e Verficação", "15/05/2023", "30/05/2023", "Respondido"}
+                {"01", "Iniciação", "15/04/2023", "30/04/2023", "Respondido (20/04/2023)"},
+                {"02", "Requisitos", "15/04/2023", "30/04/2023", "Respondido (20/04/2023)"},
+                {"03", "Projeto", "15/04/2023", "30/04/2023", "Respondido (20/04/2023)"},
+                {"04", "Desenvolvimento", "15/04/2023", "30/04/2023", "Respondido (20/04/2023)"},
+                {"05", "Teste e Verficação", "15/04/2023", "30/04/2023", "Respondido (20/04/2023)"}
             },
             new String [] {
-                "#", "Participante", "Data Abertura", "Data Limite", "Status"
+                "#", "Participante", "Data Abertura", "Prazo para Resposta", "Status"
             }
         ) {
             Class[] types = new Class [] {
                 java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
+            boolean[] canEdit = new boolean [] {
+                false, false, true, true, true
+            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
         });
-        tableEquipe2.setRowHeight(26);
-        tableEquipe2.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        tableEquipe2.setShowGrid(true);
-        tableEquipe2.setSurrendersFocusOnKeystroke(true);
-        iteracao2.setViewportView(tableEquipe2);
-        if (tableEquipe2.getColumnModel().getColumnCount() > 0) {
-            tableEquipe2.getColumnModel().getColumn(0).setMinWidth(30);
-            tableEquipe2.getColumnModel().getColumn(0).setPreferredWidth(30);
-            tableEquipe2.getColumnModel().getColumn(0).setMaxWidth(10);
+        tableEquipe4.setRowHeight(26);
+        tableEquipe4.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tableEquipe4.setShowGrid(true);
+        tableEquipe4.setSurrendersFocusOnKeystroke(true);
+        iteracao4.setViewportView(tableEquipe4);
+        if (tableEquipe4.getColumnModel().getColumnCount() > 0) {
+            tableEquipe4.getColumnModel().getColumn(0).setMinWidth(30);
+            tableEquipe4.getColumnModel().getColumn(0).setPreferredWidth(30);
+            tableEquipe4.getColumnModel().getColumn(0).setMaxWidth(10);
+            tableEquipe4.getColumnModel().getColumn(4).setMinWidth(100);
+            tableEquipe4.getColumnModel().getColumn(4).setPreferredWidth(100);
         }
 
         javax.swing.GroupLayout projetoIteracao2Layout = new javax.swing.GroupLayout(projetoIteracao2);
         projetoIteracao2.setLayout(projetoIteracao2Layout);
         projetoIteracao2Layout.setHorizontalGroup(
             projetoIteracao2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(iteracao2, javax.swing.GroupLayout.DEFAULT_SIZE, 757, Short.MAX_VALUE)
+            .addComponent(iteracao4, javax.swing.GroupLayout.DEFAULT_SIZE, 757, Short.MAX_VALUE)
         );
         projetoIteracao2Layout.setVerticalGroup(
             projetoIteracao2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(iteracao2, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
+            .addComponent(iteracao4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
         );
 
         abasFasesIteracao.addTab("Sprint 2", projetoIteracao2);
 
-        tableEquipe3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        tableEquipe3.setModel(new javax.swing.table.DefaultTableModel(
+        tableEquipe5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tableEquipe5.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"01", "Iniciação", "15/05/2023", "30/05/2023", "Respondido"},
-                {"02", "Requisitos", "15/05/2023", "30/05/2023", "Respondido"},
-                {"03", "Projeto", "15/05/2023", "30/05/2023", "Respondido"},
-                {"04", "Desenvolvimento", "15/05/2023", "30/05/2023", "Respondido"},
-                {"05", "Teste e Verficação", "15/05/2023", "30/05/2023", "Respondido"}
+                {"01", "Iniciação", "15/05/2023", "30/05/2023", "Respondido (20/05/2023)"},
+                {"02", "Requisitos", "15/05/2023", "30/05/2023", "Respondido (20/05/2023)"},
+                {"03", "Projeto", "15/05/2023", "30/05/2023", "Respondido (20/05/2023)"},
+                {"04", "Desenvolvimento", "15/05/2023", "30/05/2023", "Respondido (20/05/2023)"},
+                {"05", "Teste e Verficação", "15/05/2023", "30/05/2023", "Respondido (20/05/2023)"}
             },
             new String [] {
-                "#", "Participante", "Data Abertura", "Data Limite", "Status"
+                "#", "Participante", "Data Abertura", "Prazo para Resposta", "Status"
             }
         ) {
             Class[] types = new Class [] {
                 java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
+            boolean[] canEdit = new boolean [] {
+                false, false, true, true, false
+            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
         });
-        tableEquipe3.setRowHeight(26);
-        tableEquipe3.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        tableEquipe3.setShowGrid(true);
-        tableEquipe3.setSurrendersFocusOnKeystroke(true);
-        iteracao3.setViewportView(tableEquipe3);
-        if (tableEquipe3.getColumnModel().getColumnCount() > 0) {
-            tableEquipe3.getColumnModel().getColumn(0).setMinWidth(30);
-            tableEquipe3.getColumnModel().getColumn(0).setPreferredWidth(30);
-            tableEquipe3.getColumnModel().getColumn(0).setMaxWidth(10);
+        tableEquipe5.setRowHeight(26);
+        tableEquipe5.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tableEquipe5.setShowGrid(true);
+        tableEquipe5.setSurrendersFocusOnKeystroke(true);
+        iteracao5.setViewportView(tableEquipe5);
+        if (tableEquipe5.getColumnModel().getColumnCount() > 0) {
+            tableEquipe5.getColumnModel().getColumn(0).setMinWidth(30);
+            tableEquipe5.getColumnModel().getColumn(0).setPreferredWidth(30);
+            tableEquipe5.getColumnModel().getColumn(0).setMaxWidth(10);
+            tableEquipe5.getColumnModel().getColumn(4).setMinWidth(100);
+            tableEquipe5.getColumnModel().getColumn(4).setPreferredWidth(100);
         }
 
         javax.swing.GroupLayout projetoIteracao3Layout = new javax.swing.GroupLayout(projetoIteracao3);
         projetoIteracao3.setLayout(projetoIteracao3Layout);
         projetoIteracao3Layout.setHorizontalGroup(
             projetoIteracao3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(iteracao3, javax.swing.GroupLayout.DEFAULT_SIZE, 757, Short.MAX_VALUE)
+            .addComponent(iteracao5, javax.swing.GroupLayout.DEFAULT_SIZE, 757, Short.MAX_VALUE)
         );
         projetoIteracao3Layout.setVerticalGroup(
             projetoIteracao3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(iteracao3, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
+            .addComponent(iteracao5, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
         );
 
         abasFasesIteracao.addTab("Sprint 3", projetoIteracao3);
 
-        tableEquipe7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        tableEquipe7.setModel(new javax.swing.table.DefaultTableModel(
+        tableEquipe6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tableEquipe6.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"01", "Iniciação", "05/06/2023", "30/06/2023", "Aberto"},
-                {"02", "Requisitos", "05/06/2023", "30/06/2023", "Aberto"},
-                {"03", "Projeto", "05/06/2023", "30/06/2023", "Aberto"},
-                {"04", "Desenvolvimento", "05/06/2023", "30/06/2023", "Aberto"},
-                {"05", "Teste e Verficação", "05/06/2023", "30/06/2023", "Aberto"}
+                {"01", "Iniciação", "15/06/2023", "30/06/2023", "Aberto"},
+                {"02", "Requisitos", "15/06/2023", "30/06/2023", "Aberto"},
+                {"03", "Projeto", "15/06/2023", "30/06/2023", "Aberto"},
+                {"04", "Desenvolvimento", "15/06/2023", "30/06/2023", "Aberto"},
+                {"05", "Teste e Verficação", "15/06/2023", "30/06/2023", "Aberto"}
             },
             new String [] {
-                "#", "Participante", "Data Abertura", "Data Limite", "Status"
+                "#", "Participante", "Data Abertura", "Prazo para Resposta", "Status"
             }
         ) {
             Class[] types = new Class [] {
                 java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
+            boolean[] canEdit = new boolean [] {
+                false, false, true, true, false
+            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
         });
-        tableEquipe7.setRowHeight(26);
-        tableEquipe7.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        tableEquipe7.setShowGrid(true);
-        tableEquipe7.setSurrendersFocusOnKeystroke(true);
-        iteracao7.setViewportView(tableEquipe7);
-        if (tableEquipe7.getColumnModel().getColumnCount() > 0) {
-            tableEquipe7.getColumnModel().getColumn(0).setMinWidth(30);
-            tableEquipe7.getColumnModel().getColumn(0).setPreferredWidth(30);
-            tableEquipe7.getColumnModel().getColumn(0).setMaxWidth(10);
+        tableEquipe6.setRowHeight(26);
+        tableEquipe6.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tableEquipe6.setShowGrid(true);
+        tableEquipe6.setSurrendersFocusOnKeystroke(true);
+        iteracao6.setViewportView(tableEquipe6);
+        if (tableEquipe6.getColumnModel().getColumnCount() > 0) {
+            tableEquipe6.getColumnModel().getColumn(0).setMinWidth(30);
+            tableEquipe6.getColumnModel().getColumn(0).setPreferredWidth(30);
+            tableEquipe6.getColumnModel().getColumn(0).setMaxWidth(10);
+            tableEquipe6.getColumnModel().getColumn(4).setMinWidth(100);
+            tableEquipe6.getColumnModel().getColumn(4).setPreferredWidth(100);
         }
 
         javax.swing.GroupLayout projetoIteracao4Layout = new javax.swing.GroupLayout(projetoIteracao4);
         projetoIteracao4.setLayout(projetoIteracao4Layout);
         projetoIteracao4Layout.setHorizontalGroup(
             projetoIteracao4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(iteracao7, javax.swing.GroupLayout.DEFAULT_SIZE, 757, Short.MAX_VALUE)
+            .addComponent(iteracao6, javax.swing.GroupLayout.DEFAULT_SIZE, 757, Short.MAX_VALUE)
         );
         projetoIteracao4Layout.setVerticalGroup(
             projetoIteracao4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(iteracao7, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
+            .addComponent(iteracao6, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
         );
 
         abasFasesIteracao.addTab("Sprint 4", projetoIteracao4);
 
-        btnVoltar1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnVoltar1.setText("Nova Iteração");
-        btnVoltar1.addActionListener(new java.awt.event.ActionListener() {
+        btnNovaIteracao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnNovaIteracao.setText("Nova Iteração");
+        btnNovaIteracao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVoltar1ActionPerformed(evt);
+                btnNovaIteracaoActionPerformed(evt);
             }
         });
 
@@ -282,11 +320,27 @@ public class GerenciarIteracoesProjeto extends javax.swing.JFrame {
         txtTituloSelecionarModeloQuestionario1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtTituloSelecionarModeloQuestionario1.setText("Sistema de Padaria");
 
-        btnVoltar2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnVoltar2.setText("Abrir Questionário");
-        btnVoltar2.addActionListener(new java.awt.event.ActionListener() {
+        btnAbrirQuestionario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnAbrirQuestionario.setText("Abrir Questionário");
+        btnAbrirQuestionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVoltar2ActionPerformed(evt);
+                btnAbrirQuestionarioActionPerformed(evt);
+            }
+        });
+
+        btnNovaEtapa.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnNovaEtapa.setText("Nova Etapa");
+        btnNovaEtapa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNovaEtapaActionPerformed(evt);
+            }
+        });
+
+        btnAumentarPrazo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnAumentarPrazo.setText("Aumentar Prazo");
+        btnAumentarPrazo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAumentarPrazoActionPerformed(evt);
             }
         });
 
@@ -306,9 +360,13 @@ public class GerenciarIteracoesProjeto extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(abasFasesIteracao)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnVoltar1)
+                                .addComponent(btnNovaIteracao)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnVoltar2)
+                                .addComponent(btnNovaEtapa)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnAumentarPrazo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnAbrirQuestionario)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnVoltar)))
                         .addGap(65, 65, 65))
@@ -325,17 +383,19 @@ public class GerenciarIteracoesProjeto extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtTituloSelecionarModeloQuestionario)
                     .addComponent(txtTituloSelecionarModeloQuestionario1))
-                .addGap(20, 20, 20)
+                .addGap(10, 10, 10)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jLabel2))
                 .addGap(20, 20, 20)
                 .addComponent(abasFasesIteracao, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnVoltar)
-                    .addComponent(btnVoltar1)
-                    .addComponent(btnVoltar2))
+                    .addComponent(btnNovaIteracao)
+                    .addComponent(btnAbrirQuestionario)
+                    .addComponent(btnNovaEtapa)
+                    .addComponent(btnAumentarPrazo))
                 .addGap(20, 20, 20))
         );
 
@@ -352,15 +412,25 @@ public class GerenciarIteracoesProjeto extends javax.swing.JFrame {
         //listarProjetosAdminView.setVisible(false);
     }//GEN-LAST:event_btnVoltarActionPerformed
 
-    private void btnVoltar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltar1ActionPerformed
+    private void btnNovaIteracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovaIteracaoActionPerformed
         CriarNovaIteracaoView criarNovaIteracaoView = new CriarNovaIteracaoView();
         criarNovaIteracaoView.setVisible(true);
-    }//GEN-LAST:event_btnVoltar1ActionPerformed
+    }//GEN-LAST:event_btnNovaIteracaoActionPerformed
 
-    private void btnVoltar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltar2ActionPerformed
+    private void btnAbrirQuestionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirQuestionarioActionPerformed
         GerenciarEtapasIteracao listarPerguntasEtapaIteracaoProjetoView = new GerenciarEtapasIteracao();
         listarPerguntasEtapaIteracaoProjetoView.setVisible(true);
-    }//GEN-LAST:event_btnVoltar2ActionPerformed
+    }//GEN-LAST:event_btnAbrirQuestionarioActionPerformed
+
+    private void btnNovaEtapaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovaEtapaActionPerformed
+        CriarNovaEtapaView criarNovaEtapaView = new CriarNovaEtapaView();
+        criarNovaEtapaView.setVisible(true);
+    }//GEN-LAST:event_btnNovaEtapaActionPerformed
+
+    private void btnAumentarPrazoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAumentarPrazoActionPerformed
+        AumentarPrazoQuestionárioView aumentarPrazoQuestionárioView = new AumentarPrazoQuestionárioView();
+        aumentarPrazoQuestionárioView.setVisible(true);
+    }//GEN-LAST:event_btnAumentarPrazoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -526,14 +596,16 @@ public class GerenciarIteracoesProjeto extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane abasFasesIteracao;
+    private javax.swing.JButton btnAbrirQuestionario;
+    private javax.swing.JButton btnAumentarPrazo;
     private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnNovaEtapa;
+    private javax.swing.JButton btnNovaIteracao;
     private javax.swing.JButton btnVoltar;
-    private javax.swing.JButton btnVoltar1;
-    private javax.swing.JButton btnVoltar2;
     private javax.swing.JScrollPane iteracao1;
-    private javax.swing.JScrollPane iteracao2;
-    private javax.swing.JScrollPane iteracao3;
-    private javax.swing.JScrollPane iteracao7;
+    private javax.swing.JScrollPane iteracao4;
+    private javax.swing.JScrollPane iteracao5;
+    private javax.swing.JScrollPane iteracao6;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel projetoIteracao1;
@@ -541,9 +613,9 @@ public class GerenciarIteracoesProjeto extends javax.swing.JFrame {
     private javax.swing.JPanel projetoIteracao3;
     private javax.swing.JPanel projetoIteracao4;
     private javax.swing.JTable tableEquipe1;
-    private javax.swing.JTable tableEquipe2;
-    private javax.swing.JTable tableEquipe3;
-    private javax.swing.JTable tableEquipe7;
+    private javax.swing.JTable tableEquipe4;
+    private javax.swing.JTable tableEquipe5;
+    private javax.swing.JTable tableEquipe6;
     private javax.swing.JLabel txtTituloSelecionarModeloQuestionario;
     private javax.swing.JLabel txtTituloSelecionarModeloQuestionario1;
     // End of variables declaration//GEN-END:variables

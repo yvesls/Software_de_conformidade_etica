@@ -196,7 +196,7 @@ public class ManterPerguntasEtapaProjetoView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtTituloPerguntasQuestionario)
                     .addComponent(txtTituloPerguntasQuestionario1))
-                .addGap(23, 23, 23)
+                .addGap(10, 10, 10)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(txtTituloPerguntasQuestionario2))
@@ -232,6 +232,8 @@ public class ManterPerguntasEtapaProjetoView extends javax.swing.JFrame {
 
     private void btnSalvar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvar1ActionPerformed
         dispose();
+        GerenciarEtapasIteracao listarPerguntasEtapaIteracaoProjetoView = new GerenciarEtapasIteracao();
+        listarPerguntasEtapaIteracaoProjetoView.setVisible(true);
     }//GEN-LAST:event_btnSalvar1ActionPerformed
 
     private void btnEditarPerguntaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarPerguntaActionPerformed

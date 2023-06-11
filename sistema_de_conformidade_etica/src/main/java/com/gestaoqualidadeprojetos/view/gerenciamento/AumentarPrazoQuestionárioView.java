@@ -2,22 +2,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.gestaoqualidadeprojetos.view.questionario;
+package com.gestaoqualidadeprojetos.view.gerenciamento;
 
 /**
  *
  * @author Gabriel
  */
-public class CriarNovoQuestionarioView extends javax.swing.JFrame {
+public class AumentarPrazoQuestionárioView extends javax.swing.JFrame {
 
     /**
      * Creates new form CriarNovaPerguntaView
      */
-    public CriarNovoQuestionarioView() {
+    public AumentarPrazoQuestionárioView() {
         initComponents();
         setVisible(true);
         setResizable(false);
         this.setLocationRelativeTo(this.getParent());
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
+
     }
 
     /**
@@ -29,19 +31,23 @@ public class CriarNovoQuestionarioView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        txtTituloCriarPergunta = new javax.swing.JLabel();
         labelPergunta = new javax.swing.JLabel();
         btnSalvar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
-        labelStatus = new javax.swing.JLabel();
-        txtStatusQuestionario = new javax.swing.JLabel();
-        txtTituloProjetos = new javax.swing.JLabel();
+        labelPergunta1 = new javax.swing.JLabel();
+        labelPergunta2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Criar Novo Questionário");
+        setTitle("Aumentar Prazo de Resposta do Questionário");
+
+        txtTituloCriarPergunta.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        txtTituloCriarPergunta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtTituloCriarPergunta.setText("Defina o Novo Prazo de Resposta");
 
         labelPergunta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        labelPergunta.setText("Nome:");
+        labelPergunta.setText("Aumentar (dias úteis):");
 
         btnSalvar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnSalvar.setText("Salvar");
@@ -60,74 +66,67 @@ public class CriarNovoQuestionarioView extends javax.swing.JFrame {
         });
 
         jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField1.setText("Novo Questionário");
+        jTextField1.setText("05");
 
-        labelStatus.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        labelStatus.setText("Status:");
+        labelPergunta1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        labelPergunta1.setText("Novo Prazo:");
 
-        txtStatusQuestionario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txtStatusQuestionario.setText("Rascunho");
-
-        txtTituloProjetos.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        txtTituloProjetos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtTituloProjetos.setText("Digite o nome do novo Questionário");
+        labelPergunta2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        labelPergunta2.setText("05/07/2023");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtTituloProjetos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(txtTituloCriarPergunta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addContainerGap(110, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(labelPergunta)
+                        .addComponent(labelPergunta1))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(labelStatus)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtStatusQuestionario))
+                        .addComponent(btnCancelar)
+                        .addGap(59, 59, 59)))
+                .addGap(31, 31, 31)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(labelPergunta)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(btnCancelar)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnSalvar))))
-                .addGap(65, 65, 65))
+                        .addComponent(labelPergunta2)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnSalvar))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addComponent(txtTituloProjetos)
+                .addComponent(txtTituloCriarPergunta)
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelPergunta)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtStatusQuestionario)
-                    .addComponent(labelStatus))
-                .addGap(20, 20, 20)
+                    .addComponent(labelPergunta2)
+                    .addComponent(labelPergunta1))
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSalvar)
-                    .addComponent(btnCancelar))
-                .addGap(20, 20, 20))
+                    .addComponent(btnCancelar)
+                    .addComponent(btnSalvar))
+                .addGap(25, 25, 25))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-        dispose();
-        //ManterQuestionariosView manterQuesionariosView = new ManterQuestionariosView();
-        //manterQuesionariosView.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         this.dispose();
-        //ManterQuestionariosView manterQuesionariosView = new ManterQuestionariosView();
-        //manterQuesionariosView.setVisible(true);
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     /**
@@ -147,14 +146,26 @@ public class CriarNovoQuestionarioView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CriarNovoQuestionarioView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AumentarPrazoQuestionárioView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CriarNovoQuestionarioView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AumentarPrazoQuestionárioView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CriarNovoQuestionarioView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AumentarPrazoQuestionárioView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CriarNovoQuestionarioView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AumentarPrazoQuestionárioView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -163,7 +174,7 @@ public class CriarNovoQuestionarioView extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CriarNovoQuestionarioView().setVisible(true);
+                new AumentarPrazoQuestionárioView().setVisible(true);
             }
         });
     }
@@ -173,8 +184,8 @@ public class CriarNovoQuestionarioView extends javax.swing.JFrame {
     private javax.swing.JButton btnSalvar;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel labelPergunta;
-    private javax.swing.JLabel labelStatus;
-    private javax.swing.JLabel txtStatusQuestionario;
-    private javax.swing.JLabel txtTituloProjetos;
+    private javax.swing.JLabel labelPergunta1;
+    private javax.swing.JLabel labelPergunta2;
+    private javax.swing.JLabel txtTituloCriarPergunta;
     // End of variables declaration//GEN-END:variables
 }

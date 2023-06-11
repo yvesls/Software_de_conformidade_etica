@@ -2,6 +2,24 @@
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
+    <Component class="javax.swing.JComboBox" name="selectStatusProjeto">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Aberto"/>
+            <StringItem index="1" value="Conclu&#xed;do"/>
+            <StringItem index="2" value="Arquivado"/>
+            <StringItem index="3" value="Rascunho"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
     <Menu class="javax.swing.JMenuBar" name="menuBarProjetosAdmin">
     </Menu>
   </NonVisualComponents>
@@ -161,7 +179,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="tableProjetosAbertos">
+        <Component class="javax.swing.JTable" name="tableProjetos">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="0"/>
@@ -173,7 +191,7 @@
                   <Data value="02"/>
                   <Data value="03"/>
                   <Data value="04"/>
-                  <Data value="null"/>
+                  <Data value="05"/>
                   <Data value="null"/>
                   <Data value="null"/>
                   <Data value="null"/>
@@ -184,31 +202,31 @@
                   <Data value="Sistema de Padaria"/>
                   <Data value="App para Academia"/>
                   <Data value="Rede Social"/>
+                  <Data value="Projeto Arquivado"/>
                   <Data value="Projeto de Rascunho"/>
                   <Data value="null"/>
                   <Data value="null"/>
                   <Data value="null"/>
                   <Data value="null"/>
                   <Data value="null"/>
-                  <Data value="null"/>
                 </Column>
-                <Column editable="true" title="Data Abertura" type="java.lang.String">
+                <Column editable="true" title="Data de Abertura" type="java.lang.String">
                   <Data value="15/05/2023"/>
                   <Data value="26/05/2023"/>
                   <Data value="01/05/2023"/>
+                  <Data value="01/04/2023"/>
                   <Data value=""/>
                   <Data value="null"/>
                   <Data value="null"/>
                   <Data value="null"/>
                   <Data value="null"/>
                   <Data value="null"/>
-                  <Data value="null"/>
                 </Column>
-                <Column editable="true" title="Data Limite" type="java.lang.String">
+                <Column editable="true" title="Previs&#xe3;o de Conclus&#xe3;o" type="java.lang.String">
                   <Data value="15/07/2023"/>
                   <Data value="30/07/2023"/>
                   <Data value="30/05/2023"/>
-                  <Data value="null"/>
+                  <Data value="30/04/2023"/>
                   <Data value="null"/>
                   <Data value="null"/>
                   <Data value="null"/>
@@ -216,11 +234,11 @@
                   <Data value="null"/>
                   <Data value="null"/>
                 </Column>
-                <Column editable="true" title="Data Final" type="java.lang.String">
+                <Column editable="true" title="Data de Conclus&#xe3;o" type="java.lang.String">
                   <Data value="30/07/2023"/>
                   <Data value="15/08/2023"/>
                   <Data value="05/06/2023"/>
-                  <Data value="null"/>
+                  <Data value="05/05/2023"/>
                   <Data value="null"/>
                   <Data value="null"/>
                   <Data value="null"/>
@@ -228,12 +246,12 @@
                   <Data value="null"/>
                   <Data value="null"/>
                 </Column>
-                <Column editable="true" title="Status" type="java.lang.String">
+                <Column editable="true" title="Status" type="java.lang.Object">
                   <Data value="Aberto"/>
                   <Data value="Aberto"/>
-                  <Data value="Fechado"/>
+                  <Data value="Conclu&#xed;do"/>
+                  <Data value="Arquivado"/>
                   <Data value="Rascunho"/>
-                  <Data value="null"/>
                   <Data value="null"/>
                   <Data value="null"/>
                   <Data value="null"/>
@@ -269,7 +287,7 @@
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
                   <Title/>
                   <Editor/>
                   <Renderer/>

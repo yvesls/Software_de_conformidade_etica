@@ -6,7 +6,10 @@ package com.gestaoqualidadeprojetos.view.projeto;
 
 import com.gestaoqualidadeprojetos.view.gerenciamento.GerenciarIteracoesProjeto;
 import com.gestaoqualidadeprojetos.view.projeto.ListarProjetosAdminView;
+import javax.swing.DefaultCellEditor;
 import javax.swing.JFrame;
+import javax.swing.table.TableCellEditor;
+
 
 /**
  *
@@ -35,41 +38,37 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        selectFuncao = new javax.swing.JComboBox<>();
         txtTituloProjetos = new javax.swing.JLabel();
         btnSalvarProjeto = new javax.swing.JButton();
-        inputEmailAtor3 = new javax.swing.JTextField();
         labelTipo = new javax.swing.JLabel();
         labelNome = new javax.swing.JLabel();
         selectTipoProjeto = new javax.swing.JComboBox<>();
-        labelEquipe = new javax.swing.JLabel();
         inputNomeProjeto1 = new javax.swing.JTextField();
-        inputEmailAtor1 = new javax.swing.JTextField();
-        inputEmailAtor4 = new javax.swing.JTextField();
-        inputEmailAtor2 = new javax.swing.JTextField();
-        inputEmailAtor5 = new javax.swing.JTextField();
-        inputEmailAtor6 = new javax.swing.JTextField();
-        labelFuncaoAtor = new javax.swing.JLabel();
-        selectFuncaoAtor1 = new javax.swing.JComboBox<>();
-        selectFuncaoAtor2 = new javax.swing.JComboBox<>();
-        selectFuncaoAtor5 = new javax.swing.JComboBox<>();
-        selectFuncaoAtor3 = new javax.swing.JComboBox<>();
-        selectFuncaoAtor4 = new javax.swing.JComboBox<>();
-        selectFuncaoAtor6 = new javax.swing.JComboBox<>();
         btnCancelar = new javax.swing.JButton();
-        inputEmailAtor7 = new javax.swing.JTextField();
-        inputEmailAtor8 = new javax.swing.JTextField();
-        inputEmailAtor9 = new javax.swing.JTextField();
-        inputEmailAtor10 = new javax.swing.JTextField();
-        inputEmailAtor11 = new javax.swing.JTextField();
-        inputEmailAtor12 = new javax.swing.JTextField();
-        inputEmailAtor13 = new javax.swing.JTextField();
-        inputEmailAtor14 = new javax.swing.JTextField();
-        inputEmailAtor15 = new javax.swing.JTextField();
-        inputEmailAtor16 = new javax.swing.JTextField();
-        inputEmailAtor17 = new javax.swing.JTextField();
-        inputEmailAtor18 = new javax.swing.JTextField();
         labelQuestionario = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
+        iniciacaoPerguntasProjeto1 = new javax.swing.JScrollPane();
+        tableEquipeProjeto = new javax.swing.JTable();
+        labelNumIteracoes = new javax.swing.JLabel();
+        txtNumIteracoes = new javax.swing.JTextField();
+        labelDuracaoProjeto = new javax.swing.JLabel();
+        txxDuracaoProjeto = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        labelDuracaoIteracoes1 = new javax.swing.JLabel();
+        iniciacaoPerguntasProjeto2 = new javax.swing.JScrollPane();
+        tableEquipeProjeto1 = new javax.swing.JTable();
+        jLabelEtapas = new javax.swing.JLabel();
+        jLabelEtapas1 = new javax.swing.JLabel();
+        btnNovaEtapa = new javax.swing.JButton();
+        btnNovaEtapa1 = new javax.swing.JButton();
+        labelDuracaoIteracoes2 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        labelDuracaoIteracoes3 = new javax.swing.JLabel();
+        txxDuracaoIteracoes = new javax.swing.JTextField();
+
+        selectFuncao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        selectFuncao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Desenvolvedor", "Arquiteto de Software", "Gerente de Projeto", "Líder Técnico", "Analista de Qualidade" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Criar Novo Projeto");
@@ -86,14 +85,11 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
             }
         });
 
-        inputEmailAtor3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        inputEmailAtor3.setText("arquitetoSoftware@projeto.com");
-
         labelTipo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         labelTipo.setText("Tipo de Projeto:");
 
         labelNome.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        labelNome.setText("Nome:");
+        labelNome.setText("Nome do Projeto:");
 
         selectTipoProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         selectTipoProjeto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cascata", "Iterativo/Incremental" }));
@@ -103,84 +99,8 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
             }
         });
 
-        labelEquipe.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        labelEquipe.setText("Equipe:");
-
         inputNomeProjeto1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        inputNomeProjeto1.setText("Sistema de padaria");
-
-        inputEmailAtor1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        inputEmailAtor1.setText("cliente@projeto.com");
-        inputEmailAtor1.setToolTipText("");
-        inputEmailAtor1.setName(""); // NOI18N
-        inputEmailAtor1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputEmailAtor1ActionPerformed(evt);
-            }
-        });
-
-        inputEmailAtor4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        inputEmailAtor4.setText("liderTecnico@projeto.com");
-
-        inputEmailAtor2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        inputEmailAtor2.setText("desenvolvedor@projeto.com");
-
-        inputEmailAtor5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        inputEmailAtor5.setText("gerenteProjeto@projeto.com");
-
-        inputEmailAtor6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        inputEmailAtor6.setText("analistaQualidade@projeto.com");
-
-        labelFuncaoAtor.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        labelFuncaoAtor.setText("Função:");
-
-        selectFuncaoAtor1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        selectFuncaoAtor1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Desenvolvedor", "Arquiteto de Software", "Líder Técnico", "Gerente de Projeto", "Analista de Qualidade" }));
-        selectFuncaoAtor1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                selectFuncaoAtor1ActionPerformed(evt);
-            }
-        });
-
-        selectFuncaoAtor2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        selectFuncaoAtor2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Desenvolvedor", "Arquiteto de Software", "Líder Técnico", "Gerente de Projeto", "Analista de Qualidade" }));
-        selectFuncaoAtor2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                selectFuncaoAtor2ActionPerformed(evt);
-            }
-        });
-
-        selectFuncaoAtor5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        selectFuncaoAtor5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Desenvolvedor", "Arquiteto de Software", "Líder Técnico", "Gerente de Projeto", "Analista de Qualidade" }));
-        selectFuncaoAtor5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                selectFuncaoAtor5ActionPerformed(evt);
-            }
-        });
-
-        selectFuncaoAtor3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        selectFuncaoAtor3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Desenvolvedor", "Arquiteto de Software", "Líder Técnico", "Gerente de Projeto", "Analista de Qualidade" }));
-        selectFuncaoAtor3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                selectFuncaoAtor3ActionPerformed(evt);
-            }
-        });
-
-        selectFuncaoAtor4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        selectFuncaoAtor4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Desenvolvedor", "Arquiteto de Software", "Líder Técnico", "Gerente de Projeto", "Analista de Qualidade" }));
-        selectFuncaoAtor4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                selectFuncaoAtor4ActionPerformed(evt);
-            }
-        });
-
-        selectFuncaoAtor6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        selectFuncaoAtor6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Desenvolvedor", "Arquiteto de Software", "Líder Técnico", "Gerente de Projeto", "Analista de Qualidade" }));
-        selectFuncaoAtor6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                selectFuncaoAtor6ActionPerformed(evt);
-            }
-        });
+        inputNomeProjeto1.setText("Novo Projeto");
 
         btnCancelar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnCancelar.setText("Cancelar");
@@ -190,131 +110,164 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
             }
         });
 
-        inputEmailAtor7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        inputEmailAtor7.setText("Fulano");
-        inputEmailAtor7.setToolTipText("");
-        inputEmailAtor7.setName(""); // NOI18N
-        inputEmailAtor7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputEmailAtor7ActionPerformed(evt);
-            }
-        });
-
-        inputEmailAtor8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        inputEmailAtor8.setText("de Tal");
-        inputEmailAtor8.setToolTipText("");
-        inputEmailAtor8.setName(""); // NOI18N
-        inputEmailAtor8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputEmailAtor8ActionPerformed(evt);
-            }
-        });
-
-        inputEmailAtor9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        inputEmailAtor9.setText("Fulano");
-        inputEmailAtor9.setToolTipText("");
-        inputEmailAtor9.setName(""); // NOI18N
-        inputEmailAtor9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputEmailAtor9ActionPerformed(evt);
-            }
-        });
-
-        inputEmailAtor10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        inputEmailAtor10.setText("de Tal");
-        inputEmailAtor10.setToolTipText("");
-        inputEmailAtor10.setName(""); // NOI18N
-        inputEmailAtor10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputEmailAtor10ActionPerformed(evt);
-            }
-        });
-
-        inputEmailAtor11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        inputEmailAtor11.setText("Fulano");
-        inputEmailAtor11.setToolTipText("");
-        inputEmailAtor11.setName(""); // NOI18N
-        inputEmailAtor11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputEmailAtor11ActionPerformed(evt);
-            }
-        });
-
-        inputEmailAtor12.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        inputEmailAtor12.setText("de Tal");
-        inputEmailAtor12.setToolTipText("");
-        inputEmailAtor12.setName(""); // NOI18N
-        inputEmailAtor12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputEmailAtor12ActionPerformed(evt);
-            }
-        });
-
-        inputEmailAtor13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        inputEmailAtor13.setText("Fulano");
-        inputEmailAtor13.setToolTipText("");
-        inputEmailAtor13.setName(""); // NOI18N
-        inputEmailAtor13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputEmailAtor13ActionPerformed(evt);
-            }
-        });
-
-        inputEmailAtor14.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        inputEmailAtor14.setText("de Tal");
-        inputEmailAtor14.setToolTipText("");
-        inputEmailAtor14.setName(""); // NOI18N
-        inputEmailAtor14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputEmailAtor14ActionPerformed(evt);
-            }
-        });
-
-        inputEmailAtor15.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        inputEmailAtor15.setText("Fulano");
-        inputEmailAtor15.setToolTipText("");
-        inputEmailAtor15.setName(""); // NOI18N
-        inputEmailAtor15.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputEmailAtor15ActionPerformed(evt);
-            }
-        });
-
-        inputEmailAtor16.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        inputEmailAtor16.setText("de Tal");
-        inputEmailAtor16.setToolTipText("");
-        inputEmailAtor16.setName(""); // NOI18N
-        inputEmailAtor16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputEmailAtor16ActionPerformed(evt);
-            }
-        });
-
-        inputEmailAtor17.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        inputEmailAtor17.setText("Fulano");
-        inputEmailAtor17.setToolTipText("");
-        inputEmailAtor17.setName(""); // NOI18N
-        inputEmailAtor17.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputEmailAtor17ActionPerformed(evt);
-            }
-        });
-
-        inputEmailAtor18.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        inputEmailAtor18.setText("de Tal");
-        inputEmailAtor18.setToolTipText("");
-        inputEmailAtor18.setName(""); // NOI18N
-        inputEmailAtor18.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputEmailAtor18ActionPerformed(evt);
-            }
-        });
-
         labelQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         labelQuestionario.setText("Selecione o Questionário Modelo:");
 
         jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Padrão", "Sistema de padaria", "App para academia", "Rede social", "Importar Questionário" }));
+
+        tableEquipeProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tableEquipeProjeto.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"01", "Cliente", "cliente@projeto.com", "Cliente"},
+                {"02", "Desenvolvedor", "desenvolvedor@projeto.com", "Desenvolvedor"},
+                {"03", "Arquiteto de Software", "arquiteto@projeto.com", "Arquiteto de Software"},
+                {"04", "Gerente de Projeto", "gerente@projeto.com", "Gerente de Projeto"},
+                {"05", "Líder Técnico", "lider@projeto.com", "Líder Técnico"},
+                {"06", "Analista de Qualidade", "analista@projeto.com", "Analista de Qualidade"},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "#", "Nome", "Email", "Função"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        tableEquipeProjeto.setColumnSelectionAllowed(true);
+        tableEquipeProjeto.setRowHeight(26);
+        // Percorre todas as linhas da tabela
+        for (int i = 0; i < tableEquipeProjeto.getRowCount(); i++) {
+            // Obtém a célula da coluna "Teste" da linha atual
+            TableCellEditor editor = new DefaultCellEditor(selectFuncao);
+            tableEquipeProjeto.getColumnModel().getColumn(3).setCellEditor(editor);
+        }
+        tableEquipeProjeto.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tableEquipeProjeto.setShowGrid(true);
+        tableEquipeProjeto.setSurrendersFocusOnKeystroke(true);
+        iniciacaoPerguntasProjeto1.setViewportView(tableEquipeProjeto);
+        tableEquipeProjeto.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        if (tableEquipeProjeto.getColumnModel().getColumnCount() > 0) {
+            tableEquipeProjeto.getColumnModel().getColumn(0).setMinWidth(50);
+            tableEquipeProjeto.getColumnModel().getColumn(0).setPreferredWidth(50);
+            tableEquipeProjeto.getColumnModel().getColumn(0).setMaxWidth(100);
+            tableEquipeProjeto.getColumnModel().getColumn(1).setPreferredWidth(250);
+            tableEquipeProjeto.getColumnModel().getColumn(2).setMinWidth(250);
+            tableEquipeProjeto.getColumnModel().getColumn(2).setPreferredWidth(250);
+            tableEquipeProjeto.getColumnModel().getColumn(2).setMaxWidth(300);
+        }
+
+        labelNumIteracoes.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        labelNumIteracoes.setText("Nº de Iterações:");
+
+        txtNumIteracoes.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtNumIteracoes.setText("1");
+        txtNumIteracoes.setEnabled(false);
+        txtNumIteracoes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNumIteracoesActionPerformed(evt);
+            }
+        });
+
+        labelDuracaoProjeto.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        labelDuracaoProjeto.setText("Duração do projeto");
+
+        txxDuracaoProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txxDuracaoProjeto.setText("90");
+        txxDuracaoProjeto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txxDuracaoProjetoActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("(dias úteis)");
+
+        labelDuracaoIteracoes1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        labelDuracaoIteracoes1.setText(":");
+
+        tableEquipeProjeto1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tableEquipeProjeto1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"01", "Iniciação", ""},
+                {"02", "Requisitos", ""},
+                {"03", "Projeto", ""},
+                {"04", "Desenvolvimento", ""},
+                {"05", "Teste e Verficação", ""},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "#", "Etapas", "Peso de Esforço"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        tableEquipeProjeto1.setColumnSelectionAllowed(true);
+        tableEquipeProjeto1.setRowHeight(26);
+        tableEquipeProjeto1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tableEquipeProjeto1.setShowGrid(true);
+        tableEquipeProjeto1.setSurrendersFocusOnKeystroke(true);
+        iniciacaoPerguntasProjeto2.setViewportView(tableEquipeProjeto1);
+        tableEquipeProjeto1.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        if (tableEquipeProjeto1.getColumnModel().getColumnCount() > 0) {
+            tableEquipeProjeto1.getColumnModel().getColumn(0).setMinWidth(50);
+            tableEquipeProjeto1.getColumnModel().getColumn(0).setPreferredWidth(50);
+            tableEquipeProjeto1.getColumnModel().getColumn(0).setMaxWidth(100);
+            tableEquipeProjeto1.getColumnModel().getColumn(1).setPreferredWidth(300);
+            tableEquipeProjeto1.getColumnModel().getColumn(2).setMinWidth(100);
+            tableEquipeProjeto1.getColumnModel().getColumn(2).setPreferredWidth(100);
+            tableEquipeProjeto1.getColumnModel().getColumn(2).setMaxWidth(100);
+        }
+
+        jLabelEtapas.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabelEtapas.setText("Etapas:");
+
+        jLabelEtapas1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabelEtapas1.setText("Membros da Equipe:");
+
+        btnNovaEtapa.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnNovaEtapa.setText("Nova Etapa");
+        btnNovaEtapa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNovaEtapaActionPerformed(evt);
+            }
+        });
+
+        btnNovaEtapa1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnNovaEtapa1.setText("Novo Membro");
+        btnNovaEtapa1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNovaEtapa1ActionPerformed(evt);
+            }
+        });
+
+        labelDuracaoIteracoes2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        labelDuracaoIteracoes2.setText("Duração de cada Iteração");
+
+        jLabel2.setText("(dias úteis)");
+
+        labelDuracaoIteracoes3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        labelDuracaoIteracoes3.setText(":");
+
+        txxDuracaoIteracoes.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txxDuracaoIteracoes.setEnabled(false);
+        txxDuracaoIteracoes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txxDuracaoIteracoesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -322,194 +275,127 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(txtTituloProjetos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addContainerGap(81, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelEtapas)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnCancelar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnSalvarProjeto))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(labelEquipe)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                                .addComponent(inputEmailAtor15, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(inputEmailAtor16, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                                .addComponent(inputEmailAtor13)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(inputEmailAtor14, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                                .addComponent(inputEmailAtor11)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(inputEmailAtor12, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(inputEmailAtor7, javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(inputEmailAtor9))
-                                                .addGap(18, 18, 18)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(inputEmailAtor10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(inputEmailAtor8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(inputEmailAtor17)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(inputEmailAtor18, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(inputEmailAtor5, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(inputEmailAtor4, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(inputEmailAtor3, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(inputEmailAtor2, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(inputEmailAtor1, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(inputEmailAtor6, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(20, 20, 20)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(labelFuncaoAtor)
-                                        .addGap(65, 65, 65))
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(selectFuncaoAtor6, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(selectFuncaoAtor5, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(selectFuncaoAtor4, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(selectFuncaoAtor3, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(selectFuncaoAtor2, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(selectFuncaoAtor1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(65, 65, 65))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(labelQuestionario)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(labelNome)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(inputNomeProjeto1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(labelTipo)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(selectTipoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(739, 739, 739))))
+                        .addComponent(labelNome)
+                        .addGap(18, 18, 18)
+                        .addComponent(inputNomeProjeto1, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnNovaEtapa1)
+                    .addComponent(jLabelEtapas1)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(btnNovaEtapa)
+                            .addGap(18, 18, 18))
+                        .addComponent(iniciacaoPerguntasProjeto1, javax.swing.GroupLayout.PREFERRED_SIZE, 1016, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(btnCancelar)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnSalvarProjeto))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(iniciacaoPerguntasProjeto2, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(93, 93, 93)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(labelQuestionario)
+                                    .addGap(34, 34, 34)
+                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(labelDuracaoIteracoes2)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(0, 0, 0)
+                                            .addComponent(labelDuracaoIteracoes3))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(labelDuracaoProjeto)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(0, 0, 0)
+                                            .addComponent(labelDuracaoIteracoes1))
+                                        .addComponent(labelNumIteracoes)
+                                        .addComponent(labelTipo))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(txtNumIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txxDuracaoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txxDuracaoIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(selectTipoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(35, 35, 35)
                 .addComponent(txtTituloProjetos)
-                .addGap(33, 33, 33)
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelNome)
-                    .addComponent(inputNomeProjeto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(inputNomeProjeto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelNome))
+                .addGap(18, 18, 18)
+                .addComponent(jLabelEtapas1)
+                .addGap(15, 15, 15)
+                .addComponent(iniciacaoPerguntasProjeto1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15)
+                .addComponent(btnNovaEtapa1)
+                .addGap(22, 22, 22)
+                .addComponent(jLabelEtapas)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(labelEquipe)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(inputEmailAtor7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(inputEmailAtor8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(inputEmailAtor9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(inputEmailAtor10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(inputEmailAtor11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(inputEmailAtor12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(9, 9, 9)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(inputEmailAtor13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(inputEmailAtor14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(inputEmailAtor15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(inputEmailAtor16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(inputEmailAtor17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(inputEmailAtor18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(inputEmailAtor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(inputEmailAtor2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(inputEmailAtor3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(9, 9, 9)
-                                .addComponent(inputEmailAtor4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(inputEmailAtor5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(inputEmailAtor6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(15, 15, 15)
+                        .addComponent(iniciacaoPerguntasProjeto2, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(labelFuncaoAtor)
-                        .addGap(12, 12, 12)
-                        .addComponent(selectFuncaoAtor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(selectFuncaoAtor2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(selectFuncaoAtor3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(9, 9, 9)
-                        .addComponent(selectFuncaoAtor4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(selectFuncaoAtor5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(selectFuncaoAtor6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(20, 20, 20)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(labelTipo)
+                            .addComponent(selectTipoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(5, 5, 5)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(labelNumIteracoes)
+                            .addComponent(txtNumIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(5, 5, 5)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(labelDuracaoIteracoes2)
+                            .addComponent(jLabel2)
+                            .addComponent(labelDuracaoIteracoes3)
+                            .addComponent(txxDuracaoIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(5, 5, 5)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(labelDuracaoProjeto)
+                            .addComponent(jLabel1)
+                            .addComponent(labelDuracaoIteracoes1)
+                            .addComponent(txxDuracaoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(5, 5, 5)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(labelQuestionario)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(10, 10, 10)
+                .addComponent(btnNovaEtapa)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelTipo)
-                    .addComponent(selectTipoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelQuestionario)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSalvarProjeto)
-                    .addComponent(btnCancelar))
+                    .addComponent(btnCancelar)
+                    .addComponent(btnSalvarProjeto))
                 .addGap(25, 25, 25))
         );
-
-        inputEmailAtor1.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void selectTipoProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectTipoProjetoActionPerformed
-        // TODO add your handling code here:
+        if (selectTipoProjeto.getSelectedItem().equals("Iterativo/Incremental")) {
+            
+            txxDuracaoIteracoes.setEnabled(true);
+            txtNumIteracoes.setEnabled(true);
+            txxDuracaoIteracoes.setText("15");
+            txtNumIteracoes.setText("5");
+        } else {
+            txxDuracaoIteracoes.setEnabled(false);
+            txxDuracaoIteracoes.setText("");
+            txtNumIteracoes.setText("1");
+            txtNumIteracoes.setEnabled(false);
+        }
     }//GEN-LAST:event_selectTipoProjetoActionPerformed
-
-    private void selectFuncaoAtor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectFuncaoAtor1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_selectFuncaoAtor1ActionPerformed
-
-    private void selectFuncaoAtor2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectFuncaoAtor2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_selectFuncaoAtor2ActionPerformed
-
-    private void selectFuncaoAtor5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectFuncaoAtor5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_selectFuncaoAtor5ActionPerformed
-
-    private void selectFuncaoAtor3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectFuncaoAtor3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_selectFuncaoAtor3ActionPerformed
-
-    private void selectFuncaoAtor4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectFuncaoAtor4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_selectFuncaoAtor4ActionPerformed
-
-    private void selectFuncaoAtor6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectFuncaoAtor6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_selectFuncaoAtor6ActionPerformed
 
     private void btnSalvarProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarProjetoActionPerformed
         this.dispose();
@@ -523,57 +409,25 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
         listarProjetosAdminView.setVisible(true);
     }//GEN-LAST:event_btnCancelarActionPerformed
 
-    private void inputEmailAtor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputEmailAtor1ActionPerformed
+    private void txtNumIteracoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumIteracoesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_inputEmailAtor1ActionPerformed
+    }//GEN-LAST:event_txtNumIteracoesActionPerformed
 
-    private void inputEmailAtor7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputEmailAtor7ActionPerformed
+    private void txxDuracaoProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txxDuracaoProjetoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_inputEmailAtor7ActionPerformed
+    }//GEN-LAST:event_txxDuracaoProjetoActionPerformed
 
-    private void inputEmailAtor8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputEmailAtor8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inputEmailAtor8ActionPerformed
+    private void btnNovaEtapaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovaEtapaActionPerformed
 
-    private void inputEmailAtor9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputEmailAtor9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inputEmailAtor9ActionPerformed
+    }//GEN-LAST:event_btnNovaEtapaActionPerformed
 
-    private void inputEmailAtor10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputEmailAtor10ActionPerformed
+    private void btnNovaEtapa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovaEtapa1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_inputEmailAtor10ActionPerformed
+    }//GEN-LAST:event_btnNovaEtapa1ActionPerformed
 
-    private void inputEmailAtor11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputEmailAtor11ActionPerformed
+    private void txxDuracaoIteracoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txxDuracaoIteracoesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_inputEmailAtor11ActionPerformed
-
-    private void inputEmailAtor12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputEmailAtor12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inputEmailAtor12ActionPerformed
-
-    private void inputEmailAtor13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputEmailAtor13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inputEmailAtor13ActionPerformed
-
-    private void inputEmailAtor14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputEmailAtor14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inputEmailAtor14ActionPerformed
-
-    private void inputEmailAtor15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputEmailAtor15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inputEmailAtor15ActionPerformed
-
-    private void inputEmailAtor16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputEmailAtor16ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inputEmailAtor16ActionPerformed
-
-    private void inputEmailAtor17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputEmailAtor17ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inputEmailAtor17ActionPerformed
-
-    private void inputEmailAtor18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputEmailAtor18ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inputEmailAtor18ActionPerformed
+    }//GEN-LAST:event_txxDuracaoIteracoesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -613,39 +467,32 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnNovaEtapa;
+    private javax.swing.JButton btnNovaEtapa1;
     private javax.swing.JButton btnSalvarProjeto;
-    private javax.swing.JTextField inputEmailAtor1;
-    private javax.swing.JTextField inputEmailAtor10;
-    private javax.swing.JTextField inputEmailAtor11;
-    private javax.swing.JTextField inputEmailAtor12;
-    private javax.swing.JTextField inputEmailAtor13;
-    private javax.swing.JTextField inputEmailAtor14;
-    private javax.swing.JTextField inputEmailAtor15;
-    private javax.swing.JTextField inputEmailAtor16;
-    private javax.swing.JTextField inputEmailAtor17;
-    private javax.swing.JTextField inputEmailAtor18;
-    private javax.swing.JTextField inputEmailAtor2;
-    private javax.swing.JTextField inputEmailAtor3;
-    private javax.swing.JTextField inputEmailAtor4;
-    private javax.swing.JTextField inputEmailAtor5;
-    private javax.swing.JTextField inputEmailAtor6;
-    private javax.swing.JTextField inputEmailAtor7;
-    private javax.swing.JTextField inputEmailAtor8;
-    private javax.swing.JTextField inputEmailAtor9;
+    private javax.swing.JScrollPane iniciacaoPerguntasProjeto1;
+    private javax.swing.JScrollPane iniciacaoPerguntasProjeto2;
     private javax.swing.JTextField inputNomeProjeto1;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel labelEquipe;
-    private javax.swing.JLabel labelFuncaoAtor;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabelEtapas;
+    private javax.swing.JLabel jLabelEtapas1;
+    private javax.swing.JLabel labelDuracaoIteracoes1;
+    private javax.swing.JLabel labelDuracaoIteracoes2;
+    private javax.swing.JLabel labelDuracaoIteracoes3;
+    private javax.swing.JLabel labelDuracaoProjeto;
     private javax.swing.JLabel labelNome;
+    private javax.swing.JLabel labelNumIteracoes;
     private javax.swing.JLabel labelQuestionario;
     private javax.swing.JLabel labelTipo;
-    private javax.swing.JComboBox<String> selectFuncaoAtor1;
-    private javax.swing.JComboBox<String> selectFuncaoAtor2;
-    private javax.swing.JComboBox<String> selectFuncaoAtor3;
-    private javax.swing.JComboBox<String> selectFuncaoAtor4;
-    private javax.swing.JComboBox<String> selectFuncaoAtor5;
-    private javax.swing.JComboBox<String> selectFuncaoAtor6;
+    private javax.swing.JComboBox<String> selectFuncao;
     private javax.swing.JComboBox<String> selectTipoProjeto;
+    public javax.swing.JTable tableEquipeProjeto;
+    public javax.swing.JTable tableEquipeProjeto1;
+    private javax.swing.JTextField txtNumIteracoes;
     private javax.swing.JLabel txtTituloProjetos;
+    private javax.swing.JTextField txxDuracaoIteracoes;
+    private javax.swing.JTextField txxDuracaoProjeto;
     // End of variables declaration//GEN-END:variables
 }
