@@ -94,9 +94,9 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
         tableProjetos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tableProjetos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"01", "Sistema de Padaria", "15/05/2023", "15/07/2023", "30/07/2023", "Aberto"},
-                {"02", "App para Academia", "26/05/2023", "30/07/2023", "15/08/2023", "Aberto"},
-                {"03", "Rede Social", "01/05/2023", "30/05/2023", "05/06/2023", "Concluído"},
+                {"01", "Sistema de Padaria", "15/05/2023", "15/07/2023", "", "Aberto"},
+                {"02", "App para Academia", "26/05/2023", "30/07/2023", "", "Aberto"},
+                {"03", "Rede Social", "01/05/2023", "30/05/2023", "22/05/2023", "Concluído"},
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -148,7 +148,7 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
                         .addComponent(btnAbrirQuestionario)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnVerDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 542, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 585, Short.MAX_VALUE)
                         .addComponent(btnFechar))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)

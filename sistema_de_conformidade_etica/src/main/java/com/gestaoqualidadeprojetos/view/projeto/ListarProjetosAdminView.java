@@ -123,10 +123,10 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         tableProjetos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tableProjetos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"01", "Sistema de Padaria", "15/05/2023", "15/07/2023", "30/07/2023", "Aberto"},
-                {"02", "App para Academia", "26/05/2023", "30/07/2023", "15/08/2023", "Aberto"},
-                {"03", "Rede Social", "01/05/2023", "30/05/2023", "05/06/2023", "Concluído"},
-                {"04", "Projeto Arquivado", "01/04/2023", "30/04/2023", "05/05/2023", "Arquivado"},
+                {"01", "Sistema de Padaria", "15/05/2023", "15/07/2023", "", "Aberto"},
+                {"02", "App para Academia", "14/06/2023", "14/08/2023", "", "Aberto"},
+                {"03", "Rede Social", "01/05/2023", "30/05/2023", "29/05/2023", "Concluído"},
+                {"04", "Projeto Arquivado", "01/04/2023", "30/04/2023", "", "Arquivado"},
                 {"05", "Projeto de Rascunho", "", null, null, "Rascunho"},
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},

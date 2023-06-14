@@ -36,7 +36,7 @@
                       <Component id="btnAbrirQuestionario" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnVerDashboard" min="-2" pref="125" max="-2" attributes="0"/>
-                      <EmptySpace pref="542" max="32767" attributes="0"/>
+                      <EmptySpace pref="585" max="32767" attributes="0"/>
                       <Component id="btnFechar" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
@@ -200,9 +200,9 @@
                   <Data value="null"/>
                 </Column>
                 <Column editable="false" title="Data de Conclus&#xe3;o" type="java.lang.String">
-                  <Data value="30/07/2023"/>
-                  <Data value="15/08/2023"/>
-                  <Data value="05/06/2023"/>
+                  <Data value=""/>
+                  <Data value=""/>
+                  <Data value="22/05/2023"/>
                   <Data value="null"/>
                   <Data value="null"/>
                   <Data value="null"/>

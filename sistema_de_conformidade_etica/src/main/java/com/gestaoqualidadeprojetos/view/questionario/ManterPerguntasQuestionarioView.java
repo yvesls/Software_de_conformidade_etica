@@ -139,7 +139,7 @@ public class ManterPerguntasQuestionarioView extends javax.swing.JFrame {
 
         txtTituloPerguntasQuestionario1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtTituloPerguntasQuestionario1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtTituloPerguntasQuestionario1.setText("Sistema de Padaria");
+        txtTituloPerguntasQuestionario1.setText("Questionario Etico 2");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
