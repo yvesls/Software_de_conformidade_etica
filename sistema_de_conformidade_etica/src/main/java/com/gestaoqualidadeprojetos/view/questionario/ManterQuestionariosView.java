@@ -112,23 +112,23 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
         jTableQuestionario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTableQuestionario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"01", "Questionário Ético Padrão", "01/04/2023", "Padrão"},
-                {"02", "Questionário Ético 2", "15/05/2023", "Disponível"},
-                {"03", "Questionário Ético 3", "01/06/2023", "Disponível"},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {"01", "Questionário Ético Padrão", "01/04/2023"},
+                {"02", "Questionário Ético 2", "15/05/2023"},
+                {"03", "Questionário Ético 3", "01/06/2023"},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "#", "Nome", "Data de Criação", "Status"
+                "#", "Nome", "Data de Criação"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -146,9 +146,6 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
             jTableQuestionario.getColumnModel().getColumn(2).setMinWidth(150);
             jTableQuestionario.getColumnModel().getColumn(2).setPreferredWidth(150);
             jTableQuestionario.getColumnModel().getColumn(2).setMaxWidth(150);
-            jTableQuestionario.getColumnModel().getColumn(3).setMinWidth(150);
-            jTableQuestionario.getColumnModel().getColumn(3).setPreferredWidth(150);
-            jTableQuestionario.getColumnModel().getColumn(3).setMaxWidth(150);
         }
 
         jLabel1.setText("Ações");

@@ -197,7 +197,7 @@
                   <Data value="L&#xed;der T&#xe9;cnico"/>
                   <Data value="Analista de Qualidade"/>
                 </Column>
-                <Column editable="true" title="Data Abertura" type="java.lang.String">
+                <Column editable="false" title="Data Abertura" type="java.lang.String">
                   <Data value="05/06/2023"/>
                   <Data value="05/06/2023"/>
                   <Data value="05/06/2023"/>
@@ -205,7 +205,7 @@
                   <Data value="05/06/2023"/>
                   <Data value="05/06/2023"/>
                 </Column>
-                <Column editable="true" title="Prazo para Resposta" type="java.lang.String">
+                <Column editable="false" title="Prazo para Resposta" type="java.lang.String">
                   <Data value="30/06/2023"/>
                   <Data value="30/06/2023"/>
                   <Data value="30/06/2023"/>
@@ -213,7 +213,7 @@
                   <Data value="30/06/2023"/>
                   <Data value="30/06/2023"/>
                 </Column>
-                <Column editable="true" title="Data da Resposta" type="java.lang.String">
+                <Column editable="false" title="Data da Resposta" type="java.lang.String">
                   <Data value="10/06/2023"/>
                   <Data value="10/06/2023"/>
                   <Data value="10/06/2023"/>
@@ -221,7 +221,7 @@
                   <Data value="null"/>
                   <Data value="null"/>
                 </Column>
-                <Column editable="true" title="Status" type="java.lang.String">
+                <Column editable="false" title="Status" type="java.lang.String">
                   <Data value="Respondido"/>
                   <Data value="Respondido"/>
                   <Data value="Respondido"/>

@@ -196,28 +196,28 @@
                           <Data value="Desenvolvimento"/>
                           <Data value="Teste e Verfica&#xe7;&#xe3;o"/>
                         </Column>
-                        <Column editable="true" title="Data Abertura" type="java.lang.String">
+                        <Column editable="false" title="Data Abertura" type="java.lang.String">
                           <Data value="15/03/2023"/>
                           <Data value="15/03/2023"/>
                           <Data value="15/03/2023"/>
                           <Data value="15/03/2023"/>
                           <Data value="15/03/2023"/>
                         </Column>
-                        <Column editable="true" title="Prazo para Resposta" type="java.lang.String">
+                        <Column editable="false" title="Prazo para Resposta" type="java.lang.String">
                           <Data value="30/03/2023"/>
                           <Data value="30/03/2023"/>
                           <Data value="30/03/2023"/>
                           <Data value="30/03/2023"/>
                           <Data value="30/03/2023"/>
                         </Column>
-                        <Column editable="true" title="Data da Resposta" type="java.lang.String">
+                        <Column editable="false" title="Data da Resposta" type="java.lang.String">
                           <Data value="25/03/2023"/>
                           <Data value="25/03/2023"/>
                           <Data value="25/03/2023"/>
                           <Data value="25/03/2023"/>
                           <Data value="25/03/2023"/>
                         </Column>
-                        <Column editable="true" title="Status" type="java.lang.String">
+                        <Column editable="false" title="Status" type="java.lang.String">
                           <Data value="Respondido"/>
                           <Data value="Respondido"/>
                           <Data value="Respondido"/>
