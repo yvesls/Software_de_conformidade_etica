@@ -39,7 +39,7 @@ public class EditarPerguntaView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Editar Pergunta");
 
-        txtTituloCriarPergunta.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        txtTituloCriarPergunta.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         txtTituloCriarPergunta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtTituloCriarPergunta.setText("Faça as alterações na Pergunta");
 

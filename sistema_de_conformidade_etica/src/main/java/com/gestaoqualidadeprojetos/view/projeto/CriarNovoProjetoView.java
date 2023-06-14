@@ -76,7 +76,7 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Criar Novo Projeto");
 
-        txtTituloProjetos.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        txtTituloProjetos.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         txtTituloProjetos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtTituloProjetos.setText("Preencha os dados do novo Projeto");
 

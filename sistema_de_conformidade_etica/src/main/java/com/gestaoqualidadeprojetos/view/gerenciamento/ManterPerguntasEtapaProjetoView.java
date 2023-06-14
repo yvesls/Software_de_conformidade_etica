@@ -35,8 +35,6 @@ public class ManterPerguntasEtapaProjetoView extends javax.swing.JFrame {
 
         txtTituloPerguntasQuestionario = new javax.swing.JLabel();
         btnNovaPergunta = new javax.swing.JButton();
-        labelStatus = new javax.swing.JLabel();
-        txtStatusQuestionario = new javax.swing.JLabel();
         btnCancelar = new javax.swing.JButton();
         btnSalvar1 = new javax.swing.JButton();
         txtTituloPerguntasQuestionario1 = new javax.swing.JLabel();
@@ -62,12 +60,6 @@ public class ManterPerguntasEtapaProjetoView extends javax.swing.JFrame {
                 btnNovaPerguntaActionPerformed(evt);
             }
         });
-
-        labelStatus.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        labelStatus.setText("Status:");
-
-        txtStatusQuestionario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txtStatusQuestionario.setText("Rascunho");
 
         btnCancelar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnCancelar.setText("Voltar");
@@ -161,11 +153,6 @@ public class ManterPerguntasEtapaProjetoView extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(labelStatus)
-                                .addGap(12, 12, 12)
-                                .addComponent(txtStatusQuestionario))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(btnNovaPergunta)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnEditarPergunta)
@@ -202,10 +189,6 @@ public class ManterPerguntasEtapaProjetoView extends javax.swing.JFrame {
                     .addComponent(txtTituloPerguntasQuestionario2))
                 .addGap(20, 20, 20)
                 .addComponent(perguntasFaseAtualDesenvolvedor6, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelStatus)
-                    .addComponent(txtStatusQuestionario))
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -318,11 +301,9 @@ public class ManterPerguntasEtapaProjetoView extends javax.swing.JFrame {
     private javax.swing.JButton btnNovaPergunta2;
     private javax.swing.JButton btnSalvar1;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel labelStatus;
     private javax.swing.JMenuBar menuAcoesPerguntasQuestionario;
     private javax.swing.JScrollPane perguntasFaseAtualDesenvolvedor6;
     private javax.swing.JTable tablePerguntasFaseAtualDesenvolvedor6;
-    private javax.swing.JLabel txtStatusQuestionario;
     private javax.swing.JLabel txtTituloPerguntasQuestionario;
     private javax.swing.JLabel txtTituloPerguntasQuestionario1;
     private javax.swing.JLabel txtTituloPerguntasQuestionario2;

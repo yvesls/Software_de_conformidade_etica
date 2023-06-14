@@ -18,7 +18,7 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
     public ManterQuestionariosView() {
         initComponents();
         setVisible(true);
-        //setResizable(false);
+        setResizable(false);
         this.setLocationRelativeTo(this.getParent());
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
     }

@@ -42,9 +42,9 @@ public class DetalharIteracoesView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Detalhar Iterações e Etapas");
 
-        txtTituloCriarPergunta.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        txtTituloCriarPergunta.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         txtTituloCriarPergunta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtTituloCriarPergunta.setText("Altere os dados das Iterações e Etapas");
+        txtTituloCriarPergunta.setText("Personalize os dados das Iterações e Etapas");
 
         btnSalvar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnSalvar.setText("Salvar");

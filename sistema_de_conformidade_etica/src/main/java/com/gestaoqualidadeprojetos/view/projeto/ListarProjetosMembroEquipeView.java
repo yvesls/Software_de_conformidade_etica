@@ -23,6 +23,7 @@ public class ListarProjetosMembroEquipeView extends javax.swing.JFrame {
     public ListarProjetosMembroEquipeView() {
         initComponents();
         setVisible(true);
+        setResizable(false);
         this.setLocationRelativeTo(this.getParent());
         centralizarTabela();
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);//clicar no X não fechar o sistema inteiro
