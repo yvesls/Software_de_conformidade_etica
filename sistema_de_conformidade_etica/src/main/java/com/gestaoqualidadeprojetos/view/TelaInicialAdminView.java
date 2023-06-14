@@ -44,7 +44,7 @@ public class TelaInicialAdminView extends javax.swing.JFrame {
         itemMenuLogout = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tela Inicial");
+        setTitle("Ethical Compliance Software with Software Engineering");
 
         jLabelUsuario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabelUsuario.setText("Usuário:");

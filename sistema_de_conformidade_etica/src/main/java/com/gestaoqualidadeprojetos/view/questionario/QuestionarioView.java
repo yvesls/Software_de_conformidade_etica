@@ -45,16 +45,12 @@ public class QuestionarioView extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         buttonGroup3 = new javax.swing.ButtonGroup();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jButtonAnterior = new javax.swing.JButton();
-        jButtonProximo = new javax.swing.JButton();
-        jProgressBar1 = new javax.swing.JProgressBar();
         jButtonConfirmar = new javax.swing.JButton();
         jButtonFechar = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
+        questionarioSprint = new javax.swing.JTabbedPane();
+        questionarioSprint1 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
+        jButtonAnexoEvidencia = new javax.swing.JButton();
         jRadioButtonSim = new javax.swing.JRadioButton();
         jLabel9 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -65,53 +61,79 @@ public class QuestionarioView extends javax.swing.JFrame {
         jRadioButtonNao = new javax.swing.JRadioButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextEvidencia = new javax.swing.JTextArea();
-        jButtonAnexoEvidencia = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jButtonAnterior = new javax.swing.JButton();
+        jProgressBar1 = new javax.swing.JProgressBar();
+        jButtonProximo = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        questionarioSprint2 = new javax.swing.JPanel();
+        jLabel40 = new javax.swing.JLabel();
+        jButtonAnexoEvidencia3 = new javax.swing.JButton();
+        jRadioButtonSim3 = new javax.swing.JRadioButton();
+        jLabel41 = new javax.swing.JLabel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jTextJustificativa3 = new javax.swing.JTextArea();
+        jLabel42 = new javax.swing.JLabel();
+        jButtonAnexoJustificativa3 = new javax.swing.JButton();
+        jLabel43 = new javax.swing.JLabel();
+        jRadioButtonNao3 = new javax.swing.JRadioButton();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jTextEvidencia3 = new javax.swing.JTextArea();
+        jLabel44 = new javax.swing.JLabel();
+        jButtonAnterior6 = new javax.swing.JButton();
+        jProgressBar7 = new javax.swing.JProgressBar();
+        jButtonProximo6 = new javax.swing.JButton();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        questionarioSprint3 = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        jButtonAnexoEvidencia2 = new javax.swing.JButton();
+        jRadioButtonSim2 = new javax.swing.JRadioButton();
+        jLabel19 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTextJustificativa2 = new javax.swing.JTextArea();
+        jLabel20 = new javax.swing.JLabel();
+        jButtonAnexoJustificativa2 = new javax.swing.JButton();
+        jLabel21 = new javax.swing.JLabel();
+        jRadioButtonNao2 = new javax.swing.JRadioButton();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTextEvidencia2 = new javax.swing.JTextArea();
+        jLabel22 = new javax.swing.JLabel();
+        jButtonAnterior5 = new javax.swing.JButton();
+        jProgressBar6 = new javax.swing.JProgressBar();
+        jButtonProximo5 = new javax.swing.JButton();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        questionarioSprint4 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        jButtonAnexoEvidencia1 = new javax.swing.JButton();
+        jRadioButtonSim1 = new javax.swing.JRadioButton();
+        jLabel10 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextJustificativa1 = new javax.swing.JTextArea();
+        jLabel8 = new javax.swing.JLabel();
+        jButtonAnexoJustificativa1 = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        jRadioButtonNao1 = new javax.swing.JRadioButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextEvidencia1 = new javax.swing.JTextArea();
+        jLabel15 = new javax.swing.JLabel();
+        jButtonAnterior4 = new javax.swing.JButton();
+        jProgressBar5 = new javax.swing.JProgressBar();
+        jButtonProximo4 = new javax.swing.JButton();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jMenuItem10 = new javax.swing.JMenuItem();
 
         jLabel4.setText("jLabel4");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Questionário");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("4ª Sprint");
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText("Data: 20/05/2024");
-
-        jButtonAnterior.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jButtonAnterior.setText("Anterior");
-        jButtonAnterior.setToolTipText("");
-        jButtonAnterior.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonAnteriorActionPerformed(evt);
-            }
-        });
-
-        jButtonProximo.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jButtonProximo.setText("Próximo");
-        jButtonProximo.setToolTipText("");
-        jButtonProximo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonProximoActionPerformed(evt);
-            }
-        });
-
-        jButtonConfirmar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButtonConfirmar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButtonConfirmar.setLabel("Confirmar respostas");
         jButtonConfirmar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,7 +141,7 @@ public class QuestionarioView extends javax.swing.JFrame {
             }
         });
 
-        jButtonFechar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonFechar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButtonFechar.setText("Fechar");
         jButtonFechar.setToolTipText("");
         jButtonFechar.addActionListener(new java.awt.event.ActionListener() {
@@ -128,17 +150,22 @@ public class QuestionarioView extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel7.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("1 - Você está disposto a fornecer feedback para a equipe de desenvolvimento durante todo o processo?");
-        jLabel7.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(153, 153, 153)));
-        jLabel7.setName("pergunta1"); // NOI18N
+        questionarioSprint.setToolTipText("");
+        questionarioSprint.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        questionarioSprint.setName("Fases da Iteração"); // NOI18N
 
         jLabel12.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel12.setText("Resposta:");
         jLabel12.setToolTipText("");
+
+        jButtonAnexoEvidencia.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonAnexoEvidencia.setText("Anexar");
+        jButtonAnexoEvidencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAnexoEvidenciaActionPerformed(evt);
+            }
+        });
 
         jRadioButtonSim.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jRadioButtonSim.setText("Sim");
@@ -189,145 +216,646 @@ public class QuestionarioView extends javax.swing.JFrame {
         jTextEvidencia.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         jScrollPane1.setViewportView(jTextEvidencia);
 
-        jButtonAnexoEvidencia.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButtonAnexoEvidencia.setText("Anexar");
-        jButtonAnexoEvidencia.addActionListener(new java.awt.event.ActionListener() {
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("1 - Você está disposto a fornecer feedback para a equipe de desenvolvimento durante todo o processo?");
+        jLabel7.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(153, 153, 153)));
+        jLabel7.setName("pergunta1"); // NOI18N
+
+        jButtonAnterior.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonAnterior.setText("Anterior");
+        jButtonAnterior.setToolTipText("");
+        jButtonAnterior.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonAnexoEvidenciaActionPerformed(evt);
+                jButtonAnteriorActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(300, 300, 300)
-                        .addComponent(jButtonAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButtonProximo, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(306, 306, 306))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButtonFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+        jButtonProximo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonProximo.setText("Próximo");
+        jButtonProximo.setToolTipText("");
+        jButtonProximo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonProximoActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Situação:");
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setText("Respondido");
+
+        javax.swing.GroupLayout questionarioSprint1Layout = new javax.swing.GroupLayout(questionarioSprint1);
+        questionarioSprint1.setLayout(questionarioSprint1Layout);
+        questionarioSprint1Layout.setHorizontalGroup(
+            questionarioSprint1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(questionarioSprint1Layout.createSequentialGroup()
+                .addContainerGap(250, Short.MAX_VALUE)
+                .addGroup(questionarioSprint1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButtonAnexoJustificativa)
+                    .addGroup(questionarioSprint1Layout.createSequentialGroup()
+                        .addGroup(questionarioSprint1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel12)
+                            .addComponent(jRadioButtonSim)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jRadioButtonNao))
+                        .addGap(126, 126, 126)
+                        .addGroup(questionarioSprint1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel9)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(questionarioSprint1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jButtonAnexoEvidencia)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, questionarioSprint1Layout.createSequentialGroup()
+                        .addComponent(jButtonAnterior)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonConfirmar)
-                        .addGap(65, 65, 65))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 1038, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jButtonAnexoJustificativa)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel12)
-                                .addComponent(jRadioButtonSim)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButtonNao))
-                            .addGap(126, 126, 126)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel11)
-                                .addComponent(jLabel9)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jButtonAnexoEvidencia)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                        .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonProximo)))
+                .addContainerGap(249, Short.MAX_VALUE))
+            .addGroup(questionarioSprint1Layout.createSequentialGroup()
+                .addGroup(questionarioSprint1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(questionarioSprint1Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 1007, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(questionarioSprint1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+        questionarioSprint1Layout.setVerticalGroup(
+            questionarioSprint1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(questionarioSprint1Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(questionarioSprint1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(questionarioSprint1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(questionarioSprint1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jRadioButtonSim)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButtonAnexoJustificativa)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(questionarioSprint1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(questionarioSprint1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jRadioButtonNao)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButtonAnexoEvidencia)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonProximo, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(13, 13, 13))
+                .addGap(32, 32, 32)
+                .addGroup(questionarioSprint1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonAnterior)
+                    .addComponent(jButtonProximo))
+                .addGap(25, 25, 25))
         );
 
-        jMenu1.setText("Histórico de Questionários");
-        jMenu1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        questionarioSprint.addTab("Sprint 1", questionarioSprint1);
 
-        jMenu2.setText("Projetos");
-        jMenu2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel40.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
+        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel40.setText("Resposta:");
+        jLabel40.setToolTipText("");
 
-        jMenu3.setText("Sistema de Padaria");
-        jMenu3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButtonAnexoEvidencia3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonAnexoEvidencia3.setText("Anexar");
+        jButtonAnexoEvidencia3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAnexoEvidencia3ActionPerformed(evt);
+            }
+        });
 
-        jMenuItem3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jMenuItem3.setText("1ª Sprint");
-        jMenu3.add(jMenuItem3);
+        jRadioButtonSim3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButtonSim3.setText("Sim");
+        jRadioButtonSim3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonSim3ActionPerformed(evt);
+            }
+        });
 
-        jMenuItem4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jMenuItem4.setText("2ª Sprint");
-        jMenu3.add(jMenuItem4);
+        jLabel41.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
+        jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel41.setText("Justificativa:");
+        jLabel41.setToolTipText("");
 
-        jMenuItem5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jMenuItem5.setText("3ª Sprint");
-        jMenu3.add(jMenuItem5);
+        jTextJustificativa3.setColumns(20);
+        jTextJustificativa3.setRows(5);
+        jTextJustificativa3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        jScrollPane7.setViewportView(jTextJustificativa3);
 
-        jMenuItem6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jMenuItem6.setText("4ª Sprint");
-        jMenu3.add(jMenuItem6);
+        jLabel42.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
+        jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel42.setText("Resposta:");
+        jLabel42.setToolTipText("");
 
-        jMenu2.add(jMenu3);
+        jButtonAnexoJustificativa3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonAnexoJustificativa3.setText("Anexar");
+        jButtonAnexoJustificativa3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAnexoJustificativa3ActionPerformed(evt);
+            }
+        });
 
-        jMenu4.setText("Outro Projeto");
-        jMenu4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel43.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
+        jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel43.setText("Evidência:");
+        jLabel43.setToolTipText("");
 
-        jMenuItem7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jMenuItem7.setText("1ª Sprint");
-        jMenu4.add(jMenuItem7);
+        jRadioButtonNao3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButtonNao3.setText("Não");
+        jRadioButtonNao3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonNao3ActionPerformed(evt);
+            }
+        });
 
-        jMenuItem8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jMenuItem8.setText("2ª Sprint");
-        jMenu4.add(jMenuItem8);
+        jTextEvidencia3.setColumns(20);
+        jTextEvidencia3.setRows(5);
+        jTextEvidencia3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        jScrollPane8.setViewportView(jTextEvidencia3);
 
-        jMenuItem9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jMenuItem9.setText("3ª Sprint");
-        jMenu4.add(jMenuItem9);
+        jLabel44.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel44.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel44.setText("1 - Você está disposto a fornecer feedback para a equipe de desenvolvimento durante todo o processo?");
+        jLabel44.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(153, 153, 153)));
+        jLabel44.setName("pergunta1"); // NOI18N
 
-        jMenuItem10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jMenuItem10.setText("4ª Sprint");
-        jMenu4.add(jMenuItem10);
+        jButtonAnterior6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonAnterior6.setText("Anterior");
+        jButtonAnterior6.setToolTipText("");
+        jButtonAnterior6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAnterior6ActionPerformed(evt);
+            }
+        });
 
-        jMenu2.add(jMenu4);
+        jButtonProximo6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonProximo6.setText("Próximo");
+        jButtonProximo6.setToolTipText("");
+        jButtonProximo6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonProximo6ActionPerformed(evt);
+            }
+        });
 
-        jMenu1.add(jMenu2);
+        jLabel45.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel45.setText("Situação:");
 
-        jMenuBar1.add(jMenu1);
+        jLabel46.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel46.setText("Respondido");
 
+        javax.swing.GroupLayout questionarioSprint2Layout = new javax.swing.GroupLayout(questionarioSprint2);
+        questionarioSprint2.setLayout(questionarioSprint2Layout);
+        questionarioSprint2Layout.setHorizontalGroup(
+            questionarioSprint2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(questionarioSprint2Layout.createSequentialGroup()
+                .addContainerGap(250, Short.MAX_VALUE)
+                .addGroup(questionarioSprint2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButtonAnexoJustificativa3)
+                    .addGroup(questionarioSprint2Layout.createSequentialGroup()
+                        .addGroup(questionarioSprint2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel40)
+                            .addComponent(jRadioButtonSim3)
+                            .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jRadioButtonNao3))
+                        .addGap(126, 126, 126)
+                        .addGroup(questionarioSprint2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel43)
+                            .addComponent(jLabel41)
+                            .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(questionarioSprint2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jButtonAnexoEvidencia3)
+                                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, questionarioSprint2Layout.createSequentialGroup()
+                        .addComponent(jButtonAnterior6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jProgressBar7, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonProximo6)))
+                .addContainerGap(249, Short.MAX_VALUE))
+            .addGroup(questionarioSprint2Layout.createSequentialGroup()
+                .addGroup(questionarioSprint2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(questionarioSprint2Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 1007, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(questionarioSprint2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel45)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel46)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        questionarioSprint2Layout.setVerticalGroup(
+            questionarioSprint2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(questionarioSprint2Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(questionarioSprint2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel45)
+                    .addComponent(jLabel46))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addGroup(questionarioSprint2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(questionarioSprint2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButtonSim3)
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonAnexoJustificativa3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(questionarioSprint2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(questionarioSprint2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButtonNao3)
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonAnexoEvidencia3)
+                .addGap(32, 32, 32)
+                .addGroup(questionarioSprint2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jProgressBar7, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonAnterior6)
+                    .addComponent(jButtonProximo6))
+                .addGap(25, 25, 25))
+        );
+
+        questionarioSprint.addTab("Sprint 2", questionarioSprint2);
+
+        jLabel18.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel18.setText("Resposta:");
+        jLabel18.setToolTipText("");
+
+        jButtonAnexoEvidencia2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonAnexoEvidencia2.setText("Anexar");
+        jButtonAnexoEvidencia2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAnexoEvidencia2ActionPerformed(evt);
+            }
+        });
+
+        jRadioButtonSim2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButtonSim2.setText("Sim");
+        jRadioButtonSim2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonSim2ActionPerformed(evt);
+            }
+        });
+
+        jLabel19.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel19.setText("Justificativa:");
+        jLabel19.setToolTipText("");
+
+        jTextJustificativa2.setColumns(20);
+        jTextJustificativa2.setRows(5);
+        jTextJustificativa2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        jScrollPane5.setViewportView(jTextJustificativa2);
+
+        jLabel20.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel20.setText("Resposta:");
+        jLabel20.setToolTipText("");
+
+        jButtonAnexoJustificativa2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonAnexoJustificativa2.setText("Anexar");
+        jButtonAnexoJustificativa2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAnexoJustificativa2ActionPerformed(evt);
+            }
+        });
+
+        jLabel21.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
+        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel21.setText("Evidência:");
+        jLabel21.setToolTipText("");
+
+        jRadioButtonNao2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButtonNao2.setText("Não");
+        jRadioButtonNao2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonNao2ActionPerformed(evt);
+            }
+        });
+
+        jTextEvidencia2.setColumns(20);
+        jTextEvidencia2.setRows(5);
+        jTextEvidencia2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        jScrollPane6.setViewportView(jTextEvidencia2);
+
+        jLabel22.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel22.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel22.setText("1 - Você está disposto a fornecer feedback para a equipe de desenvolvimento durante todo o processo?");
+        jLabel22.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(153, 153, 153)));
+        jLabel22.setName("pergunta1"); // NOI18N
+
+        jButtonAnterior5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonAnterior5.setText("Anterior");
+        jButtonAnterior5.setToolTipText("");
+        jButtonAnterior5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAnterior5ActionPerformed(evt);
+            }
+        });
+
+        jButtonProximo5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonProximo5.setText("Próximo");
+        jButtonProximo5.setToolTipText("");
+        jButtonProximo5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonProximo5ActionPerformed(evt);
+            }
+        });
+
+        jLabel38.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel38.setText("Situação:");
+
+        jLabel39.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel39.setText("Respondido");
+
+        javax.swing.GroupLayout questionarioSprint3Layout = new javax.swing.GroupLayout(questionarioSprint3);
+        questionarioSprint3.setLayout(questionarioSprint3Layout);
+        questionarioSprint3Layout.setHorizontalGroup(
+            questionarioSprint3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(questionarioSprint3Layout.createSequentialGroup()
+                .addContainerGap(250, Short.MAX_VALUE)
+                .addGroup(questionarioSprint3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButtonAnexoJustificativa2)
+                    .addGroup(questionarioSprint3Layout.createSequentialGroup()
+                        .addGroup(questionarioSprint3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel18)
+                            .addComponent(jRadioButtonSim2)
+                            .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jRadioButtonNao2))
+                        .addGap(126, 126, 126)
+                        .addGroup(questionarioSprint3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel21)
+                            .addComponent(jLabel19)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(questionarioSprint3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jButtonAnexoEvidencia2)
+                                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, questionarioSprint3Layout.createSequentialGroup()
+                        .addComponent(jButtonAnterior5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jProgressBar6, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonProximo5)))
+                .addContainerGap(249, Short.MAX_VALUE))
+            .addGroup(questionarioSprint3Layout.createSequentialGroup()
+                .addGroup(questionarioSprint3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(questionarioSprint3Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 1007, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(questionarioSprint3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel38)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel39)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        questionarioSprint3Layout.setVerticalGroup(
+            questionarioSprint3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(questionarioSprint3Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(questionarioSprint3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel38)
+                    .addComponent(jLabel39))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addGroup(questionarioSprint3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(questionarioSprint3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButtonSim2)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonAnexoJustificativa2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(questionarioSprint3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(questionarioSprint3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButtonNao2)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonAnexoEvidencia2)
+                .addGap(32, 32, 32)
+                .addGroup(questionarioSprint3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jProgressBar6, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonAnterior5)
+                    .addComponent(jButtonProximo5))
+                .addGap(25, 25, 25))
+        );
+
+        questionarioSprint.addTab("Sprint 3", questionarioSprint3);
+
+        jLabel13.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel13.setText("Resposta:");
+        jLabel13.setToolTipText("");
+
+        jButtonAnexoEvidencia1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonAnexoEvidencia1.setText("Anexar");
+        jButtonAnexoEvidencia1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAnexoEvidencia1ActionPerformed(evt);
+            }
+        });
+
+        jRadioButtonSim1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButtonSim1.setText("Sim");
+        jRadioButtonSim1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonSim1ActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel10.setText("Justificativa:");
+        jLabel10.setToolTipText("");
+
+        jTextJustificativa1.setColumns(20);
+        jTextJustificativa1.setRows(5);
+        jTextJustificativa1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        jScrollPane3.setViewportView(jTextJustificativa1);
+
+        jLabel8.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel8.setText("Resposta:");
+        jLabel8.setToolTipText("");
+
+        jButtonAnexoJustificativa1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonAnexoJustificativa1.setText("Anexar");
+        jButtonAnexoJustificativa1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAnexoJustificativa1ActionPerformed(evt);
+            }
+        });
+
+        jLabel14.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel14.setText("Evidência:");
+        jLabel14.setToolTipText("");
+
+        jRadioButtonNao1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButtonNao1.setText("Não");
+        jRadioButtonNao1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonNao1ActionPerformed(evt);
+            }
+        });
+
+        jTextEvidencia1.setColumns(20);
+        jTextEvidencia1.setRows(5);
+        jTextEvidencia1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        jScrollPane4.setViewportView(jTextEvidencia1);
+
+        jLabel15.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel15.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setText("1 - Você está disposto a fornecer feedback para a equipe de desenvolvimento durante todo o processo?");
+        jLabel15.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(153, 153, 153)));
+        jLabel15.setName("pergunta1"); // NOI18N
+
+        jButtonAnterior4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonAnterior4.setText("Anterior");
+        jButtonAnterior4.setToolTipText("");
+        jButtonAnterior4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAnterior4ActionPerformed(evt);
+            }
+        });
+
+        jButtonProximo4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonProximo4.setText("Próximo");
+        jButtonProximo4.setToolTipText("");
+        jButtonProximo4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonProximo4ActionPerformed(evt);
+            }
+        });
+
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setText("Situação:");
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel17.setText("Em andamento");
+
+        javax.swing.GroupLayout questionarioSprint4Layout = new javax.swing.GroupLayout(questionarioSprint4);
+        questionarioSprint4.setLayout(questionarioSprint4Layout);
+        questionarioSprint4Layout.setHorizontalGroup(
+            questionarioSprint4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(questionarioSprint4Layout.createSequentialGroup()
+                .addContainerGap(250, Short.MAX_VALUE)
+                .addGroup(questionarioSprint4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButtonAnexoJustificativa1)
+                    .addGroup(questionarioSprint4Layout.createSequentialGroup()
+                        .addGroup(questionarioSprint4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel13)
+                            .addComponent(jRadioButtonSim1)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jRadioButtonNao1))
+                        .addGap(126, 126, 126)
+                        .addGroup(questionarioSprint4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel10)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(questionarioSprint4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jButtonAnexoEvidencia1)
+                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, questionarioSprint4Layout.createSequentialGroup()
+                        .addComponent(jButtonAnterior4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jProgressBar5, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonProximo4)))
+                .addContainerGap(249, Short.MAX_VALUE))
+            .addGroup(questionarioSprint4Layout.createSequentialGroup()
+                .addGroup(questionarioSprint4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(questionarioSprint4Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 1007, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(questionarioSprint4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel16)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel17)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        questionarioSprint4Layout.setVerticalGroup(
+            questionarioSprint4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(questionarioSprint4Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(questionarioSprint4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(jLabel17))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addGroup(questionarioSprint4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(questionarioSprint4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButtonSim1)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonAnexoJustificativa1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(questionarioSprint4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(questionarioSprint4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButtonNao1)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonAnexoEvidencia1)
+                .addGap(32, 32, 32)
+                .addGroup(questionarioSprint4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jProgressBar5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonAnterior4)
+                    .addComponent(jButtonProximo4))
+                .addGap(25, 25, 25))
+        );
+
+        questionarioSprint.addTab("Sprint 4", questionarioSprint4);
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Questionário Atual:");
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        jLabel1.setText("Sprint 4");
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -335,25 +863,36 @@ public class QuestionarioView extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(100, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel3)
-                        .addGap(98, 98, 98))))
+                        .addComponent(jButtonConfirmar)
+                        .addGap(105, 105, 105))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(questionarioSprint, javax.swing.GroupLayout.PREFERRED_SIZE, 1090, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel1)))
+                        .addContainerGap(100, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel1))
+                .addGap(20, 20, 20)
+                .addComponent(questionarioSprint, javax.swing.GroupLayout.PREFERRED_SIZE, 605, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25))
         );
 
         pack();
@@ -457,6 +996,78 @@ public class QuestionarioView extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jRadioButtonNaoActionPerformed
 
+    private void jButtonAnexoEvidencia1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnexoEvidencia1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAnexoEvidencia1ActionPerformed
+
+    private void jRadioButtonSim1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSim1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonSim1ActionPerformed
+
+    private void jButtonAnexoJustificativa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnexoJustificativa1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAnexoJustificativa1ActionPerformed
+
+    private void jRadioButtonNao1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonNao1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonNao1ActionPerformed
+
+    private void jButtonAnterior4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnterior4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAnterior4ActionPerformed
+
+    private void jButtonProximo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonProximo4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonProximo4ActionPerformed
+
+    private void jButtonAnexoEvidencia2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnexoEvidencia2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAnexoEvidencia2ActionPerformed
+
+    private void jRadioButtonSim2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSim2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonSim2ActionPerformed
+
+    private void jButtonAnexoJustificativa2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnexoJustificativa2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAnexoJustificativa2ActionPerformed
+
+    private void jRadioButtonNao2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonNao2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonNao2ActionPerformed
+
+    private void jButtonAnterior5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnterior5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAnterior5ActionPerformed
+
+    private void jButtonProximo5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonProximo5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonProximo5ActionPerformed
+
+    private void jButtonAnexoEvidencia3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnexoEvidencia3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAnexoEvidencia3ActionPerformed
+
+    private void jRadioButtonSim3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSim3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonSim3ActionPerformed
+
+    private void jButtonAnexoJustificativa3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnexoJustificativa3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAnexoJustificativa3ActionPerformed
+
+    private void jRadioButtonNao3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonNao3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonNao3ActionPerformed
+
+    private void jButtonAnterior6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnterior6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAnterior6ActionPerformed
+
+    private void jButtonProximo6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonProximo6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonProximo6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -497,39 +1108,87 @@ public class QuestionarioView extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.JButton jButtonAnexoEvidencia;
+    private javax.swing.JButton jButtonAnexoEvidencia1;
+    private javax.swing.JButton jButtonAnexoEvidencia2;
+    private javax.swing.JButton jButtonAnexoEvidencia3;
     private javax.swing.JButton jButtonAnexoJustificativa;
+    private javax.swing.JButton jButtonAnexoJustificativa1;
+    private javax.swing.JButton jButtonAnexoJustificativa2;
+    private javax.swing.JButton jButtonAnexoJustificativa3;
     private javax.swing.JButton jButtonAnterior;
+    private javax.swing.JButton jButtonAnterior4;
+    private javax.swing.JButton jButtonAnterior5;
+    private javax.swing.JButton jButtonAnterior6;
     private javax.swing.JButton jButtonConfirmar;
     private javax.swing.JButton jButtonFechar;
     private javax.swing.JButton jButtonProximo;
+    private javax.swing.JButton jButtonProximo4;
+    private javax.swing.JButton jButtonProximo5;
+    private javax.swing.JButton jButtonProximo6;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem10;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JProgressBar jProgressBar1;
+    private javax.swing.JProgressBar jProgressBar5;
+    private javax.swing.JProgressBar jProgressBar6;
+    private javax.swing.JProgressBar jProgressBar7;
     private javax.swing.JRadioButton jRadioButtonNao;
+    private javax.swing.JRadioButton jRadioButtonNao1;
+    private javax.swing.JRadioButton jRadioButtonNao2;
+    private javax.swing.JRadioButton jRadioButtonNao3;
     private javax.swing.JRadioButton jRadioButtonSim;
+    private javax.swing.JRadioButton jRadioButtonSim1;
+    private javax.swing.JRadioButton jRadioButtonSim2;
+    private javax.swing.JRadioButton jRadioButtonSim3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JTextArea jTextEvidencia;
+    private javax.swing.JTextArea jTextEvidencia1;
+    private javax.swing.JTextArea jTextEvidencia2;
+    private javax.swing.JTextArea jTextEvidencia3;
     private javax.swing.JTextArea jTextJustificativa;
+    private javax.swing.JTextArea jTextJustificativa1;
+    private javax.swing.JTextArea jTextJustificativa2;
+    private javax.swing.JTextArea jTextJustificativa3;
+    private javax.swing.JTabbedPane questionarioSprint;
+    private javax.swing.JPanel questionarioSprint1;
+    private javax.swing.JPanel questionarioSprint2;
+    private javax.swing.JPanel questionarioSprint3;
+    private javax.swing.JPanel questionarioSprint4;
     // End of variables declaration//GEN-END:variables
 }

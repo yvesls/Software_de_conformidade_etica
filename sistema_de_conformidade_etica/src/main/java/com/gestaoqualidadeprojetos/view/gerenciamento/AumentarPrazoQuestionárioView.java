@@ -36,18 +36,17 @@ public class AumentarPrazoQuestionárioView extends javax.swing.JFrame {
         btnSalvar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
-        labelPergunta1 = new javax.swing.JLabel();
-        labelPergunta2 = new javax.swing.JLabel();
+        labelPergunta3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Aumentar Prazo de Resposta do Questionário");
+        setTitle("Aumentar Prazo para Respostas");
 
-        txtTituloCriarPergunta.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        txtTituloCriarPergunta.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         txtTituloCriarPergunta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtTituloCriarPergunta.setText("Defina o Novo Prazo de Resposta");
 
         labelPergunta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        labelPergunta.setText("Aumentar (dias úteis):");
+        labelPergunta.setText("Novo Prazo");
 
         btnSalvar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnSalvar.setText("Salvar");
@@ -66,13 +65,10 @@ public class AumentarPrazoQuestionárioView extends javax.swing.JFrame {
         });
 
         jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField1.setText("05");
+        jTextField1.setText("05/07/2023");
 
-        labelPergunta1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        labelPergunta1.setText("Novo Prazo:");
-
-        labelPergunta2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        labelPergunta2.setText("05/07/2023");
+        labelPergunta3.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        labelPergunta3.setText("(DD/MM/AAAA):");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -82,36 +78,31 @@ public class AumentarPrazoQuestionárioView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(txtTituloCriarPergunta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(110, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap(72, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(labelPergunta)
-                        .addComponent(labelPergunta1))
+                        .addGap(4, 4, 4)
+                        .addComponent(labelPergunta3))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnCancelar)
-                        .addGap(59, 59, 59)))
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(labelPergunta2)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(btnSalvar))
-                .addContainerGap(110, Short.MAX_VALUE))
+                        .addGap(90, 90, 90)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSalvar))))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(25, 25, 25)
                 .addComponent(txtTituloCriarPergunta)
-                .addGap(35, 35, 35)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelPergunta)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelPergunta2)
-                    .addComponent(labelPergunta1))
-                .addGap(35, 35, 35)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelPergunta3))
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCancelar)
                     .addComponent(btnSalvar))
@@ -184,8 +175,7 @@ public class AumentarPrazoQuestionárioView extends javax.swing.JFrame {
     private javax.swing.JButton btnSalvar;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel labelPergunta;
-    private javax.swing.JLabel labelPergunta1;
-    private javax.swing.JLabel labelPergunta2;
+    private javax.swing.JLabel labelPergunta3;
     private javax.swing.JLabel txtTituloCriarPergunta;
     // End of variables declaration//GEN-END:variables
 }

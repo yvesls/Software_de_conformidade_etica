@@ -66,6 +66,9 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         labelDuracaoIteracoes3 = new javax.swing.JLabel();
         txxDuracaoIteracoes = new javax.swing.JTextField();
+        btnDetalharIteracoes = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         selectFuncao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         selectFuncao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Desenvolvedor", "Arquiteto de Software", "Gerente de Projeto", "Líder Técnico", "Analista de Qualidade" }));
@@ -194,16 +197,16 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
         tableEquipeProjeto1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tableEquipeProjeto1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"01", "Iniciação", ""},
-                {"02", "Requisitos", ""},
-                {"03", "Projeto", ""},
-                {"04", "Desenvolvimento", ""},
-                {"05", "Teste e Verficação", ""},
+                {"01", "Iniciação", "5"},
+                {"02", "Requisitos", "20"},
+                {"03", "Projeto", "10"},
+                {"04", "Desenvolvimento", "40"},
+                {"05", "Teste e Verficação", "25"},
                 {null, null, null},
                 {null, null, null}
             },
             new String [] {
-                "#", "Etapas", "Peso de Esforço"
+                "#", "Etapas", "Esforço (%)"
             }
         ) {
             Class[] types = new Class [] {
@@ -226,13 +229,13 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
             tableEquipeProjeto1.getColumnModel().getColumn(0).setPreferredWidth(50);
             tableEquipeProjeto1.getColumnModel().getColumn(0).setMaxWidth(100);
             tableEquipeProjeto1.getColumnModel().getColumn(1).setPreferredWidth(300);
-            tableEquipeProjeto1.getColumnModel().getColumn(2).setMinWidth(100);
-            tableEquipeProjeto1.getColumnModel().getColumn(2).setPreferredWidth(100);
+            tableEquipeProjeto1.getColumnModel().getColumn(2).setMinWidth(75);
+            tableEquipeProjeto1.getColumnModel().getColumn(2).setPreferredWidth(75);
             tableEquipeProjeto1.getColumnModel().getColumn(2).setMaxWidth(100);
         }
 
         jLabelEtapas.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabelEtapas.setText("Etapas:");
+        jLabelEtapas.setText("Etapas para resposta do Questionário:");
 
         jLabelEtapas1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabelEtapas1.setText("Membros da Equipe:");
@@ -269,83 +272,101 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
             }
         });
 
+        btnDetalharIteracoes.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnDetalharIteracoes.setText("Detalhar Iterações");
+        btnDetalharIteracoes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDetalharIteracoesActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("Roteiro de Métricas de Software do SISP.");
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel4.setText("Fonte de Esforço:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(txtTituloProjetos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(81, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelEtapas)
+                .addContainerGap(25, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(labelNome)
                         .addGap(18, 18, 18)
                         .addComponent(inputNomeProjeto1, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(btnNovaEtapa1)
                     .addComponent(jLabelEtapas1)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addComponent(btnNovaEtapa)
-                            .addGap(18, 18, 18))
-                        .addComponent(iniciacaoPerguntasProjeto1, javax.swing.GroupLayout.PREFERRED_SIZE, 1016, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addComponent(btnCancelar)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnSalvarProjeto))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(iniciacaoPerguntasProjeto2, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(93, 93, 93)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(labelQuestionario)
-                                    .addGap(34, 34, 34)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(labelDuracaoIteracoes2)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(0, 0, 0)
-                                            .addComponent(labelDuracaoIteracoes3))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(labelDuracaoProjeto)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(0, 0, 0)
-                                            .addComponent(labelDuracaoIteracoes1))
-                                        .addComponent(labelNumIteracoes)
-                                        .addComponent(labelTipo))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtNumIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txxDuracaoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(labelQuestionario)
+                                .addGap(34, 34, 34)
+                                .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(labelDuracaoIteracoes2)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, 0)
+                                        .addComponent(labelDuracaoIteracoes3))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(labelDuracaoProjeto)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, 0)
+                                        .addComponent(labelDuracaoIteracoes1))
+                                    .addComponent(labelNumIteracoes)
+                                    .addComponent(labelTipo))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtNumIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txxDuracaoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
                                         .addComponent(txxDuracaoIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(selectTipoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                .addContainerGap(65, Short.MAX_VALUE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btnDetalharIteracoes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(selectTipoProjeto, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(93, 93, 93)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabelEtapas)
+                                .addComponent(iniciacaoPerguntasProjeto2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnNovaEtapa, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(66, 66, 66)
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnCancelar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnSalvarProjeto))
+                    .addComponent(iniciacaoPerguntasProjeto1, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(25, 25, 25)
                 .addComponent(txtTituloProjetos)
-                .addGap(35, 35, 35)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(inputNomeProjeto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelNome))
                 .addGap(18, 18, 18)
                 .addComponent(jLabelEtapas1)
-                .addGap(15, 15, 15)
+                .addGap(0, 0, 0)
                 .addComponent(iniciacaoPerguntasProjeto1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
+                .addGap(5, 5, 5)
                 .addComponent(btnNovaEtapa1)
-                .addGap(22, 22, 22)
+                .addGap(18, 18, 18)
                 .addComponent(jLabelEtapas)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(iniciacaoPerguntasProjeto2, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, 0)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(labelTipo)
@@ -359,7 +380,8 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
                             .addComponent(labelDuracaoIteracoes2)
                             .addComponent(jLabel2)
                             .addComponent(labelDuracaoIteracoes3)
-                            .addComponent(txxDuracaoIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txxDuracaoIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnDetalharIteracoes))
                         .addGap(5, 5, 5)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(labelDuracaoProjeto)
@@ -369,8 +391,14 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
                         .addGap(5, 5, 5)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(labelQuestionario)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(10, 10, 10)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(iniciacaoPerguntasProjeto2, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4))))
+                .addGap(5, 5, 5)
                 .addComponent(btnNovaEtapa)
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -429,6 +457,11 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txxDuracaoIteracoesActionPerformed
 
+    private void btnDetalharIteracoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDetalharIteracoesActionPerformed
+        DetalharIteracoesView detalharIteracoesView = new DetalharIteracoesView();
+        detalharIteracoesView.setVisible(true);
+    }//GEN-LAST:event_btnDetalharIteracoesActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -467,6 +500,7 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnDetalharIteracoes;
     private javax.swing.JButton btnNovaEtapa;
     private javax.swing.JButton btnNovaEtapa1;
     private javax.swing.JButton btnSalvarProjeto;
@@ -476,6 +510,8 @@ public class CriarNovoProjetoView extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabelEtapas;
     private javax.swing.JLabel jLabelEtapas1;
     private javax.swing.JLabel labelDuracaoIteracoes1;

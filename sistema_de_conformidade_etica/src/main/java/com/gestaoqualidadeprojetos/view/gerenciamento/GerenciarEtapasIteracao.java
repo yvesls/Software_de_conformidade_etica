@@ -72,11 +72,11 @@ public class GerenciarEtapasIteracao extends javax.swing.JFrame {
             }
         });
 
-        txtTituloSelecionarModeloQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        txtTituloSelecionarModeloQuestionario.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         txtTituloSelecionarModeloQuestionario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtTituloSelecionarModeloQuestionario.setText("Projeto: ");
 
-        txtTituloSelecionarModeloQuestionario1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtTituloSelecionarModeloQuestionario1.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txtTituloSelecionarModeloQuestionario1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtTituloSelecionarModeloQuestionario1.setText("Sistema de Padaria");
 
@@ -84,29 +84,29 @@ public class GerenciarEtapasIteracao extends javax.swing.JFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Iteração:");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel2.setText("Sprint 4");
 
         tableIniciacaoPerguntasProjeto1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tableIniciacaoPerguntasProjeto1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"01", "Cliente", "05/06/2023", "30/06/2023", "Respondido (10/06/2023)"},
-                {"02", "Desenvolvedor", "05/06/2023", "30/06/2023", "Respondido (10/06/2023)"},
-                {"03", "Arquiteto de Software", "05/06/2023", "30/06/2023", "Respondido (10/06/2023)"},
-                {"04", "Gerente de Projeto", "05/06/2023", "30/06/2023", "Aberto"},
-                {"05", "Líder Técnico", "05/06/2023", "30/06/2023", "Aberto"},
-                {"06", "Analista de Qualidade", "05/06/2023", "30/06/2023", "Aberto"}
+                {"01", "Cliente", "05/06/2023", "30/06/2023", "10/06/2023", "Respondido"},
+                {"02", "Desenvolvedor", "05/06/2023", "30/06/2023", "10/06/2023", "Respondido"},
+                {"03", "Arquiteto de Software", "05/06/2023", "30/06/2023", "10/06/2023", "Respondido"},
+                {"04", "Gerente de Projeto", "05/06/2023", "30/06/2023", null, "Aberto"},
+                {"05", "Líder Técnico", "05/06/2023", "30/06/2023", null, "Aberto"},
+                {"06", "Analista de Qualidade", "05/06/2023", "30/06/2023", null, "Aberto"}
             },
             new String [] {
-                "#", "Questionário", "Data Abertura", "Prazo para Resposta", "Status"
+                "#", "Participante", "Data Abertura", "Prazo para Resposta", "Data da Resposta", "Status"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, true, true, true, true
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -124,20 +124,16 @@ public class GerenciarEtapasIteracao extends javax.swing.JFrame {
         iniciacaoPerguntasProjeto1.setViewportView(tableIniciacaoPerguntasProjeto1);
         if (tableIniciacaoPerguntasProjeto1.getColumnModel().getColumnCount() > 0) {
             tableIniciacaoPerguntasProjeto1.getColumnModel().getColumn(0).setMinWidth(50);
-            tableIniciacaoPerguntasProjeto1.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tableIniciacaoPerguntasProjeto1.getColumnModel().getColumn(0).setPreferredWidth(50);
             tableIniciacaoPerguntasProjeto1.getColumnModel().getColumn(0).setMaxWidth(50);
-            tableIniciacaoPerguntasProjeto1.getColumnModel().getColumn(1).setPreferredWidth(100);
-            tableIniciacaoPerguntasProjeto1.getColumnModel().getColumn(2).setPreferredWidth(20);
-            tableIniciacaoPerguntasProjeto1.getColumnModel().getColumn(3).setPreferredWidth(20);
-            tableIniciacaoPerguntasProjeto1.getColumnModel().getColumn(4).setMinWidth(100);
-            tableIniciacaoPerguntasProjeto1.getColumnModel().getColumn(4).setPreferredWidth(100);
+            tableIniciacaoPerguntasProjeto1.getColumnModel().getColumn(1).setPreferredWidth(150);
         }
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel5.setText("Etapa:");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel6.setText("Iniciação");
         setJMenuBar(menuBarQuestionarios);
@@ -147,7 +143,7 @@ public class GerenciarEtapasIteracao extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -171,22 +167,22 @@ public class GerenciarEtapasIteracao extends javax.swing.JFrame {
                                     .addComponent(jLabel3)
                                     .addGap(6, 6, 6)
                                     .addComponent(jLabel2))))
-                        .addGap(0, 518, Short.MAX_VALUE))
+                        .addGap(0, 598, Short.MAX_VALUE))
                     .addComponent(iniciacaoPerguntasProjeto1))
-                .addGap(65, 65, 65))
+                .addGap(25, 25, 25))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtTituloSelecionarModeloQuestionario)
                     .addComponent(txtTituloSelecionarModeloQuestionario1))
-                .addGap(10, 10, 10)
+                .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jLabel2))
-                .addGap(10, 10, 10)
+                .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jLabel6))
@@ -197,7 +193,7 @@ public class GerenciarEtapasIteracao extends javax.swing.JFrame {
                     .addComponent(btnAbrirPerguntasQuestionario)
                     .addComponent(btnPublicarPerguntasFaseProjeto)
                     .addComponent(btnFechar))
-                .addGap(20, 20, 20))
+                .addGap(25, 25, 25))
         );
 
         pack();

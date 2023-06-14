@@ -4,7 +4,7 @@
  */
 package com.gestaoqualidadeprojetos.view.questionario;
 
-import com.gestaoqualidadeprojetos.view.gerenciamento.CriarNovaIteracaoView;
+import com.gestaoqualidadeprojetos.view.projeto.CriarNovaIteracaoView;
 
 /**
  *
@@ -44,6 +44,7 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTableQuestionario = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
 
         btnCancelar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnCancelar.setText("Cancelar");
@@ -111,9 +112,9 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
         jTableQuestionario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTableQuestionario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"01", "Questionário Padrão", "01/04/2023", "Padrão"},
-                {"02", "Sistema de Padaria", "15/05/2023", "Publicado"},
-                {null, null, null, null},
+                {"01", "Questionário Ético Padrão", "01/04/2023", "Padrão"},
+                {"02", "Questionário Ético 2", "15/05/2023", "Disponível"},
+                {"03", "Questionário Ético 3", "01/06/2023", "Disponível"},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
@@ -145,16 +146,26 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
             jTableQuestionario.getColumnModel().getColumn(2).setMinWidth(150);
             jTableQuestionario.getColumnModel().getColumn(2).setPreferredWidth(150);
             jTableQuestionario.getColumnModel().getColumn(2).setMaxWidth(150);
+            jTableQuestionario.getColumnModel().getColumn(3).setMinWidth(150);
+            jTableQuestionario.getColumnModel().getColumn(3).setPreferredWidth(150);
+            jTableQuestionario.getColumnModel().getColumn(3).setMaxWidth(150);
         }
 
         jLabel1.setText("Ações");
+
+        jButton7.setText("Exportar ");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jTextFieldBuscarProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -175,24 +186,27 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButtonExportar)
-                            .addComponent(jButton6)))
+                            .addComponent(jButton6)
+                            .addComponent(jButton7)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(65, 65, 65))
+                .addGap(25, 25, 25))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(0, 0, 0)
                         .addComponent(jButtonExportar)
-                        .addGap(1, 1, 1)
+                        .addGap(0, 0, 0)
                         .addComponent(jButton6)
-                        .addGap(233, 233, 233))
+                        .addGap(0, 0, 0)
+                        .addComponent(jButton7)
+                        .addGap(200, 200, 200))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jTextFieldBuscarProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -205,7 +219,7 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
                     .addComponent(jButton5)
                     .addComponent(btnImportarQuestionario)
                     .addComponent(btnVoltar))
-                .addGap(20, 20, 20))
+                .addGap(25, 25, 25))
         );
 
         pack();
@@ -240,6 +254,10 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -411,6 +429,7 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButtonExportar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane2;
