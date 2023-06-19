@@ -10,7 +10,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <exec.mainClass>com.gestaoqualidadeprojetos.sistema_de_conformidade_etica.Sistema_de_conformidade_etica</exec.mainClass>
+        <exec.mainClass>com.gestaoqualidadeprojetos.view.login.LoginView.java</exec.mainClass>
     </properties>
 
     <dependencies>
