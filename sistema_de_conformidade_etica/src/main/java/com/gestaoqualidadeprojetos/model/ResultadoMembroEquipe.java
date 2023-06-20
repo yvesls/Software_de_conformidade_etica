@@ -14,18 +14,20 @@ public class ResultadoMembroEquipe {
     private Integer quantidadeRespostasSim;
     private Integer quantidadeTotalPerguntas;
     private double percentualRespostasSim;
-    private ArrayList<Peso> pesos;  
+    private Peso pesoAtribuido;
     private Classificacao classificacao;
+    private MembroEquipeTeste membro;
     
     public ResultadoMembroEquipe() {
     }
 
-    public ResultadoMembroEquipe(Integer quantidadeRespostasSim, Integer quantidadeTotalPerguntas, double percentualRespostasSim, ArrayList<Peso> pesos, Classificacao classificacao) {
+    public ResultadoMembroEquipe(Integer quantidadeRespostasSim, Integer quantidadeTotalPerguntas, double percentualRespostasSim, Peso pesoAtribuido, Classificacao classificacao, MembroEquipeTeste membro) {
         this.quantidadeRespostasSim = quantidadeRespostasSim;
         this.quantidadeTotalPerguntas = quantidadeTotalPerguntas;
         this.percentualRespostasSim = percentualRespostasSim;
-        this.pesos = pesos;
+        this.pesoAtribuido = pesoAtribuido;
         this.classificacao = classificacao;
+        this.membro = membro;
     }
 
     public Integer getQuantidadeRespostasSim() {
@@ -40,16 +42,20 @@ public class ResultadoMembroEquipe {
         return percentualRespostasSim;
     }
 
-    public ArrayList<Peso> getPesos() {
-        return pesos;
+    public Peso getPesos() {
+        return pesoAtribuido;
     }
 
     public Classificacao getClassificacao() {
         return classificacao;
     }
 
+    public MembroEquipeTeste getMembro() {
+        return membro;
+    }
+
     @Override
     public String toString() {
-        return "ResultadoMembroEquipe{" + "quantidadeRespostasSim=" + quantidadeRespostasSim + ", quantidadeTotalPerguntas=" + quantidadeTotalPerguntas + ", percentualRespostasSim=" + percentualRespostasSim + ", pesos=" + pesos + ", classificacao=" + classificacao + '}';
+        return "ResultadoMembroEquipe{" + "quantidadeRespostasSim=" + quantidadeRespostasSim + ", quantidadeTotalPerguntas=" + quantidadeTotalPerguntas + ", percentualRespostasSim=" + percentualRespostasSim + ", pesoAtribuido=" + pesoAtribuido + ", classificacao=" + classificacao + '}';
     }
 }

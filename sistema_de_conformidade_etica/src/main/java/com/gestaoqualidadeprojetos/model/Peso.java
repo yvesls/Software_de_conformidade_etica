@@ -13,9 +13,9 @@ import java.time.LocalDateTime;
 public class Peso {
     private LocalDateTime dataCriacao;
     private MembroEquipeTeste membro;
-    private Double valor;
+    private Integer valor;
 
-    public Peso(LocalDateTime dataCriacao, MembroEquipeTeste membro, Double valor) {
+    public Peso(LocalDateTime dataCriacao, MembroEquipeTeste membro, Integer valor) {
         this.dataCriacao = dataCriacao;
         this.membro = membro;
         this.valor = valor;
@@ -29,7 +29,7 @@ public class Peso {
         return membro;
     }
 
-    public Double getValor() {
+    public Integer getValor() {
         return valor;
     }
 

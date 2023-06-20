@@ -30,10 +30,14 @@ public class MembroEquipeTesteRepository {
         var membro2 = new MembroEquipeTeste("Pedro", "pedro@edu.ufes.br", "Gerente de projeto");
         var membro3 = new MembroEquipeTeste("maria", "maria@edu.ufes.br", "Analista de qualidade");
         var membro4 = new MembroEquipeTeste("José", "jose@edu.ufes.br", "Desenvolvedor");
+        var membro5 = new MembroEquipeTeste("Giulia", "giulia@edu.ufes.br", "Arquiteto de software");
+        var membro6 = new MembroEquipeTeste("Maurício", "mauricio@edu.ufes.br", "Líder de equipe");
         listaMembros.add(membro1);
         listaMembros.add(membro2);
         listaMembros.add(membro3);
         listaMembros.add(membro4);
+        listaMembros.add(membro5);
+        listaMembros.add(membro6);
         return listaMembros;
     }
     
@@ -44,5 +48,9 @@ public class MembroEquipeTesteRepository {
             }
         }
         return null;
+    }
+
+    public ArrayList<MembroEquipeTeste> getListaMembros() {
+        return listaMembros;
     }
 }

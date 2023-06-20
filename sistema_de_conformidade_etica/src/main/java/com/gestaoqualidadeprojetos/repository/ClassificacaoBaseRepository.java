@@ -24,7 +24,7 @@ public class ClassificacaoBaseRepository {
     }
     
     private ArrayList<ClassificacaoBase> generateAllMock() {
-        this.listaClassificacaoBase = new ArrayList<ClassificacaoBase>();
+        listaClassificacaoBase = new ArrayList<ClassificacaoBase>();
         var cb1 = new ClassificacaoBase(100.0, 90.0, ClassificacaoEnum.A);
         var cb2 = new ClassificacaoBase(75.0, 89.9, ClassificacaoEnum.B);
         var cb3 = new ClassificacaoBase(60.0, 79.9, ClassificacaoEnum.C);

@@ -38,5 +38,4 @@ public class Classificacao {
     public ClassificacaoEnum getClassificacaoAtingida() {
         return classificacaoAtingida;
     }
-    
 }
