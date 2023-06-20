@@ -5,7 +5,7 @@
 package com.gestaoqualidadeprojetos.repository;
 
 import com.gestaoqualidadeprojetos.model.ClassificacaoBase;
-import com.gestaoqualidadeprojetos.model.ClassificacaoEnum;
+import com.gestaoqualidadeprojetos.model.enums.ClassificacaoEnum;
 import java.util.ArrayList;
 
 /**

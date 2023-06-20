@@ -15,15 +15,17 @@ public class ResultadoIteracao {
     private LocalDateTime dataResultado;
     private ResultadoMembroEquipe resultadoMembroEquipe;
     private Classificacao classificacao;
+    private String iteracao;
     
     public ResultadoIteracao() {
     }
 
-    public ResultadoIteracao(String descricao, LocalDateTime dataResultado, ResultadoMembroEquipe resultadoMembroEquipe, Classificacao classificacao) {
+    public ResultadoIteracao(String descricao, LocalDateTime dataResultado, ResultadoMembroEquipe resultadoMembroEquipe, Classificacao classificacao, String iteracao) {
         this.descricao = descricao;
         this.dataResultado = dataResultado;
         this.resultadoMembroEquipe = resultadoMembroEquipe;
         this.classificacao = classificacao;
+        this.iteracao = iteracao;
     }
 
     public String getDescricao() {
@@ -42,8 +44,12 @@ public class ResultadoIteracao {
         return classificacao;
     }
 
+    public String getIteracao() {
+        return iteracao;
+    }
+
     @Override
     public String toString() {
-        return "ResultadoIteracao{" + "descricao=" + descricao + ", dataResultado=" + dataResultado + ", resultadoMembroEquipe=" + resultadoMembroEquipe + ", classificacao=" + classificacao + '}';
+        return "ResultadoIteracao{" + "descricao=" + descricao + ", dataResultado=" + dataResultado + ", resultadoMembroEquipe=" + resultadoMembroEquipe + ", classificacao=" + classificacao + ", iteracao=" + iteracao + '}';
     }
 }

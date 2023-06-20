@@ -4,6 +4,8 @@
  */
 package com.gestaoqualidadeprojetos.model;
 
+import com.gestaoqualidadeprojetos.model.enums.ClassificacaoEnum;
+
 /**
  *
  * @author Note102

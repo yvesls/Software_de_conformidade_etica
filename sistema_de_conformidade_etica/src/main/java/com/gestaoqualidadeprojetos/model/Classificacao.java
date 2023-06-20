@@ -4,6 +4,7 @@
  */
 package com.gestaoqualidadeprojetos.model;
 
+import com.gestaoqualidadeprojetos.model.enums.ClassificacaoEnum;
 import java.time.LocalDateTime;
 
 /**
