@@ -1,4 +1,5 @@
 package com.gestaoqualidadeprojetos.model;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Iteracao {
@@ -7,6 +8,7 @@ public class Iteracao {
     private Date dataConclusao;
     private Date previsaoConclusao;
     private String status;
+    private ArrayList<EtapaIteracao> etapas;
 
     public Iteracao(String descricao, Date dataInicio, Date dataConclusao, Date previsaoConclusao, String status) {
         this.descricao = descricao;
@@ -14,8 +16,17 @@ public class Iteracao {
         this.dataConclusao = dataConclusao;
         this.previsaoConclusao = previsaoConclusao;
         this.status = status;
+        this.etapas = new ArrayList();
     }
 
+    public void addEtapa(EtapaIteracao etapa){
+        this.etapas.add(etapa);
+    }
+
+    public ArrayList<EtapaIteracao> getEtapas() {
+        return etapas;
+    }
+    
     public String getDescricao() {
         return descricao;
     }
