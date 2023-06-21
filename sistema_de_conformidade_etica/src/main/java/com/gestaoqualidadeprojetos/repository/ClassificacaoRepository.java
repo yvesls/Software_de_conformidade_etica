@@ -16,12 +16,16 @@ import java.util.ArrayList;
 public class ClassificacaoRepository {
     private ArrayList<Classificacao> listaClassificacao;
     
+    public ClassificacaoRepository(){
+        generateAllMock();
+    }
+    
     public Classificacao getByFaixa(ClassificacaoEnum faixa) {
         return getMockByFaixa(faixa);
     }
     
     public  ArrayList<Classificacao> getAll() {
-        return generateAllMock();
+        return listaClassificacao;
     }
     
     private ArrayList<Classificacao> generateAllMock() {
@@ -45,6 +49,8 @@ public class ClassificacaoRepository {
         listaClassificacao.add(cb3);
         listaClassificacao.add(cb4);
         listaClassificacao.add(cb5);
+        listaClassificacao.add(cb6);
+        listaClassificacao.add(cb7);
         return listaClassificacao;
     }
     

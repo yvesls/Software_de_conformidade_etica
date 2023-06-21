@@ -16,12 +16,16 @@ import java.util.ArrayList;
 public class MembroEquipeTesteRepository {
     private ArrayList<MembroEquipeTeste> listaMembros;
     
+    public MembroEquipeTesteRepository(){
+        generateAllMock();
+    }
+    
     public MembroEquipeTeste getByName(String nome) {
         return getMockByName(nome);
     }
     
     public ArrayList<MembroEquipeTeste> getAll() {
-          return generateAllMock();
+          return listaMembros;
     }
     
     private ArrayList<MembroEquipeTeste> generateAllMock() {

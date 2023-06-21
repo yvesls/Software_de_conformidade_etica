@@ -17,17 +17,19 @@ public class ResultadoMembroEquipe {
     private Peso pesoAtribuido;
     private Classificacao classificacao;
     private MembroEquipeTeste membro;
+    private String iteracao;
     
     public ResultadoMembroEquipe() {
     }
 
-    public ResultadoMembroEquipe(Integer quantidadeRespostasSim, Integer quantidadeTotalPerguntas, double percentualRespostasSim, Peso pesoAtribuido, Classificacao classificacao, MembroEquipeTeste membro) {
+    public ResultadoMembroEquipe(Integer quantidadeRespostasSim, Integer quantidadeTotalPerguntas, double percentualRespostasSim, Peso pesoAtribuido, Classificacao classificacao, MembroEquipeTeste membro, String iteracao) {
         this.quantidadeRespostasSim = quantidadeRespostasSim;
         this.quantidadeTotalPerguntas = quantidadeTotalPerguntas;
         this.percentualRespostasSim = percentualRespostasSim;
         this.pesoAtribuido = pesoAtribuido;
         this.classificacao = classificacao;
         this.membro = membro;
+        this.iteracao = iteracao;
     }
 
     public Integer getQuantidadeRespostasSim() {
@@ -54,8 +56,16 @@ public class ResultadoMembroEquipe {
         return membro;
     }
 
+    public Peso getPesoAtribuido() {
+        return pesoAtribuido;
+    }
+
+    public String getIteracao() {
+        return iteracao;
+    }
+
     @Override
     public String toString() {
-        return "ResultadoMembroEquipe{" + "quantidadeRespostasSim=" + quantidadeRespostasSim + ", quantidadeTotalPerguntas=" + quantidadeTotalPerguntas + ", percentualRespostasSim=" + percentualRespostasSim + ", pesoAtribuido=" + pesoAtribuido + ", classificacao=" + classificacao + '}';
+        return "ResultadoMembroEquipe{" + "quantidadeRespostasSim=" + quantidadeRespostasSim + ", quantidadeTotalPerguntas=" + quantidadeTotalPerguntas + ", percentualRespostasSim=" + percentualRespostasSim + ", pesoAtribuido=" + pesoAtribuido + ", classificacao=" + classificacao + ", membro=" + membro + ", iteracao=" + iteracao + '}';
     }
 }

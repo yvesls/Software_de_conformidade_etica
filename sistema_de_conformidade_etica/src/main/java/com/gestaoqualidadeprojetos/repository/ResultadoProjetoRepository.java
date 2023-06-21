@@ -18,12 +18,16 @@ import java.util.ArrayList;
 public class ResultadoProjetoRepository {
     private ArrayList<ResultadoProjeto> listaResultadosProjeto;
     
-    public ResultadoProjeto getByNome(String nome) {
-        return getMockByNome(nome);
+    public ResultadoProjetoRepository() {
+        generateAllMock();
+    }
+    
+    public ResultadoProjeto getByProjeto(String projeto) {
+        return getMockByNome(projeto);
     }
     
     public ArrayList<ResultadoProjeto> getAll() {
-          return generateAllMock();
+          return listaResultadosProjeto;
     }
     
     private ArrayList<ResultadoProjeto> generateAllMock() {
@@ -31,9 +35,9 @@ public class ResultadoProjetoRepository {
         return listaResultadosProjeto;
     }
     
-    private ResultadoProjeto getMockByNome(String nome) {
+    private ResultadoProjeto getMockByNome(String projeto) {
         for(ResultadoProjeto rp : listaResultadosProjeto) {
-            if(rp.getDescricao().equals(nome)) {
+            if(rp.getProjeto().equals(projeto)) {
                 return rp;
             }
         }

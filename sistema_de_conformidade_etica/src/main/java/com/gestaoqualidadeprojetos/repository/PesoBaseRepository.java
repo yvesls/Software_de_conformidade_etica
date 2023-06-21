@@ -15,12 +15,16 @@ import java.util.ArrayList;
 public class PesoBaseRepository {
     private ArrayList<PesoBase> listaPesosBase;
     
+    public PesoBaseRepository(){
+        generateAllMock();
+    }
+    
     public PesoBase getByName(String representante) {
         return getMockByMembroRepresentante(representante);
     }
     
     public ArrayList<PesoBase> getAll() {
-          return generateAllMock();
+          return listaPesosBase;
     }
     
     private ArrayList<PesoBase> generateAllMock() {

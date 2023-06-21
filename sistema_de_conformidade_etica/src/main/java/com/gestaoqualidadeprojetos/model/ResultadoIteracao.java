@@ -13,17 +13,15 @@ import java.time.LocalDateTime;
 public class ResultadoIteracao {
     private String descricao;
     private LocalDateTime dataResultado;
-    private ResultadoMembroEquipe resultadoMembroEquipe;
     private Classificacao classificacao;
     private String iteracao;
     
     public ResultadoIteracao() {
     }
 
-    public ResultadoIteracao(String descricao, LocalDateTime dataResultado, ResultadoMembroEquipe resultadoMembroEquipe, Classificacao classificacao, String iteracao) {
+    public ResultadoIteracao(String descricao, LocalDateTime dataResultado, Classificacao classificacao, String iteracao) {
         this.descricao = descricao;
         this.dataResultado = dataResultado;
-        this.resultadoMembroEquipe = resultadoMembroEquipe;
         this.classificacao = classificacao;
         this.iteracao = iteracao;
     }
@@ -36,10 +34,6 @@ public class ResultadoIteracao {
         return dataResultado;
     }
 
-    public ResultadoMembroEquipe getResultadoMembroEquipe() {
-        return resultadoMembroEquipe;
-    }
-
     public Classificacao getClassificacao() {
         return classificacao;
     }
@@ -50,6 +44,6 @@ public class ResultadoIteracao {
 
     @Override
     public String toString() {
-        return "ResultadoIteracao{" + "descricao=" + descricao + ", dataResultado=" + dataResultado + ", resultadoMembroEquipe=" + resultadoMembroEquipe + ", classificacao=" + classificacao + ", iteracao=" + iteracao + '}';
+        return "ResultadoIteracao{" + "descricao=" + descricao + ", dataResultado=" + dataResultado + ", classificacao=" + classificacao + ", iteracao=" + iteracao + '}';
     }
 }

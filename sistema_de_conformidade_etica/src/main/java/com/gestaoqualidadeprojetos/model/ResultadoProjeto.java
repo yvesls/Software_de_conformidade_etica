@@ -16,12 +16,14 @@ public class ResultadoProjeto {
    private LocalDateTime dataResultado;
    private Classificacao classificacao;
    private ArrayList<ResultadoIteracao> resultadosIteracao;
+   private String projeto;
 
-    public ResultadoProjeto(String descricao, LocalDateTime dataResultado, Classificacao classificacao, ArrayList<ResultadoIteracao> resultadosIteracao) {
+    public ResultadoProjeto(String descricao, LocalDateTime dataResultado, Classificacao classificacao, ArrayList<ResultadoIteracao> resultadosIteracao, String projeto) {
         this.descricao = descricao;
         this.dataResultado = dataResultado;
         this.classificacao = classificacao;
         this.resultadosIteracao = resultadosIteracao;
+        this.projeto = projeto;
     }
 
     public String getDescricao() {
@@ -40,8 +42,12 @@ public class ResultadoProjeto {
         return resultadosIteracao;
     }
 
+    public String getProjeto() {
+        return projeto;
+    }
+
     @Override
     public String toString() {
-        return "ResultadoProjeto{" + "descricao=" + descricao + ", dataResultado=" + dataResultado + ", classificacao=" + classificacao + ", resultadosIteracao=" + resultadosIteracao + '}';
+        return "ResultadoProjeto{" + "descricao=" + descricao + ", dataResultado=" + dataResultado + ", classificacao=" + classificacao + ", resultadosIteracao=" + resultadosIteracao + ", projeto=" + projeto + '}';
     }
 }

@@ -39,4 +39,9 @@ public class Classificacao {
     public ClassificacaoEnum getClassificacaoAtingida() {
         return classificacaoAtingida;
     }
+
+    @Override
+    public String toString() {
+        return "Classificacao{" + "descricao=" + descricao + ", dataCriacao=" + dataCriacao + ", valorPercentualAtingido=" + valorPercentualAtingido + ", classificacaoAtingida=" + classificacaoAtingida + '}';
+    }
 }
