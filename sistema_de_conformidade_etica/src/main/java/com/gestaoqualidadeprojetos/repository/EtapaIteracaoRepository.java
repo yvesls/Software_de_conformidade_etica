@@ -8,11 +8,11 @@ public class EtapaIteracaoRepository {
 
     public EtapaIteracaoRepository() {
         etapas = new ArrayList<>();
-        etapas.add(new EtapaIteracao("Iniciação", 5));
+        /*etapas.add(new EtapaIteracao("Iniciação", 5));
         etapas.add(new EtapaIteracao("Requisitos", 20));
         etapas.add(new EtapaIteracao("Projeto", 10));
         etapas.add(new EtapaIteracao("Desenvolvimento", 40));
-        etapas.add(new EtapaIteracao("Teste e Verificação", 25));
+        etapas.add(new EtapaIteracao("Teste e Verificação", 25));*/
     }
 
     public List<EtapaIteracao> listarEtapas() {
