@@ -64,5 +64,10 @@ public class MembroEquipe {
     public void setPrimeiroAcesso(boolean primeiroAcesso) {
         this.primeiroAcesso = primeiroAcesso;
     }
+
+    @Override
+    public String toString() {
+        return "MembroEquipe{" + "nome=" + nome + ", sobrenome=" + sobrenome + ", email=" + email + ", representante=" + representante + '}';
+    }
     
 }

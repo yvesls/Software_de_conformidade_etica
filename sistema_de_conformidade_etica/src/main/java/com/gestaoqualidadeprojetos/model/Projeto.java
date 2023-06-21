@@ -75,5 +75,10 @@ public class Projeto {
     public void setDuracaoIteracao(Date duracaoIteracao) {
         this.duracaoIteracao = duracaoIteracao;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Projeto{" + "nome=" + nome + ", dataInicio=" + dataInicio + ", dataConclusao=" + dataConclusao + ", status=" + status + ", tipo=" + tipo + ", quantidadeIteracao=" + quantidadeIteracao + ", duracaoIteracao=" + duracaoIteracao + '}';
+    }
+
 }

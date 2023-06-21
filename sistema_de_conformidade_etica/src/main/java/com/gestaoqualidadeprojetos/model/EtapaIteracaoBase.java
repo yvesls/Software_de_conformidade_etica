@@ -24,5 +24,10 @@ public class EtapaIteracaoBase {
     public void setPesoEsforco(int pesoEsforco) {
         this.pesoEsforco = pesoEsforco;
     }
-    
+
+    @Override
+    public String toString() {
+        return "EtapaIteracaoBase{" + "descricao=" + descricao + ", pesoEsforco=" + pesoEsforco + '}';
+    }
+     
 }

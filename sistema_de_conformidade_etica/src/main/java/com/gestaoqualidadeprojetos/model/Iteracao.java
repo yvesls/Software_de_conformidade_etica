@@ -55,6 +55,10 @@ public class Iteracao {
     public void setStatus(String status) {
         this.status = status;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Iteracao{" + "descricao=" + descricao + ", dataInicio=" + dataInicio + ", dataConclusao=" + dataConclusao + ", previsaoConclusao=" + previsaoConclusao + ", status=" + status + '}';
+    }
     
 }
