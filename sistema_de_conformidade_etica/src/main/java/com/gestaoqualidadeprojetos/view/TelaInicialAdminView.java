@@ -75,7 +75,7 @@ public class TelaInicialAdminView extends javax.swing.JFrame {
         menuProjetos.add(itemMenuAcessarProjetos);
 
         itemMenuAcessarQuestionarios.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        itemMenuAcessarQuestionarios.setText("Acessar Questionários");
+        itemMenuAcessarQuestionarios.setText("Acessar Questionários Base");
         itemMenuAcessarQuestionarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 itemMenuAcessarQuestionariosActionPerformed(evt);
