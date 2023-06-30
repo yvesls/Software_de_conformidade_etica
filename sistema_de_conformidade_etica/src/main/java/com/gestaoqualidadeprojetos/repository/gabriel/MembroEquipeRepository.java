@@ -1,5 +1,5 @@
-package com.gestaoqualidadeprojetos.repository;
-import com.gestaoqualidadeprojetos.model.MembroEquipe;
+package com.gestaoqualidadeprojetos.repository.gabriel;
+import com.gestaoqualidadeprojetos.model.gabriel.MembroEquipe;
 import java.util.ArrayList;
 import java.util.List;
 
