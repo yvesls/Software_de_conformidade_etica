@@ -1,5 +1,5 @@
 
-package com.gestaoqualidadeprojetos.model;
+package com.gestaoqualidadeprojetos.model.lucas;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

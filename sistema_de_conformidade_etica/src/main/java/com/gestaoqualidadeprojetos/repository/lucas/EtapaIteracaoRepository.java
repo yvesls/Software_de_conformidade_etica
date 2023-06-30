@@ -1,7 +1,7 @@
 
-package com.gestaoqualidadeprojetos.repository;
+package com.gestaoqualidadeprojetos.repository.lucas;
 
-import com.gestaoqualidadeprojetos.model.EtapaIteracaoModel;
+import com.gestaoqualidadeprojetos.model.lucas.EtapaIteracaoModel;
 import java.util.ArrayList;
 import java.util.List;
 

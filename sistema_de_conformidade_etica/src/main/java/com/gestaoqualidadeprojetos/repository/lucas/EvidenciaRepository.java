@@ -1,8 +1,8 @@
 
-package com.gestaoqualidadeprojetos.repository;
+package com.gestaoqualidadeprojetos.repository.lucas;
 
-import com.gestaoqualidadeprojetos.model.AnexoModel;
-import com.gestaoqualidadeprojetos.model.EvidenciaModel;
+import com.gestaoqualidadeprojetos.model.lucas.AnexoModel;
+import com.gestaoqualidadeprojetos.model.lucas.EvidenciaModel;
 import java.util.ArrayList;
 
 /**

@@ -1,8 +1,8 @@
 
-package com.gestaoqualidadeprojetos.repository;
+package com.gestaoqualidadeprojetos.repository.lucas;
 
 
-import com.gestaoqualidadeprojetos.model.QuestionarioEtapaModel;
+import com.gestaoqualidadeprojetos.model.lucas.QuestionarioEtapaModel;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;

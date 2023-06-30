@@ -1,5 +1,5 @@
 
-package com.gestaoqualidadeprojetos.repository;
+package com.gestaoqualidadeprojetos.repository.lucas;
 
 /**
  *

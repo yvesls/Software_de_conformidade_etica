@@ -1,5 +1,5 @@
 
-package com.gestaoqualidadeprojetos.service;
+package com.gestaoqualidadeprojetos.service.lucas;
 
 /**
  *

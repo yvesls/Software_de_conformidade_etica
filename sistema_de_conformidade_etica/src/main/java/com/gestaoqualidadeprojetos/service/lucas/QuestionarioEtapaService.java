@@ -1,8 +1,8 @@
 
-package com.gestaoqualidadeprojetos.service;
+package com.gestaoqualidadeprojetos.service.lucas;
 
-import com.gestaoqualidadeprojetos.model.QuestionarioEtapaModel;
-import com.gestaoqualidadeprojetos.repository.QuestionarioEtapaRepository;
+import com.gestaoqualidadeprojetos.model.lucas.QuestionarioEtapaModel;
+import com.gestaoqualidadeprojetos.repository.lucas.QuestionarioEtapaRepository;
 import java.util.List;
 
 /**

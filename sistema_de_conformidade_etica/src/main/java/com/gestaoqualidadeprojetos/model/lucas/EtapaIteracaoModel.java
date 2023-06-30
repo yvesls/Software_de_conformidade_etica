@@ -1,5 +1,5 @@
 
-package com.gestaoqualidadeprojetos.model;
+package com.gestaoqualidadeprojetos.model.lucas;
 
 import java.util.List;
 

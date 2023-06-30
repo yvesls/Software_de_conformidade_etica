@@ -1,8 +1,8 @@
 
-package com.gestaoqualidadeprojetos.service;
+package com.gestaoqualidadeprojetos.service.lucas;
 
-import com.gestaoqualidadeprojetos.model.PerguntaModel;
-import com.gestaoqualidadeprojetos.repository.PerguntaRepository;
+import com.gestaoqualidadeprojetos.model.lucas.PerguntaModel;
+import com.gestaoqualidadeprojetos.repository.lucas.PerguntaRepository;
 import java.util.List;
 
 /**

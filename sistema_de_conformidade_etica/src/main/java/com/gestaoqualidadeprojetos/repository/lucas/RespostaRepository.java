@@ -1,10 +1,10 @@
 
-package com.gestaoqualidadeprojetos.repository;
+package com.gestaoqualidadeprojetos.repository.lucas;
 
-import com.gestaoqualidadeprojetos.model.EvidenciaModel;
-import com.gestaoqualidadeprojetos.model.JustificativaModel;
-import com.gestaoqualidadeprojetos.model.MembroEquipeModel;
-import com.gestaoqualidadeprojetos.model.RespostaModel;
+import com.gestaoqualidadeprojetos.model.lucas.EvidenciaModel;
+import com.gestaoqualidadeprojetos.model.lucas.JustificativaModel;
+import com.gestaoqualidadeprojetos.model.lucas.MembroEquipeModel;
+import com.gestaoqualidadeprojetos.model.lucas.RespostaModel;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;

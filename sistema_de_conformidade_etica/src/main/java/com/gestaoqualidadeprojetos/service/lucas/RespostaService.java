@@ -1,9 +1,9 @@
 
-package com.gestaoqualidadeprojetos.service;
+package com.gestaoqualidadeprojetos.service.lucas;
 
-import com.gestaoqualidadeprojetos.model.MembroEquipeModel;
-import com.gestaoqualidadeprojetos.model.RespostaModel;
-import com.gestaoqualidadeprojetos.repository.RespostaRepository;
+import com.gestaoqualidadeprojetos.model.lucas.MembroEquipeModel;
+import com.gestaoqualidadeprojetos.model.lucas.RespostaModel;
+import com.gestaoqualidadeprojetos.repository.lucas.RespostaRepository;
 
 /**
  *

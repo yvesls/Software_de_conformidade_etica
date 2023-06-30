@@ -1,15 +1,15 @@
 package com.gestaoqualidadeprojetos;
 
-import com.gestaoqualidadeprojetos.model.MembroEquipeModel;
-import com.gestaoqualidadeprojetos.model.PerguntaBaseModel;
-import com.gestaoqualidadeprojetos.model.QuestionarioEtapaBaseModel;
-import com.gestaoqualidadeprojetos.model.QuestionarioEtapaModel;
-import com.gestaoqualidadeprojetos.model.RespostaModel;
-import com.gestaoqualidadeprojetos.service.MembroEquipeService;
-import com.gestaoqualidadeprojetos.service.PerguntaBaseService;
-import com.gestaoqualidadeprojetos.service.QuestionarioEtapaBaseService;
-import com.gestaoqualidadeprojetos.service.QuestionarioEtapaService;
-import com.gestaoqualidadeprojetos.service.RespostaService;
+import com.gestaoqualidadeprojetos.model.lucas.MembroEquipeModel;
+import com.gestaoqualidadeprojetos.model.lucas.PerguntaBaseModel;
+import com.gestaoqualidadeprojetos.model.lucas.QuestionarioEtapaBaseModel;
+import com.gestaoqualidadeprojetos.model.lucas.QuestionarioEtapaModel;
+import com.gestaoqualidadeprojetos.model.lucas.RespostaModel;
+import com.gestaoqualidadeprojetos.service.lucas.MembroEquipeService;
+import com.gestaoqualidadeprojetos.service.lucas.PerguntaBaseService;
+import com.gestaoqualidadeprojetos.service.lucas.QuestionarioEtapaBaseService;
+import com.gestaoqualidadeprojetos.service.lucas.QuestionarioEtapaService;
+import com.gestaoqualidadeprojetos.service.lucas.RespostaService;
 import java.time.LocalDateTime;
 import java.util.List;
 import org.jfree.chart.axis.DateTick;
