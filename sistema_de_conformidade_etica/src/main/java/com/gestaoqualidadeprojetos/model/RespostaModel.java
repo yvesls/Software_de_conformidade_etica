@@ -6,56 +6,50 @@ package com.gestaoqualidadeprojetos.model;
  * @author lucas
  */
 public class RespostaModel {
-    private Boolean resposta;
-    private MembroEquipeModel membroEquipe;
-    private EvidenciaModel evidencia;
-    private JustificativaModel justificativa;
-    
-    //com evidencia 
-    public RespostaModel(Boolean resposta, MembroEquipeModel membroEquipe, EvidenciaModel evidencia) {
+   private MembroEquipeModel membro;
+    private boolean resposta;
+    private String justificativa;
+    private String evidencia;
+
+  
+
+    public RespostaModel(MembroEquipeModel membro, boolean resposta) {
+        this.membro = membro;
         this.resposta = resposta;
-        this.membroEquipe = membroEquipe;
-        this.evidencia = evidencia;
-    }
-    
-    //com justificativa
-    public RespostaModel(Boolean resposta, MembroEquipeModel membroEquipe, JustificativaModel justificativa) {
-        this.resposta = resposta;
-        this.membroEquipe = membroEquipe;
-        this.justificativa = justificativa;
     }
 
-    public Boolean getResposta() {
+    public MembroEquipeModel getMembro() {
+        return membro;
+    }
+
+    public void setMembro(MembroEquipeModel membro) {
+        this.membro = membro;
+    }
+
+    public boolean getResposta() {
         return resposta;
     }
 
-    public MembroEquipeModel getMembroEquipe() {
-        return membroEquipe;
-    }
-
-    public EvidenciaModel getEvidencia() {
-        return evidencia;
-    }
-
-    public JustificativaModel getJustificativa() {
-        return justificativa;
-    }
-
-    public void setResposta(Boolean resposta) {
+    public void setResposta(boolean resposta) {
         this.resposta = resposta;
     }
 
-    public void setMembroEquipe(MembroEquipeModel membroEquipe) {
-        this.membroEquipe = membroEquipe;
+    public String getJustificativa() {
+        return justificativa;
     }
 
-    public void setEvidencia(EvidenciaModel evidencia) {
+    public void setJustificativa(String justificativa) {
+        this.justificativa = justificativa;
+    }
+
+    public String getEvidencia() {
+        return evidencia;
+    }
+
+    public void setEvidencia(String evidencia) {
         this.evidencia = evidencia;
     }
 
-    public void setJustificativa(JustificativaModel justificativa) {
-        this.justificativa = justificativa;
-    }
     
     
 }

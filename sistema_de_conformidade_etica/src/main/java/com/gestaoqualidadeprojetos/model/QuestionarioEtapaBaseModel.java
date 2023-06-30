@@ -9,36 +9,34 @@ import java.util.ArrayList;
  * @author lucas
  */
 public class QuestionarioEtapaBaseModel {
-     
-     private String nome;
-     private LocalDateTime dataCriacao;
-     private ArrayList<PerguntaBaseModel> listaPerguntasBase;
+     private String nomeQuestionario;
+    private LocalDateTime dataCriacao;
 
-    public QuestionarioEtapaBaseModel(String nome, LocalDateTime dataCriacao, ArrayList<PerguntaBaseModel> listaPerguntasBase) {
-        this.nome = nome;
+    
+
+    public QuestionarioEtapaBaseModel(String nomeQuestionario, LocalDateTime dataCriacao) {
+        this.nomeQuestionario = nomeQuestionario;
         this.dataCriacao = dataCriacao;
-        this.listaPerguntasBase = listaPerguntasBase;
     }
 
-    public String getNome() {
-        return nome;
+    public String getNomeQuestionario() {
+        return nomeQuestionario;
+    }
+
+    public void setNomeQuestionario(String nomeQuestionario) {
+        this.nomeQuestionario = nomeQuestionario;
     }
 
     public LocalDateTime getDataCriacao() {
         return dataCriacao;
     }
 
-    public ArrayList<PerguntaBaseModel> getListaPerguntasBase() {
-        return listaPerguntasBase;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public void setDataCriacao(LocalDateTime dataCriacao) {
         this.dataCriacao = dataCriacao;
     }
-     
+
+    public void adicionarPerguntaBase(PerguntaBaseModel perguntaBase2) {
+       // throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }

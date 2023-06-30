@@ -7,39 +7,28 @@ import com.gestaoqualidadeprojetos.model.MembroEquipeModel;
 import com.gestaoqualidadeprojetos.model.RespostaModel;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
  * @author lucas
  */
 public class RespostaRepository {
-    private ArrayList<RespostaModel> listaRespostas;
-    private MembroEquipeModel membro;
-    private EvidenciaModel evidencia;
-    private JustificativaModel justificativa;
-    LocalDateTime horas = LocalDateTime.now();
-    
-    public RespostaRepository(){
-        generateAllMock();
-    }
-    
-    
-    public  ArrayList<RespostaModel> getAll() {
-        return listaRespostas;
-    }
-    
-    private ArrayList<RespostaModel> generateAllMock() {
-        listaRespostas = new ArrayList<RespostaModel>();
-        var resposta1 = new RespostaModel(true, membro, evidencia ); 
-        var resposta2 = new RespostaModel(false, membro, justificativa); 
-        var resposta3 = new RespostaModel(true, membro, evidencia ); 
-        
+    private Map<String, RespostaModel> respostas;
 
-        listaRespostas.add(resposta1);
-        listaRespostas.add(resposta2);
-        listaRespostas.add(resposta3);
-       
-        
-        return listaRespostas;
+    public RespostaRepository() {
+        respostas = new HashMap<>();
+    }
+
+    public void salvarResposta(RespostaModel resposta) {
+        MembroEquipeModel membro = resposta.getMembro();
+        String chave = membro.getNome() + membro.getSobrenome();
+        respostas.put(chave, resposta);
+    }
+
+    public RespostaModel obterRespostaPorMembro(MembroEquipeModel membro) {
+        String chave = membro.getNome() + membro.getSobrenome();
+        return respostas.get(chave);
     }
 }

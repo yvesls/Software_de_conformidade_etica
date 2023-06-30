@@ -5,6 +5,7 @@ import com.gestaoqualidadeprojetos.model.PerguntaBaseModel;
 import com.gestaoqualidadeprojetos.model.QuestionarioEtapaBaseModel;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -12,40 +13,18 @@ import java.util.ArrayList;
  */
 public class QuestionarioEtapaBaseRepository {
      
-    private ArrayList<QuestionarioEtapaBaseModel> listaQuestionarioEtapaBase;
-    private PerguntaBaseRepository perguntas;
-    LocalDateTime horas = LocalDateTime.now();
-    
-    public QuestionarioEtapaBaseRepository(){
-        generateAllMock();
+   private List<QuestionarioEtapaBaseModel> questionariosBase;
+
+    public QuestionarioEtapaBaseRepository() {
+        questionariosBase = new ArrayList<>();
     }
-    
-    public QuestionarioEtapaBaseModel getByQuestionario(String nome) {
-        return getMockByQuestionario(nome);
+
+    public void salvarQuestionarioBase(QuestionarioEtapaBaseModel questionarioBase) {
+        questionariosBase.add(questionarioBase);
     }
-    
-    public  ArrayList<QuestionarioEtapaBaseModel> getAll() {
-        return listaQuestionarioEtapaBase;
-    }
-    
-    private ArrayList<QuestionarioEtapaBaseModel> generateAllMock() {
-        listaQuestionarioEtapaBase = new ArrayList<QuestionarioEtapaBaseModel>();
-        var questionario1 = new QuestionarioEtapaBaseModel("quest1", horas, perguntas.getAll()); //lista de perguntas vindas de Pergunta para montar o quest
-        var questionario2 = new QuestionarioEtapaBaseModel("quest2", horas, perguntas.getAll());
-        
-        listaQuestionarioEtapaBase.add(questionario1);
-        listaQuestionarioEtapaBase.add(questionario2);
-        
-        return listaQuestionarioEtapaBase;
-    }
-    
-    private QuestionarioEtapaBaseModel getMockByQuestionario(String nome) {
-        for(QuestionarioEtapaBaseModel q : listaQuestionarioEtapaBase) {
-            if(q.getNome().equals(nome)) {
-                return q;
-            }
-        }
-        return null;
+
+    public List<QuestionarioEtapaBaseModel> obterQuestionariosBase() {
+        return questionariosBase;
     }
     
     

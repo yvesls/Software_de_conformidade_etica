@@ -55,7 +55,7 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
         });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Manter Questionários");
+        setTitle("Manter Questionários Base");
 
         btnVoltar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnVoltar.setText("Voltar");
@@ -124,7 +124,7 @@ public class ManterQuestionariosView extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String [] {
-                "#", "Nome", "Data de Criação"
+                "#", "Nome do Questionário Base", "Data de Criação"
             }
         ) {
             Class[] types = new Class [] {
