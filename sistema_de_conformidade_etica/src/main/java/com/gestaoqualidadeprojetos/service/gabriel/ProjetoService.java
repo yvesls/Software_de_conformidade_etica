@@ -1,10 +1,10 @@
-package com.gestaoqualidadeprojetos.service;
+package com.gestaoqualidadeprojetos.service.gabriel;
 
-import com.gestaoqualidadeprojetos.model.EtapaIteracao;
-import com.gestaoqualidadeprojetos.model.Iteracao;
-import com.gestaoqualidadeprojetos.model.MembroEquipe;
-import com.gestaoqualidadeprojetos.model.Projeto;
-import com.gestaoqualidadeprojetos.repository.ProjetoRepository;
+import com.gestaoqualidadeprojetos.model.gabriel.EtapaIteracao;
+import com.gestaoqualidadeprojetos.model.gabriel.Iteracao;
+import com.gestaoqualidadeprojetos.model.gabriel.MembroEquipe;
+import com.gestaoqualidadeprojetos.model.gabriel.Projeto;
+import com.gestaoqualidadeprojetos.repository.gabriel.ProjetoRepository;
 import java.util.ArrayList;
 import java.util.List;
 

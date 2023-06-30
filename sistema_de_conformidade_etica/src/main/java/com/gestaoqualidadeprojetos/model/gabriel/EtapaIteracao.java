@@ -1,4 +1,4 @@
-package com.gestaoqualidadeprojetos.model;
+package com.gestaoqualidadeprojetos.model.gabriel;
 
 public class EtapaIteracao extends EtapaIteracaoBase{
     

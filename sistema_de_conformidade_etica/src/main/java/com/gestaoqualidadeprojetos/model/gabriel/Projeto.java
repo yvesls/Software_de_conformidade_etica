@@ -1,4 +1,4 @@
-package com.gestaoqualidadeprojetos.model;
+package com.gestaoqualidadeprojetos.model.gabriel;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
