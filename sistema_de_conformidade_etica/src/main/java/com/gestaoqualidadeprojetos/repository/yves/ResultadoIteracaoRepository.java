@@ -1,9 +1,9 @@
-package com.gestaoqualidadeprojetos.repository;
+package com.gestaoqualidadeprojetos.repository.yves;
 
 
-import com.gestaoqualidadeprojetos.model.Classificacao;
-import com.gestaoqualidadeprojetos.model.ResultadoIteracao;
-import com.gestaoqualidadeprojetos.repository.ClassificacaoRepository;
+import com.gestaoqualidadeprojetos.model.yves.Classificacao;
+import com.gestaoqualidadeprojetos.model.yves.ResultadoIteracao;
+import com.gestaoqualidadeprojetos.repository.yves.ClassificacaoRepository;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 

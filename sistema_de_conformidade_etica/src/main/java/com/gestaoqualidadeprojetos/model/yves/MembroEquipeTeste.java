@@ -1,4 +1,4 @@
-package com.gestaoqualidadeprojetos.model;
+package com.gestaoqualidadeprojetos.model.yves;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license

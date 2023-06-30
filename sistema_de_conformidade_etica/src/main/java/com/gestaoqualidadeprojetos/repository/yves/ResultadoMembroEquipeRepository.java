@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.gestaoqualidadeprojetos.repository;
+package com.gestaoqualidadeprojetos.repository.yves;
 
-import com.gestaoqualidadeprojetos.model.Classificacao;
-import com.gestaoqualidadeprojetos.model.MembroEquipeTeste;
-import com.gestaoqualidadeprojetos.model.Peso;
-import com.gestaoqualidadeprojetos.model.ResultadoMembroEquipe;
+import com.gestaoqualidadeprojetos.model.yves.Classificacao;
+import com.gestaoqualidadeprojetos.model.yves.MembroEquipeTeste;
+import com.gestaoqualidadeprojetos.model.yves.Peso;
+import com.gestaoqualidadeprojetos.model.yves.ResultadoMembroEquipe;
 import java.util.ArrayList;
 
 /**

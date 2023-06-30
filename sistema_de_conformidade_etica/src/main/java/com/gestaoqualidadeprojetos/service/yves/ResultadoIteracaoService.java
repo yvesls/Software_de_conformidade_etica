@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.gestaoqualidadeprojetos.service;
+package com.gestaoqualidadeprojetos.service.yves;
 
-import com.gestaoqualidadeprojetos.model.ResultadoIteracao;
-import com.gestaoqualidadeprojetos.repository.ResultadoIteracaoRepository;
+import com.gestaoqualidadeprojetos.model.yves.ResultadoIteracao;
+import com.gestaoqualidadeprojetos.repository.yves.ResultadoIteracaoRepository;
 
 /**
  *

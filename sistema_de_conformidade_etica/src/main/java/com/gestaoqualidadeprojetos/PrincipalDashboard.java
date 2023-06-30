@@ -1,8 +1,8 @@
 package com.gestaoqualidadeprojetos;
 
-import com.gestaoqualidadeprojetos.service.ResultadoIteracaoService;
-import com.gestaoqualidadeprojetos.service.ResultadoMembroEquipeService;
-import com.gestaoqualidadeprojetos.service.ResultadoProjetoService;
+import com.gestaoqualidadeprojetos.service.yves.ResultadoIteracaoService;
+import com.gestaoqualidadeprojetos.service.yves.ResultadoMembroEquipeService;
+import com.gestaoqualidadeprojetos.service.yves.ResultadoProjetoService;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -11,7 +11,7 @@ import java.util.logging.Logger;
  *
  * @author Note102
  */
-public class main {
+public class PrincipalDashboard {
 
     public static void main(String args[]) {
         // chamar service aqui
@@ -56,7 +56,7 @@ public class main {
                         break;
                 }
             } catch (Exception ex) {
-                Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(PrincipalDashboard.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }
