@@ -1,5 +1,4 @@
 
-
 package com.gestaoqualidadeprojetos.repository;
 
 import com.gestaoqualidadeprojetos.model.EtapaIteracaoModel;
@@ -25,4 +24,3 @@ public class EtapaIteracaoRepository {
         return etapas;
     }
 }
-
