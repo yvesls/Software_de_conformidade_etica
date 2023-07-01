@@ -1,9 +1,9 @@
 package com.gestaoqualidadeprojetos;
-import com.gestaoqualidadeprojetos.model.gabriel.EtapaIteracao;
-import com.gestaoqualidadeprojetos.model.gabriel.Iteracao;
-import com.gestaoqualidadeprojetos.model.gabriel.MembroEquipe;
-import com.gestaoqualidadeprojetos.model.gabriel.Projeto;
-import com.gestaoqualidadeprojetos.service.gabriel.ProjetoService;
+import com.gestaoqualidadeprojetos.mode.EtapaIteracao;
+import com.gestaoqualidadeprojetos.mode.Iteracao;
+import com.gestaoqualidadeprojetos.mode.MembroEquipe;
+import com.gestaoqualidadeprojetos.mode.Projeto;
+import com.gestaoqualidadeprojetos.service.ProjetoService;
 import java.util.Date;
 
 public class PrincipalProjeto {

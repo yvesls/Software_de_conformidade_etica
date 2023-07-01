@@ -1,8 +1,6 @@
 package com.gestaoqualidadeprojetos;
 
-import com.gestaoqualidadeprojetos.service.yves.ResultadoIteracaoService;
-import com.gestaoqualidadeprojetos.service.yves.ResultadoMembroEquipeService;
-import com.gestaoqualidadeprojetos.service.yves.ResultadoProjetoService;
+import com.gestaoqualidadeprojetos.service.ResultadoService;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -34,17 +32,17 @@ public class PrincipalDashboard {
                 switch (opcao) {
                     case 1:
                         System.out.println("Opção 1: Visualizar resultado da iteracao vigente selecionada.");
-                        var resultadoIteracaoService = new ResultadoIteracaoService();
+                        var resultadoIteracaoService = new ResultadoService();
                         System.out.println(resultadoIteracaoService.getByIteracao("Iteração 1"));
                         break;
                     case 2:
                         System.out.println("Opção 2 Visualizar resultado dos membros de equipe da iteração vigente selecionada.");
-                        var resultadoMembroEquipeService = new ResultadoMembroEquipeService();
+                        var resultadoMembroEquipeService = new ResultadoService();
                         System.out.println(resultadoMembroEquipeService.getByIteracao("Iteração 1"));
                         break;
                     case 3:
                         System.out.println("Opção 3 Visualizar resultado do projeto");
-                        var resultadoProjetoService = new ResultadoProjetoService();
+                        var resultadoProjetoService = new ResultadoService();
                         System.out.println(resultadoProjetoService.getByProjeto("Projeto 1"));
                         break;
                     case 0:
