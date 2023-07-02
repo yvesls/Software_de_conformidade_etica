@@ -1,4 +1,4 @@
-package com.gestaoqualidadeprojetos.mode;
+package com.gestaoqualidadeprojetos.model;
 
 public class MembroEquipe {
     private String nome;

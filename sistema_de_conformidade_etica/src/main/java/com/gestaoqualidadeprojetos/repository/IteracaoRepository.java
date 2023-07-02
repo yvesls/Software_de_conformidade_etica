@@ -1,7 +1,6 @@
 package com.gestaoqualidadeprojetos.repository;
-import com.gestaoqualidadeprojetos.mode.Iteracao;
+import com.gestaoqualidadeprojetos.model.Iteracao;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class IteracaoRepository {

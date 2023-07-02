@@ -4,7 +4,7 @@
  */
 package com.gestaoqualidadeprojetos.repository;
 
-import com.gestaoqualidadeprojetos.mode.Classificacao;
+import com.gestaoqualidadeprojetos.model.Classificacao;
 import com.gestaoqualidadeprojetos.model.enums.ClassificacaoEnum;
 import java.time.LocalDateTime;
 import java.util.ArrayList;

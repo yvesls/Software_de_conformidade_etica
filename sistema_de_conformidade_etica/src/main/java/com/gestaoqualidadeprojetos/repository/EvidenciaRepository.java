@@ -1,8 +1,8 @@
 
 package com.gestaoqualidadeprojetos.repository;
 
-import com.gestaoqualidadeprojetos.mode.AnexoModel;
-import com.gestaoqualidadeprojetos.mode.Evidencia;
+import com.gestaoqualidadeprojetos.model.AnexoModel;
+import com.gestaoqualidadeprojetos.model.Evidencia;
 import java.util.ArrayList;
 
 /**

@@ -1,16 +1,16 @@
 
-package com.gestaoqualidadeprojetos.mode;
+package com.gestaoqualidadeprojetos.model;
 
 /**
  *
  * @author lucas
  */
-public class Evidencia {
-   private String conteudo;
+public class Justificativa {
+    private String conteudo;
 
-   
+    
 
-    public Evidencia(String conteudo) {
+    public Justificativa(String conteudo) {
         this.conteudo = conteudo;
     }
 
@@ -21,4 +21,6 @@ public class Evidencia {
     public void setConteudo(String conteudo) {
         this.conteudo = conteudo;
     }
+    
+    
 }

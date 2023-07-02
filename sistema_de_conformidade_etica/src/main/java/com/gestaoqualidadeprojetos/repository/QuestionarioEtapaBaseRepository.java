@@ -1,9 +1,7 @@
 
 package com.gestaoqualidadeprojetos.repository;
 
-import com.gestaoqualidadeprojetos.mode.PerguntaBase;
-import com.gestaoqualidadeprojetos.mode.QuestionarioEtapaBase;
-import java.time.LocalDateTime;
+import com.gestaoqualidadeprojetos.model.QuestionarioEtapaBase;
 import java.util.ArrayList;
 import java.util.List;
 

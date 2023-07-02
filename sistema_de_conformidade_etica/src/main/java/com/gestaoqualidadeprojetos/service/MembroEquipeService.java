@@ -1,7 +1,7 @@
 
 package com.gestaoqualidadeprojetos.service;
 
-import com.gestaoqualidadeprojetos.mode.MembroEquipe;
+import com.gestaoqualidadeprojetos.model.MembroEquipe;
 import com.gestaoqualidadeprojetos.repository.MembroEquipeRepository;
 import java.util.List;
 
@@ -16,11 +16,11 @@ public class MembroEquipeService {
         membroRepository = new MembroEquipeRepository();
     }
 
-    public void salvarMembro(MembroEquipe membro) {
+    public void addMembro(MembroEquipe membro) {
         membroRepository.adicionarMembro(membro);
     }
 
-    public List<MembroEquipe> obterMembros() {
+    public List<MembroEquipe> listarMembros() {
         return membroRepository.listarMembros();
     }
 }

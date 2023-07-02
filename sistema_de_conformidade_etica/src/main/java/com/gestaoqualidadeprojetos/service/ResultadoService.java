@@ -4,9 +4,9 @@
  */
 package com.gestaoqualidadeprojetos.service;
 
-import com.gestaoqualidadeprojetos.mode.ResultadoIteracao;
-import com.gestaoqualidadeprojetos.mode.ResultadoMembroEquipe;
-import com.gestaoqualidadeprojetos.mode.ResultadoProjeto;
+import com.gestaoqualidadeprojetos.model.ResultadoIteracao;
+import com.gestaoqualidadeprojetos.model.ResultadoMembroEquipe;
+import com.gestaoqualidadeprojetos.model.ResultadoProjeto;
 import com.gestaoqualidadeprojetos.repository.ResultadoIteracaoRepository;
 import com.gestaoqualidadeprojetos.repository.ResultadoMembroEquipeRepository;
 import com.gestaoqualidadeprojetos.repository.ResultadoProjetoRepository;

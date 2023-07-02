@@ -1,11 +1,8 @@
 
 package com.gestaoqualidadeprojetos.repository;
 
-import com.gestaoqualidadeprojetos.mode.AnexoModel;
-import com.gestaoqualidadeprojetos.mode.Evidencia;
-import com.gestaoqualidadeprojetos.mode.Justificativa;
-import com.gestaoqualidadeprojetos.mode.Resposta;
-import java.time.LocalDateTime;
+import com.gestaoqualidadeprojetos.model.AnexoModel;
+import com.gestaoqualidadeprojetos.model.Justificativa;
 import java.util.ArrayList;
 
 /**

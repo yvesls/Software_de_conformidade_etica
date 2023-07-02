@@ -1,11 +1,10 @@
 package com.gestaoqualidadeprojetos.service;
 
-import com.gestaoqualidadeprojetos.mode.EtapaIteracao;
-import com.gestaoqualidadeprojetos.mode.Iteracao;
-import com.gestaoqualidadeprojetos.mode.MembroEquipe;
-import com.gestaoqualidadeprojetos.mode.Projeto;
+import com.gestaoqualidadeprojetos.model.EtapaIteracao;
+import com.gestaoqualidadeprojetos.model.Iteracao;
+import com.gestaoqualidadeprojetos.model.MembroEquipe;
+import com.gestaoqualidadeprojetos.model.Projeto;
 import com.gestaoqualidadeprojetos.repository.ProjetoRepository;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ProjetoService {

@@ -1,4 +1,4 @@
-package com.gestaoqualidadeprojetos.mode;
+package com.gestaoqualidadeprojetos.model;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

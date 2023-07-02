@@ -4,11 +4,7 @@
  */
 package com.gestaoqualidadeprojetos.repository;
 
-import com.gestaoqualidadeprojetos.mode.Classificacao;
-import com.gestaoqualidadeprojetos.mode.ResultadoIteracao;
-import com.gestaoqualidadeprojetos.mode.ResultadoMembroEquipe;
-import com.gestaoqualidadeprojetos.mode.ResultadoProjeto;
-import java.time.LocalDateTime;
+import com.gestaoqualidadeprojetos.model.ResultadoProjeto;
 import java.util.ArrayList;
 
 /**

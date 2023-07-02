@@ -4,8 +4,8 @@
  */
 package com.gestaoqualidadeprojetos.repository;
 
-import com.gestaoqualidadeprojetos.mode.MembroEquipe;
-import com.gestaoqualidadeprojetos.mode.Peso;
+import com.gestaoqualidadeprojetos.model.MembroEquipe;
+import com.gestaoqualidadeprojetos.model.Peso;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
