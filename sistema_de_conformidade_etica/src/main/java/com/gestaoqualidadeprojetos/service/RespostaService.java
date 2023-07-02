@@ -21,11 +21,11 @@ public class RespostaService {
     }
 
    public Resposta obterRespostaPorMembro(MembroEquipe membro) {
-        System.out.println("Membro: " + membro.getNome() + "\nResposta: " + respostaRepository.obterRespostaPorMembro(membro).getResposta());
+        System.out.println("\nMembro: " + membro.getNome() + "\nResposta: " + respostaRepository.obterRespostaPorMembro(membro).getResposta());
         if (respostaRepository.obterRespostaPorMembro(membro).getResposta() == true) {
-            System.out.println("Evidência: " + respostaRepository.obterRespostaPorMembro(membro).getEvidencia());
+            System.out.println("Evidência: " + respostaRepository.obterRespostaPorMembro(membro).getEvidencia()+"\n");
         } else {
-            System.out.println("Justificativa: " + respostaRepository.obterRespostaPorMembro(membro).getJustificativa());
+            System.out.println("Justificativa: " + respostaRepository.obterRespostaPorMembro(membro).getJustificativa()+"\n");
         }
         return respostaRepository.obterRespostaPorMembro(membro);
     }
