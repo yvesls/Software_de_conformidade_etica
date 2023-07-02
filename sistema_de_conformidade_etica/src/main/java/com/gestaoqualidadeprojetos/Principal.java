@@ -87,7 +87,7 @@ public class Principal {
         PerguntaBase perguntaBase2 = new PerguntaBase("Você encontrou algum bug no sistema?", LocalDateTime.now());
 
         // Criando questionários base
-        QuestionarioEtapaBase questionarioEtapaBase1 = new QuestionarioEtapaBase("Questionário Etapa Base 1", LocalDateTime.now());
+        QuestionarioEtapaBase questionarioEtapaBase1 = new QuestionarioEtapaBase(cascata.getDescricao(), LocalDateTime.now());
 
         questionarioEtapaBase1.adicionarPerguntaBase(perguntaBase1);
         questionarioEtapaBase1.adicionarPerguntaBase(perguntaBase2);
@@ -111,7 +111,13 @@ public class Principal {
         for (QuestionarioEtapa questionarioEtapa : questionarioEtapaService.obterQuestionarios()) {
             System.out.println(questionarioEtapa.getNomeQuestionario());
         }
-
+        
+        // Obtendo as perguntas base
+        System.out.println("\nPerguntas Base:");
+        for (PerguntaBase perguntaBase : perguntaBaseService.obterPerguntasBase()) {
+            System.out.println(perguntaBase.getDescricao()+ " " + perguntaBase.getDataCriacao());
+        }
+        
         // Responder os questionários
         Resposta resposta1 = new Resposta(cliente, true);
         resposta1.setEvidencia("Evidência da resposta positiva");
