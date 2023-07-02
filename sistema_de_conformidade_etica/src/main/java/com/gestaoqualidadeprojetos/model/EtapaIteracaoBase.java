@@ -1,4 +1,4 @@
-package com.gestaoqualidadeprojetos.mode;
+package com.gestaoqualidadeprojetos.model;
 
 public class EtapaIteracaoBase {
     private String descricao;

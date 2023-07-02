@@ -1,8 +1,8 @@
 
 package com.gestaoqualidadeprojetos.service;
 
-import com.gestaoqualidadeprojetos.mode.MembroEquipe;
-import com.gestaoqualidadeprojetos.mode.Resposta;
+import com.gestaoqualidadeprojetos.model.MembroEquipe;
+import com.gestaoqualidadeprojetos.model.Resposta;
 import com.gestaoqualidadeprojetos.repository.RespostaRepository;
 
 /**

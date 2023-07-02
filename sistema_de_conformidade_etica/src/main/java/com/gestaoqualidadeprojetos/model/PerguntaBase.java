@@ -1,5 +1,5 @@
 
-package com.gestaoqualidadeprojetos.mode;
+package com.gestaoqualidadeprojetos.model;
 
 import java.time.LocalDateTime;
 

@@ -1,9 +1,7 @@
 package com.gestaoqualidadeprojetos.repository;
 
-
-import com.gestaoqualidadeprojetos.mode.Classificacao;
-import com.gestaoqualidadeprojetos.mode.ResultadoIteracao;
-import com.gestaoqualidadeprojetos.repository.ClassificacaoRepository;
+import com.gestaoqualidadeprojetos.model.Classificacao;
+import com.gestaoqualidadeprojetos.model.ResultadoIteracao;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -16,7 +14,7 @@ import java.util.ArrayList;
  *
  * @author Note102
  */
-public class ResultadoIteracaoRepository {
+public class  ResultadoIteracaoRepository {
     private ArrayList<ResultadoIteracao> listaResultadosIteracao;
     
     public ResultadoIteracaoRepository() {

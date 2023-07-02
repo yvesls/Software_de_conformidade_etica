@@ -1,7 +1,7 @@
 
 package com.gestaoqualidadeprojetos.service;
 
-import com.gestaoqualidadeprojetos.mode.MembroEquipe;
+import com.gestaoqualidadeprojetos.model.MembroEquipe;
 import com.gestaoqualidadeprojetos.repository.MembroEquipeRepository;
 import java.util.List;
 

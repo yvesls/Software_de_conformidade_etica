@@ -1,18 +1,16 @@
 package com.gestaoqualidadeprojetos;
 
-import com.gestaoqualidadeprojetos.mode.MembroEquipe;
-import com.gestaoqualidadeprojetos.mode.PerguntaBase;
-import com.gestaoqualidadeprojetos.mode.QuestionarioEtapaBase;
-import com.gestaoqualidadeprojetos.mode.QuestionarioEtapa;
-import com.gestaoqualidadeprojetos.mode.Resposta;
+import com.gestaoqualidadeprojetos.model.MembroEquipe;
+import com.gestaoqualidadeprojetos.model.PerguntaBase;
+import com.gestaoqualidadeprojetos.model.QuestionarioEtapa;
+import com.gestaoqualidadeprojetos.model.QuestionarioEtapaBase;
+import com.gestaoqualidadeprojetos.model.Resposta;
 import com.gestaoqualidadeprojetos.service.MembroEquipeService;
 import com.gestaoqualidadeprojetos.service.PerguntaBaseService;
 import com.gestaoqualidadeprojetos.service.QuestionarioEtapaBaseService;
 import com.gestaoqualidadeprojetos.service.QuestionarioEtapaService;
 import com.gestaoqualidadeprojetos.service.RespostaService;
 import java.time.LocalDateTime;
-import java.util.List;
-import org.jfree.chart.axis.DateTick;
 
 /**
  *

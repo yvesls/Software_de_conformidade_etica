@@ -1,12 +1,8 @@
 
 package com.gestaoqualidadeprojetos.repository;
 
-import com.gestaoqualidadeprojetos.mode.Evidencia;
-import com.gestaoqualidadeprojetos.mode.Justificativa;
-import com.gestaoqualidadeprojetos.mode.MembroEquipe;
-import com.gestaoqualidadeprojetos.mode.Resposta;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
+import com.gestaoqualidadeprojetos.model.MembroEquipe;
+import com.gestaoqualidadeprojetos.model.Resposta;
 import java.util.HashMap;
 import java.util.Map;
 

@@ -1,7 +1,7 @@
 
 package com.gestaoqualidadeprojetos.service;
 
-import com.gestaoqualidadeprojetos.mode.QuestionarioEtapaBase;
+import com.gestaoqualidadeprojetos.model.QuestionarioEtapaBase;
 import com.gestaoqualidadeprojetos.repository.QuestionarioEtapaBaseRepository;
 import java.util.List;
 

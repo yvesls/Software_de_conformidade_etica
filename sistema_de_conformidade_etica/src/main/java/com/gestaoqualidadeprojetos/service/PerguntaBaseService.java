@@ -1,7 +1,7 @@
 
 package com.gestaoqualidadeprojetos.service;
 
-import com.gestaoqualidadeprojetos.mode.PerguntaBase;
+import com.gestaoqualidadeprojetos.model.PerguntaBase;
 import com.gestaoqualidadeprojetos.repository.PerguntaBaseRepository;
 import java.util.List;
 

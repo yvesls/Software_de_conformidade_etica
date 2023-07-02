@@ -1,7 +1,6 @@
 package com.gestaoqualidadeprojetos.repository;
-import com.gestaoqualidadeprojetos.mode.Projeto;
+import com.gestaoqualidadeprojetos.model.Projeto;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class ProjetoRepository {

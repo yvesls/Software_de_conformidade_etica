@@ -4,10 +4,10 @@
  */
 package com.gestaoqualidadeprojetos.repository;
 
-import com.gestaoqualidadeprojetos.mode.Classificacao;
-import com.gestaoqualidadeprojetos.mode.MembroEquipe;
-import com.gestaoqualidadeprojetos.mode.Peso;
-import com.gestaoqualidadeprojetos.mode.ResultadoMembroEquipe;
+import com.gestaoqualidadeprojetos.model.Classificacao;
+import com.gestaoqualidadeprojetos.model.MembroEquipe;
+import com.gestaoqualidadeprojetos.model.Peso;
+import com.gestaoqualidadeprojetos.model.ResultadoMembroEquipe;
 import java.util.ArrayList;
 import java.util.List;
 
