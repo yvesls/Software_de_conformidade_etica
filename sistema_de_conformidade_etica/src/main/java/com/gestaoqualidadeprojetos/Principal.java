@@ -125,16 +125,16 @@ public class Principal {
         resposta2.setJustificativa("Justificativa da resposta negativa");
 
         Resposta resposta3 = new Resposta(liderEquipe, true);
-        resposta1.setEvidencia("Evidência da resposta positiva");
+        resposta3.setEvidencia("Evidência da resposta positiva");
 
         Resposta resposta4 = new Resposta(arquitetoSoftware, false);
-        resposta2.setJustificativa("Justificativa da resposta negativa");
+        resposta4.setJustificativa("Justificativa da resposta negativa");
 
         Resposta resposta5 = new Resposta(desenvolvedor, true);
-        resposta1.setEvidencia("Evidência da resposta positiva");
+        resposta5.setEvidencia("Evidência da resposta positiva");
 
         Resposta resposta6 = new Resposta(analistaQualidade, false);
-        resposta2.setJustificativa("Justificativa da resposta negativa");
+        resposta6.setJustificativa("Justificativa da resposta negativa");
 
         RespostaService respostaService = new RespostaService();
         respostaService.salvarResposta(cliente, resposta1);
@@ -149,6 +149,10 @@ public class Principal {
 
         resposta = respostaService.obterRespostaPorMembro(cliente);
         resposta = respostaService.obterRespostaPorMembro(gerenteProjeto);
+        resposta = respostaService.obterRespostaPorMembro(liderEquipe);
+        resposta = respostaService.obterRespostaPorMembro(arquitetoSoftware);
+        resposta = respostaService.obterRespostaPorMembro(desenvolvedor);
+        resposta = respostaService.obterRespostaPorMembro(analistaQualidade);
 
         /*DASHBOARD*/
         System.out.println("\n--------------------------DASHBOARD--------------------------\n");
