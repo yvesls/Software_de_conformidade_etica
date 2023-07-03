@@ -10,12 +10,13 @@ import java.util.List;
 public class ProjetoService {
 
     private ProjetoRepository projetosRepository;
-
+    private Projeto projeto;
+    
     public ProjetoService() {
         projetosRepository = new ProjetoRepository();
     }
-
-    public void criarProjeto(Projeto projeto) {
+    
+    public void salvarProjeto(Projeto projeto) {
         this.projetosRepository.adicionarProjeto(projeto);
     }
 
@@ -24,20 +25,25 @@ public class ProjetoService {
     }
 
     public void addMembroEquipe(Projeto projeto, MembroEquipe membro) {
-        Projeto projetoBuscado = this.buscarProjeto(projeto);
-        projetoBuscado.addMembroEquipe(membro);
+        //Projeto projetoBuscado = this.buscarProjeto(projeto);
+        //projetoBuscado.addMembroEquipe(membro);
+        this.projeto = projeto;
+        this.projeto.addMembroEquipe(membro);
     }
 
     public void criarIteracao(Projeto projeto, Iteracao iteracao) {
-        Projeto projetoBuscado = this.buscarProjeto(projeto);
-        projetoBuscado.addIteracao(iteracao);
+        //Projeto projetoBuscado = this.buscarProjeto(projeto);
+        //projetoBuscado.addIteracao(iteracao);
+        this.projeto = projeto;
+        this.projeto.addIteracao(iteracao);
     }
 
     private Iteracao buscarIteracao(Projeto projeto, Iteracao iteracao) {
-        Projeto projetoBuscado = this.buscarProjeto(projeto);
-        for (int i = 0; i < projetoBuscado.getIteracoes().size(); i++) {
-            if (projetoBuscado.getIteracoes().get(i).getDescricao().equals(iteracao.getDescricao())) {
-                return projetoBuscado.getIteracoes().get(i);
+        //Projeto projetoBuscado = this.buscarProjeto(projeto);
+        this.projeto = projeto;
+        for (int i = 0; i < projeto.getIteracoes().size(); i++) {
+            if (projeto.getIteracoes().get(i).getDescricao().equals(iteracao.getDescricao())) {
+                return projeto.getIteracoes().get(i);
             }
         }
         System.out.println("Iteração não encontrada no projeto " + projeto.getNome());
@@ -49,7 +55,7 @@ public class ProjetoService {
         if (iteracaoBuscada != null) {
             iteracaoBuscada.addEtapa(etapa);
         } else {
-            System.out.println("Etapa não encontrada na iteração" + iteracao.getDescricao() + "no projeto projeto " + projeto.getNome());
+            System.out.println("Etapa não encontrada na iteração" + iteracao.getDescricao() + " do projeto " + projeto.getNome());
         }
     }
 
@@ -62,6 +68,8 @@ public class ProjetoService {
         Projeto projetoBuscado = this.projetosRepository.buscarProjeto(projeto);
         System.out.println("--------------VER PROJETO--------------");
         System.out.println("PROJETO: " + projetoBuscado.toString());
+        System.out.println("EQUIPE:");
+        this.projeto.listarEquipe();
         for (Iteracao iteracao : projetoBuscado.getIteracoes()) {
             System.out.println("ITERAÇÃO: " + iteracao.toString());
             for (EtapaIteracao etapa : iteracao.getEtapas()) {
