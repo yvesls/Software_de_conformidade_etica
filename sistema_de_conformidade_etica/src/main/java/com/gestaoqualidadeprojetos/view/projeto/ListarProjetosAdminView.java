@@ -51,7 +51,6 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        selectStatusProjeto = new javax.swing.JComboBox<>();
         btnNovoProjeto = new javax.swing.JButton();
         btnFechar = new javax.swing.JButton();
         btnVerDashboard = new javax.swing.JButton();
@@ -62,9 +61,6 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
         jScrollPaneTabelaProjetosAbertos = new javax.swing.JScrollPane();
         tableProjetos = new javax.swing.JTable();
         menuBarProjetosAdmin = new javax.swing.JMenuBar();
-
-        selectStatusProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        selectStatusProjeto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aberto", "Concluído", "Arquivado", "Rascunho" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Todos os Projetos");
@@ -153,9 +149,13 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+
         tableProjetos.setRowHeight(26);
+
         tableProjetos.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+
         tableProjetos.setShowGrid(true);
+
         tableProjetos.setSurrendersFocusOnKeystroke(true);
         jScrollPaneTabelaProjetosAbertos.setViewportView(tableProjetos);
         if (tableProjetos.getColumnModel().getColumnCount() > 0) {
@@ -200,16 +200,16 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextFieldBuscarProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPaneTabelaProjetosAbertos, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnNovoProjeto)
                     .addComponent(btnFechar)
                     .addComponent(btnAbrirProjeto)
                     .addComponent(btnAbrirQuestionario)
                     .addComponent(btnVerDashboard))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addGap(25, 25, 25))
         );
 
         pack();
@@ -297,7 +297,6 @@ public class ListarProjetosAdminView extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPaneTabelaProjetosAbertos;
     private javax.swing.JTextField jTextFieldBuscarProjeto;
     private javax.swing.JMenuBar menuBarProjetosAdmin;
-    private javax.swing.JComboBox<String> selectStatusProjeto;
     private javax.swing.JTable tableProjetos;
     // End of variables declaration//GEN-END:variables
 }
