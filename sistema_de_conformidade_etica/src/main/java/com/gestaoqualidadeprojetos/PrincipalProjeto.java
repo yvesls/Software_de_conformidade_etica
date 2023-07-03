@@ -14,7 +14,7 @@ public class PrincipalProjeto {
         //Projeto
         Projeto projetoCascata = new Projeto("Sistema Cascata", new Date(), new Date(), "Em andamento", "CASCATA", 1, new Date());
 
-        projetoService.criarProjeto(projetoCascata);
+        projetoService.salvarProjeto(projetoCascata);
         
         //Equipe
         MembroEquipe cliente = new MembroEquipe("João", "Silva", "joao@projeto.com", "123", "CLIENTE", false);
