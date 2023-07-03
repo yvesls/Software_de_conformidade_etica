@@ -1,4 +1,5 @@
 package com.gestaoqualidadeprojetos;
+
 import com.gestaoqualidadeprojetos.model.EtapaIteracao;
 import com.gestaoqualidadeprojetos.model.Iteracao;
 import com.gestaoqualidadeprojetos.model.MembroEquipe;
@@ -20,11 +21,10 @@ import java.util.Date;
 public class Principal {
 
     public static void main(String[] args) throws Exception {
-        
-        /*PROJETO*/
 
+        /*PROJETO*/
         System.out.println("\n--------------------------PROJETO--------------------------\n");
-        
+
         //Service de Projeto
         ProjetoService projetoService = new ProjetoService();
 
@@ -80,16 +80,15 @@ public class Principal {
         //projetoService.listarProjeto();
 
         /*QUESTIONÁRIO*/
-        
         System.out.println("\n--------------------------QUESTIONÁRIO--------------------------\n");
-        
+
         // Criando perguntas base
         PerguntaBase perguntaBase1 = new PerguntaBase("Qual é o seu nível de satisfação?", LocalDateTime.now());
         PerguntaBase perguntaBase2 = new PerguntaBase("Você encontrou algum bug no sistema?", LocalDateTime.now());
 
         // Criando questionários base
         QuestionarioEtapaBase questionarioEtapaBase1 = new QuestionarioEtapaBase("Questionário Etapa Base 1", LocalDateTime.now());
-        
+
         questionarioEtapaBase1.adicionarPerguntaBase(perguntaBase1);
         questionarioEtapaBase1.adicionarPerguntaBase(perguntaBase2);
 
@@ -97,7 +96,7 @@ public class Principal {
         QuestionarioEtapa questionarioEtapa1 = new QuestionarioEtapa(questionarioEtapaBase1.getNomeQuestionario(), LocalDateTime.now());
 
         PerguntaBaseService perguntaBaseService = new PerguntaBaseService();
-        
+
         perguntaBaseService.salvarPerguntaBase(perguntaBase1);
         perguntaBaseService.salvarPerguntaBase(perguntaBase2);
 
@@ -119,13 +118,13 @@ public class Principal {
 
         Resposta resposta2 = new Resposta(gerenteProjeto, false);
         resposta2.setJustificativa("Justificativa da resposta negativa");
-        
+
         Resposta resposta3 = new Resposta(liderEquipe, true);
         resposta1.setEvidencia("Evidência da resposta positiva");
 
         Resposta resposta4 = new Resposta(arquitetoSoftware, false);
         resposta2.setJustificativa("Justificativa da resposta negativa");
-        
+
         Resposta resposta5 = new Resposta(desenvolvedor, true);
         resposta1.setEvidencia("Evidência da resposta positiva");
 
@@ -135,17 +134,20 @@ public class Principal {
         RespostaService respostaService = new RespostaService();
         respostaService.salvarResposta(cliente, resposta1);
         respostaService.salvarResposta(gerenteProjeto, resposta2);
+        respostaService.salvarResposta(liderEquipe, resposta3);
+        respostaService.salvarResposta(arquitetoSoftware, resposta4);
+        respostaService.salvarResposta(desenvolvedor, resposta5);
+        respostaService.salvarResposta(analistaQualidade, resposta6);
 
         // Obtendo as respostas
         Resposta resposta;
-        
+
         resposta = respostaService.obterRespostaPorMembro(cliente);
         resposta = respostaService.obterRespostaPorMembro(gerenteProjeto);
 
         /*DASHBOARD*/
-        
         System.out.println("\n--------------------------DASHBOARD--------------------------\n");
-        
+
         System.out.println("Visualizar resultado da iteracao vigente selecionada: ");
         var resultadoIteracaoService = new ResultadoService();
         System.out.println(resultadoIteracaoService.getByIteracao("Iteração 1"));
@@ -156,6 +158,6 @@ public class Principal {
 
         System.out.println("Visualizar resultado do projeto: ");
         var resultadoProjetoService = new ResultadoService();
-        System.out.println(resultadoProjetoService.getByProjeto("Projeto 1"));
+        //System.out.println(resultadoProjetoService.getByProjeto("Projeto 1"));
     }
 }

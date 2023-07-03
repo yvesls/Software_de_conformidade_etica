@@ -39,8 +39,8 @@ public class PrincipalQuestionario {
 
         // Utilizando os serviços
         MembroEquipeService membroService = new MembroEquipeService();
-        membroService.salvarMembro(cliente);
-        membroService.salvarMembro(gerenteProjeto);
+        membroService.addMembro(cliente);
+        membroService.addMembro(gerenteProjeto);
 
         PerguntaBaseService perguntaBaseService = new PerguntaBaseService();
         perguntaBaseService.salvarPerguntaBase(perguntaBase1);
@@ -85,7 +85,7 @@ public class PrincipalQuestionario {
         
         // Obtendo os membros da equipe
         //System.out.println("\nMembros da Equipe:");
-        for (MembroEquipe membro : membroService.obterMembros()) {
+        for (MembroEquipe membro : membroService.listarMembros()) {
             //System.out.println(membro.getNome() + " " + membro.getSobrenome());
 
            // Obtendo as respostas
