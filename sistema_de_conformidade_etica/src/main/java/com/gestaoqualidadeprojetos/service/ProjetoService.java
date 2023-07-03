@@ -58,10 +58,9 @@ public class ProjetoService {
             System.out.println("Etapa não encontrada na iteração" + iteracao.getDescricao() + " do projeto " + projeto.getNome());
         }
     }
-
-    public List<Projeto> listarProjeto() {
-        System.out.println("Projetos: " + this.projetosRepository.listarProjetos());
-        return this.projetosRepository.listarProjetos();
+    
+    public void listarTodosProjetos() {
+        this.projetosRepository.listarTodosProjetos();
     }
 
     public void verProjeto(String nome){

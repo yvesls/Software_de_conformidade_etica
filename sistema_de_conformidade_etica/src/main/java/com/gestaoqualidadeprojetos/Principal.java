@@ -15,21 +15,28 @@ import com.gestaoqualidadeprojetos.service.QuestionarioEtapaBaseService;
 import com.gestaoqualidadeprojetos.service.QuestionarioEtapaService;
 import com.gestaoqualidadeprojetos.service.RespostaService;
 import com.gestaoqualidadeprojetos.service.ResultadoService;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Principal {
 
     public static void main(String[] args) throws Exception {
-
+        
         /*PROJETO*/
         System.out.println("\n--------------------------PROJETO--------------------------\n");
 
         //Service de Projeto
         ProjetoService projetoService = new ProjetoService();
-
+        
+        //Criando as datas
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date dataInicio = dateFormat.parse("01/07/2023");
+        Date dataFim = dateFormat.parse("01/08/2023");
+        
         //Projeto
-        Projeto projetoCascata = new Projeto("Sistema Cascata", new Date(), new Date(), "Em andamento", "CASCATA", 1, new Date());
+        Projeto projetoCascata = new Projeto("Sistema Cascata", dataInicio, dataFim, "Em andamento", "CASCATA", 1);
 
         //Equipe
         MembroEquipe cliente = new MembroEquipe("João", "Silva", "joao@projeto.com", "123", "CLIENTE", false);

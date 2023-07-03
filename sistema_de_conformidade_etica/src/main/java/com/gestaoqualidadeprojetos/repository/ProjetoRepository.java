@@ -1,9 +1,11 @@
 package com.gestaoqualidadeprojetos.repository;
+
 import com.gestaoqualidadeprojetos.model.Projeto;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProjetoRepository {
+
     private List<Projeto> projetos;
 
     public ProjetoRepository() {
@@ -12,21 +14,33 @@ public class ProjetoRepository {
         //projetos.add(new Projeto("Sistema Iterativo", new Date(), new Date(), "Em andamento", "ITERATIVO", 5, new Date()));
     }
 
-    public List<Projeto> listarProjetos() {
-        return projetos;
+    public void listarTodosProjetos() {
+        System.out.println("Todos os projetos:");
+        for (Projeto projeto : projetos) {
+            System.out.println("Projeto: " + projeto.getNome());
+        }
     }
 
     public void adicionarProjeto(Projeto projeto) {
-        projetos.add(projeto);
+        Projeto projetoEncontrado = buscarProjeto(projeto.getNome());
+        if (projetoEncontrado == null) {
+            projetos.add(projeto);
+        } else {
+            // Atualiza o projeto existente
+            projetoEncontrado = projeto;
+            System.out.println("Projeto atualizado: " + projetoEncontrado.getNome());
+        }
     }
 
-    public Projeto buscarProjeto(String nome){
-        for(Projeto projetosSalvos: projetos){
-            if(projetosSalvos.getNome().equals(nome));
-            System.out.println("Projeto " + nome + " encontrado");
-            return projetosSalvos;
+    public Projeto buscarProjeto(String nome) {
+        for (Projeto projetoSalvo : projetos) {
+            if (projetoSalvo.getNome().equals(nome)) {
+                System.out.println("Projeto " + nome + " encontrado");
+                return projetoSalvo;
+            }
         }
         System.out.println("Projeto " + nome + " não encontrado.");
         return null;
     }
+
 }
