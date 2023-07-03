@@ -20,12 +20,13 @@ public class ProjetoRepository {
         projetos.add(projeto);
     }
 
-    public Projeto buscarProjeto(Projeto projeto){
-        for(Projeto projetoNoArray: projetos){
-            if(projetoNoArray.getNome().equals(projeto.getNome()));
-            return projetoNoArray;
+    public Projeto buscarProjeto(String nome){
+        for(Projeto projetosSalvos: projetos){
+            if(projetosSalvos.getNome().equals(nome));
+            System.out.println("Projeto " + nome + " encontrado");
+            return projetosSalvos;
         }
-        System.out.println("Projeto " + projeto.getNome() + " não encontrado.");
+        System.out.println("Projeto " + nome + " não encontrado.");
         return null;
     }
 }

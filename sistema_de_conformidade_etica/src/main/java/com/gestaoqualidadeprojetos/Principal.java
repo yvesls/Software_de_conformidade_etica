@@ -75,7 +75,7 @@ public class Principal {
 
         //Salva o Projeto
         projetoService.salvarProjeto(projetoCascata);
-        projetoService.verProjeto(projetoCascata);
+        projetoService.verProjeto("Sistema Cascata");
         //projetoService.listarProjeto();
 
         /*QUESTIONÁRIO*/

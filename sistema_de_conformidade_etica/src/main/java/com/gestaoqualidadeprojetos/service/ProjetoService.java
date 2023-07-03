@@ -20,8 +20,8 @@ public class ProjetoService {
         this.projetosRepository.adicionarProjeto(projeto);
     }
 
-    public Projeto buscarProjeto(Projeto projeto) {
-        return this.projetosRepository.buscarProjeto(projeto);
+    public Projeto buscarProjeto(String nome) {
+        return this.projetosRepository.buscarProjeto(nome);
     }
 
     public void addMembroEquipe(Projeto projeto, MembroEquipe membro) {
@@ -64,8 +64,8 @@ public class ProjetoService {
         return this.projetosRepository.listarProjetos();
     }
 
-    public void verProjeto(Projeto projeto){
-        Projeto projetoBuscado = this.projetosRepository.buscarProjeto(projeto);
+    public void verProjeto(String nome){
+        Projeto projetoBuscado = this.projetosRepository.buscarProjeto(nome);
         System.out.println("--------------VER PROJETO--------------");
         System.out.println("PROJETO: " + projetoBuscado.toString());
         System.out.println("EQUIPE:");
