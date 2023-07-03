@@ -117,6 +117,12 @@ public class Principal {
         for (QuestionarioEtapa questionarioEtapa : questionarioEtapaService.obterQuestionarios()) {
             System.out.println(questionarioEtapa.getNomeQuestionario());
         }
+        
+        // Obtendo as perguntas base
+        System.out.println("\nPerguntas Base:");
+        for (PerguntaBase perguntaBase : perguntaBaseService.obterPerguntasBase()) {
+            System.out.println(perguntaBase.getDescricao()+ " " + perguntaBase.getDataCriacao());
+        }
 
         // Responder os questionários
         Resposta resposta1 = new Resposta(cliente, true);
