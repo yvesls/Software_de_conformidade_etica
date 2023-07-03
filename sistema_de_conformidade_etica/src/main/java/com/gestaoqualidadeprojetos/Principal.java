@@ -15,21 +15,28 @@ import com.gestaoqualidadeprojetos.service.QuestionarioEtapaBaseService;
 import com.gestaoqualidadeprojetos.service.QuestionarioEtapaService;
 import com.gestaoqualidadeprojetos.service.RespostaService;
 import com.gestaoqualidadeprojetos.service.ResultadoService;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Principal {
 
     public static void main(String[] args) throws Exception {
-
+        
         /*PROJETO*/
         System.out.println("\n--------------------------PROJETO--------------------------\n");
 
         //Service de Projeto
         ProjetoService projetoService = new ProjetoService();
-
+        
+        //Criando as datas
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date dataInicio = dateFormat.parse("01/07/2023");
+        Date dataFim = dateFormat.parse("01/08/2023");
+        
         //Projeto
-        Projeto projetoCascata = new Projeto("Sistema Cascata", new Date(), new Date(), "Em andamento", "CASCATA", 1, new Date());
+        Projeto projetoCascata = new Projeto("Sistema Cascata", dataInicio, dataFim, "Em andamento", "CASCATA", 1);
 
         //Equipe
         MembroEquipe cliente = new MembroEquipe("João", "Silva", "joao@projeto.com", "123", "CLIENTE", false);
@@ -75,7 +82,7 @@ public class Principal {
 
         //Salva o Projeto
         projetoService.salvarProjeto(projetoCascata);
-        projetoService.verProjeto(projetoCascata);
+        projetoService.verProjeto("Sistema Cascata");
         //projetoService.listarProjeto();
 
         /*QUESTIONÁRIO*/
@@ -86,7 +93,7 @@ public class Principal {
         PerguntaBase perguntaBase2 = new PerguntaBase("Você encontrou algum bug no sistema?", LocalDateTime.now());
 
         // Criando questionários base
-        QuestionarioEtapaBase questionarioEtapaBase1 = new QuestionarioEtapaBase(cascata.getDescricao(), LocalDateTime.now());
+        QuestionarioEtapaBase questionarioEtapaBase1 = new QuestionarioEtapaBase("Questionário Etapa Base 1", LocalDateTime.now());
 
         questionarioEtapaBase1.adicionarPerguntaBase(perguntaBase1);
         questionarioEtapaBase1.adicionarPerguntaBase(perguntaBase2);
@@ -110,13 +117,7 @@ public class Principal {
         for (QuestionarioEtapa questionarioEtapa : questionarioEtapaService.obterQuestionarios()) {
             System.out.println(questionarioEtapa.getNomeQuestionario());
         }
-        
-        // Obtendo as perguntas base
-        System.out.println("\nPerguntas Base:");
-        for (PerguntaBase perguntaBase : perguntaBaseService.obterPerguntasBase()) {
-            System.out.println(perguntaBase.getDescricao()+ " " + perguntaBase.getDataCriacao());
-        }
-        
+
         // Responder os questionários
         Resposta resposta1 = new Resposta(cliente, true);
         resposta1.setEvidencia("Evidência da resposta positiva");
@@ -125,16 +126,16 @@ public class Principal {
         resposta2.setJustificativa("Justificativa da resposta negativa");
 
         Resposta resposta3 = new Resposta(liderEquipe, true);
-        resposta3.setEvidencia("Evidência da resposta positiva");
+        resposta1.setEvidencia("Evidência da resposta positiva");
 
         Resposta resposta4 = new Resposta(arquitetoSoftware, false);
-        resposta4.setJustificativa("Justificativa da resposta negativa");
+        resposta2.setJustificativa("Justificativa da resposta negativa");
 
         Resposta resposta5 = new Resposta(desenvolvedor, true);
-        resposta5.setEvidencia("Evidência da resposta positiva");
+        resposta1.setEvidencia("Evidência da resposta positiva");
 
         Resposta resposta6 = new Resposta(analistaQualidade, false);
-        resposta6.setJustificativa("Justificativa da resposta negativa");
+        resposta2.setJustificativa("Justificativa da resposta negativa");
 
         RespostaService respostaService = new RespostaService();
         respostaService.salvarResposta(cliente, resposta1);
@@ -149,10 +150,6 @@ public class Principal {
 
         resposta = respostaService.obterRespostaPorMembro(cliente);
         resposta = respostaService.obterRespostaPorMembro(gerenteProjeto);
-        resposta = respostaService.obterRespostaPorMembro(liderEquipe);
-        resposta = respostaService.obterRespostaPorMembro(arquitetoSoftware);
-        resposta = respostaService.obterRespostaPorMembro(desenvolvedor);
-        resposta = respostaService.obterRespostaPorMembro(analistaQualidade);
 
         /*DASHBOARD*/
         System.out.println("\n--------------------------DASHBOARD--------------------------\n");
