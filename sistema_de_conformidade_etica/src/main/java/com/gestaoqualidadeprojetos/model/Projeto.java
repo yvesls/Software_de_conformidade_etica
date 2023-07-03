@@ -1,9 +1,11 @@
 package com.gestaoqualidadeprojetos.model;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Projeto {
+
     private String nome;
     private Date dataInicio;
     private Date dataConclusao;
@@ -26,11 +28,11 @@ public class Projeto {
         this.equipe = new ArrayList<MembroEquipe>();
     }
 
-    public void addMembroEquipe(MembroEquipe membro){
+    public void addMembroEquipe(MembroEquipe membro) {
         this.equipe.add(membro);
     }
-    
-    public void addIteracao(Iteracao iteracao){
+
+    public void addIteracao(Iteracao iteracao) {
         this.iteracoes.add(iteracao);
     }
 
@@ -86,6 +88,12 @@ public class Projeto {
         this.quantidadeIteracao = quantidadeIteracao;
     }
 
+    public void listarEquipe() {
+        for (MembroEquipe membro : this.equipe) {
+            System.out.println(membro.toString());
+        }
+    }
+
     /*public Date getDuracaoIteracao() {
         return duracaoIteracao;
     }
@@ -93,7 +101,6 @@ public class Projeto {
     public void setDuracaoIteracao(Date duracaoIteracao) {
         this.duracaoIteracao = duracaoIteracao;
     }*/
-
     @Override
     public String toString() {
         return "Projeto{" + "nome=" + nome + ", dataInicio=" + dataInicio + ", dataConclusao=" + dataConclusao + ", status=" + status + ", tipo=" + tipo + ", quantidadeIteracao=" + quantidadeIteracao + '}';
