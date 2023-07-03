@@ -1,8 +1,10 @@
 
 import com.gestaoqualidadeprojetos.model.EtapaIteracao;
 import com.gestaoqualidadeprojetos.model.Iteracao;
+import com.gestaoqualidadeprojetos.model.MembroEquipe;
 import com.gestaoqualidadeprojetos.model.Projeto;
 import com.gestaoqualidadeprojetos.repository.ProjetoRepository;
+import com.gestaoqualidadeprojetos.service.MembroEquipeService;
 import com.gestaoqualidadeprojetos.service.ProjetoService;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -17,8 +19,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class ProjetoServiceTest {
 
     private ProjetoService projetoService;
-   
-    public ProjetoServiceTest(){
+
+    public ProjetoServiceTest() {
         this.projetoService = new ProjetoService();
     }
 
@@ -28,10 +30,10 @@ public class ProjetoServiceTest {
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Date dataInicio = dateFormat.parse("01/07/2023");
         Date dataFim = dateFormat.parse("01/08/2023");
-              
+
         //Criação do projeto
         Projeto projetoCascata = new Projeto("Sistema Cascata", dataInicio, dataFim, "Em andamento", "CASCATA", 1);
-        
+
         // Salvar projeto
         projetoService.salvarProjeto(projetoCascata);
 
@@ -103,5 +105,49 @@ public class ProjetoServiceTest {
         assertEquals("Projeto", projetoAtualizado.getIteracoes().get(0).getEtapas().get(2).getDescricao());
         assertEquals("Desenvolvimento", projetoAtualizado.getIteracoes().get(0).getEtapas().get(3).getDescricao());
         assertEquals("Teste e Verificação", projetoAtualizado.getIteracoes().get(0).getEtapas().get(4).getDescricao());
+    }
+
+    @Test
+    public void testAddMembroEquipe() throws ParseException {
+        //Buscar o projeto
+        Projeto projetoSalvo = projetoService.buscarProjeto("Sistema Cascata");
+
+        // Equipe
+        MembroEquipe cliente = new MembroEquipe("João", "Silva", "joao@projeto.com", "123", "CLIENTE", false);
+        MembroEquipe gerenteProjeto = new MembroEquipe("Maria", "Souza", "maria@projeto.com", "456", "GERENTE DE PROJETO", false);
+        MembroEquipe liderEquipe = new MembroEquipe("Carlos", "Ferreira", "carlos@projeto.com", "789", "LÍDER DE EQUIPE", false);
+        MembroEquipe arquitetoSoftware = new MembroEquipe("Ana", "Santos", "ana@projeto.com", "101112", "ARQUITETO DE SOFTWARE", false);
+        MembroEquipe desenvolvedor = new MembroEquipe("Pedro", "Gomes", "pedro@projeto.com", "131415", "DESENVOLVEDOR", false);
+        MembroEquipe analistaQualidade = new MembroEquipe("Mariana", "Lima", "mariana@projeto.com", "161718", "ANALISTA DE QUALIDADE", false);
+
+        // Service de Membros de Equipe
+        MembroEquipeService membroService = new MembroEquipeService();
+
+        membroService.addMembro(cliente);
+        membroService.addMembro(gerenteProjeto);
+        membroService.addMembro(liderEquipe);
+        membroService.addMembro(arquitetoSoftware);
+        membroService.addMembro(desenvolvedor);
+        membroService.addMembro(analistaQualidade);
+        
+        // Service de Projeto
+        projetoService.addMembroEquipe(projetoSalvo, cliente);
+        projetoService.addMembroEquipe(projetoSalvo, gerenteProjeto);
+        projetoService.addMembroEquipe(projetoSalvo, liderEquipe);
+        projetoService.addMembroEquipe(projetoSalvo, arquitetoSoftware);
+        projetoService.addMembroEquipe(projetoSalvo, desenvolvedor);
+        projetoService.addMembroEquipe(projetoSalvo, analistaQualidade);
+        
+        // Salva o projeto
+        projetoService.salvarProjeto(projetoSalvo);
+
+        // Verificar se os membro foram adicionados a equipe do projeto
+        Projeto projetoAtualizado = projetoService.buscarProjeto("Sistema Cascata");
+        assertTrue(projetoAtualizado.getEquipe().contains(cliente));
+        assertTrue(projetoAtualizado.getEquipe().contains(gerenteProjeto));
+        assertTrue(projetoAtualizado.getEquipe().contains(liderEquipe));
+        assertTrue(projetoAtualizado.getEquipe().contains(arquitetoSoftware));
+        assertTrue(projetoAtualizado.getEquipe().contains(desenvolvedor));
+        assertTrue(projetoAtualizado.getEquipe().contains(analistaQualidade));
     }
 }
