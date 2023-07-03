@@ -31,8 +31,6 @@ public class Principal {
         //Projeto
         Projeto projetoCascata = new Projeto("Sistema Cascata", new Date(), new Date(), "Em andamento", "CASCATA", 1, new Date());
 
-        projetoService.criarProjeto(projetoCascata);
-
         //Equipe
         MembroEquipe cliente = new MembroEquipe("João", "Silva", "joao@projeto.com", "123", "CLIENTE", false);
         MembroEquipe gerenteProjeto = new MembroEquipe("Maria", "Souza", "maria@projeto.com", "456", "GERENTE DE PROJETO", false);
@@ -75,7 +73,8 @@ public class Principal {
         projetoService.criarEtapa(projetoCascata, cascata, desenvolvimento);
         projetoService.criarEtapa(projetoCascata, cascata, testeVerificacao);;
 
-        //Ver o Projeto
+        //Salva o Projeto
+        projetoService.salvarProjeto(projetoCascata);
         projetoService.verProjeto(projetoCascata);
         //projetoService.listarProjeto();
 
