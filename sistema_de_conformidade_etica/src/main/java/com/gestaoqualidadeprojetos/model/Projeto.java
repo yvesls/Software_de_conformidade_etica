@@ -16,7 +16,7 @@ public class Projeto {
     private List<Iteracao> iteracoes;
     private ArrayList<MembroEquipe> equipe;
 
-    public Projeto(String nome, Date dataInicio, Date dataConclusao, String status, String tipo, int quantidadeIteracao, Date duracaoIteracao) {
+    public Projeto(String nome, Date dataInicio, Date dataConclusao, String status, String tipo, int quantidadeIteracao) {
         this.nome = nome;
         this.dataInicio = dataInicio;
         this.dataConclusao = dataConclusao;
@@ -30,6 +30,10 @@ public class Projeto {
 
     public void addMembroEquipe(MembroEquipe membro) {
         this.equipe.add(membro);
+    }
+
+    public ArrayList<MembroEquipe> getEquipe() {
+        return equipe;
     }
 
     public void addIteracao(Iteracao iteracao) {
