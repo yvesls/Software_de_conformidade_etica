@@ -38,8 +38,10 @@ public class ProjetoRepository {
                 System.out.println("Projeto " + nome + " encontrado");
                 return projetoSalvo;
             }
+            else
+                System.out.println("Projeto " + nome + " não encontrado.");
         }
-        System.out.println("Projeto " + nome + " não encontrado.");
+        
         return null;
     }
 

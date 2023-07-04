@@ -78,7 +78,7 @@ public class Principal {
         projetoService.criarEtapa(projetoCascata, cascata, requisitos);
         projetoService.criarEtapa(projetoCascata, cascata, projeto);
         projetoService.criarEtapa(projetoCascata, cascata, desenvolvimento);
-        projetoService.criarEtapa(projetoCascata, cascata, testeVerificacao);;
+        projetoService.criarEtapa(projetoCascata, cascata, testeVerificacao);
 
         //Salva o Projeto
         projetoService.salvarProjeto(projetoCascata);
@@ -93,7 +93,7 @@ public class Principal {
         PerguntaBase perguntaBase2 = new PerguntaBase("Você encontrou algum bug no sistema?", LocalDateTime.now());
 
         // Criando questionários base
-        QuestionarioEtapaBase questionarioEtapaBase1 = new QuestionarioEtapaBase("Questionário Etapa Base 1", LocalDateTime.now());
+        QuestionarioEtapaBase questionarioEtapaBase1 = new QuestionarioEtapaBase(cascata.getDescricao(), LocalDateTime.now());
 
         questionarioEtapaBase1.adicionarPerguntaBase(perguntaBase1);
         questionarioEtapaBase1.adicionarPerguntaBase(perguntaBase2);
