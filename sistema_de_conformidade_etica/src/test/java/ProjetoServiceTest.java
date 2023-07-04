@@ -108,7 +108,7 @@ public class ProjetoServiceTest {
     }
 
     @Test
-    public void testAddMembroEquipe() throws ParseException {
+    public void testAddMembroEquipe() {
         //Buscar o projeto
         Projeto projetoSalvo = projetoService.buscarProjeto("Sistema Cascata");
 
