@@ -8,24 +8,31 @@ public class Projeto {
 
     private String nome;
     private Date dataInicio;
+    private Date previsaoConclusao;
     private Date dataConclusao;
     private String status;
     private String tipo;
     private int quantidadeIteracao;
-    //private Date duracaoIteracao;
     private List<Iteracao> iteracoes;
     private ArrayList<MembroEquipe> equipe;
 
-    public Projeto(String nome, Date dataInicio, Date dataConclusao, String status, String tipo, int quantidadeIteracao) {
+    public Projeto(String nome, Date dataInicio, Date previsaoConclusao, String status, String tipo, int quantidadeIteracao) {
         this.nome = nome;
         this.dataInicio = dataInicio;
-        this.dataConclusao = dataConclusao;
+        this.previsaoConclusao = previsaoConclusao;
         this.status = status;
         this.tipo = tipo;
         this.quantidadeIteracao = quantidadeIteracao;
-        //this.duracaoIteracao = duracaoIteracao;
         this.iteracoes = new ArrayList<Iteracao>();
         this.equipe = new ArrayList<MembroEquipe>();
+    }
+
+    public void setDataConclusao(Date dataConclusao) {
+        this.dataConclusao = dataConclusao;
+    }
+
+    public Date getDataConclusao() {
+        return dataConclusao;
     }
 
     public void addMembroEquipe(MembroEquipe membro) {
@@ -60,12 +67,12 @@ public class Projeto {
         this.dataInicio = dataInicio;
     }
 
-    public Date getDataConclusao() {
-        return dataConclusao;
+    public Date getPrevisaoConclusao() {
+        return previsaoConclusao;
     }
 
-    public void setDataConclusao(Date dataConclusao) {
-        this.dataConclusao = dataConclusao;
+    public void setPrevisaoConclusao(Date previsaoConclusao) {
+        this.previsaoConclusao = previsaoConclusao;
     }
 
     public String getStatus() {
@@ -98,13 +105,6 @@ public class Projeto {
         }
     }
 
-    /*public Date getDuracaoIteracao() {
-        return duracaoIteracao;
-    }
-
-    public void setDuracaoIteracao(Date duracaoIteracao) {
-        this.duracaoIteracao = duracaoIteracao;
-    }*/
     @Override
     public String toString() {
         return "Projeto{" + "nome=" + nome + ", dataInicio=" + dataInicio + ", dataConclusao=" + dataConclusao + ", status=" + status + ", tipo=" + tipo + ", quantidadeIteracao=" + quantidadeIteracao + '}';

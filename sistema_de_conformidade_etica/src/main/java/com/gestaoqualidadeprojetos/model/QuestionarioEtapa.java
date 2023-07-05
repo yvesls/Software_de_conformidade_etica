@@ -13,8 +13,6 @@ public class QuestionarioEtapa extends QuestionarioEtapaBase{
     private LocalDateTime dataPrevisaoConclusao;
     private String status;
 
-    
-
     public QuestionarioEtapa(String nomeQuestionario, LocalDateTime dataCriacao) {
         super(nomeQuestionario, dataCriacao);
     }

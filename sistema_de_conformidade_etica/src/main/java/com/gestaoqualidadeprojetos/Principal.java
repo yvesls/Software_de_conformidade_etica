@@ -1,5 +1,4 @@
 package com.gestaoqualidadeprojetos;
-
 import com.gestaoqualidadeprojetos.model.EtapaIteracao;
 import com.gestaoqualidadeprojetos.model.Iteracao;
 import com.gestaoqualidadeprojetos.model.MembroEquipe;
@@ -36,8 +35,8 @@ public class Principal {
         Date dataFim = dateFormat.parse("01/08/2023");
         
         //Projeto
-        Projeto projetoCascata = new Projeto("Sistema Cascata", dataInicio, dataFim, "Em andamento", "CASCATA", 1);
-
+        Projeto projetoCascata = projetoService.criarProjeto("Sistema Cascata", dataInicio, dataFim, "Em andamento", "CASCATA", 1);
+        
         //Equipe
         MembroEquipe cliente = new MembroEquipe("João", "Silva", "joao@projeto.com", "123", "CLIENTE", false);
         MembroEquipe gerenteProjeto = new MembroEquipe("Maria", "Souza", "maria@projeto.com", "456", "GERENTE DE PROJETO", false);
@@ -45,16 +44,6 @@ public class Principal {
         MembroEquipe arquitetoSoftware = new MembroEquipe("Ana", "Santos", "ana@projeto.com", "101112", "ARQUITETO DE SOFTWARE", false);
         MembroEquipe desenvolvedor = new MembroEquipe("Pedro", "Gomes", "pedro@projeto.com", "131415", "DESENVOLVEDOR", false);
         MembroEquipe analistaQualidade = new MembroEquipe("Mariana", "Lima", "mariana@projeto.com", "161718", "ANALISTA DE QUALIDADE", false);
-
-        // Service de Membros de Equipe
-        MembroEquipeService membroService = new MembroEquipeService();
-
-        membroService.addMembro(cliente);
-        membroService.addMembro(gerenteProjeto);
-        membroService.addMembro(liderEquipe);
-        membroService.addMembro(arquitetoSoftware);
-        membroService.addMembro(desenvolvedor);
-        membroService.addMembro(analistaQualidade);
 
         projetoService.addMembroEquipe(projetoCascata, cliente);
         projetoService.addMembroEquipe(projetoCascata, gerenteProjeto);
@@ -64,26 +53,28 @@ public class Principal {
         projetoService.addMembroEquipe(projetoCascata, analistaQualidade);
 
         //Iteração
-        Iteracao cascata = new Iteracao("Iteração Única", new Date(), new Date(), new Date(), "ABERTA");
-        projetoService.criarIteracao(projetoCascata, cascata);
+        Iteracao cascata = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
+        projetoService.addIteracao(projetoCascata, cascata);
 
         //Etapas
-        EtapaIteracao iniciacao = new EtapaIteracao("Iniciação", 5);
-        EtapaIteracao requisitos = new EtapaIteracao("Requisitos", 20);
-        EtapaIteracao projeto = new EtapaIteracao("Projeto", 10);
-        EtapaIteracao desenvolvimento = new EtapaIteracao("Desenvolvimento", 40);
-        EtapaIteracao testeVerificacao = new EtapaIteracao("Teste e Verificação", 25);
+        EtapaIteracao iniciacao = new EtapaIteracao("Iniciação", 5, "Questionário Base");
+        EtapaIteracao requisitos = new EtapaIteracao("Requisitos", 20, "Questionário Base");
+        EtapaIteracao projeto = new EtapaIteracao("Projeto", 10, "Questionário Base");
+        EtapaIteracao desenvolvimento = new EtapaIteracao("Desenvolvimento", 40, "Questionário Base");
+        EtapaIteracao testeVerificacao = new EtapaIteracao("Teste e Verificação", 25, "Questionário Base");
 
-        projetoService.criarEtapa(projetoCascata, cascata, iniciacao);
-        projetoService.criarEtapa(projetoCascata, cascata, requisitos);
-        projetoService.criarEtapa(projetoCascata, cascata, projeto);
-        projetoService.criarEtapa(projetoCascata, cascata, desenvolvimento);
-        projetoService.criarEtapa(projetoCascata, cascata, testeVerificacao);
+        projetoService.addEtapa(projetoCascata, "Iteração Única", iniciacao);
+        projetoService.addEtapa(projetoCascata, "Iteração Única", requisitos);
+        projetoService.addEtapa(projetoCascata, "Iteração Única", projeto);
+        projetoService.addEtapa(projetoCascata, "Iteração Única", desenvolvimento);
+        projetoService.addEtapa(projetoCascata, "Iteração Única", testeVerificacao);
 
         //Salva o Projeto
-        projetoService.salvarProjeto(projetoCascata);
+        projetoCascata = projetoService.finalizarIteracao(projetoCascata, "Iteração Única", dataFim);
+        //projetoCascata = projetoService.finalizarProjeto(projetoCascata, dataFim);
+        projetoService.salvarProjetoNoSistema(projetoCascata);
         projetoService.verProjeto("Sistema Cascata");
-        //projetoService.listarProjeto();
+        
 
         /*QUESTIONÁRIO*/
         System.out.println("\n--------------------------QUESTIONÁRIO--------------------------\n");
