@@ -36,8 +36,7 @@ public class Principal {
         Date dataFim = dateFormat.parse("01/08/2023");
         
         //Projeto
-        Projeto projetoCascata = new Projeto("Sistema Cascata", dataInicio, dataFim, "Em andamento", "CASCATA", 1);
-
+        Projeto projetoCascata = projetoService.criarProjeto("Sistema Cascata", dataInicio, dataFim, "Em andamento", "CASCATA", 1);
         //Equipe
         MembroEquipe cliente = new MembroEquipe("João", "Silva", "joao@projeto.com", "123", "CLIENTE", false);
         MembroEquipe gerenteProjeto = new MembroEquipe("Maria", "Souza", "maria@projeto.com", "456", "GERENTE DE PROJETO", false);
@@ -64,21 +63,21 @@ public class Principal {
         projetoService.addMembroEquipe(projetoCascata, analistaQualidade);
 
         //Iteração
-        Iteracao cascata = new Iteracao("Iteração Única", new Date(), new Date(), new Date(), "ABERTA");
+        Iteracao cascata = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
         projetoService.criarIteracao(projetoCascata, cascata);
 
         //Etapas
-        EtapaIteracao iniciacao = new EtapaIteracao("Iniciação", 5);
-        EtapaIteracao requisitos = new EtapaIteracao("Requisitos", 20);
-        EtapaIteracao projeto = new EtapaIteracao("Projeto", 10);
-        EtapaIteracao desenvolvimento = new EtapaIteracao("Desenvolvimento", 40);
-        EtapaIteracao testeVerificacao = new EtapaIteracao("Teste e Verificação", 25);
+        EtapaIteracao iniciacao = new EtapaIteracao("Iniciação", 5, "Questionário Base");
+        EtapaIteracao requisitos = new EtapaIteracao("Requisitos", 20, "Questionário Base");
+        EtapaIteracao projeto = new EtapaIteracao("Projeto", 10, "Questionário Base");
+        EtapaIteracao desenvolvimento = new EtapaIteracao("Desenvolvimento", 40, "Questionário Base");
+        EtapaIteracao testeVerificacao = new EtapaIteracao("Teste e Verificação", 25, "Questionário Base");
 
-        projetoService.criarEtapa(projetoCascata, cascata, iniciacao);
-        projetoService.criarEtapa(projetoCascata, cascata, requisitos);
-        projetoService.criarEtapa(projetoCascata, cascata, projeto);
-        projetoService.criarEtapa(projetoCascata, cascata, desenvolvimento);
-        projetoService.criarEtapa(projetoCascata, cascata, testeVerificacao);
+        projetoService.criarEtapa(projetoCascata, "Iteração Única", iniciacao);
+        projetoService.criarEtapa(projetoCascata, "Iteração Única", requisitos);
+        projetoService.criarEtapa(projetoCascata, "Iteração Única", projeto);
+        projetoService.criarEtapa(projetoCascata, "Iteração Única", desenvolvimento);
+        projetoService.criarEtapa(projetoCascata, "Iteração Única", testeVerificacao);
 
         //Salva o Projeto
         projetoService.salvarProjeto(projetoCascata);

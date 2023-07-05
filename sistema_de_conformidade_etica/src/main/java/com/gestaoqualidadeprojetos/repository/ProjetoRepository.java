@@ -1,7 +1,16 @@
 package com.gestaoqualidadeprojetos.repository;
 
+import com.gestaoqualidadeprojetos.model.EtapaIteracao;
+import com.gestaoqualidadeprojetos.model.Iteracao;
+import com.gestaoqualidadeprojetos.model.MembroEquipe;
 import com.gestaoqualidadeprojetos.model.Projeto;
+import com.gestaoqualidadeprojetos.service.MembroEquipeService;
+import com.gestaoqualidadeprojetos.service.ProjetoService;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class ProjetoRepository {
@@ -10,8 +19,6 @@ public class ProjetoRepository {
 
     public ProjetoRepository() {
         projetos = new ArrayList<>();
-        //projetos.add(new Projeto("Sistema Cascata", new Date(), new Date(), "Em andamento", "CASCATA", 1, new Date()));
-        //projetos.add(new Projeto("Sistema Iterativo", new Date(), new Date(), "Em andamento", "ITERATIVO", 5, new Date()));
     }
 
     public void listarTodosProjetos() {
@@ -25,23 +32,29 @@ public class ProjetoRepository {
         Projeto projetoEncontrado = buscarProjeto(projeto.getNome());
         if (projetoEncontrado == null) {
             projetos.add(projeto);
-        } else {
-            // Atualiza o projeto existente
-            projetoEncontrado = projeto;
-            System.out.println("Projeto atualizado: " + projetoEncontrado.getNome());
+        } 
+        else {
+            int index = projetos.indexOf(projetoEncontrado);
+            //Se for encontrado
+            if (index != -1) {
+                projetos.set(index, projeto);
+                //System.out.println("Projeto atualizado: " + projeto.getNome());
+            }
         }
     }
 
     public Projeto buscarProjeto(String nome) {
         for (Projeto projetoSalvo : projetos) {
             if (projetoSalvo.getNome().equals(nome)) {
-                System.out.println("Projeto " + nome + " encontrado");
+                //System.out.println("Projeto " + nome + " encontrado");
                 return projetoSalvo;
             }
-            else
+            /*else{
                 System.out.println("Projeto " + nome + " não encontrado.");
+            }
+             */
         }
-        
+
         return null;
     }
 
