@@ -16,6 +16,10 @@ public class MembroEquipeService {
         membroRepository = new MembroEquipeRepository();
     }
 
+    public MembroEquipe criarMembro(String nome, String sobrenome, String email, String senha, String representante, boolean primeiroAcesso){
+        return new MembroEquipe(nome, sobrenome, email, senha, representante, primeiroAcesso);
+    }
+    
     public void addMembro(MembroEquipe membro) {
         membroRepository.adicionarMembro(membro);
     }

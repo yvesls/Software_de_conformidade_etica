@@ -27,7 +27,7 @@ public class Projeto {
         this.equipe = new ArrayList<MembroEquipe>();
     }
 
-    public void finalizarProjeto(Date dataConclusao) {
+    public void setDataConclusao(Date dataConclusao) {
         this.dataConclusao = dataConclusao;
     }
 

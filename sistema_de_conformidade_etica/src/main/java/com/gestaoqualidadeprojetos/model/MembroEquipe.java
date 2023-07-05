@@ -17,8 +17,6 @@ public class MembroEquipe {
         this.primeiroAcesso = primeiroAcesso;
     }
     
-    
-
     public String getNome() {
         return nome;
     }

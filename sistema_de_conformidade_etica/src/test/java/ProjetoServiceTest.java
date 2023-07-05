@@ -38,8 +38,8 @@ public class ProjetoServiceTest {
         /*THEN*/
         assertNotNull(projetoIterativo);
         assertNotNull(projetoIterativo.getDataInicio());
-        assertNotNull(projetoIterativo.getDataConclusao());
-        assertTrue(projetoIterativo.getDataConclusao().after(projetoIterativo.getDataInicio()));
+        assertNotNull(projetoIterativo.getPrevisaoConclusao());
+        assertTrue(projetoIterativo.getPrevisaoConclusao().after(projetoIterativo.getDataInicio()));
         assertEquals("Sistema Iterativo", projetoIterativo.getNome());
         assertEquals("Em andamento", projetoIterativo.getStatus());
         assertEquals("ITERATIVO", projetoIterativo.getTipo());
@@ -57,11 +57,12 @@ public class ProjetoServiceTest {
         
         /*WHEN*/
         Iteracao sprint1 = new Iteracao("Sprint 1", dataInicio, dataFim, "ABERTA");
-        projetoService.criarIteracao(projetoIterativo, sprint1);
+        projetoService.addIteracao(projetoIterativo, sprint1);
 
         /*THEN*/
         assertEquals(1, projetoIterativo.getIteracoes().size());
         assertEquals("Sprint 1", projetoIterativo.getIteracoes().get(0).getDescricao());
+        assertEquals("ABERTA", projetoIterativo.getIteracoes().get(0).getStatus());
     }
     
     @Test
@@ -77,11 +78,11 @@ public class ProjetoServiceTest {
         EtapaIteracao testeVerificacao = new EtapaIteracao("Teste e Verificação", 25, "Sprint 2");
 
         /*WHEN*/
-        projetoService.criarEtapa(projetoIterativo, "Sprint 1", iniciacao);
-        projetoService.criarEtapa(projetoIterativo, "Sprint 1", requisitos);
-        projetoService.criarEtapa(projetoIterativo, "Sprint 1", projeto);
-        projetoService.criarEtapa(projetoIterativo, "Sprint 1", desenvolvimento);
-        projetoService.criarEtapa(projetoIterativo, "Sprint 1", testeVerificacao);
+        projetoService.addEtapa(projetoIterativo, "Sprint 1", iniciacao);
+        projetoService.addEtapa(projetoIterativo, "Sprint 1", requisitos);
+        projetoService.addEtapa(projetoIterativo, "Sprint 1", projeto);
+        projetoService.addEtapa(projetoIterativo, "Sprint 1", desenvolvimento);
+        projetoService.addEtapa(projetoIterativo, "Sprint 1", testeVerificacao);
 
         /*THEN*/
         assertEquals(5, projetoIterativo.getIteracoes().get(0).getEtapas().size());
@@ -133,12 +134,23 @@ public class ProjetoServiceTest {
     @Test
     //@Order(5)
     public void testSalvarProjeto() throws ParseException {
+        /*GIVEN*/
         testAddMembroEquipe();
         
-        /*GIVEN/WHEN*/
-        projetoService.salvarProjeto(projetoIterativo);
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date dataInicio = dateFormat.parse("01/07/2023");
+        Date dataFim = dateFormat.parse("01/08/2023");
+        
+        /*WHEN*/
+        projetoService.salvarProjetoNoSistema(projetoIterativo);
+        projetoIterativo = projetoService.finalizarIteracao(projetoIterativo, "Sprint 1", dataFim);
+        projetoIterativo = projetoService.finalizarProjeto(projetoIterativo, dataFim);
+        
+        assertTrue(projetoIterativo.getDataConclusao().after(projetoIterativo.getDataInicio()));
         
         /*THEN*/
-        assertEquals(projetoIterativo, projetoService.buscarProjeto("Sistema Iterativo"));
+        assertEquals(projetoIterativo, projetoService.buscarProjetoSalvo("Sistema Iterativo"));
+        assertEquals("FINALIZADA", projetoIterativo.getIteracoes().get(0).getStatus());
+        assertEquals("Concluído", projetoIterativo.getStatus());
     }
 }

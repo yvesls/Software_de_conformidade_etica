@@ -13,34 +13,11 @@ public class Iteracao {
     private ArrayList<EtapaIteracao> etapas;
 
     public Iteracao(String descricao, Date dataInicio, Date previsaoConclusao, String status) {
-        if (validarDatas(dataInicio, previsaoConclusao)) {
-            this.descricao = descricao;
-            this.dataInicio = dataInicio;
-            this.previsaoConclusao = previsaoConclusao;
-            this.status = status;
-            this.etapas = new ArrayList();
-        }
-    }
-
-    public boolean validarDatas(Date dataInicial, Date dataFinal) {
-        if (dataInicial.compareTo(dataFinal) < 0) {
-            return true;
-        }
-        System.out.println("A previsão de conclusão da Iteração deve ser maior que a data inicial.");
-        return false;
-    }
-
-    public void finalizarIteracao(Date dataConclusao) {
-        // Converte a data de previsão em tempo (milissegundos) para calcular
-        long tempoDataPrevisaoConclusao = previsaoConclusao.getTime() - (long) (previsaoConclusao.getTime() * 0.25);
-        Date DataPrevisaoConclusao = new Date(tempoDataPrevisaoConclusao);
-        if (this.dataConclusao.compareTo(DataPrevisaoConclusao) >= 0) {
-            this.dataConclusao = DataPrevisaoConclusao;
-            this.status = "FINALIZADA";
-            System.out.println("Iteração finalizada.");
-        } else {
-            System.out.println("A Iteração só poderá ser finalizada após cumprir 75% da data prevista de conclusão.");
-        }
+        this.descricao = descricao;
+        this.dataInicio = dataInicio;
+        this.previsaoConclusao = previsaoConclusao;
+        this.status = status;
+        this.etapas = new ArrayList();
     }
 
     public void addEtapa(EtapaIteracao etapa) {
