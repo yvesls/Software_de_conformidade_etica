@@ -9,6 +9,7 @@ import com.gestaoqualidadeprojetos.model.MembroEquipe;
 import com.gestaoqualidadeprojetos.model.Peso;
 import com.gestaoqualidadeprojetos.model.ResultadoMembroEquipe;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -30,10 +31,19 @@ public class ResultadoMembroEquipeRepository {
           return listaResultadosMembroEquipe;
     }
     
+    public void save(ResultadoMembroEquipe resultadoMembroEquipe) {
+        listaResultadosMembroEquipe.add(resultadoMembroEquipe);
+    }
+    
+    public void remove(ResultadoMembroEquipe resultadoMembroEquipe) {
+        var list = new ArrayList<>(Arrays.asList(listaResultadosMembroEquipe));
+        list.removeIf(item -> item.equals(resultadoMembroEquipe));
+    }
+    
     private ArrayList<ResultadoMembroEquipe> generateAllMock() {
         listaResultadosMembroEquipe = new ArrayList<ResultadoMembroEquipe>();
-        ArrayList<Peso> pesos = new PesoRepository().getListaPesos();
-        ArrayList<Classificacao> classificacoes = new ClassificacaoRepository().getListaClassificacao();
+        ArrayList<Peso> pesos = new PesoRepository().getAll();
+        ArrayList<Classificacao> classificacoes = new ClassificacaoRepository().getAll();
         List<MembroEquipe> membros = new MembroEquipeRepository().listarMembros();
         var membro1 = new ResultadoMembroEquipe(28, 36, 0.778, pesos.get(0), classificacoes.get(0), membros.get(0), "Iteração 1");
         var membro2 = new ResultadoMembroEquipe(29, 47, 0.617, pesos.get(1), classificacoes.get(1), membros.get(1), "Iteração 1");
@@ -62,9 +72,5 @@ public class ResultadoMembroEquipeRepository {
             return null;
         }
         return listaResultados;
-    }
-
-    public ArrayList<ResultadoMembroEquipe> getListaResultadosMembroEquipe() {
-        return listaResultadosMembroEquipe;
     }
 }

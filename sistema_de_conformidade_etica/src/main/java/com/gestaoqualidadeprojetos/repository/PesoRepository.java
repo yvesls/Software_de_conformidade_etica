@@ -4,10 +4,12 @@
  */
 package com.gestaoqualidadeprojetos.repository;
 
+import com.gestaoqualidadeprojetos.model.Classificacao;
 import com.gestaoqualidadeprojetos.model.MembroEquipe;
 import com.gestaoqualidadeprojetos.model.Peso;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -28,6 +30,15 @@ public class PesoRepository {
     
     public ArrayList<Peso> getAll() {
           return listaPesos;
+    }
+    
+    public void save(Peso peso) {
+        listaPesos.add(peso);
+    }
+    
+    public void remove(Peso peso) {
+        var list = new ArrayList<>(Arrays.asList(listaPesos));
+        list.removeIf(item -> item.equals(peso));
     }
     
     private ArrayList<Peso> generateAllMock() {
@@ -55,9 +66,5 @@ public class PesoRepository {
             }
         }
         return null;
-    }
-
-    public ArrayList<Peso> getListaPesos() {
-        return listaPesos;
     }
 }

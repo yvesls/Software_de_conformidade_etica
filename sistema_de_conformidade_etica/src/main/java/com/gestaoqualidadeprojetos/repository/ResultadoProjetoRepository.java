@@ -6,6 +6,7 @@ package com.gestaoqualidadeprojetos.repository;
 
 import com.gestaoqualidadeprojetos.model.ResultadoProjeto;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  *
@@ -26,6 +27,15 @@ public class ResultadoProjetoRepository {
           return listaResultadosProjeto;
     }
     
+    public void save(ResultadoProjeto resultadoProjeto) {
+        listaResultadosProjeto.add(resultadoProjeto);
+    }
+    
+    public void remove(ResultadoProjeto resultadoProjeto) {
+        var list = new ArrayList<>(Arrays.asList(listaResultadosProjeto));
+        list.removeIf(item -> item.equals(resultadoProjeto));
+    }
+    
     private ArrayList<ResultadoProjeto> generateAllMock() {
         listaResultadosProjeto = new ArrayList<ResultadoProjeto>();
         return listaResultadosProjeto;
@@ -38,9 +48,5 @@ public class ResultadoProjetoRepository {
             }
         }
         return null;
-    }
-
-    public ArrayList<ResultadoProjeto> getListaResultadosProjeto() {
-        return listaResultadosProjeto;
     }
 }
