@@ -8,7 +8,6 @@ import com.gestaoqualidadeprojetos.model.QuestionarioEtapaBase;
 import com.gestaoqualidadeprojetos.model.QuestionarioEtapa;
 import com.gestaoqualidadeprojetos.model.Resposta;
 import com.gestaoqualidadeprojetos.service.ProjetoService;
-import com.gestaoqualidadeprojetos.service.MembroEquipeService;
 import com.gestaoqualidadeprojetos.service.PerguntaBaseService;
 import com.gestaoqualidadeprojetos.service.QuestionarioEtapaBaseService;
 import com.gestaoqualidadeprojetos.service.QuestionarioEtapaService;
