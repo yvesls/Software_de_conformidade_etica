@@ -4,7 +4,6 @@
  */
 package com.gestaoqualidadeprojetos.model;
 
-import java.util.ArrayList;
 
 /**
  *

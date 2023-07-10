@@ -1,6 +1,5 @@
 package com.gestaoqualidadeprojetos.service;
 import com.gestaoqualidadeprojetos.model.EtapaIteracao;
-import com.gestaoqualidadeprojetos.model.Iteracao;
 import com.gestaoqualidadeprojetos.model.Projeto;
 import java.util.List;
 
