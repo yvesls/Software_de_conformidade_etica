@@ -29,8 +29,8 @@ public class ResultadoProjetoRepositoryTest {
     @Test
     public void testGetByProjetoExistingProjetoReturns() {
         // Given
-        LocalDateTime dataInicio = LocalDateTime.parse("01/07/2023");
-        LocalDateTime dataFim = LocalDateTime.parse("01/08/2023");
+        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
+        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
         Projeto projeto = new Projeto("Sistema Cascata", dataInicio, dataFim, "Em andamento", "CASCATA", 1);
         
         ResultadoProjeto expectedResultadoProjeto = resultadoProjetoRepository.getByProjeto(projeto);
@@ -45,8 +45,8 @@ public class ResultadoProjetoRepositoryTest {
     @Test
     public void testGetByProjetoNonExistingProjetoReturnsNull() {
         // Given
-        LocalDateTime dataInicio = LocalDateTime.parse("01/07/2023");
-        LocalDateTime dataFim = LocalDateTime.parse("01/08/2023");
+        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
+        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
         Projeto projeto = new Projeto("Sistema Cascata", dataInicio, dataFim, "Em andamento", "CASCATA", 1);
 
         // When
@@ -71,8 +71,8 @@ public class ResultadoProjetoRepositoryTest {
     @Test
     public void testGetByProjetoValidProjetoReturnsCorrect() {
         // Given
-        LocalDateTime dataInicio = LocalDateTime.parse("01/07/2023");
-        LocalDateTime dataFim = LocalDateTime.parse("01/08/2023");
+        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
+        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
         Projeto projeto = new Projeto("Sistema Cascata", dataInicio, dataFim, "Em andamento", "CASCATA", 1);
 
         // When

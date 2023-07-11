@@ -28,8 +28,8 @@ public class ProjetoServiceTest {
     //@Order(1)
     public void testCriarProjetoVazio() throws ParseException {
         /*GIVEN*/
-        LocalDateTime dataInicio = LocalDateTime.parse("01/07/2023");
-        LocalDateTime dataFim = LocalDateTime.parse("01/08/2023");
+        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
+        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
         
         /*WHEN*/
         projetoIterativo = new Projeto("Sistema Iterativo", dataInicio, dataFim, "Em andamento", "ITERATIVO", 2);
@@ -50,8 +50,8 @@ public class ProjetoServiceTest {
         testCriarProjetoVazio();
         
         /*GIVEN*/
-        LocalDateTime dataInicio = LocalDateTime.parse("13/07/2023");
-        LocalDateTime dataFim = LocalDateTime.parse("20/07/2023");
+        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
+        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
         
         /*WHEN*/
         Iteracao sprint1 = new Iteracao("Sprint 1", dataInicio, dataFim, "ABERTA");
@@ -135,8 +135,8 @@ public class ProjetoServiceTest {
         /*GIVEN*/
         testAddMembroEquipe();
         
-        LocalDateTime dataInicio = LocalDateTime.parse("01/07/2023");
-        LocalDateTime dataFim = LocalDateTime.parse("01/08/2023");
+        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
+        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
         
         /*WHEN*/
         projetoService.salvarProjetoNoSistema(projetoIterativo);

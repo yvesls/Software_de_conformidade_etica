@@ -26,8 +26,8 @@ public class Principal {
         ProjetoService projetoService = new ProjetoService();
         
         //Criando as datas
-        LocalDateTime dataInicio = LocalDateTime.parse("01/07/2023");
-        LocalDateTime dataFim = LocalDateTime.parse("01/08/2023");
+        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
+        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
         
         //Projeto
         Projeto projetoCascata = projetoService.criarProjeto("Sistema Cascata", dataInicio, dataFim, "Em andamento", "CASCATA", 1);

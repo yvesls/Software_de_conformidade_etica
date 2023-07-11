@@ -42,7 +42,7 @@ public class IteracaoService extends ValidarDatasService {
         int i = buscarIndexIteracao(projeto, nomeIteracao);
         if (i >= 0) {
                 // Converte a data de previsão em tempo (milissegundos) para calcular
-            var DataPrevisaoConclusao = LocalDateTime.parse("01/08/2023");
+            var DataPrevisaoConclusao = LocalDateTime.parse("2023-08-01T12:30:54");
             if (DataPrevisaoConclusao.compareTo(dataConclusao) <= 0) {
                 projeto.getIteracoes().get(i).setStatus("FINALIZADA");
                 projeto.getIteracoes().get(i).setDataConclusao(dataConclusao);

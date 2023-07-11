@@ -28,8 +28,8 @@ public class ResultadoMembroEquipeRepositoryTest {
     @Test
     public void testGetByIteracaoExistingIteracaoReturns() {
         // Given
-        LocalDateTime dataInicio = LocalDateTime.parse("01/07/2023");
-        LocalDateTime dataFim = LocalDateTime.parse("01/08/2023");
+        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
+        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
         Iteracao iteracao = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
         
         List<ResultadoMembroEquipe> expectedListResultadoMembroEquipe = resultadoMembroEquipeRepository.getByIteracao(iteracao);
@@ -45,8 +45,8 @@ public class ResultadoMembroEquipeRepositoryTest {
     @Test
     public void testGetByIteracaoNonExistingIteracaoReturnsNull() {
         // Given
-        LocalDateTime dataInicio = LocalDateTime.parse("01/07/2023");
-        LocalDateTime dataFim = LocalDateTime.parse("01/08/2023");
+        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
+        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
         Iteracao iteracao = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
 
         // When
@@ -71,8 +71,8 @@ public class ResultadoMembroEquipeRepositoryTest {
     @Test
     public void testGetByIteracaoValidIteracaoReturnsCorrect() {
         // Given
-        LocalDateTime dataInicio = LocalDateTime.parse("01/07/2023");
-        LocalDateTime dataFim = LocalDateTime.parse("01/08/2023");
+        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
+        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
         Iteracao iteracao = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
 
         // When
@@ -98,8 +98,8 @@ public class ResultadoMembroEquipeRepositoryTest {
     @Test
     public void testGetByIteracaoExistingIteracaoCheckProperties() {
         // Given
-        LocalDateTime dataInicio = LocalDateTime.parse("01/07/2023");
-        LocalDateTime dataFim = LocalDateTime.parse("01/08/2023");
+        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
+        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
         Iteracao iteracao = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
 
         // When

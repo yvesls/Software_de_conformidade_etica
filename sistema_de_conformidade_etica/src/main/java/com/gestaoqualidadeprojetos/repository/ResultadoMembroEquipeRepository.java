@@ -47,8 +47,8 @@ public class ResultadoMembroEquipeRepository {
     private ArrayList<ResultadoMembroEquipe> generateAllMock() throws ParseException {
         listaResultadosMembroEquipe = new ArrayList<ResultadoMembroEquipe>();
         ArrayList<Peso> pesos = new PesoRepository().getAll();
-        LocalDateTime dataInicio = LocalDateTime.now();
-        LocalDateTime dataFim = LocalDateTime.now();
+        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
+        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
         Iteracao cascata = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
         ArrayList<Classificacao> classificacoes = new ClassificacaoRepository().getAll();
         List<MembroEquipe> membros = new MembroEquipeRepository().listarMembros();

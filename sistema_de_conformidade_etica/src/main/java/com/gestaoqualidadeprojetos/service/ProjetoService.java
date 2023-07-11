@@ -30,7 +30,7 @@ public class ProjetoService extends ValidarDatasService {
 
     public Projeto finalizarProjeto(Projeto projeto, LocalDateTime dataConclusao) {
             // Converte a data de previsão em tempo (milissegundos) para calcular
-            LocalDateTime DataPrevisaoConclusao = LocalDateTime.parse("01/08/2023");
+            LocalDateTime DataPrevisaoConclusao = LocalDateTime.parse("2023-08-01T12:30:54");
             if (DataPrevisaoConclusao.compareTo(dataConclusao) <= 0) {
                 projeto.setStatus("Concluído");
                 projeto.setDataConclusao(dataConclusao);
