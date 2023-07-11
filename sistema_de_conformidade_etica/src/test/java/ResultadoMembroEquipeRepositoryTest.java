@@ -1,21 +1,37 @@
+import com.gestaoqualidadeprojetos.model.Iteracao;
 import com.gestaoqualidadeprojetos.model.ResultadoMembroEquipe;
 import com.gestaoqualidadeprojetos.repository.ResultadoMembroEquipeRepository;
+import java.text.ParseException;
+import java.time.LocalDateTime;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ResultadoMembroEquipeRepositoryTest {
 
-    private final ResultadoMembroEquipeRepository resultadoMembroEquipeRepository = new ResultadoMembroEquipeRepository();
+    private ResultadoMembroEquipeRepository resultadoMembroEquipeRepository;
+    
+    public ResultadoMembroEquipeRepositoryTest() {
+        try {
+            this.resultadoMembroEquipeRepository = new ResultadoMembroEquipeRepository();
+        } catch (ParseException ex) {
+            Logger.getLogger(ResultadoMembroEquipeRepositoryTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
     @Test
     public void testGetByIteracaoExistingIteracaoReturns() {
         // Given
-        String iteracao = "Iteração 1";
+        LocalDateTime dataInicio = LocalDateTime.parse("01/07/2023");
+        LocalDateTime dataFim = LocalDateTime.parse("01/08/2023");
+        Iteracao iteracao = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
+        
         List<ResultadoMembroEquipe> expectedListResultadoMembroEquipe = resultadoMembroEquipeRepository.getByIteracao(iteracao);
 
         // When
@@ -29,7 +45,9 @@ public class ResultadoMembroEquipeRepositoryTest {
     @Test
     public void testGetByIteracaoNonExistingIteracaoReturnsNull() {
         // Given
-        String iteracao = "Iteração 2";
+        LocalDateTime dataInicio = LocalDateTime.parse("01/07/2023");
+        LocalDateTime dataFim = LocalDateTime.parse("01/08/2023");
+        Iteracao iteracao = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
 
         // When
         List<ResultadoMembroEquipe> listResultadoMembroEquipe = resultadoMembroEquipeRepository.getByIteracao(iteracao);
@@ -53,7 +71,9 @@ public class ResultadoMembroEquipeRepositoryTest {
     @Test
     public void testGetByIteracaoValidIteracaoReturnsCorrect() {
         // Given
-        String iteracao = "Iteração 1";
+        LocalDateTime dataInicio = LocalDateTime.parse("01/07/2023");
+        LocalDateTime dataFim = LocalDateTime.parse("01/08/2023");
+        Iteracao iteracao = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
 
         // When
         List<ResultadoMembroEquipe> listResultadoMembroEquipe = resultadoMembroEquipeRepository.getByIteracao(iteracao);
@@ -66,7 +86,7 @@ public class ResultadoMembroEquipeRepositoryTest {
     @Test
     public void testGetByIteracaoInvalidIteracaoReturnsNull() {
         // Given
-        String iteracao = null;
+        Iteracao iteracao = null;
 
         // When
         List<ResultadoMembroEquipe> listResultadoMembroEquipe = resultadoMembroEquipeRepository.getByIteracao(iteracao);
@@ -78,7 +98,9 @@ public class ResultadoMembroEquipeRepositoryTest {
     @Test
     public void testGetByIteracaoExistingIteracaoCheckProperties() {
         // Given
-        String iteracao = "Iteração 1";
+        LocalDateTime dataInicio = LocalDateTime.parse("01/07/2023");
+        LocalDateTime dataFim = LocalDateTime.parse("01/08/2023");
+        Iteracao iteracao = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
 
         // When
         List<ResultadoMembroEquipe> listResultadoMembroEquipe = resultadoMembroEquipeRepository.getByIteracao(iteracao);

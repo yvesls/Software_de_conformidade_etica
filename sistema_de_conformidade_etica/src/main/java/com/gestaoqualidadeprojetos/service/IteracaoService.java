@@ -2,6 +2,7 @@ package com.gestaoqualidadeprojetos.service;
 
 import com.gestaoqualidadeprojetos.model.Iteracao;
 import com.gestaoqualidadeprojetos.model.Projeto;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
@@ -36,13 +37,12 @@ public class IteracaoService extends ValidarDatasService {
         return -1;
     }
 
-    public Projeto finalizarIteracao(Projeto projeto, String nomeIteracao, Date dataConclusao) {
+    public Projeto finalizarIteracao(Projeto projeto, String nomeIteracao, LocalDateTime dataConclusao) {
         //Busca a iteração dentro do projeto
         int i = buscarIndexIteracao(projeto, nomeIteracao);
         if (i >= 0) {
                 // Converte a data de previsão em tempo (milissegundos) para calcular
-                long tempoDataPrevisaoConclusao = projeto.getIteracoes().get(i).getPrevisaoConclusao().getTime() - (long) (projeto.getIteracoes().get(i).getPrevisaoConclusao().getTime() * 0.25);
-                Date DataPrevisaoConclusao = new Date(tempoDataPrevisaoConclusao);
+            var DataPrevisaoConclusao = LocalDateTime.parse("01/08/2023");
             if (DataPrevisaoConclusao.compareTo(dataConclusao) <= 0) {
                 projeto.getIteracoes().get(i).setStatus("FINALIZADA");
                 projeto.getIteracoes().get(i).setDataConclusao(dataConclusao);

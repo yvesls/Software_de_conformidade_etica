@@ -1,6 +1,6 @@
+import com.gestaoqualidadeprojetos.model.Iteracao;
 import com.gestaoqualidadeprojetos.model.ResultadoIteracao;
 import com.gestaoqualidadeprojetos.repository.ResultadoIteracaoRepository;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
@@ -15,7 +15,9 @@ public class ResultadoIteracaoRepositoryTest {
     @Test
     public void testGetByIteracaoExistingIteracaoReturns() {
         // Given
-        String iteracao = "Iteração 1";
+        LocalDateTime dataInicio = LocalDateTime.parse("01/07/2023");
+        LocalDateTime dataFim = LocalDateTime.parse("01/08/2023");
+        Iteracao iteracao = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
         ResultadoIteracao expectedResultadoIteracao = resultadoIteracaoRepository.getByIteracao(iteracao);
 
         // When
@@ -29,7 +31,9 @@ public class ResultadoIteracaoRepositoryTest {
     @Test
     public void testGetByIteracaoNonExistingIteracaoReturnsNull() {
         // Given
-        String iteracao = "Iteração 2";
+        LocalDateTime dataInicio = LocalDateTime.parse("01/07/2023");
+        LocalDateTime dataFim = LocalDateTime.parse("01/08/2023");
+        Iteracao iteracao = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
 
         // When
         ResultadoIteracao resultadoIteracao = resultadoIteracaoRepository.getByIteracao(iteracao);
@@ -53,7 +57,9 @@ public class ResultadoIteracaoRepositoryTest {
     @Test
     public void testGetByIteracaoValidIteracaoReturnsCorrect() {
         // Given
-        String iteracao = "Iteração 1";
+        LocalDateTime dataInicio = LocalDateTime.parse("01/07/2023");
+        LocalDateTime dataFim = LocalDateTime.parse("01/08/2023");
+        Iteracao iteracao = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
 
         // When
         ResultadoIteracao resultadoIteracao = resultadoIteracaoRepository.getByIteracao(iteracao);
@@ -66,7 +72,7 @@ public class ResultadoIteracaoRepositoryTest {
     @Test
     public void testGetByIteracaoInvalidIteracaoReturnsNull() {
         // Given
-        String iteracao = null;
+        Iteracao iteracao = null;
 
         // When
         ResultadoIteracao resultadoIteracao = resultadoIteracaoRepository.getByIteracao(iteracao);
@@ -78,7 +84,9 @@ public class ResultadoIteracaoRepositoryTest {
     @Test
     public void testGetByIteracaoExistingIteracaoCheckProperties() {
         // Given
-        String iteracao = "Iteração 1";
+        LocalDateTime dataInicio = LocalDateTime.parse("01/07/2023");
+        LocalDateTime dataFim = LocalDateTime.parse("01/08/2023");
+        Iteracao iteracao = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
 
         // When
         ResultadoIteracao resultadoIteracao = resultadoIteracaoRepository.getByIteracao(iteracao);

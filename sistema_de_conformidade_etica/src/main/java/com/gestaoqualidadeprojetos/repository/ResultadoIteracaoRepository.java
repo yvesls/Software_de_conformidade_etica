@@ -1,7 +1,7 @@
 package com.gestaoqualidadeprojetos.repository;
 
 import com.gestaoqualidadeprojetos.model.Classificacao;
-import com.gestaoqualidadeprojetos.model.Peso;
+import com.gestaoqualidadeprojetos.model.Iteracao;
 import com.gestaoqualidadeprojetos.model.ResultadoIteracao;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ public class  ResultadoIteracaoRepository {
         generateAllMock();
     }
     
-    public ResultadoIteracao getByIteracao(String iteracao) {
+    public ResultadoIteracao getByIteracao(Iteracao iteracao) {
         return getMockByIteracao(iteracao);
     }
     
@@ -48,7 +48,7 @@ public class  ResultadoIteracaoRepository {
         return listaResultadosIteracao;
     }
     
-    private ResultadoIteracao getMockByIteracao(String iteracao) {
+    private ResultadoIteracao getMockByIteracao(Iteracao iteracao) {
         for(ResultadoIteracao ri : listaResultadosIteracao) {
             if(ri.getIteracao().equals(iteracao)) {
                 return ri;

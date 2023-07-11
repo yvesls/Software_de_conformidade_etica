@@ -6,6 +6,7 @@ package com.gestaoqualidadeprojetos.service;
 
 import com.gestaoqualidadeprojetos.business.ProcessaResultadoService;
 import com.gestaoqualidadeprojetos.model.Iteracao;
+import com.gestaoqualidadeprojetos.model.Projeto;
 import com.gestaoqualidadeprojetos.model.ResultadoIteracao;
 import com.gestaoqualidadeprojetos.model.ResultadoMembroEquipe;
 import com.gestaoqualidadeprojetos.model.ResultadoProjeto;
@@ -20,9 +21,19 @@ import java.util.ArrayList;
  * @author Note102
  */
 public class ResultadoService {
-    private static final ResultadoProjetoRepository resultadoProjetoRepositoriy = new ResultadoProjetoRepository();
-    private static final ResultadoMembroEquipeRepository resultadoMembroEquipeRepository = new ResultadoMembroEquipeRepository();
-    private static final ResultadoIteracaoRepository resultadoIteracaoRepositoriy = new ResultadoIteracaoRepository();
+    private ResultadoProjetoRepository resultadoProjetoRepositoriy;
+    private ResultadoMembroEquipeRepository resultadoMembroEquipeRepository;
+    private ResultadoIteracaoRepository resultadoIteracaoRepositoriy;
+    
+    public ResultadoService() {
+        try{
+            this.resultadoProjetoRepositoriy = new ResultadoProjetoRepository();
+            this.resultadoMembroEquipeRepository = new ResultadoMembroEquipeRepository();
+            this.resultadoIteracaoRepositoriy = new ResultadoIteracaoRepository();
+        }catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
     
     public void gerarResultado(ProcessaResultadoService processaResultado, Iteracao iteracao) throws ParseException{
         // chamar chain de processo de resultados
@@ -45,7 +56,7 @@ public class ResultadoService {
         return resultado;
     }
     
-    public ResultadoProjeto getResultadoProjeto(Iteracao projeto) throws Exception {
+    public ResultadoProjeto getResultadoProjeto(Projeto projeto) throws Exception {
         var resultado = resultadoProjetoRepositoriy.getByProjeto(projeto);
         if(resultado == null) { // validação será feita em alguma camada inferior
             throw new Exception("Não existe resultado para o projeto atual. As iterações não foram todas completadas ainda.");

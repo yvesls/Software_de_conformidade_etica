@@ -8,12 +8,12 @@ import com.gestaoqualidadeprojetos.service.ProjetoService;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import org.junit.jupiter.api.Test;
 import java.util.Date;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import org.junit.jupiter.api.Order;
 
 public class ProjetoServiceTest {
 
@@ -28,9 +28,8 @@ public class ProjetoServiceTest {
     //@Order(1)
     public void testCriarProjetoVazio() throws ParseException {
         /*GIVEN*/
-        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        Date dataInicio = dateFormat.parse("01/07/2023");
-        Date dataFim = dateFormat.parse("01/08/2023");
+        LocalDateTime dataInicio = LocalDateTime.parse("01/07/2023");
+        LocalDateTime dataFim = LocalDateTime.parse("01/08/2023");
         
         /*WHEN*/
         projetoIterativo = new Projeto("Sistema Iterativo", dataInicio, dataFim, "Em andamento", "ITERATIVO", 2);
@@ -39,7 +38,7 @@ public class ProjetoServiceTest {
         assertNotNull(projetoIterativo);
         assertNotNull(projetoIterativo.getDataInicio());
         assertNotNull(projetoIterativo.getPrevisaoConclusao());
-        assertTrue(projetoIterativo.getPrevisaoConclusao().after(projetoIterativo.getDataInicio()));
+        assertTrue(projetoIterativo.getPrevisaoConclusao().isAfter(projetoIterativo.getDataInicio()));
         assertEquals("Sistema Iterativo", projetoIterativo.getNome());
         assertEquals("Em andamento", projetoIterativo.getStatus());
         assertEquals("ITERATIVO", projetoIterativo.getTipo());
@@ -51,9 +50,8 @@ public class ProjetoServiceTest {
         testCriarProjetoVazio();
         
         /*GIVEN*/
-        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        Date dataInicio = dateFormat.parse("13/07/2023");
-        Date dataFim = dateFormat.parse("20/07/2023");
+        LocalDateTime dataInicio = LocalDateTime.parse("13/07/2023");
+        LocalDateTime dataFim = LocalDateTime.parse("20/07/2023");
         
         /*WHEN*/
         Iteracao sprint1 = new Iteracao("Sprint 1", dataInicio, dataFim, "ABERTA");
@@ -137,16 +135,15 @@ public class ProjetoServiceTest {
         /*GIVEN*/
         testAddMembroEquipe();
         
-        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        Date dataInicio = dateFormat.parse("01/07/2023");
-        Date dataFim = dateFormat.parse("01/08/2023");
+        LocalDateTime dataInicio = LocalDateTime.parse("01/07/2023");
+        LocalDateTime dataFim = LocalDateTime.parse("01/08/2023");
         
         /*WHEN*/
         projetoService.salvarProjetoNoSistema(projetoIterativo);
         projetoIterativo = projetoService.finalizarIteracao(projetoIterativo, "Sprint 1", dataFim);
         projetoIterativo = projetoService.finalizarProjeto(projetoIterativo, dataFim);
         
-        assertTrue(projetoIterativo.getDataConclusao().after(projetoIterativo.getDataInicio()));
+        assertTrue(projetoIterativo.getDataConclusao().isAfter(projetoIterativo.getDataInicio()));
         
         /*THEN*/
         assertEquals(projetoIterativo, projetoService.buscarProjetoSalvo("Sistema Iterativo"));

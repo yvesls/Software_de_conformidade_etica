@@ -1,10 +1,11 @@
 package com.gestaoqualidadeprojetos.service;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public abstract class ValidarDatasService {
     
-    public boolean validarDatas(Date dataInicial, Date dataFinal) {
+    public boolean validarDatas(LocalDateTime dataInicial, LocalDateTime dataFinal) {
         if (dataInicial.compareTo(dataFinal) < 0) {
             return true;
         }

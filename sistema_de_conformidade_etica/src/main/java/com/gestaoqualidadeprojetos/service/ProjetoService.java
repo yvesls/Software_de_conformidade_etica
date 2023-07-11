@@ -5,6 +5,7 @@ import com.gestaoqualidadeprojetos.model.Iteracao;
 import com.gestaoqualidadeprojetos.model.MembroEquipe;
 import com.gestaoqualidadeprojetos.model.Projeto;
 import com.gestaoqualidadeprojetos.repository.ProjetoRepository;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class ProjetoService extends ValidarDatasService {
@@ -20,17 +21,16 @@ public class ProjetoService extends ValidarDatasService {
         this.etapaService = new EtapaService();
     }
 
-    public Projeto criarProjeto(String nome, Date dataInicio, Date previsaoConclusao, String status, String tipo, int quantidadeIteracao) {
+    public Projeto criarProjeto(String nome, LocalDateTime dataInicio, LocalDateTime previsaoConclusao, String status, String tipo, int quantidadeIteracao) {
         if (validarDatas(dataInicio, previsaoConclusao)) {
             return new Projeto(nome, dataInicio, previsaoConclusao, status, tipo, quantidadeIteracao);
         }
         return null;
     }
 
-    public Projeto finalizarProjeto(Projeto projeto, Date dataConclusao) {
+    public Projeto finalizarProjeto(Projeto projeto, LocalDateTime dataConclusao) {
             // Converte a data de previsão em tempo (milissegundos) para calcular
-            long tempoDataPrevisaoConclusao = projeto.getPrevisaoConclusao().getTime() - (long) (projeto.getPrevisaoConclusao().getTime() * 0.25);
-            Date DataPrevisaoConclusao = new Date(tempoDataPrevisaoConclusao);
+            LocalDateTime DataPrevisaoConclusao = LocalDateTime.parse("01/08/2023");
             if (DataPrevisaoConclusao.compareTo(dataConclusao) <= 0) {
                 projeto.setStatus("Concluído");
                 projeto.setDataConclusao(dataConclusao);
@@ -53,7 +53,7 @@ public class ProjetoService extends ValidarDatasService {
         this.iteracaoService.addIteracao(projeto, iteracao);
     }
 
-    public Projeto finalizarIteracao(Projeto projeto, String nomeIteracao, Date dataConclusao) {
+    public Projeto finalizarIteracao(Projeto projeto, String nomeIteracao, LocalDateTime dataConclusao) {
         this.iteracaoService.finalizarIteracao(projeto, nomeIteracao, dataConclusao);
         return projeto;
     }
