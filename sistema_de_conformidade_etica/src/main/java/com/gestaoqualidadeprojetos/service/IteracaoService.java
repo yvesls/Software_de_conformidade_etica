@@ -2,6 +2,7 @@ package com.gestaoqualidadeprojetos.service;
 
 import com.gestaoqualidadeprojetos.model.Iteracao;
 import com.gestaoqualidadeprojetos.model.Projeto;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -11,7 +12,7 @@ public class IteracaoService extends ValidarDatasService {
 
     }
 
-    public Iteracao criarIteracao(String descricao, Date dataInicio, Date previsaoConclusao, String status) {
+    public Iteracao criarIteracao(String descricao, LocalDateTime dataInicio, LocalDateTime previsaoConclusao, String status) {
         if(validarDatas(dataInicio, previsaoConclusao)){
             return new Iteracao(descricao, dataInicio, previsaoConclusao, status);
         }

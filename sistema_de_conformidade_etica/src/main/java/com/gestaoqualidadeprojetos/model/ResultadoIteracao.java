@@ -33,10 +33,6 @@ public class ResultadoIteracao extends Resultado {
         return dataResultado;
     }
 
-    public Classificacao getClassificacao() {
-        return classificacao;
-    }
-
     public String getIteracao() {
         return iteracao;
     }
