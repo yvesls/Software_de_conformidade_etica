@@ -1,18 +1,19 @@
 package com.gestaoqualidadeprojetos.model;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Iteracao {
 
     private String descricao;
-    private Date dataInicio;
-    private Date previsaoConclusao;
-    private Date dataConclusao;
+    private LocalDateTime dataInicio;
+    private LocalDateTime previsaoConclusao;
+    private LocalDateTime dataConclusao;
     private String status;
     private ArrayList<EtapaIteracao> etapas;
 
-    public Iteracao(String descricao, Date dataInicio, Date previsaoConclusao, String status) {
+    public Iteracao(String descricao, LocalDateTime dataInicio, LocalDateTime previsaoConclusao, String status) {
         this.descricao = descricao;
         this.dataInicio = dataInicio;
         this.previsaoConclusao = previsaoConclusao;
@@ -36,27 +37,27 @@ public class Iteracao {
         this.descricao = descricao;
     }
 
-    public Date getDataInicio() {
+    public LocalDateTime getDataInicio() {
         return dataInicio;
     }
 
-    public void setDataInicio(Date dataInicio) {
+    public void setDataInicio(LocalDateTime dataInicio) {
         this.dataInicio = dataInicio;
     }
 
-    public Date getPrevisaoConclusao() {
+    public LocalDateTime getPrevisaoConclusao() {
         return previsaoConclusao;
     }
 
-    public void setPrevisaoConclusao(Date previsaoConclusao) {
+    public void setPrevisaoConclusao(LocalDateTime previsaoConclusao) {
         this.previsaoConclusao = previsaoConclusao;
     }
 
-    public Date getDataConclusao() {
+    public LocalDateTime getDataConclusao() {
         return dataConclusao;
     }
 
-    public void setDataConclusao(Date dataConclusao) {
+    public void setDataConclusao(LocalDateTime dataConclusao) {
         this.dataConclusao = dataConclusao;
     }
 

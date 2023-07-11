@@ -10,10 +10,9 @@ import java.time.LocalDateTime;
  *
  * @author Note102
  */
-public class ResultadoIteracao {
+public class ResultadoIteracao extends Resultado {
     private String descricao;
     private LocalDateTime dataResultado;
-    private Classificacao classificacao;
     private String iteracao;
     
     public ResultadoIteracao() {

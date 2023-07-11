@@ -10,19 +10,18 @@ import java.util.ArrayList;
  *
  * @author Note102
  */
-public class ResultadoMembroEquipe {
+public class ResultadoMembroEquipe extends Resultado {
     private Integer quantidadeRespostasSim;
     private Integer quantidadeTotalPerguntas;
     private double percentualRespostasSim;
     private Peso pesoAtribuido;
-    private Classificacao classificacao;
     private MembroEquipe membro;
-    private String iteracao;
+    private Iteracao iteracao;
     
     public ResultadoMembroEquipe() {
     }
 
-    public ResultadoMembroEquipe(Integer quantidadeRespostasSim, Integer quantidadeTotalPerguntas, double percentualRespostasSim, Peso pesoAtribuido, Classificacao classificacao, MembroEquipe membro, String iteracao) {
+    public ResultadoMembroEquipe(Integer quantidadeRespostasSim, Integer quantidadeTotalPerguntas, double percentualRespostasSim, Peso pesoAtribuido, Classificacao classificacao, MembroEquipe membro, Iteracao iteracao) {
         this.quantidadeRespostasSim = quantidadeRespostasSim;
         this.quantidadeTotalPerguntas = quantidadeTotalPerguntas;
         this.percentualRespostasSim = percentualRespostasSim;
@@ -48,10 +47,6 @@ public class ResultadoMembroEquipe {
         return pesoAtribuido;
     }
 
-    public Classificacao getClassificacao() {
-        return classificacao;
-    }
-
     public MembroEquipe getMembro() {
         return membro;
     }
@@ -60,7 +55,7 @@ public class ResultadoMembroEquipe {
         return pesoAtribuido;
     }
 
-    public String getIteracao() {
+    public Iteracao getIteracao() {
         return iteracao;
     }
 

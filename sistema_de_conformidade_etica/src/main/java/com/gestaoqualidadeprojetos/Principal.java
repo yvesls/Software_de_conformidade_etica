@@ -153,11 +153,11 @@ public class Principal {
 
         System.out.println("Visualizar resultado da iteracao vigente selecionada: ");
         var resultadoIteracaoService = new ResultadoService();
-        System.out.println(resultadoIteracaoService.getByIteracao("Iteração 1"));
+        System.out.println(resultadoIteracaoService.getResultadoIteracao(cascata));
 
         System.out.println("Visualizar resultado dos membros de equipe da iteração vigente selecionada: ");
         var resultadoMembroEquipeService = new ResultadoService();
-        System.out.println(resultadoMembroEquipeService.getByIteracao("Iteração 1"));
+        System.out.println(resultadoMembroEquipeService.getResultadoIteracao(cascata));
 
         System.out.println("Visualizar resultado do projeto: ");
         var resultadoProjetoService = new ResultadoService();
