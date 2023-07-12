@@ -1,14 +1,13 @@
 package com.gestaoqualidadeprojetos.model;
-
 public class EtapaIteracaoBase {
     private String descricao;
     private int pesoEsforco;
     private QuestionarioEtapa questionarioEtapa;
 
-    public EtapaIteracaoBase(String descricao, int pesoEsforco, String questionarioEtapa) {
+    public EtapaIteracaoBase(String descricao, int pesoEsforco, QuestionarioEtapa questionarioEtapa) {
         this.descricao = descricao;
         this.pesoEsforco = pesoEsforco;
-        //this.questionarioEtapa = this.questionarioEtapa;
+        this.questionarioEtapa = this.questionarioEtapa;
     }
 
     public String getDescricao() {
@@ -27,6 +26,14 @@ public class EtapaIteracaoBase {
         this.pesoEsforco = pesoEsforco;
     }
 
+    public QuestionarioEtapa getQuestionarioEtapa() {
+        return questionarioEtapa;
+    }
+
+    public void setQuestionarioEtapa(QuestionarioEtapa questionarioEtapa) {
+        this.questionarioEtapa = questionarioEtapa;
+    }
+    
     @Override
     public String toString() {
         return "EtapaIteracaoBase{" + "descricao=" + descricao + ", pesoEsforco=" + pesoEsforco + '}';
