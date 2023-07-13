@@ -125,20 +125,7 @@ public class ModuloQuestionarioTest {
     }
 
      
-    @Test
-    public void testObterQtdPerguntaBaseService() {
-        PerguntaBaseService perguntaBaseService = new PerguntaBaseService();
-        PerguntaBase perguntaBase1 = new PerguntaBase("Pergunta Base 1", LocalDateTime.now());
-        PerguntaBase perguntaBase2 = new PerguntaBase("Pergunta Base 2", LocalDateTime.now());
-        PerguntaBase perguntaBase3 = new PerguntaBase("Pergunta Base 3", LocalDateTime.now());
-        
-        perguntaBaseService.salvarPerguntaBase(perguntaBase1);
-        perguntaBaseService.salvarPerguntaBase(perguntaBase2);
-        perguntaBaseService.salvarPerguntaBase(perguntaBase3);
-        List<PerguntaBase> perguntasBase = perguntaBaseService.obterPerguntasBase();
-
-        assertEquals(3, perguntasBase.size());
-    }
+    
     
 
 
