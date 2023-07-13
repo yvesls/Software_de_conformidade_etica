@@ -10,6 +10,8 @@ import com.gestaoqualidadeprojetos.repository.PerguntaRepository;
 import com.gestaoqualidadeprojetos.repository.QuestionarioEtapaBaseRepository;
 import com.gestaoqualidadeprojetos.repository.QuestionarioEtapaRepository;
 import com.gestaoqualidadeprojetos.repository.RespostaRepository;
+import com.gestaoqualidadeprojetos.service.PerguntaBaseService;
+import com.gestaoqualidadeprojetos.service.RespostaService;
 import org.junit.jupiter.api.Test;
 import org.hamcrest.MatcherAssert;
 import static org.hamcrest.Matchers.*;
@@ -122,8 +124,22 @@ public class ModuloQuestionarioTest {
         MatcherAssert.assertThat(questionarios, hasItem(questionario));
     }
 
-    
+     
+    @Test
+    public void testObterQtdPerguntaBaseService() {
+        PerguntaBaseService perguntaBaseService = new PerguntaBaseService();
+        PerguntaBase perguntaBase1 = new PerguntaBase("Pergunta Base 1", LocalDateTime.now());
+        PerguntaBase perguntaBase2 = new PerguntaBase("Pergunta Base 2", LocalDateTime.now());
+        PerguntaBase perguntaBase3 = new PerguntaBase("Pergunta Base 3", LocalDateTime.now());
+        
+        perguntaBaseService.salvarPerguntaBase(perguntaBase1);
+        perguntaBaseService.salvarPerguntaBase(perguntaBase2);
+        perguntaBaseService.salvarPerguntaBase(perguntaBase3);
+        List<PerguntaBase> perguntasBase = perguntaBaseService.obterPerguntasBase();
 
+        assertEquals(3, perguntasBase.size());
+    }
+    
 
 
 }
