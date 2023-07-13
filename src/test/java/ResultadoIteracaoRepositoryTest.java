@@ -1,6 +1,5 @@
 import com.gestaoqualidadeprojetos.model.ResultadoIteracao;
 import com.gestaoqualidadeprojetos.repository.ResultadoIteracaoRepository;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;

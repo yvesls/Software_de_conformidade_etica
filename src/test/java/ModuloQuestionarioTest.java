@@ -10,14 +10,11 @@ import com.gestaoqualidadeprojetos.repository.PerguntaRepository;
 import com.gestaoqualidadeprojetos.repository.QuestionarioEtapaBaseRepository;
 import com.gestaoqualidadeprojetos.repository.QuestionarioEtapaRepository;
 import com.gestaoqualidadeprojetos.repository.RespostaRepository;
-import com.gestaoqualidadeprojetos.service.QuestionarioEtapaBaseService;
-import com.gestaoqualidadeprojetos.service.QuestionarioEtapaService;
 import org.junit.jupiter.api.Test;
 import org.hamcrest.MatcherAssert;
 import static org.hamcrest.Matchers.*;
 import java.time.LocalDateTime;
 import java.util.List;
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
