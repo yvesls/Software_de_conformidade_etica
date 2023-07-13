@@ -1,6 +1,5 @@
 import com.gestaoqualidadeprojetos.model.ResultadoProjeto;
 import com.gestaoqualidadeprojetos.repository.ResultadoProjetoRepository;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
