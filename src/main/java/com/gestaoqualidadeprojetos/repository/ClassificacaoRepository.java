@@ -8,6 +8,8 @@ import com.gestaoqualidadeprojetos.model.Classificacao;
 import com.gestaoqualidadeprojetos.model.enums.ClassificacaoEnum;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  *
@@ -24,8 +26,17 @@ public class ClassificacaoRepository {
         return getMockByFaixa(faixa);
     }
     
-    public  ArrayList<Classificacao> getAll() {
+    public ArrayList<Classificacao> getAll() {
         return listaClassificacao;
+    }
+    
+    public void save(Classificacao classificacao) {
+        listaClassificacao.add(classificacao);
+    }
+    
+    public void remove(Classificacao classificacao) {
+        var list = new ArrayList<>(Arrays.asList(listaClassificacao));
+        list.removeIf(item -> item.equals(classificacao));
     }
     
     private ArrayList<Classificacao> generateAllMock() {
@@ -61,9 +72,5 @@ public class ClassificacaoRepository {
             }
         }
         return null;
-    }
-
-    public ArrayList<Classificacao> getListaClassificacao() {
-        return listaClassificacao;
     }
 }

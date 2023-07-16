@@ -4,8 +4,10 @@
  */
 package com.gestaoqualidadeprojetos.repository;
 
+import com.gestaoqualidadeprojetos.model.Projeto;
 import com.gestaoqualidadeprojetos.model.ResultadoProjeto;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  *
@@ -18,7 +20,7 @@ public class ResultadoProjetoRepository {
         generateAllMock();
     }
     
-    public ResultadoProjeto getByProjeto(String projeto) {
+    public ResultadoProjeto getByProjeto(Projeto projeto) {
         return getMockByNome(projeto);
     }
     
@@ -26,21 +28,26 @@ public class ResultadoProjetoRepository {
           return listaResultadosProjeto;
     }
     
+    public void save(ResultadoProjeto resultadoProjeto) {
+        listaResultadosProjeto.add(resultadoProjeto);
+    }
+    
+    public void remove(ResultadoProjeto resultadoProjeto) {
+        var list = new ArrayList<>(Arrays.asList(listaResultadosProjeto));
+        list.removeIf(item -> item.equals(resultadoProjeto));
+    }
+    
     private ArrayList<ResultadoProjeto> generateAllMock() {
         listaResultadosProjeto = new ArrayList<ResultadoProjeto>();
         return listaResultadosProjeto;
     }
     
-    private ResultadoProjeto getMockByNome(String projeto) {
+    private ResultadoProjeto getMockByNome(Projeto projeto) {
         for(ResultadoProjeto rp : listaResultadosProjeto) {
             if(rp.getProjeto().equals(projeto)) {
                 return rp;
             }
         }
         return null;
-    }
-
-    public ArrayList<ResultadoProjeto> getListaResultadosProjeto() {
-        return listaResultadosProjeto;
     }
 }
