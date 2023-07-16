@@ -3,6 +3,7 @@ package com.gestaoqualidadeprojetos.repository;
 import com.gestaoqualidadeprojetos.model.Classificacao;
 import com.gestaoqualidadeprojetos.model.Iteracao;
 import com.gestaoqualidadeprojetos.model.ResultadoIteracao;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -43,8 +44,11 @@ public class  ResultadoIteracaoRepository {
     private ArrayList<ResultadoIteracao> generateAllMock() {
         listaResultadosIteracao = new ArrayList<ResultadoIteracao>();
         ArrayList<Classificacao> classificacoes = new ClassificacaoRepository().getAll();
-        var resultadoIteracao1 = new ResultadoIteracao("A iteração não alcançou o esperado", LocalDateTime.now(), classificacoes.get(6), "Iteração 1");
-        listaResultadosIteracao.add(resultadoIteracao1);
+        LocalDate dataInicio = LocalDate.parse("2023-07-01T12:30:54");
+        LocalDate dataFim = LocalDate.parse("2023-08-01T12:30:54");
+        Iteracao cascata = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
+        //var resultadoIteracao1 = new ResultadoIteracao("A iteração não alcançou o esperado", LocalDateTime.now(), classificacoes.get(6), cascata));
+        //listaResultadosIteracao.add(resultadoIteracao1);
         return listaResultadosIteracao;
     }
     

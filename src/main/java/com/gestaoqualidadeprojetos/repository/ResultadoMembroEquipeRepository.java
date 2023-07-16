@@ -52,18 +52,18 @@ public class ResultadoMembroEquipeRepository {
         Iteracao cascata = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
         ArrayList<Classificacao> classificacoes = new ClassificacaoRepository().getAll();
         List<MembroEquipe> membros = new MembroEquipeRepository().listarMembros();
-        var membro1 = new ResultadoMembroEquipe(28, 36, 0.778, pesos.get(0), classificacoes.get(0), membros.get(0),cascata);
+        /*var membro1 = new ResultadoMembroEquipe(28, 36, 0.778, pesos.get(0), classificacoes.get(0), membros.get(0),cascata);
         var membro2 = new ResultadoMembroEquipe(29, 47, 0.617, pesos.get(1), classificacoes.get(1), membros.get(1), cascata);
         var membro3 = new ResultadoMembroEquipe(24, 41, 0.585, pesos.get(2), classificacoes.get(2), membros.get(2), cascata);
         var membro4 = new ResultadoMembroEquipe(21, 40, 0.525, pesos.get(3), classificacoes.get(3), membros.get(3), cascata);
         var membro5 = new ResultadoMembroEquipe(27, 47, 0.574, pesos.get(4), classificacoes.get(4), membros.get(4), cascata);
-        var membro6 = new ResultadoMembroEquipe(33, 58, 0.569, pesos.get(5), classificacoes.get(5), membros.get(5), cascata);
+        var membro6 = new ResultadoMembroEquipe(33, 58, 0.569, pesos.get(5), classificacoes.get(5), membros.get(5), cascata); 
         listaResultadosMembroEquipe.add(membro1);
         listaResultadosMembroEquipe.add(membro2);
         listaResultadosMembroEquipe.add(membro3);
         listaResultadosMembroEquipe.add(membro4);
         listaResultadosMembroEquipe.add(membro5);
-        listaResultadosMembroEquipe.add(membro6);
+        listaResultadosMembroEquipe.add(membro6); */
         return listaResultadosMembroEquipe;
     }
     

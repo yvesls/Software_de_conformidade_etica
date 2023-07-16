@@ -1,0 +1,18 @@
+Processos resultadoIteracao:
+- validar se a iteração é a atual
+- validar se existe resultado para iteração referente
+- validar se todos os membros responderam o questionário
+- gerar os resultados por etapa para iteração
+- gerar o resultado da iteração referente
+
+Processos resultadoMembroEquipe:
+- validar se existe resultado do membro para a iteração referente
+- gerar os resultados por etapa para o membro
+- gerar o resultado do membro
+
+Processos resultadoProjeto:
+- validar se o projeto está em vigor
+- validar se existe resultado para o projeto referente
+- validar se todas as iterações foram completadas (possuem o resultado)
+- gerar os resultados por etapa para o projeto
+- gerar o resultado do projeto referente

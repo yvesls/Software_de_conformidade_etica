@@ -5,6 +5,7 @@
 package com.gestaoqualidadeprojetos.model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -16,12 +17,13 @@ public class ResultadoMembroEquipe extends Resultado {
     private double percentualRespostasSim;
     private Peso pesoAtribuido;
     private MembroEquipe membro;
+    private List<ResultadoEtapaMembroEquipe> resultadosEtapa;
     private Iteracao iteracao;
     
     public ResultadoMembroEquipe() {
     }
 
-    public ResultadoMembroEquipe(Integer quantidadeRespostasSim, Integer quantidadeTotalPerguntas, double percentualRespostasSim, Peso pesoAtribuido, Classificacao classificacao, MembroEquipe membro, Iteracao iteracao) {
+    public ResultadoMembroEquipe(Integer quantidadeRespostasSim, Integer quantidadeTotalPerguntas, double percentualRespostasSim, Peso pesoAtribuido, Classificacao classificacao, MembroEquipe membro, Iteracao iteracao, List<ResultadoEtapaMembroEquipe> resultadosEtapa) {
         this.quantidadeRespostasSim = quantidadeRespostasSim;
         this.quantidadeTotalPerguntas = quantidadeTotalPerguntas;
         this.percentualRespostasSim = percentualRespostasSim;
@@ -29,6 +31,7 @@ public class ResultadoMembroEquipe extends Resultado {
         this.classificacao = classificacao;
         this.membro = membro;
         this.iteracao = iteracao;
+        this.resultadosEtapa = resultadosEtapa;
     }
 
     public Integer getQuantidadeRespostasSim() {
@@ -58,9 +61,13 @@ public class ResultadoMembroEquipe extends Resultado {
     public Iteracao getIteracao() {
         return iteracao;
     }
+    
+    public List<ResultadoEtapaMembroEquipe> getResultadosEtapa() {
+        return resultadosEtapa;
+    }
 
     @Override
     public String toString() {
-        return "ResultadoMembroEquipe{" + "quantidadeRespostasSim=" + quantidadeRespostasSim + ", quantidadeTotalPerguntas=" + quantidadeTotalPerguntas + ", percentualRespostasSim=" + percentualRespostasSim + ", pesoAtribuido=" + pesoAtribuido + ", classificacao=" + classificacao + ", membro=" + membro + ", iteracao=" + iteracao + '}';
+        return "ResultadoMembroEquipe{" + "quantidadeRespostasSim=" + quantidadeRespostasSim + ", quantidadeTotalPerguntas=" + quantidadeTotalPerguntas + ", percentualRespostasSim=" + percentualRespostasSim + ", pesoAtribuido=" + pesoAtribuido + ", membro=" + membro + ", resultadosEtapa=" + resultadosEtapa + ", iteracao=" + iteracao + '}';
     }
 }

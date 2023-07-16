@@ -12,6 +12,5 @@ import com.gestaoqualidadeprojetos.model.Iteracao;
  * @author Note102
  */
 public interface ProcessaResultadoStrategy {
-    void processar(Iteracao iteracao);
-    void salvarResultado(Resultado resultado);
+    Resultado processar(Iteracao iteracao);
 }
