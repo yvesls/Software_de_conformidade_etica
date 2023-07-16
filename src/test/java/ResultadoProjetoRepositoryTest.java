@@ -4,6 +4,7 @@ import com.gestaoqualidadeprojetos.model.ResultadoProjeto;
 import com.gestaoqualidadeprojetos.repository.ResultadoMembroEquipeRepository;
 import com.gestaoqualidadeprojetos.repository.ResultadoProjetoRepository;
 import java.text.ParseException;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -29,8 +30,8 @@ public class ResultadoProjetoRepositoryTest {
     @Test
     public void testGetByProjetoExistingProjetoReturns() {
         // Given
-        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
-        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
+         LocalDate dataInicio = LocalDate.parse("2023-07-01T12:30:54");
+        LocalDate dataFim = LocalDate.parse("2023-08-01T12:30:54");
         Projeto projeto = new Projeto("Sistema Cascata", dataInicio, dataFim, "Em andamento", "CASCATA", 1);
         
         ResultadoProjeto expectedResultadoProjeto = resultadoProjetoRepository.getByProjeto(projeto);
@@ -45,10 +46,10 @@ public class ResultadoProjetoRepositoryTest {
     @Test
     public void testGetByProjetoNonExistingProjetoReturnsNull() {
         // Given
-        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
-        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
+         LocalDate dataInicio = LocalDate.parse("2023-07-01T12:30:54");
+        LocalDate dataFim = LocalDate.parse("2023-08-01T12:30:54");
         Projeto projeto = new Projeto("Sistema Cascata", dataInicio, dataFim, "Em andamento", "CASCATA", 1);
-
+        
         // When
         ResultadoProjeto resultadoProjeto = resultadoProjetoRepository.getByProjeto(projeto);
 
@@ -71,10 +72,10 @@ public class ResultadoProjetoRepositoryTest {
     @Test
     public void testGetByProjetoValidProjetoReturnsCorrect() {
         // Given
-        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
-        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
+        LocalDate dataInicio = LocalDate.parse("2023-07-01T12:30:54");
+        LocalDate dataFim = LocalDate.parse("2023-08-01T12:30:54");
         Projeto projeto = new Projeto("Sistema Cascata", dataInicio, dataFim, "Em andamento", "CASCATA", 1);
-
+        
         // When
         ResultadoProjeto resultadoProjeto = resultadoProjetoRepository.getByProjeto(projeto);
 

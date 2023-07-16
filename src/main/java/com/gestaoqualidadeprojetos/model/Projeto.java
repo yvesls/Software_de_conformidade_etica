@@ -1,5 +1,6 @@
 package com.gestaoqualidadeprojetos.model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,16 +8,16 @@ import java.util.List;
 public class Projeto {
 
     private String nome;
-    private LocalDateTime dataInicio;
-    private LocalDateTime previsaoConclusao;
-    private LocalDateTime dataConclusao;
+    private LocalDate dataInicio;
+    private LocalDate previsaoConclusao;
+    private LocalDate dataConclusao;
     private String status;
     private String tipo;
     private int quantidadeIteracao;
-    private List<Iteracao> iteracoes;
+    private ArrayList<Iteracao> iteracoes;
     private ArrayList<MembroEquipe> equipe;
 
-    public Projeto(String nome, LocalDateTime dataInicio, LocalDateTime previsaoConclusao, String status, String tipo, int quantidadeIteracao) {
+    public Projeto(String nome, LocalDate dataInicio, LocalDate previsaoConclusao, String status, String tipo, int quantidadeIteracao) {
         this.nome = nome;
         this.dataInicio = dataInicio;
         this.previsaoConclusao = previsaoConclusao;
@@ -27,11 +28,11 @@ public class Projeto {
         this.equipe = new ArrayList<MembroEquipe>();
     }
 
-    public void setDataConclusao(LocalDateTime dataConclusao) {
+    public void setDataConclusao(LocalDate dataConclusao) {
         this.dataConclusao = dataConclusao;
     }
 
-    public LocalDateTime getDataConclusao() {
+    public LocalDate getDataConclusao() {
         return dataConclusao;
     }
 
@@ -47,7 +48,7 @@ public class Projeto {
         this.iteracoes.add(iteracao);
     }
 
-    public List<Iteracao> getIteracoes() {
+    public ArrayList<Iteracao> getIteracoes() {
         return iteracoes;
     }
 
@@ -59,19 +60,19 @@ public class Projeto {
         this.nome = nome;
     }
 
-    public LocalDateTime getDataInicio() {
+    public LocalDate getDataInicio() {
         return dataInicio;
     }
 
-    public void setDataInicio(LocalDateTime dataInicio) {
+    public void setDataInicio(LocalDate dataInicio) {
         this.dataInicio = dataInicio;
     }
 
-    public LocalDateTime getPrevisaoConclusao() {
+    public LocalDate getPrevisaoConclusao() {
         return previsaoConclusao;
     }
 
-    public void setPrevisaoConclusao(LocalDateTime previsaoConclusao) {
+    public void setPrevisaoConclusao(LocalDate previsaoConclusao) {
         this.previsaoConclusao = previsaoConclusao;
     }
 
@@ -107,7 +108,7 @@ public class Projeto {
 
     @Override
     public String toString() {
-        return "Projeto{" + "nome=" + nome + ", dataInicio=" + dataInicio + ", dataConclusao=" + dataConclusao + ", status=" + status + ", tipo=" + tipo + ", quantidadeIteracao=" + quantidadeIteracao + '}';
+        return "Projeto{" + "nome=" + nome + ", dataInicio=" + dataInicio + ", previsaoConclusao=" + previsaoConclusao + ", dataConclusao=" + dataConclusao + ", status=" + status + ", tipo=" + tipo + ", quantidadeIteracao=" + quantidadeIteracao + '}';
     }
 
 }

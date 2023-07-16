@@ -2,6 +2,7 @@ import com.gestaoqualidadeprojetos.model.Iteracao;
 import com.gestaoqualidadeprojetos.model.ResultadoMembroEquipe;
 import com.gestaoqualidadeprojetos.repository.ResultadoMembroEquipeRepository;
 import java.text.ParseException;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -28,8 +29,8 @@ public class ResultadoMembroEquipeRepositoryTest {
     @Test
     public void testGetByIteracaoExistingIteracaoReturns() {
         // Given
-        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
-        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
+         LocalDate dataInicio = LocalDate.parse("2023-07-01T12:30:54");
+        LocalDate dataFim = LocalDate.parse("2023-08-01T12:30:54");
         Iteracao iteracao = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
         
         List<ResultadoMembroEquipe> expectedListResultadoMembroEquipe = resultadoMembroEquipeRepository.getByIteracao(iteracao);
@@ -45,8 +46,8 @@ public class ResultadoMembroEquipeRepositoryTest {
     @Test
     public void testGetByIteracaoNonExistingIteracaoReturnsNull() {
         // Given
-        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
-        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
+         LocalDate dataInicio = LocalDate.parse("2023-07-01T12:30:54");
+        LocalDate dataFim = LocalDate.parse("2023-08-01T12:30:54");
         Iteracao iteracao = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
 
         // When
@@ -71,8 +72,8 @@ public class ResultadoMembroEquipeRepositoryTest {
     @Test
     public void testGetByIteracaoValidIteracaoReturnsCorrect() {
         // Given
-        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
-        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
+         LocalDate dataInicio = LocalDate.parse("2023-07-01T12:30:54");
+        LocalDate dataFim = LocalDate.parse("2023-08-01T12:30:54");
         Iteracao iteracao = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
 
         // When
@@ -98,8 +99,8 @@ public class ResultadoMembroEquipeRepositoryTest {
     @Test
     public void testGetByIteracaoExistingIteracaoCheckProperties() {
         // Given
-        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
-        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
+         LocalDate dataInicio = LocalDate.parse("2023-07-01T12:30:54");
+        LocalDate dataFim = LocalDate.parse("2023-08-01T12:30:54");
         Iteracao iteracao = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
 
         // When

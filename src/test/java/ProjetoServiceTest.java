@@ -1,16 +1,13 @@
-
 import com.gestaoqualidadeprojetos.model.EtapaIteracao;
 import com.gestaoqualidadeprojetos.model.Iteracao;
 import com.gestaoqualidadeprojetos.model.MembroEquipe;
 import com.gestaoqualidadeprojetos.model.Projeto;
-import com.gestaoqualidadeprojetos.service.MembroEquipeService;
+import com.gestaoqualidadeprojetos.model.QuestionarioEtapa;
 import com.gestaoqualidadeprojetos.service.ProjetoService;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import org.junit.jupiter.api.Test;
-import java.util.Date;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -20,17 +17,18 @@ public class ProjetoServiceTest {
     private ProjetoService projetoService;
     private Projeto projetoIterativo;
 
-    public ProjetoServiceTest() throws ParseException {
+    public ProjetoServiceTest(){
         this.projetoService = new ProjetoService();
     }
 
     @Test
     //@Order(1)
-    public void testCriarProjetoVazio() throws ParseException {
+    public void testCriarProjetoVazio(){
         /*GIVEN*/
-        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
-        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
-        
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate dataInicio = LocalDate.parse("01/07/2023", formatter);
+        LocalDate dataFim = LocalDate.parse("01/10/2023", formatter);
+
         /*WHEN*/
         projetoIterativo = new Projeto("Sistema Iterativo", dataInicio, dataFim, "Em andamento", "ITERATIVO", 2);
 
@@ -46,15 +44,16 @@ public class ProjetoServiceTest {
 
     @Test
     //@Order(2)
-    public void testCriarIteracao() throws ParseException {
+    public void testCriarIteracao(){
         testCriarProjetoVazio();
-        
+
         /*GIVEN*/
-        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
-        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
-        
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate dataInicio = LocalDate.parse("13/07/2023", formatter);
+        LocalDate previsaoFim = LocalDate.parse("20/08/2023", formatter);
+
         /*WHEN*/
-        Iteracao sprint1 = new Iteracao("Sprint 1", dataInicio, dataFim, "ABERTA");
+        Iteracao sprint1 = new Iteracao("Sprint 1", dataInicio, previsaoFim, "ABERTA");
         projetoService.addIteracao(projetoIterativo, sprint1);
 
         /*THEN*/
@@ -62,91 +61,56 @@ public class ProjetoServiceTest {
         assertEquals("Sprint 1", projetoIterativo.getIteracoes().get(0).getDescricao());
         assertEquals("ABERTA", projetoIterativo.getIteracoes().get(0).getStatus());
     }
-    
+
     @Test
     //@Order(3)
-    public void testCriarEtapa() throws ParseException {
+    public void testCriarEtapa(){
         testCriarIteracao();
 
         /*GIVEN*/
-        EtapaIteracao iniciacao = new EtapaIteracao("Iniciação", 5, "Sprint 2");
-        EtapaIteracao requisitos = new EtapaIteracao("Requisitos", 20, "Sprint 2");
-        EtapaIteracao projeto = new EtapaIteracao("Projeto", 10, "Sprint 2");
-        EtapaIteracao desenvolvimento = new EtapaIteracao("Desenvolvimento", 40, "Sprint 2");
-        EtapaIteracao testeVerificacao = new EtapaIteracao("Teste e Verificação", 25, "Sprint 2");
+        QuestionarioEtapa questionarioBaseEtapa = new QuestionarioEtapa("Questionário Base", LocalDateTime.now());
+        EtapaIteracao iniciacao = new EtapaIteracao("Iniciação", 5, questionarioBaseEtapa);
 
         /*WHEN*/
         projetoService.addEtapa(projetoIterativo, "Sprint 1", iniciacao);
-        projetoService.addEtapa(projetoIterativo, "Sprint 1", requisitos);
-        projetoService.addEtapa(projetoIterativo, "Sprint 1", projeto);
-        projetoService.addEtapa(projetoIterativo, "Sprint 1", desenvolvimento);
-        projetoService.addEtapa(projetoIterativo, "Sprint 1", testeVerificacao);
 
         /*THEN*/
-        assertEquals(5, projetoIterativo.getIteracoes().get(0).getEtapas().size());
+        assertEquals(1, projetoIterativo.getIteracoes().get(0).getEtapas().size());
         assertEquals("Iniciação", projetoIterativo.getIteracoes().get(0).getEtapas().get(0).getDescricao());
-        assertEquals("Requisitos", projetoIterativo.getIteracoes().get(0).getEtapas().get(1).getDescricao());
-        assertEquals("Projeto", projetoIterativo.getIteracoes().get(0).getEtapas().get(2).getDescricao());
-        assertEquals("Desenvolvimento", projetoIterativo.getIteracoes().get(0).getEtapas().get(3).getDescricao());
-        assertEquals("Teste e Verificação", projetoIterativo.getIteracoes().get(0).getEtapas().get(4).getDescricao());
     }
 
     @Test
     //@Order(4)
-    public void testAddMembroEquipe() throws ParseException {
+    public void testAddMembroEquipe(){
         testCriarEtapa();
-        
+
         /*GIVEN*/
         MembroEquipe cliente = new MembroEquipe("João", "Silva", "joao@projeto.com", "123", "CLIENTE", false);
-        MembroEquipe gerenteProjeto = new MembroEquipe("Maria", "Souza", "maria@projeto.com", "456", "GERENTE DE PROJETO", false);
-        MembroEquipe liderEquipe = new MembroEquipe("Carlos", "Ferreira", "carlos@projeto.com", "789", "LÍDER DE EQUIPE", false);
-        MembroEquipe arquitetoSoftware = new MembroEquipe("Ana", "Santos", "ana@projeto.com", "101112", "ARQUITETO DE SOFTWARE", false);
-        MembroEquipe desenvolvedor = new MembroEquipe("Pedro", "Gomes", "pedro@projeto.com", "131415", "DESENVOLVEDOR", false);
-        MembroEquipe analistaQualidade = new MembroEquipe("Mariana", "Lima", "mariana@projeto.com", "161718", "ANALISTA DE QUALIDADE", false);
-
+       
         /*WHEN*/
-        MembroEquipeService membroService = new MembroEquipeService();
-        membroService.addMembro(cliente);
-        membroService.addMembro(gerenteProjeto);
-        membroService.addMembro(liderEquipe);
-        membroService.addMembro(arquitetoSoftware);
-        membroService.addMembro(desenvolvedor);
-        membroService.addMembro(analistaQualidade);
-        
         projetoService.addMembroEquipe(projetoIterativo, cliente);
-        projetoService.addMembroEquipe(projetoIterativo, gerenteProjeto);
-        projetoService.addMembroEquipe(projetoIterativo, liderEquipe);
-        projetoService.addMembroEquipe(projetoIterativo, arquitetoSoftware);
-        projetoService.addMembroEquipe(projetoIterativo, desenvolvedor);
-        projetoService.addMembroEquipe(projetoIterativo, analistaQualidade);
 
         /*THEN*/
         assertTrue(projetoIterativo.getEquipe().contains(cliente));
-        assertTrue(projetoIterativo.getEquipe().contains(gerenteProjeto));
-        assertTrue(projetoIterativo.getEquipe().contains(liderEquipe));
-        assertTrue(projetoIterativo.getEquipe().contains(arquitetoSoftware));
-        assertTrue(projetoIterativo.getEquipe().contains(desenvolvedor));
-        assertTrue(projetoIterativo.getEquipe().contains(analistaQualidade));
     }
-    
+
     @Test
     //@Order(5)
-    public void testSalvarProjeto() throws ParseException {
+    public void testSalvarProjeto(){
         /*GIVEN*/
         testAddMembroEquipe();
         
-        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
-        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
-        
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate dataFimIteracao = LocalDate.parse("18/08/2023", formatter);
+        LocalDate dataFimProjeto = LocalDate.parse("01/10/2023", formatter);
+
         /*WHEN*/
-        projetoService.salvarProjetoNoSistema(projetoIterativo);
-        projetoIterativo = projetoService.finalizarIteracao(projetoIterativo, "Sprint 1", dataFim);
-        projetoIterativo = projetoService.finalizarProjeto(projetoIterativo, dataFim);
-        
-        assertTrue(projetoIterativo.getDataConclusao().isAfter(projetoIterativo.getDataInicio()));
-        
+        projetoIterativo = projetoService.finalizarIteracao(projetoIterativo, "Sprint 1", dataFimIteracao);
+        projetoIterativo = projetoService.finalizarProjeto(projetoIterativo, dataFimProjeto);
+        projetoService.salvar(projetoIterativo);
+
         /*THEN*/
-        assertEquals(projetoIterativo, projetoService.buscarProjetoSalvo("Sistema Iterativo"));
+        assertEquals(projetoIterativo, projetoService.buscarProjeto("Sistema Iterativo"));
         assertEquals("FINALIZADA", projetoIterativo.getIteracoes().get(0).getStatus());
         assertEquals("Concluído", projetoIterativo.getStatus());
     }

@@ -10,7 +10,7 @@ import com.gestaoqualidadeprojetos.model.MembroEquipe;
 import com.gestaoqualidadeprojetos.model.Peso;
 import com.gestaoqualidadeprojetos.model.ResultadoMembroEquipe;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -47,8 +47,8 @@ public class ResultadoMembroEquipeRepository {
     private ArrayList<ResultadoMembroEquipe> generateAllMock() throws ParseException {
         listaResultadosMembroEquipe = new ArrayList<ResultadoMembroEquipe>();
         ArrayList<Peso> pesos = new PesoRepository().getAll();
-        LocalDateTime dataInicio = LocalDateTime.parse("2023-07-01T12:30:54");
-        LocalDateTime dataFim = LocalDateTime.parse("2023-08-01T12:30:54");
+        LocalDate dataInicio = LocalDate.parse("2023-07-01T12:30:54");
+        LocalDate dataFim = LocalDate.parse("2023-08-01T12:30:54");
         Iteracao cascata = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
         ArrayList<Classificacao> classificacoes = new ClassificacaoRepository().getAll();
         List<MembroEquipe> membros = new MembroEquipeRepository().listarMembros();

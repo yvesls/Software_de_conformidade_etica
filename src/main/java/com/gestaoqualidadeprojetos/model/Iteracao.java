@@ -1,19 +1,18 @@
 package com.gestaoqualidadeprojetos.model;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Iteracao {
 
     private String descricao;
-    private LocalDateTime dataInicio;
-    private LocalDateTime previsaoConclusao;
-    private LocalDateTime dataConclusao;
+    private LocalDate dataInicio;
+    private LocalDate previsaoConclusao;
+    private LocalDate dataConclusao;
     private String status;
     private ArrayList<EtapaIteracao> etapas;
 
-    public Iteracao(String descricao, LocalDateTime dataInicio, LocalDateTime previsaoConclusao, String status) {
+    public Iteracao(String descricao, LocalDate dataInicio, LocalDate previsaoConclusao, String status) {
         this.descricao = descricao;
         this.dataInicio = dataInicio;
         this.previsaoConclusao = previsaoConclusao;
@@ -37,27 +36,27 @@ public class Iteracao {
         this.descricao = descricao;
     }
 
-    public LocalDateTime getDataInicio() {
+    public LocalDate getDataInicio() {
         return dataInicio;
     }
 
-    public void setDataInicio(LocalDateTime dataInicio) {
+    public void setDataInicio(LocalDate dataInicio) {
         this.dataInicio = dataInicio;
     }
 
-    public LocalDateTime getPrevisaoConclusao() {
+    public LocalDate getPrevisaoConclusao() {
         return previsaoConclusao;
     }
 
-    public void setPrevisaoConclusao(LocalDateTime previsaoConclusao) {
+    public void setPrevisaoConclusao(LocalDate previsaoConclusao) {
         this.previsaoConclusao = previsaoConclusao;
     }
 
-    public LocalDateTime getDataConclusao() {
+    public LocalDate getDataConclusao() {
         return dataConclusao;
     }
 
-    public void setDataConclusao(LocalDateTime dataConclusao) {
+    public void setDataConclusao(LocalDate dataConclusao) {
         this.dataConclusao = dataConclusao;
     }
 
@@ -68,7 +67,7 @@ public class Iteracao {
     public void setStatus(String status) {
         this.status = status;
     }
-
+    
     @Override
     public String toString() {
         return "Iteracao{" + "descricao=" + descricao + ", dataInicio=" + dataInicio + ", dataConclusao=" + dataConclusao + ", previsaoConclusao=" + previsaoConclusao + ", status=" + status + '}';
