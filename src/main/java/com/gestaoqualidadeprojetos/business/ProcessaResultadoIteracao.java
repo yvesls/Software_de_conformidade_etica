@@ -4,8 +4,13 @@
  */
 package com.gestaoqualidadeprojetos.business;
 
+import com.gestaoqualidadeprojetos.model.Classificacao;
 import com.gestaoqualidadeprojetos.model.Resultado;
 import com.gestaoqualidadeprojetos.model.Iteracao;
+import com.gestaoqualidadeprojetos.model.ResultadoIteracao;
+import com.gestaoqualidadeprojetos.model.enums.ClassificacaoEnum;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  *
@@ -14,12 +19,7 @@ import com.gestaoqualidadeprojetos.model.Iteracao;
 public class ProcessaResultadoIteracao implements ProcessaResultadoStrategy {
     
     @Override
-    public void processar(Iteracao iteracao) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public void salvarResultado(Resultado resultado) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Resultado processar(Iteracao iteracao) {
+        return null;
     }
 }

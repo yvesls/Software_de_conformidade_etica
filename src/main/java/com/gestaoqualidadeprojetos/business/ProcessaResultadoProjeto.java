@@ -14,12 +14,7 @@ import com.gestaoqualidadeprojetos.model.Iteracao;
 public class ProcessaResultadoProjeto implements ProcessaResultadoStrategy {
     
     @Override
-    public void processar(Iteracao iteracao) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public void salvarResultado(Resultado resultado) {
+    public Resultado processar(Iteracao iteracao) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

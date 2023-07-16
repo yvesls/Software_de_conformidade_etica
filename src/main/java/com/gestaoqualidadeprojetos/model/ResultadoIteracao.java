@@ -5,6 +5,8 @@
 package com.gestaoqualidadeprojetos.model;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -13,16 +15,18 @@ import java.time.LocalDateTime;
 public class ResultadoIteracao extends Resultado {
     private String descricao;
     private LocalDateTime dataResultado;
-    private String iteracao;
+    private List<ResultadoEtapaIteracao> resultadosEtapa;
+    private Iteracao iteracao;
     
     public ResultadoIteracao() {
     }
 
-    public ResultadoIteracao(String descricao, LocalDateTime dataResultado, Classificacao classificacao, String iteracao) {
+    public ResultadoIteracao(String descricao, LocalDateTime dataResultado, Classificacao classificacao, Iteracao iteracao, List<ResultadoEtapaIteracao> resultadosEtapa) {
         this.descricao = descricao;
         this.dataResultado = dataResultado;
         this.classificacao = classificacao;
         this.iteracao = iteracao;
+        this.resultadosEtapa = resultadosEtapa;
     }
 
     public String getDescricao() {
@@ -33,12 +37,16 @@ public class ResultadoIteracao extends Resultado {
         return dataResultado;
     }
 
-    public String getIteracao() {
+    public Iteracao getIteracao() {
         return iteracao;
+    }
+
+    public List<ResultadoEtapaIteracao> getResultadosEtapa() {
+        return resultadosEtapa;
     }
 
     @Override
     public String toString() {
-        return "ResultadoIteracao{" + "descricao=" + descricao + ", dataResultado=" + dataResultado + ", classificacao=" + classificacao + ", iteracao=" + iteracao + '}';
+        return "ResultadoIteracao{" + "descricao=" + descricao + ", dataResultado=" + dataResultado + ", resultadoEtapa=" + resultadosEtapa + ", iteracao=" + iteracao + '}';
     }
 }

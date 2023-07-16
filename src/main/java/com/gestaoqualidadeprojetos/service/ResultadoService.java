@@ -4,7 +4,6 @@
  */
 package com.gestaoqualidadeprojetos.service;
 
-import com.gestaoqualidadeprojetos.business.ProcessaResultadoService;
 import com.gestaoqualidadeprojetos.model.Iteracao;
 import com.gestaoqualidadeprojetos.model.Projeto;
 import com.gestaoqualidadeprojetos.model.ResultadoIteracao;
