@@ -11,14 +11,13 @@ import java.util.ArrayList;
  *
  * @author Note102
  */
-public class ResultadoProjeto {
+public class ResultadoProjeto extends Resultado {
    private String descricao;
    private LocalDateTime dataResultado;
-   private Classificacao classificacao;
    private ArrayList<ResultadoIteracao> resultadosIteracao;
-   private String projeto;
+   private Projeto projeto;
 
-    public ResultadoProjeto(String descricao, LocalDateTime dataResultado, Classificacao classificacao, ArrayList<ResultadoIteracao> resultadosIteracao, String projeto) {
+    public ResultadoProjeto(String descricao, LocalDateTime dataResultado, Classificacao classificacao, ArrayList<ResultadoIteracao> resultadosIteracao, Projeto projeto) {
         this.descricao = descricao;
         this.dataResultado = dataResultado;
         this.classificacao = classificacao;
@@ -34,15 +33,11 @@ public class ResultadoProjeto {
         return dataResultado;
     }
 
-    public Classificacao getClassificacao() {
-        return classificacao;
-    }
-
     public ArrayList<ResultadoIteracao> getResultadosIteracao() {
         return resultadosIteracao;
     }
 
-    public String getProjeto() {
+    public Projeto getProjeto() {
         return projeto;
     }
 
