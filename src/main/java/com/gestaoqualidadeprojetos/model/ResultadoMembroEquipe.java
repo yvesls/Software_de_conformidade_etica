@@ -19,9 +19,6 @@ public class ResultadoMembroEquipe extends Resultado {
     private MembroEquipe membro;
     private List<ResultadoEtapaMembroEquipe> resultadosEtapa;
     private Iteracao iteracao;
-    
-    public ResultadoMembroEquipe() {
-    }
 
     public ResultadoMembroEquipe(Integer quantidadeRespostasSim, Integer quantidadeTotalPerguntas, double percentualRespostasSim, Peso pesoAtribuido, Classificacao classificacao, MembroEquipe membro, Iteracao iteracao, List<ResultadoEtapaMembroEquipe> resultadosEtapa) {
         this.quantidadeRespostasSim = quantidadeRespostasSim;

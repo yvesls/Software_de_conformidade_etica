@@ -4,8 +4,8 @@
  */
 package com.gestaoqualidadeprojetos.model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,14 +14,11 @@ import java.util.List;
  */
 public class ResultadoIteracao extends Resultado {
     private String descricao;
-    private LocalDateTime dataResultado;
+    private LocalDate dataResultado;
     private List<ResultadoEtapaIteracao> resultadosEtapa;
     private Iteracao iteracao;
     
-    public ResultadoIteracao() {
-    }
-
-    public ResultadoIteracao(String descricao, LocalDateTime dataResultado, Classificacao classificacao, Iteracao iteracao, List<ResultadoEtapaIteracao> resultadosEtapa) {
+    public ResultadoIteracao(String descricao, LocalDate dataResultado, Classificacao classificacao, Iteracao iteracao, List<ResultadoEtapaIteracao> resultadosEtapa) {
         this.descricao = descricao;
         this.dataResultado = dataResultado;
         this.classificacao = classificacao;
@@ -33,7 +30,7 @@ public class ResultadoIteracao extends Resultado {
         return descricao;
     }
 
-    public LocalDateTime getDataResultado() {
+    public LocalDate getDataResultado() {
         return dataResultado;
     }
 

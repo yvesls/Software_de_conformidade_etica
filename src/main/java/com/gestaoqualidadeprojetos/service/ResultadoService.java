@@ -20,46 +20,43 @@ import java.util.ArrayList;
  * @author Note102
  */
 public class ResultadoService {
+
     private ResultadoProjetoRepository resultadoProjetoRepositoriy;
     private ResultadoMembroEquipeRepository resultadoMembroEquipeRepository;
     private ResultadoIteracaoRepository resultadoIteracaoRepositoriy;
-    
+
     public ResultadoService() {
-        try{
-            this.resultadoProjetoRepositoriy = new ResultadoProjetoRepository();
-            this.resultadoMembroEquipeRepository = new ResultadoMembroEquipeRepository();
-            this.resultadoIteracaoRepositoriy = new ResultadoIteracaoRepository();
-        }catch(Exception e) {
-            e.printStackTrace();
-        }
+        this.resultadoProjetoRepositoriy = new ResultadoProjetoRepository();
+        this.resultadoMembroEquipeRepository = new ResultadoMembroEquipeRepository();
+        this.resultadoIteracaoRepositoriy = new ResultadoIteracaoRepository();
     }
-    
-    public void gerarResultado(ProcessaResultadoService processaResultado, Iteracao iteracao) throws ParseException{
+
+    public void gerarResultado(ProcessaResultadoService processaResultado, Iteracao iteracao) throws ParseException {
         // chamar chain de processo de resultados
         processaResultado.processar(iteracao);
     }
-    
+
     public ResultadoIteracao getResultadoIteracao(Iteracao iteracao) throws Exception {
         var resultado = resultadoIteracaoRepositoriy.getByIteracao(iteracao);
-        if(resultado == null) { // validação será feita em alguma camada inferior
+        if (resultado == null) { // validação será feita em alguma camada inferior
             throw new Exception("Não existe resultado para a iteração atual. Os questionários não foram todos respondidos ainda.");
         }
         return resultado;
     }
-    
+
     public ArrayList<ResultadoMembroEquipe> getResultadoIteracaoMembroEquipe(Iteracao iteracao) throws Exception {
         var resultado = resultadoMembroEquipeRepository.getByIteracao(iteracao);
-        if(resultado == null) { // validação será feita em alguma camada inferior
+        if (resultado == null) { // validação será feita em alguma camada inferior
             throw new Exception("Não existe resultado para a iteração atual. Os questionários não foram todos respondidos ainda.");
         }
         return resultado;
     }
-    
+
     public ResultadoProjeto getResultadoProjeto(Projeto projeto) throws Exception {
         var resultado = resultadoProjetoRepositoriy.getByProjeto(projeto);
-        if(resultado == null) { // validação será feita em alguma camada inferior
+        if (resultado == null) { // validação será feita em alguma camada inferior
             throw new Exception("Não existe resultado para o projeto atual. As iterações não foram todas completadas ainda.");
         }
         return resultado;
     }
-}   
+}

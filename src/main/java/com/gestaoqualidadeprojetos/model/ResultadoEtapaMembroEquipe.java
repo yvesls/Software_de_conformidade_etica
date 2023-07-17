@@ -11,6 +11,9 @@ package com.gestaoqualidadeprojetos.model;
 public class ResultadoEtapaMembroEquipe extends ResultadoEtapa {
     private MembroEquipe membro;
     
+    public ResultadoEtapaMembroEquipe () {
+    }
+    
     public ResultadoEtapaMembroEquipe(Classificacao classificacao, EtapaIteracao etapa, MembroEquipe membro) {
         super(classificacao, etapa);
         this.membro = membro;

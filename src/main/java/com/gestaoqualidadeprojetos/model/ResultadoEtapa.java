@@ -12,6 +12,9 @@ public abstract class ResultadoEtapa {
     private Classificacao classificacao;
     private EtapaIteracao etapa;
     
+    public ResultadoEtapa () {
+    }
+    
     public ResultadoEtapa (Classificacao classificacao, EtapaIteracao etapa) {
         this.classificacao = classificacao;
         this.etapa = etapa;

@@ -11,6 +11,10 @@ package com.gestaoqualidadeprojetos.model;
 public class ResultadoEtapaIteracao extends ResultadoEtapa {
     private Iteracao iteracao;
     
+    public ResultadoEtapaIteracao() {
+        super();
+    }
+    
     public ResultadoEtapaIteracao(Classificacao classificacao, EtapaIteracao etapa, Iteracao iteracao) {
         super(classificacao, etapa);
         this.iteracao = iteracao;

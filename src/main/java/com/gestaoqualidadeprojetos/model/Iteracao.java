@@ -10,6 +10,9 @@ public class Iteracao {
     private LocalDate dataConclusao;
     private String status;
     private ArrayList<EtapaIteracao> etapas;
+    
+    public Iteracao() {
+    }
 
     public Iteracao(String descricao, LocalDate dataInicio, LocalDate previsaoConclusao, String status) {
         this.descricao = descricao;
