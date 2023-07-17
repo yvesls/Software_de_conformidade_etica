@@ -1,16 +1,11 @@
 import com.gestaoqualidadeprojetos.model.Iteracao;
 import com.gestaoqualidadeprojetos.model.ResultadoMembroEquipe;
 import com.gestaoqualidadeprojetos.repository.ResultadoMembroEquipeRepository;
-import java.text.ParseException;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -96,7 +91,7 @@ public class ResultadoMembroEquipeRepositoryTest {
 
         // When
         List<ResultadoMembroEquipe> listResultadoMembroEquipe = resultadoMembroEquipeRepository.getByIteracao(iteracao);
-
+ 
         // Then
         assertNotNull(listResultadoMembroEquipe);
         assertFalse(listResultadoMembroEquipe.isEmpty());

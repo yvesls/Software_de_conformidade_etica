@@ -32,7 +32,6 @@ public class ResultadoService {
     }
 
     public void gerarResultado(ProcessaResultadoService processaResultado, Iteracao iteracao) throws ParseException {
-        // chamar chain de processo de resultados
         processaResultado.processar(iteracao);
     }
 
