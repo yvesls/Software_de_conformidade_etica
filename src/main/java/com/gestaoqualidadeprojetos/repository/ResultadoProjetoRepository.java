@@ -32,11 +32,6 @@ public class ResultadoProjetoRepository {
         listaResultadosProjeto.add(resultadoProjeto);
     }
     
-    public void remove(ResultadoProjeto resultadoProjeto) {
-        var list = new ArrayList<>(Arrays.asList(listaResultadosProjeto));
-        list.removeIf(item -> item.equals(resultadoProjeto));
-    }
-    
     private ArrayList<ResultadoProjeto> generateAllMock() {
         listaResultadosProjeto = new ArrayList<ResultadoProjeto>();
         return listaResultadosProjeto;

@@ -7,7 +7,7 @@ public class EtapaIteracaoBase {
     public EtapaIteracaoBase(String descricao, int pesoEsforco, QuestionarioEtapa questionarioEtapa) {
         this.descricao = descricao;
         this.pesoEsforco = pesoEsforco;
-        this.questionarioEtapa = this.questionarioEtapa;
+        this.questionarioEtapa = questionarioEtapa;
     }
 
     public String getDescricao() {

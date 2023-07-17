@@ -5,10 +5,13 @@
 package com.gestaoqualidadeprojetos.repository;
 
 import com.gestaoqualidadeprojetos.model.Classificacao;
+import com.gestaoqualidadeprojetos.model.Peso;
 import com.gestaoqualidadeprojetos.model.enums.ClassificacaoEnum;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -34,9 +37,13 @@ public class ClassificacaoRepository {
         listaClassificacao.add(classificacao);
     }
     
-    public void remove(Classificacao classificacao) {
-        var list = new ArrayList<>(Arrays.asList(listaClassificacao));
-        list.removeIf(item -> item.equals(classificacao));
+    public void remove(Classificacao classificacao, Comparator<? super Classificacao> comparator) throws Exception {
+        if (listaClassificacao.contains(classificacao)) {
+            listaClassificacao.remove(classificacao);
+            Collections.sort(listaClassificacao, comparator);
+        } else {
+            throw new Exception("O peso não está na lista.");
+        }
     }
     
     private ArrayList<Classificacao> generateAllMock() {

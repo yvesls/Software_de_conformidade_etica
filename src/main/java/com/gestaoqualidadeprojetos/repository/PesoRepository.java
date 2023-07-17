@@ -4,12 +4,12 @@
  */
 package com.gestaoqualidadeprojetos.repository;
 
-import com.gestaoqualidadeprojetos.model.Classificacao;
 import com.gestaoqualidadeprojetos.model.MembroEquipe;
 import com.gestaoqualidadeprojetos.model.Peso;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -36,9 +36,13 @@ public class PesoRepository {
         listaPesos.add(peso);
     }
     
-    public void remove(Peso peso) {
-        var list = new ArrayList<>(Arrays.asList(listaPesos));
-        list.removeIf(item -> item.equals(peso));
+    public void remove(Peso peso, Comparator<? super Peso> comparator) throws Exception {
+        if (listaPesos.contains(peso)) {
+            listaPesos.remove(peso);
+            Collections.sort(listaPesos, comparator);
+        } else {
+            throw new Exception("O peso não está na lista.");
+        }
     }
     
     private ArrayList<Peso> generateAllMock() {

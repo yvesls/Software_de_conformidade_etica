@@ -39,11 +39,6 @@ public class ResultadoMembroEquipeRepository {
         listaResultadosMembroEquipe.add(resultadoMembroEquipe);
     }
     
-    public void remove(ResultadoMembroEquipe resultadoMembroEquipe) {
-        var list = new ArrayList<>(Arrays.asList(listaResultadosMembroEquipe));
-        list.removeIf(item -> item.equals(resultadoMembroEquipe));
-    }
-    
     private ArrayList<ResultadoMembroEquipe> generateAllMock() {
         listaResultadosMembroEquipe = new ArrayList<ResultadoMembroEquipe>();
         ArrayList<Peso> pesos = new PesoRepository().getAll();

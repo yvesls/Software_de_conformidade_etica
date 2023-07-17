@@ -6,7 +6,8 @@ import com.gestaoqualidadeprojetos.model.ResultadoEtapaIteracao;
 import com.gestaoqualidadeprojetos.model.ResultadoIteracao;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -34,11 +35,6 @@ public class  ResultadoIteracaoRepository {
     
     public void save(ResultadoIteracao resultadoIteracao) {
         listaResultadosIteracao.add(resultadoIteracao);
-    }
-    
-    public void remove(ResultadoIteracao resultadoIteracao) {
-        var list = new ArrayList<>(Arrays.asList(listaResultadosIteracao));
-        list.removeIf(item -> item.equals(resultadoIteracao));
     }
     
     private ArrayList<ResultadoIteracao> generateAllMock() {

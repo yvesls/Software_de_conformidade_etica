@@ -25,9 +25,9 @@ public class ProcessaResultadoChain {
 
     public void execute(Iteracao iteracao) {
 	metodo.processar(iteracao);
-	if (metodo == null)
-            return;
         if (next != null)
             next.execute(iteracao);
+	else
+            return;
     }
 }
