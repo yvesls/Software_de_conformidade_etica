@@ -17,14 +17,14 @@ public class ResultadoMembroEquipe extends Resultado {
     private Iteracao iteracao;
 
     public ResultadoMembroEquipe(Integer quantidadeRespostasSim, Integer quantidadeTotalPerguntas, double percentualRespostasSim, Peso pesoAtribuido, Classificacao classificacao, MembroEquipe membro, Iteracao iteracao, List<ResultadoEtapaMembroEquipe> resultadosEtapa) {
+        super(classificacao);
         this.quantidadeRespostasSim = quantidadeRespostasSim;
         this.quantidadeTotalPerguntas = quantidadeTotalPerguntas;
         this.percentualRespostasSim = percentualRespostasSim;
         this.pesoAtribuido = pesoAtribuido;
-        this.classificacao = classificacao;
         this.membro = membro;
-        this.iteracao = iteracao;
         this.resultadosEtapa = resultadosEtapa;
+        this.iteracao = iteracao;
     }
 
     public Integer getQuantidadeRespostasSim() {

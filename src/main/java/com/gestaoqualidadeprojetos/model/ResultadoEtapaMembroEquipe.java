@@ -7,13 +7,28 @@ package com.gestaoqualidadeprojetos.model;
  */
 public class ResultadoEtapaMembroEquipe extends ResultadoEtapa {
     private MembroEquipe membro;
+    private Iteracao iteracao;
     
     public ResultadoEtapaMembroEquipe () {
     }
-    
-    public ResultadoEtapaMembroEquipe(Classificacao classificacao, EtapaIteracao etapa, MembroEquipe membro) {
+
+    public ResultadoEtapaMembroEquipe(MembroEquipe membro, Iteracao iteracao) {
+        this.membro = membro;
+        this.iteracao = iteracao;
+    }
+
+    public ResultadoEtapaMembroEquipe(MembroEquipe membro, Iteracao iteracao, Classificacao classificacao, EtapaIteracao etapa) {
         super(classificacao, etapa);
         this.membro = membro;
+        this.iteracao = iteracao;
+    }
+
+    public MembroEquipe getMembro() {
+        return membro;
+    }
+
+    public Iteracao getIteracao() {
+        return iteracao;
     }
 
     @Override
