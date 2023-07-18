@@ -31,7 +31,15 @@ public class ResultadoService {
         this.resultadoIteracaoRepositoriy = new ResultadoIteracaoRepository();
     }
 
-    public void gerarResultado(ProcessaResultadoService processaResultado, Iteracao iteracao) throws ParseException {
+    public void gerarResultadoIteracao(ProcessaResultadoService processaResultado, Iteracao iteracao) throws ParseException {
+        processaResultado.processar(iteracao);
+    }
+    
+    public void gerarResultadoProjeto(ProcessaResultadoService processaResultado, Projeto projeto) throws ParseException {
+        
+    }
+    
+    public void gerarResultadoIteracaoMembroEquipe(ProcessaResultadoService processaResultado, Iteracao iteracao) throws ParseException {
         processaResultado.processar(iteracao);
     }
 
