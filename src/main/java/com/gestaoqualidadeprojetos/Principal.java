@@ -35,8 +35,8 @@ public class Principal {
 
         /*QUESTIONÁRIO*/
         // Criando perguntas base
-        PerguntaBase perguntaBase1 = new PerguntaBase("Qual é o seu nível de satisfação?", LocalDateTime.now());
-        PerguntaBase perguntaBase2 = new PerguntaBase("Você encontrou algum bug no sistema?", LocalDateTime.now());
+        PerguntaBase perguntaBase1 = new PerguntaBase("Qual é o seu nível de satisfação?", LocalDateTime.now().withNano(0));
+        PerguntaBase perguntaBase2 = new PerguntaBase("Você encontrou algum bug no sistema?", LocalDateTime.now().withNano(0));
         
         // Criando questionários base
         QuestionarioEtapaBase questionarioEtapaBase1 = new QuestionarioEtapaBase("Questionário Base Etapa", LocalDateTime.now());

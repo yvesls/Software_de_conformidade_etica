@@ -1,13 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.gestaoqualidadeprojetos.repository;
 
 import com.gestaoqualidadeprojetos.model.Projeto;
 import com.gestaoqualidadeprojetos.model.ResultadoProjeto;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  *
