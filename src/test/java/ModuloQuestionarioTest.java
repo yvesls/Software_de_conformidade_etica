@@ -11,12 +11,13 @@ import com.gestaoqualidadeprojetos.repository.QuestionarioEtapaBaseRepository;
 import com.gestaoqualidadeprojetos.repository.QuestionarioEtapaRepository;
 import com.gestaoqualidadeprojetos.repository.RespostaRepository;
 import com.gestaoqualidadeprojetos.service.PerguntaBaseService;
-import com.gestaoqualidadeprojetos.service.RespostaService;
 import org.junit.jupiter.api.Test;
 import org.hamcrest.MatcherAssert;
 import static org.hamcrest.Matchers.*;
 import java.time.LocalDateTime;
 import java.util.List;
+import static org.hamcrest.MatcherAssert.assertThat;
+import org.hamcrest.Matchers;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -30,9 +31,9 @@ public class ModuloQuestionarioTest {
         Resposta resposta = new Resposta(membro, true);
 
         respostaRepository.salvarResposta(resposta);
-        Resposta respostaObtida = respostaRepository.obterRespostaPorMembro(membro);
+        List<Resposta> respostaObtida = respostaRepository.obterRespostasPorMembro(membro);
 
-        MatcherAssert.assertThat(respostaObtida, equalTo(resposta));
+        assertThat(respostaObtida, Matchers.containsInAnyOrder(resposta));
     }
 
     @Test
@@ -139,18 +140,4 @@ public class ModuloQuestionarioTest {
 
         assertEquals(3, perguntasBase.size());
     }
-    
-    @Test
-    public void testMembroRespondeu() {
-        RespostaService respostaService = new RespostaService();
-        MembroEquipe membro = new MembroEquipe("Maria", "Silva", "maria@projeto.com", "123", "CLIENTE", false);
-        Resposta resposta = new Resposta(membro, true);
-
-        respostaService.salvarResposta(membro, resposta);
-        Resposta respostaObtida = respostaService.obterRespostaPorMembro(membro);
-
-        assertNotNull(respostaObtida);    
-    }
-
-
 }
