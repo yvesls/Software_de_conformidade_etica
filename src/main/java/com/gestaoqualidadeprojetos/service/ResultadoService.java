@@ -28,16 +28,16 @@ public class ResultadoService {
         this.resultadoIteracaoRepositoriy = new ResultadoIteracaoRepository();
     }
 
-    public void gerarResultadoIteracao(ProcessaResultadoService processaResultado, Iteracao iteracao) throws ParseException {
-        processaResultado.processar(iteracao);
-    }
-    
-    public void gerarResultadoProjeto(ProcessaResultadoService processaResultado, Projeto projeto) throws ParseException {
+    public void gerarResultadoIteracao(GenericService genericService, Iteracao iteracao) throws ParseException {
         
     }
     
-    public void gerarResultadoIteracaoMembroEquipe(ProcessaResultadoService processaResultado, Iteracao iteracao) throws ParseException {
-        processaResultado.processar(iteracao);
+    public void gerarResultadoProjeto(GenericService genericService, Projeto projeto) throws ParseException {
+        
+    }
+    
+    public void gerarResultadoIteracaoMembroEquipe(GenericService genericService, Iteracao iteracao) throws ParseException {
+        
     }
 
     public ResultadoIteracao getResultadoIteracao(Iteracao iteracao) throws Exception {

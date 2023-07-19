@@ -4,6 +4,7 @@ import com.gestaoqualidadeprojetos.model.Classificacao;
 import com.gestaoqualidadeprojetos.model.Iteracao;
 import com.gestaoqualidadeprojetos.model.ResultadoEtapaIteracao;
 import com.gestaoqualidadeprojetos.model.ResultadoIteracao;
+import com.gestaoqualidadeprojetos.model.ResultadoMembroEquipe;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -37,11 +38,12 @@ public class  ResultadoIteracaoRepository {
         listaResultadosIteracao = new ArrayList<ResultadoIteracao>();
         ArrayList<Classificacao> classificacoes = new ClassificacaoRepository().getAll();
         var etapas = new ArrayList<ResultadoEtapaIteracao>();
+        var resultadoMembros = new ArrayList<ResultadoMembroEquipe>();
         LocalDate dataInicio = LocalDate.of(2023, 7, 1);
         LocalDate dataFim = LocalDate.of(2023, 8, 1);
         Iteracao cascata = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
-
-        var resultadoIteracao1 = new ResultadoIteracao("A iteração não alcançou o esperado", LocalDate.now(), classificacoes.get(6), cascata, etapas);
+ 
+        var resultadoIteracao1 = new ResultadoIteracao("A iteração não alcançou o esperado", LocalDate.now(), classificacoes.get(6), etapas, resultadoMembros, cascata);
         listaResultadosIteracao.add(resultadoIteracao1);
         return listaResultadosIteracao;
     }

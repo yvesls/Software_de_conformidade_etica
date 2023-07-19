@@ -14,10 +14,10 @@ public class ResultadoProjeto extends Resultado {
    private ArrayList<ResultadoIteracao> resultadosIteracao;
    private Projeto projeto;
 
-    public ResultadoProjeto(String descricao, LocalDateTime dataResultado, Classificacao classificacao, ArrayList<ResultadoIteracao> resultadosIteracao, Projeto projeto) {
+    public ResultadoProjeto(String descricao, LocalDateTime dataResultado, ArrayList<ResultadoIteracao> resultadosIteracao, Projeto projeto, Classificacao classificacao) {
+        super(classificacao);
         this.descricao = descricao;
         this.dataResultado = dataResultado;
-        this.classificacao = classificacao;
         this.resultadosIteracao = resultadosIteracao;
         this.projeto = projeto;
     }
