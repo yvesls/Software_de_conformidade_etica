@@ -9,6 +9,9 @@ import com.gestaoqualidadeprojetos.model.Classificacao;
  */
 public abstract class Resultado {
     protected Classificacao classificacao;
+    
+    public Resultado(){
+    }
 
     public Resultado(Classificacao classificacao) {
         this.classificacao = classificacao;

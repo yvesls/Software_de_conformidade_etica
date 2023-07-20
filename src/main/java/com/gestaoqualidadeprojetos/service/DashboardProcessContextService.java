@@ -20,7 +20,7 @@ public class DashboardProcessContextService {
         context = new LinkedHashMap<String, Object>();
     }
 
-    public Object get(String key) throws Exception {
+    public Object get(String key) throws RuntimeException, Exception {
         if (!key.contains(".")) {
             return context.get(key);
         }
@@ -30,7 +30,7 @@ public class DashboardProcessContextService {
             if (currentMap instanceof Map) {
                 currentMap = ((Map<String, Object>) currentMap).get(step);
             } else {
-                throw new Exception(String.format("Could not navigate through %s step", step));
+                throw new RuntimeException(String.format("Could not navigate through %s step", step));
             }
         }
         return currentMap;

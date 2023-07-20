@@ -5,7 +5,9 @@
 package com.gestaoqualidadeprojetos.business.steps;
 
 import com.gestaoqualidadeprojetos.model.Iteracao;
+import com.gestaoqualidadeprojetos.model.ResultadoEtapaMembroEquipe;
 import com.gestaoqualidadeprojetos.service.DashboardProcessContextService;
+import java.util.List;
 
 /**
  *
@@ -14,8 +16,13 @@ import com.gestaoqualidadeprojetos.service.DashboardProcessContextService;
 public class CreateEtapaIteracaoResult extends ProcessStep {
 
     @Override
-    public DashboardProcessContextService execute(DashboardProcessContextService context) throws Exception {
+    public DashboardProcessContextService execute(DashboardProcessContextService context) throws RuntimeException, Exception {
         var iteracao = (Iteracao) context.get("iteracao");
+        var resultadosMembroEtapa = (List<ResultadoEtapaMembroEquipe>) context.get("resultadosEtapaMembros");
+        
+        for (ResultadoEtapaMembroEquipe reme : resultadosMembroEtapa) {
+            System.out.println(reme);
+        }
         
         return null;
     }

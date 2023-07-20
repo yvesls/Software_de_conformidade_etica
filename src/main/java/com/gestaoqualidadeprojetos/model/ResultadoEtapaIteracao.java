@@ -19,6 +19,6 @@ public class ResultadoEtapaIteracao extends ResultadoEtapa {
 
     @Override
     public String toString() {
-        return "ResultadoEtapaIteracao{" + "iteracao=" + iteracao + '}';
+        return "ResultadoEtapaMembroEquipe{" + " iteracao=" + iteracao.getDescricao() + ", classificacao=" + classificacao.getClassificacaoAtingida() + ", etapa=" + etapa.getDescricao() + '}';
     }
 }

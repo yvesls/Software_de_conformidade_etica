@@ -27,6 +27,11 @@ public class ResultadoEtapaIteracaoRepository {
     }
     
     public void save(ResultadoEtapaIteracao resultadoEtapaIteracao) {
-        listaResultadoEtapaIteracao.add(resultadoEtapaIteracao);
+        if (listaResultadoEtapaIteracao == null) {
+            listaResultadoEtapaIteracao = new ArrayList<ResultadoEtapaIteracao>();
+            listaResultadoEtapaIteracao.add(resultadoEtapaIteracao);
+        } else {
+           listaResultadoEtapaIteracao.add(resultadoEtapaIteracao);
+        }
     }
 }

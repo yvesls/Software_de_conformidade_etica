@@ -27,6 +27,11 @@ public class ResultadoEtapaMembroEquipeRepository {
     }
     
     public void save(ResultadoEtapaMembroEquipe resultadoEtapaMembroEquipe) {
-        listaResultadoEtapaMembroEquipe.add(resultadoEtapaMembroEquipe);
+        if (listaResultadoEtapaMembroEquipe == null) {
+            listaResultadoEtapaMembroEquipe = new ArrayList<ResultadoEtapaMembroEquipe>();
+            listaResultadoEtapaMembroEquipe.add(resultadoEtapaMembroEquipe);
+        } else {
+            listaResultadoEtapaMembroEquipe.add(resultadoEtapaMembroEquipe);
+        }
     }
 }

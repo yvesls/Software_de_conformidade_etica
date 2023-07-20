@@ -15,11 +15,11 @@ import com.gestaoqualidadeprojetos.service.DashboardProcessContextService;
 public class ValidatesIteracaoResultExists extends ProcessStep {
 
     @Override
-    public DashboardProcessContextService execute(DashboardProcessContextService context) throws Exception {
+    public DashboardProcessContextService execute(DashboardProcessContextService context) throws RuntimeException, Exception {
         var iteracao = (Iteracao) context.get("iteracao");
         var repository = new ResultadoIteracaoRepository();
         if(repository.getByIteracao(iteracao) == null) {
-            throw new Exception("Não é possível gerar o resultado pois já existe resultado para esta iteração!");
+            throw new RuntimeException("Não é possível gerar o resultado pois já existe resultado para esta iteração!");
         }
         System.out.println("passou pela validação resultado não gerado para a iteração atual");
         return next(context, true);

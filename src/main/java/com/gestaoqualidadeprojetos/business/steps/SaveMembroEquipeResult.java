@@ -4,8 +4,8 @@
  */
 package com.gestaoqualidadeprojetos.business.steps;
 
-import com.gestaoqualidadeprojetos.model.ResultadoEtapaMembroEquipe;
-import com.gestaoqualidadeprojetos.repository.ResultadoEtapaMembroEquipeRepository;
+import com.gestaoqualidadeprojetos.model.ResultadoMembroEquipe;
+import com.gestaoqualidadeprojetos.repository.ResultadoMembroEquipeRepository;
 import com.gestaoqualidadeprojetos.service.DashboardProcessContextService;
 import java.util.List;
 
@@ -13,16 +13,17 @@ import java.util.List;
  *
  * @author Note102
  */
-public class SaveEtapaMembroEquipeResult extends ProcessStep {
+public class SaveMembroEquipeResult extends ProcessStep {
 
     @Override
     public DashboardProcessContextService execute(DashboardProcessContextService context) throws RuntimeException, Exception {
-        var resultados = (List<ResultadoEtapaMembroEquipe>) context.get("resultadosEtapaMembros");
-        var repository = new ResultadoEtapaMembroEquipeRepository();
-        for(ResultadoEtapaMembroEquipe resultado : resultados) {
+        var resultados = (List<ResultadoMembroEquipe>) context.get("resultadosMembros");
+        var repository = new ResultadoMembroEquipeRepository();
+        for(ResultadoMembroEquipe resultado : resultados) {
             repository.save(resultado);
         }
-        System.out.println("ResultadoEtapaMembroEquipe Salvo com sucesso!");
+        System.out.println("ResultadoMembroEquipe Salvo com sucesso!");
         return next(context, true);
     }
+    
 }

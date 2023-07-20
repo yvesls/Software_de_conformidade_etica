@@ -31,7 +31,12 @@ public class  ResultadoIteracaoRepository {
     }
     
     public void save(ResultadoIteracao resultadoIteracao) {
-        listaResultadosIteracao.add(resultadoIteracao);
+        if (listaResultadosIteracao == null) {
+            listaResultadosIteracao = new ArrayList<ResultadoIteracao>();
+            listaResultadosIteracao.add(resultadoIteracao);
+        } else {
+           listaResultadosIteracao.add(resultadoIteracao);
+        }
     }
     
     private ArrayList<ResultadoIteracao> generateAllMock() {

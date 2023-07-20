@@ -4,23 +4,17 @@
  */
 package com.gestaoqualidadeprojetos.business.steps;
 
-import com.gestaoqualidadeprojetos.model.MembrosNotificacao;
 import com.gestaoqualidadeprojetos.service.DashboardProcessContextService;
-import java.util.ArrayList;
 
 /**
  *
  * @author Note102
  */
-public class NotifiesMembersNotResponded extends ProcessStep {
+public class SaveEtapaIteracaoResult extends ProcessStep {
 
     @Override
     public DashboardProcessContextService execute(DashboardProcessContextService context) throws RuntimeException, Exception {
-        var membrosNotificacao = (ArrayList<MembrosNotificacao>) context.get("membrosNotificacao");
-        // realiza o processo envio de notificação
-        
-        System.out.println("passou pela envio de notificacao");
-        return next(context, false);
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }

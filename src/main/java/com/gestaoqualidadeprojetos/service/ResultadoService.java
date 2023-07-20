@@ -27,7 +27,7 @@ public class ResultadoService {
         this.resultadoIteracaoRepositoriy = new ResultadoIteracaoRepository();
     }
 
-    public void gerarResultadoIteracao(Iteracao iteracao) throws ParseException {
+    public void gerarResultadoIteracao(Iteracao iteracao) throws RuntimeException, Exception {
         var context = new DashboardProcessContextService();
         context.put("iteracao", iteracao);
         Object response = GenericService.run(DashboardCatalogService.createIterationResultProcess, context);

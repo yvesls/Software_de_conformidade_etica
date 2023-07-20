@@ -4,10 +4,16 @@
  */
 package com.gestaoqualidadeprojetos.service;
 
+import com.gestaoqualidadeprojetos.business.steps.CreateEtapaIteracaoResult;
 import com.gestaoqualidadeprojetos.business.steps.CreateEtapaMembroEquipeResult;
-import com.gestaoqualidadeprojetos.business.steps.CreateMap;
+import com.gestaoqualidadeprojetos.business.steps.CreateIteracaoResult;
+import com.gestaoqualidadeprojetos.business.steps.CreateMembroEquipeResult;
 import com.gestaoqualidadeprojetos.business.steps.NotifiesMembersNotResponded;
 import com.gestaoqualidadeprojetos.business.steps.ProcessStep;
+import com.gestaoqualidadeprojetos.business.steps.SaveEtapaIteracaoResult;
+import com.gestaoqualidadeprojetos.business.steps.SaveEtapaMembroEquipeResult;
+import com.gestaoqualidadeprojetos.business.steps.SaveIteracaoResult;
+import com.gestaoqualidadeprojetos.business.steps.SaveMembroEquipeResult;
 import com.gestaoqualidadeprojetos.business.steps.ValidatesDateCurrent;
 import com.gestaoqualidadeprojetos.business.steps.ValidatesIfAllMembersAnswered;
 import com.gestaoqualidadeprojetos.business.steps.ValidatesIteracaoResultExists;
@@ -23,11 +29,16 @@ public class DashboardCatalogService {
             new ValidatesIteracaoResultExists(),
             new ValidatesIfAllMembersAnswered(),
             new NotifiesMembersNotResponded(),
-            new CreateEtapaMembroEquipeResult());
+            new CreateEtapaMembroEquipeResult(),
+            new SaveEtapaMembroEquipeResult(),
+            new CreateMembroEquipeResult(),
+            new SaveMembroEquipeResult(),
+            new CreateEtapaIteracaoResult(),
+            new SaveEtapaIteracaoResult(),
+            new CreateIteracaoResult(),
+            new SaveIteracaoResult());
 
-    /*public static ProcessStep createProjectResultProcess = buildChain();
-
-    public static ProcessStep createTeamMemberResultProcess = buildChain();*/
+    /*public static ProcessStep createProjectResultProcess = buildChain();*/
 
     private static ProcessStep buildChain(ProcessStep... steps) {
         for (int index = 0; index < steps.length - 1; index++) {
