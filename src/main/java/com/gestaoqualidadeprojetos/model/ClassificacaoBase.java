@@ -11,11 +11,13 @@ public class ClassificacaoBase {
     private Double valorPercentualMaximo;
     private Double valorPercentualMinimo;
     private ClassificacaoEnum faixaClassificacao;
+    private String descricao;
 
-    public ClassificacaoBase(Double valorPercentualMaximo, Double valorPercentualMinimo, ClassificacaoEnum faixaClassificacao) {
+    public ClassificacaoBase(Double valorPercentualMaximo, Double valorPercentualMinimo, ClassificacaoEnum faixaClassificacao, String descricao) {
         this.valorPercentualMaximo = valorPercentualMaximo;
         this.valorPercentualMinimo = valorPercentualMinimo;
         this.faixaClassificacao = faixaClassificacao;
+        this.descricao = descricao;
     }
 
     public Double getValorPercentualMaximo() {
@@ -28,6 +30,10 @@ public class ClassificacaoBase {
 
     public ClassificacaoEnum getFaixaClassificacao() {
         return faixaClassificacao;
+    }
+    
+     public String getDescricao() {
+        return descricao;
     }
 
     @Override

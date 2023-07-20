@@ -25,8 +25,16 @@ public abstract class ResultadoEtapa {
         return etapa;
     }
 
+    public void setClassificacao(Classificacao classificacao) {
+        this.classificacao = classificacao;
+    }
+
+    public void setEtapa(EtapaIteracao etapa) {
+        this.etapa = etapa;
+    }
+    
     @Override
     public String toString() {
-        return "ResultadoEtapa{" + "classificacao=" + classificacao + ", etapa=" + etapa + '}';
+        return "ResultadoEtapa{" + "classificacao=" + classificacao + ", etapa=" + etapa.getDescricao() + '}';
     }
 }

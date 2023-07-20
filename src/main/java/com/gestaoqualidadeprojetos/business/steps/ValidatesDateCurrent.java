@@ -4,8 +4,8 @@
  */
 package com.gestaoqualidadeprojetos.business.steps;
 
+import com.gestaoqualidadeprojetos.model.Iteracao;
 import com.gestaoqualidadeprojetos.service.DashboardProcessContextService;
-import java.time.LocalDate;
 
 /**
  *
@@ -15,10 +15,11 @@ public class ValidatesDateCurrent extends ProcessStep {
 
     @Override
     public DashboardProcessContextService execute(DashboardProcessContextService context) throws Exception {
-        var dataFinalizacaoProcesso = (LocalDate) context.get((String) args[0]);
-        if (dataFinalizacaoProcesso != null) {
-            throw new Exception(String.format("Não é possível gerar o resultado pois a %s já existe!", args[0]));
+        var dataFinalizacaoProcesso = (Iteracao) context.get("iteracao");
+        if (dataFinalizacaoProcesso.getDataConclusao()!= null) {
+            throw new Exception(String.format("Não é possível gerar o resultado pois a data de conclusão já existe!"));
         }
+        System.out.println("passou pela validação de data");
         return next(context, true);
     }
 

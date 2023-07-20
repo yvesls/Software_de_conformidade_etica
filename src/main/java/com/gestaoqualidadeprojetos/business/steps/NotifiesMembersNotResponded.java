@@ -19,6 +19,8 @@ public class NotifiesMembersNotResponded extends ProcessStep {
         if(membrosNotificacao.getMembros().size() != 0) {
             // realiza o processo envio de notificação
         }
+        System.out.println("membros necessitam ser notificados:" + membrosNotificacao);
+        System.out.println("passou pela envio de notificacao");
         return next(context, false);
     }
     

@@ -6,16 +6,28 @@ package com.gestaoqualidadeprojetos.model;
  * @author lucas
  */
 public class Resposta {
-   private MembroEquipe membro;
+    private MembroEquipe membro;
     private boolean resposta;
-    private String justificativa;
-    private String evidencia;
+    private Justificativa justificativa;
+    private Evidencia evidencia;
 
   
 
     public Resposta(MembroEquipe membro, boolean resposta) {
         this.membro = membro;
         this.resposta = resposta;
+    }
+
+    public Resposta(MembroEquipe membro, boolean resposta, Justificativa justificativa) {
+        this.membro = membro;
+        this.resposta = resposta;
+        this.justificativa = justificativa;
+    }
+
+    public Resposta(MembroEquipe membro, boolean resposta, Evidencia evidencia) {
+        this.membro = membro;
+        this.resposta = resposta;
+        this.evidencia = evidencia;
     }
 
     public MembroEquipe getMembro() {
@@ -34,22 +46,25 @@ public class Resposta {
         this.resposta = resposta;
     }
 
-    public String getJustificativa() {
+    public Justificativa getJustificativa() {
         return justificativa;
     }
 
-    public void setJustificativa(String justificativa) {
+    public void setJustificativa(Justificativa justificativa) {
         this.justificativa = justificativa;
     }
 
-    public String getEvidencia() {
+    public Evidencia getEvidencia() {
         return evidencia;
     }
 
-    public void setEvidencia(String evidencia) {
+    public void setEvidencia(Evidencia evidencia) {
         this.evidencia = evidencia;
     }
 
+    @Override
+    public String toString() {
+        return "Resposta{" + "membro=" + membro + ", resposta=" + resposta + ", justificativa=" + justificativa + ", evidencia=" + evidencia + '}';
+    }
 
-        
 }

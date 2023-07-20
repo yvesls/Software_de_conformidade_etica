@@ -4,7 +4,7 @@
  */
 package com.gestaoqualidadeprojetos.repository;
 
-import com.gestaoqualidadeprojetos.model.Iteracao;
+import com.gestaoqualidadeprojetos.model.Projeto;
 import com.gestaoqualidadeprojetos.model.ResultadoEtapaProjeto;
 import com.gestaoqualidadeprojetos.model.ResultadoMembroEquipe;
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ public class ResultadoEtapaProjetoRepository {
     public ResultadoEtapaProjetoRepository() {
     }
      
-    public ArrayList<ResultadoMembroEquipe> getByIteracao(Iteracao iteracao) {
+    public ArrayList<ResultadoMembroEquipe> getByIteracao(Projeto projeto) {
         return null;
     }
     

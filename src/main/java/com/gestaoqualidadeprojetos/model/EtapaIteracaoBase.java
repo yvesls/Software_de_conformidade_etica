@@ -33,10 +33,9 @@ public class EtapaIteracaoBase {
     public void setQuestionarioEtapa(QuestionarioEtapa questionarioEtapa) {
         this.questionarioEtapa = questionarioEtapa;
     }
-    
+
     @Override
     public String toString() {
-        return "EtapaIteracaoBase{" + "descricao=" + descricao + ", pesoEsforco=" + pesoEsforco + '}';
-    }
-     
+        return "EtapaIteracaoBase{" + "descricao=" + descricao + ", pesoEsforco=" + pesoEsforco + ", questionarioEtapa=" + questionarioEtapa.getNomeQuestionario() + '}';
+    } 
 }

@@ -8,17 +8,22 @@ import java.time.LocalDateTime;
  * @author lucas
  */
 public class Pergunta extends PerguntaBase{
-    private Resposta resposta;
+    private QuestionarioEtapa questionario;
+    
     public Pergunta(String descricao, LocalDateTime dataCriacao) {
         super(descricao, dataCriacao);
     }
-    
-    public Pergunta(String descricao, LocalDateTime dataCriacao, Resposta resposta) {
+
+    public Pergunta(QuestionarioEtapa questionario, String descricao, LocalDateTime dataCriacao) {
         super(descricao, dataCriacao);
-        this.resposta = resposta;
+        this.questionario = questionario;
     }
 
-    public Resposta getResposta() {
-        return resposta;
+    public QuestionarioEtapa getQuestionario() {
+        return questionario;
+    }
+   
+    public void setQuestionario(QuestionarioEtapa questionario) {
+        this.questionario = questionario;
     }
 }
