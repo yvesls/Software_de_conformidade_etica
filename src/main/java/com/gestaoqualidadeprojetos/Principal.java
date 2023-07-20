@@ -375,10 +375,10 @@ public class Principal {
         System.out.println("\n--------------------------QUESTIONÁRIO--------------------------\n");
 
         // Obtendo os questionários
-        System.out.println("\nQuestionários Etapa:");
-        for (QuestionarioEtapa questionarioEtapa : questionarioEtapaService.obterQuestionarios()) {
+        //System.out.println("\nQuestionários Etapa:");
+        /*for (QuestionarioEtapa questionarioEtapa : questionarioEtapaService.obterQuestionarios()) {
             System.out.println(questionarioEtapa.getNomeQuestionario());
-        }
+        }*/
 
         // Responder os questionários CLIENTE
         /*Resposta resposta1ClienteCascata = new Resposta(cliente, true);
@@ -447,22 +447,32 @@ public class Principal {
         respostaGerenteCascata.salvarResposta(gerenteProjeto, resposta7GerenteCascata);*/
 
         /********************************************************************/
-        
+        System.out.println("\n\nQuestionários Etapa 1:");
         // Obtendo as perguntas base
-        /*int numeroPergunta = 0;
-        for (PerguntaBase perguntaBase : perguntaBaseService.obterPerguntasBase()) {
+        int numeroPergunta = 0;
+        for (Pergunta perguntaB : pergunta.getQuestionario().getPerguntas()) {
             numeroPergunta++;
             System.out.println("\nPergunta Base " + numeroPergunta + ":");
-            System.out.println(perguntaBase.getDescricao() + " " + perguntaBase.getDataCriacao());
+            System.out.println(perguntaB.getDescricao() + " " + perguntaB.getDataCriacao());
+            
+            //respostaService.obterRespostasPorMembro(cliente);
+        }
+        
+        System.out.println("\n\nQuestionários Etapa 2:");
+        numeroPergunta =0;
+        for (Pergunta perguntaB : pergunta3.getQuestionario().getPerguntas()) {
+            numeroPergunta++;
+            System.out.println("\nPergunta Base " + numeroPergunta + ":");
+            System.out.println(perguntaB.getDescricao() + " " + perguntaB.getDataCriacao());
             
             //respostaService.obterRespostasPorMembro(cliente);
         }
         
         // Obtendo respostas do CLIENTE
-        respostaClienteCascata.obterRespostasPorMembro(cliente);
-        System.out.println("*********************************************");
+       /* rpRepo.getByQuestionarioEtapa(questionarioEtapa1);
+        System.out.println("*********************************************"); */
         // Obtendo respostas do GERENTE DE PROJ.
-        respostaGerenteCascata.obterRespostasPorMembro(gerenteProjeto);*/
+        //respostaGerenteCascata.obterRespostasPorMembro(gerenteProjeto);
         
         /*DASHBOARD*/
         System.out.println("\n--------------------------DASHBOARD--------------------------\n");
