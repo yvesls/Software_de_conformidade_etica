@@ -268,16 +268,47 @@ public class Principal {
         questionarioEtapa5.setPerguntas(listPerguntasTestes);
         
         // Criando questionários
-        QuestionarioEtapaBase questionarioEtapaBase1 = new QuestionarioEtapaBase("Questionário Base Etapa", LocalDateTime.now());
+        /*QuestionarioEtapaBase questionarioEtapaBase1 = new QuestionarioEtapaBase("Questionário Base Etapa", LocalDateTime.now());
 
         questionarioEtapaBase1.adicionarPerguntaBase(pergunta);
-        questionarioEtapaBase1.adicionarPerguntaBase(pergunta2);
+        questionarioEtapaBase1.adicionarPerguntaBase(pergunta2);*/
+
+        // Criando perguntas base
+        /*PerguntaBase perguntaBase1 = new PerguntaBase("Você entendeu os objetivos do software?", LocalDateTime.now().withNano(0));
+        PerguntaBase perguntaBase2 = new PerguntaBase("Você está ciente das políticas éticas que a equipe de desenvolvimento seguirá durante todo o projeto?", LocalDateTime.now().withNano(0));
+        PerguntaBase perguntaBase3 = new PerguntaBase("Você está disposto a fornecer feedback para a equipe de desenvolvimento durante todo o processo?", LocalDateTime.now().withNano(0));
+        PerguntaBase perguntaBase4 = new PerguntaBase("Você tem alguma preocupação com relação ao desenvolvimento ético do software?", LocalDateTime.now().withNano(0));
+        PerguntaBase perguntaBase5 = new PerguntaBase("Você está ciente de quaisquer requisitos legais ou regulatórios relacionados ao desenvolvimento do software?", LocalDateTime.now().withNano(0));
+        PerguntaBase perguntaBase6 = new PerguntaBase("Foi determinado quem toma as decisões em nome da sua empresa?", LocalDateTime.now().withNano(0));
+        PerguntaBase perguntaBase7 = new PerguntaBase("Foi determinado quem aprova a flexibilidade orçamentária para o gerenciamento projeto?", LocalDateTime.now().withNano(0));
+        
+        // Criando questionários base
+        QuestionarioEtapaBase questionarioEtapaBase1 = new QuestionarioEtapaBase("Cascata", LocalDateTime.now());
+
+        questionarioEtapaBase1.adicionarPerguntaBase(perguntaBase1);
+        questionarioEtapaBase1.adicionarPerguntaBase(perguntaBase2);
+        questionarioEtapaBase1.adicionarPerguntaBase(perguntaBase3);
+        questionarioEtapaBase1.adicionarPerguntaBase(perguntaBase4);
+        questionarioEtapaBase1.adicionarPerguntaBase(perguntaBase5);
+        questionarioEtapaBase1.adicionarPerguntaBase(perguntaBase6);
+        questionarioEtapaBase1.adicionarPerguntaBase(perguntaBase7);*/
+        
+        // Criando questionários
+        QuestionarioEtapa questionarioEtapa1 = new QuestionarioEtapa(questionarioEtapaBase1.getNomeQuestionario(), LocalDateTime.now());
 
         // pergunta base
         PerguntaBaseService perguntaBaseService = new PerguntaBaseService();
 
         perguntaBaseService.salvarPerguntaBase(pergunta);
         perguntaBaseService.salvarPerguntaBase(pergunta2);
+
+        perguntaBaseService.salvarPerguntaBase(perguntaBase1);
+        perguntaBaseService.salvarPerguntaBase(perguntaBase2);
+        perguntaBaseService.salvarPerguntaBase(perguntaBase3);
+        perguntaBaseService.salvarPerguntaBase(perguntaBase4);
+        perguntaBaseService.salvarPerguntaBase(perguntaBase5);
+        perguntaBaseService.salvarPerguntaBase(perguntaBase6);
+        perguntaBaseService.salvarPerguntaBase(perguntaBase7);
 
         QuestionarioEtapaBaseService questionarioEtapaBaseService = new QuestionarioEtapaBaseService();
         questionarioEtapaBaseService.salvarQuestionarioEtapaBase(questionarioEtapaBase1);
@@ -349,20 +380,91 @@ public class Principal {
             System.out.println(questionarioEtapa.getNomeQuestionario());
         }
 
-        // Obtendo as perguntas base
-        System.out.println("\nPerguntas Base:");
-        for (PerguntaBase perguntaBase : perguntaBaseService.obterPerguntasBase()) {
-            System.out.println(perguntaBase.getDescricao() + " " + perguntaBase.getDataCriacao());
-        }
+        // Responder os questionários CLIENTE
+        /*Resposta resposta1ClienteCascata = new Resposta(cliente, true);
+        resposta1ClienteCascata.setEvidencia("Evidência da resposta 1 positiva\n");
 
         RespostaService respostaService = new RespostaService();
 
-        // Obtendo as respostas
-        Resposta resposta;
+        Resposta resposta2ClienteCascata = new Resposta(cliente, false);
+        resposta2ClienteCascata.setJustificativa("Justificativa da resposta 2 negativa\n");
 
-        /*resposta = respostaService.obterRespostaPorMembro(cliente);
-        resposta = respostaService.obterRespostaPorMembro(gerenteProjeto);*/
+        Resposta resposta3ClienteCascata = new Resposta(cliente, true);
+        resposta3ClienteCascata.setEvidencia("Evidência da resposta 3 positiva\n");
 
+        Resposta resposta4ClienteCascata = new Resposta(cliente, false);
+        resposta4ClienteCascata.setJustificativa("Justificativa da resposta 4 negativa\n");
+
+        Resposta resposta5ClienteCascata = new Resposta(cliente, false);
+        resposta5ClienteCascata.setJustificativa("Evidência da resposta 5 negativa\n");
+
+        Resposta resposta6ClienteCascata = new Resposta(cliente, true);
+        resposta6ClienteCascata.setEvidencia("Justificativa da resposta 6 positiva\n");
+        
+        Resposta resposta7ClienteCascata = new Resposta(cliente, true);
+        resposta7ClienteCascata.setEvidencia("Justificativa da resposta 7 positiva\n");
+        
+        RespostaService respostaClienteCascata = new RespostaService();
+        respostaClienteCascata.salvarResposta(cliente, resposta1ClienteCascata);
+        respostaClienteCascata.salvarResposta(cliente, resposta2ClienteCascata);
+        respostaClienteCascata.salvarResposta(cliente, resposta3ClienteCascata);
+        respostaClienteCascata.salvarResposta(cliente, resposta4ClienteCascata);
+        respostaClienteCascata.salvarResposta(cliente, resposta5ClienteCascata);
+        respostaClienteCascata.salvarResposta(cliente, resposta6ClienteCascata);
+        respostaClienteCascata.salvarResposta(cliente, resposta7ClienteCascata);
+        
+        *******************************************************************/
+        
+        // Responder os questionários GERENTE PROJ.
+        /*Resposta resposta1GerenteCascata = new Resposta(gerenteProjeto, true);
+        resposta1GerenteCascata.setEvidencia("Evidência da resposta 1 positiva\n");
+
+        Resposta resposta2GerenteCascata = new Resposta(gerenteProjeto, true);
+        resposta2GerenteCascata.setEvidencia("Justificativa da resposta 2 positiva\n");
+
+        Resposta resposta3GerenteCascata = new Resposta(gerenteProjeto, true);
+        resposta3GerenteCascata.setEvidencia("Evidência da resposta 3 positiva\n");
+
+        Resposta resposta4GerenteCascata = new Resposta(gerenteProjeto, true);
+        resposta4GerenteCascata.setEvidencia("Justificativa da resposta 4 positiva\n");
+
+        Resposta resposta5GerenteCascata = new Resposta(gerenteProjeto, false);
+        resposta5GerenteCascata.setJustificativa("Evidência da resposta 5 negativa\n");
+
+        Resposta resposta6GerenteCascata = new Resposta(gerenteProjeto, true);
+        resposta6GerenteCascata.setEvidencia("Justificativa da resposta 6 positiva\n");
+        
+        Resposta resposta7GerenteCascata = new Resposta(gerenteProjeto, false);
+        resposta7GerenteCascata.setJustificativa("Justificativa da resposta 7 negativa\n");
+        
+        RespostaService respostaGerenteCascata = new RespostaService();
+        respostaGerenteCascata.salvarResposta(gerenteProjeto, resposta1GerenteCascata);
+        respostaGerenteCascata.salvarResposta(gerenteProjeto, resposta2GerenteCascata);
+        respostaGerenteCascata.salvarResposta(gerenteProjeto, resposta3GerenteCascata);
+        respostaGerenteCascata.salvarResposta(gerenteProjeto, resposta4GerenteCascata);
+        respostaGerenteCascata.salvarResposta(gerenteProjeto, resposta5GerenteCascata);
+        respostaGerenteCascata.salvarResposta(gerenteProjeto, resposta6GerenteCascata);
+        respostaGerenteCascata.salvarResposta(gerenteProjeto, resposta7GerenteCascata);*/
+
+        /********************************************************************/
+        
+        // Obtendo as perguntas base
+        int numeroPergunta = 0;
+        for (PerguntaBase perguntaBase : perguntaBaseService.obterPerguntasBase()) {
+            numeroPergunta++;
+            System.out.println("\nPergunta Base " + numeroPergunta + ":");
+            System.out.println(perguntaBase.getDescricao() + " " + perguntaBase.getDataCriacao());
+            
+            //respostaService.obterRespostasPorMembro(cliente);
+        }
+        
+        // Obtendo respostas do CLIENTE
+        respostaClienteCascata.obterRespostasPorMembro(cliente);
+        System.out.println("*********************************************");
+        // Obtendo respostas do GERENTE DE PROJ.
+        respostaGerenteCascata.obterRespostasPorMembro(gerenteProjeto);
+        
+        
         /*DASHBOARD*/
         System.out.println("\n--------------------------DASHBOARD--------------------------\n");
 

@@ -66,4 +66,5 @@ public class Resposta {
     public String toString() {
         return "Resposta{" + "membro=" + membro + ", resposta=" + resposta + ", justificativa=" + justificativa + ", evidencia=" + evidencia + '}';
     }
+
 }
