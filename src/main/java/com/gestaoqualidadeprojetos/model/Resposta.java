@@ -64,7 +64,7 @@ public class Resposta {
 
     @Override
     public String toString() {
-        return "Resposta{" + "membro=" + membro + ", resposta=" + resposta + ", justificativa=" + justificativa + ", evidencia=" + evidencia + '}';
+        return "Resposta: " + resposta + "\nJustificativa: " + justificativa + "\nEvidencia: " + evidencia + "\nMembro: " + membro.getNome() + " "+ membro.getSobrenome();
     }
 
 }

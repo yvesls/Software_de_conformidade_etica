@@ -22,7 +22,7 @@ public class RespostaPerguntaRepository {
     public List<RespostaPergunta> getByQuestionarioEtapa(QuestionarioEtapa questionarioEtapa) {
         var listRp = new ArrayList<RespostaPergunta>();
         for(RespostaPergunta rp : respostasPerguntas) {
-            if(rp.getPergunta().getQuestionario().getNomeQuestionario() == questionarioEtapa.getNomeQuestionario()) {
+            if(rp.getPergunta().getQuestionario().getNomeQuestionario().equals(questionarioEtapa.getNomeQuestionario())) {
                 listRp.add(rp);
             }
         }
