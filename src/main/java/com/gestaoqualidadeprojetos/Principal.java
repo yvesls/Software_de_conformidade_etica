@@ -294,7 +294,7 @@ public class Principal {
         questionarioEtapaBase1.adicionarPerguntaBase(perguntaBase7);*/
         
         // Criando questionários
-        QuestionarioEtapa questionarioEtapa1 = new QuestionarioEtapa(questionarioEtapaBase1.getNomeQuestionario(), LocalDateTime.now());
+        /* QuestionarioEtapa questionarioEtapa1 = new QuestionarioEtapa(questionarioEtapaBase1.getNomeQuestionario(), LocalDateTime.now());
 
         // pergunta base
         PerguntaBaseService perguntaBaseService = new PerguntaBaseService();
@@ -308,13 +308,13 @@ public class Principal {
         perguntaBaseService.salvarPerguntaBase(perguntaBase4);
         perguntaBaseService.salvarPerguntaBase(perguntaBase5);
         perguntaBaseService.salvarPerguntaBase(perguntaBase6);
-        perguntaBaseService.salvarPerguntaBase(perguntaBase7);
+        perguntaBaseService.salvarPerguntaBase(perguntaBase7);*/
 
         QuestionarioEtapaBaseService questionarioEtapaBaseService = new QuestionarioEtapaBaseService();
-        questionarioEtapaBaseService.salvarQuestionarioEtapaBase(questionarioEtapaBase1);
+        //questionarioEtapaBaseService.salvarQuestionarioEtapaBase(questionarioEtapaBase1);
 
         QuestionarioEtapaService questionarioEtapaService = new QuestionarioEtapaService();
-        questionarioEtapaService.salvarQuestionario(questionarioEtapa1);
+        /*questionarioEtapaService.salvarQuestionario(questionarioEtapa1);*/
 
         /*PROJETO*/
         
@@ -449,7 +449,7 @@ public class Principal {
         /********************************************************************/
         
         // Obtendo as perguntas base
-        int numeroPergunta = 0;
+        /*int numeroPergunta = 0;
         for (PerguntaBase perguntaBase : perguntaBaseService.obterPerguntasBase()) {
             numeroPergunta++;
             System.out.println("\nPergunta Base " + numeroPergunta + ":");
@@ -462,8 +462,7 @@ public class Principal {
         respostaClienteCascata.obterRespostasPorMembro(cliente);
         System.out.println("*********************************************");
         // Obtendo respostas do GERENTE DE PROJ.
-        respostaGerenteCascata.obterRespostasPorMembro(gerenteProjeto);
-        
+        respostaGerenteCascata.obterRespostasPorMembro(gerenteProjeto);*/
         
         /*DASHBOARD*/
         System.out.println("\n--------------------------DASHBOARD--------------------------\n");
