@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * @author Note102
  */
 public class ResultadoEtapaMembroEquipeRepository {
-     private ArrayList<ResultadoEtapaMembroEquipe> listaResultadoEtapaMembroEquipe;
+    private ArrayList<ResultadoEtapaMembroEquipe> listaResultadoEtapaMembroEquipe;
     
     public ResultadoEtapaMembroEquipeRepository() {
     }

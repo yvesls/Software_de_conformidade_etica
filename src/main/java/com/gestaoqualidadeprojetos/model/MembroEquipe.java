@@ -7,6 +7,7 @@ public class MembroEquipe {
     private String senha;
     private String representante;
     private boolean primeiroAcesso;
+    private Projeto projeto;
 
     public MembroEquipe(String nome, String sobrenome, String email, String senha, String representante, boolean primeiroAcesso) {
         this.nome = nome;
@@ -15,6 +16,16 @@ public class MembroEquipe {
         this.senha = senha;
         this.representante = representante;
         this.primeiroAcesso = primeiroAcesso;
+    }
+
+    public MembroEquipe(String nome, String sobrenome, String email, String senha, String representante, boolean primeiroAcesso, Projeto projeto) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.email = email;
+        this.senha = senha;
+        this.representante = representante;
+        this.primeiroAcesso = primeiroAcesso;
+        this.projeto = projeto;
     }
     
     public String getNome() {
@@ -65,9 +76,12 @@ public class MembroEquipe {
         this.primeiroAcesso = primeiroAcesso;
     }
 
+    public Projeto getProjeto() {
+        return projeto;
+    }
+
     @Override
     public String toString() {
-        return "MembroEquipe{" + "nome=" + nome + ", sobrenome=" + sobrenome + ", email=" + email + ", representante=" + representante + '}';
+        return "MembroEquipe{" + "nome=" + nome + ", sobrenome=" + sobrenome + ", email=" + email + ", senha=" + senha + ", representante=" + representante + ", primeiroAcesso=" + primeiroAcesso + ", projeto=" + projeto + '}';
     }
-    
 }

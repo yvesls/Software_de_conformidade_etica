@@ -21,6 +21,7 @@ public class ValidatesIteracaoResultExists extends ProcessStep {
         if(repository.getByIteracao(iteracao) == null) {
             throw new Exception("Não é possível gerar o resultado pois já existe resultado para esta iteração!");
         }
+        System.out.println("passou pela validação resultado não gerado para a iteração atual");
         return next(context, true);
     }
     

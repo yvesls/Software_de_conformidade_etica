@@ -31,8 +31,16 @@ public class ResultadoEtapaMembroEquipe extends ResultadoEtapa {
         return iteracao;
     }
 
+    public void setMembro(MembroEquipe membro) {
+        this.membro = membro;
+    }
+
+    public void setIteracao(Iteracao iteracao) {
+        this.iteracao = iteracao;
+    }
+
     @Override
     public String toString() {
-        return "ResultadoEtapaMembroEquipe{" + "membro=" + membro + '}';
+        return "ResultadoEtapaMembroEquipe{" + "membro=" + membro.getNome() + ", iteracao=" + iteracao.getDescricao() + '}';
     }
 }

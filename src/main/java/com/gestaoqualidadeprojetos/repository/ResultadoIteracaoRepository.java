@@ -36,7 +36,7 @@ public class  ResultadoIteracaoRepository {
     
     private ArrayList<ResultadoIteracao> generateAllMock() {
         listaResultadosIteracao = new ArrayList<ResultadoIteracao>();
-        ArrayList<Classificacao> classificacoes = new ClassificacaoRepository().getAll();
+        ArrayList<Classificacao> classificacoes = new ClassificacaoRepository().getAll();;
         var etapas = new ArrayList<ResultadoEtapaIteracao>();
         var resultadoMembros = new ArrayList<ResultadoMembroEquipe>();
         LocalDate dataInicio = LocalDate.of(2023, 7, 1);

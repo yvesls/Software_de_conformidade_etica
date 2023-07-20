@@ -14,15 +14,17 @@ public class QuestionarioEtapa extends QuestionarioEtapaBase{
     private EtapaIteracao etapaIteracao;
     private ArrayList<Pergunta> perguntas;
     private String status;
+    private boolean isFinalizado;
 
     public QuestionarioEtapa(String nomeQuestionario, LocalDateTime dataCriacao) {
         super(nomeQuestionario, dataCriacao);
     }
     
-    public QuestionarioEtapa(String nomeQuestionario, LocalDateTime dataCriacao, EtapaIteracao etapaIteracao, ArrayList<Pergunta> perguntas) {
+    public QuestionarioEtapa(String nomeQuestionario, LocalDateTime dataCriacao, EtapaIteracao etapaIteracao, ArrayList<Pergunta> perguntas, boolean isFinalizado) {
         super(nomeQuestionario, dataCriacao);
         this.etapaIteracao = etapaIteracao;
         this.perguntas = perguntas;
+        this.isFinalizado = isFinalizado;
     }
 
     public LocalDateTime getDataConclusao() {
@@ -41,6 +43,30 @@ public class QuestionarioEtapa extends QuestionarioEtapaBase{
         this.dataPrevisaoConclusao = dataPrevisaoConclusao;
     }
 
+    public EtapaIteracao getEtapaIteracao() {
+        return etapaIteracao;
+    }
+
+    public void setEtapaIteracao(EtapaIteracao etapaIteracao) {
+        this.etapaIteracao = etapaIteracao;
+    }
+
+    public ArrayList<Pergunta> getPerguntas() {
+        return perguntas;
+    }
+
+    public void setPerguntas(ArrayList<Pergunta> perguntas) {
+        this.perguntas = perguntas;
+    }
+
+    public boolean isIsFinalizado() {
+        return isFinalizado;
+    }
+
+    public void setIsFinalizado(boolean isFinalizado) {
+        this.isFinalizado = isFinalizado;
+    }
+
     public String getStatus() {
         return status;
     }
@@ -49,11 +75,8 @@ public class QuestionarioEtapa extends QuestionarioEtapaBase{
         this.status = status;
     }
 
-    public EtapaIteracao getEtapaIteracao() {
-        return etapaIteracao;
-    }
-
-    public ArrayList<Pergunta> getPerguntas() {
-        return perguntas;
+    @Override
+    public String toString() {
+        return "QuestionarioEtapa{" + "dataConclusao=" + dataConclusao + ", dataPrevisaoConclusao=" + dataPrevisaoConclusao + ", etapaIteracao=" + etapaIteracao + ", perguntas=" + perguntas + ", status=" + status + '}';
     }
 }

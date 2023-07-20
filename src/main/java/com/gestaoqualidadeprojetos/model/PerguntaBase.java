@@ -33,4 +33,11 @@ public class PerguntaBase {
     public void setDataCriacao(LocalDateTime dataCriacao) {
         this.dataCriacao = dataCriacao;
     }
+
+    @Override
+    public String toString() {
+        return "PerguntaBase{" + "descricao=" + descricao + ", dataCriacao=" + dataCriacao + '}';
+    }
+    
+    
 }

@@ -13,6 +13,9 @@ public class Classificacao {
     private LocalDateTime dataCriacao;
     private Double valorPercentualAtingido; 
     private ClassificacaoEnum classificacaoAtingida;
+    
+    public Classificacao(){
+    }
 
     public Classificacao(String descricao, LocalDateTime dataCriacao, Double valorPercentualAtingido, ClassificacaoEnum classificacaoAtingida) {
         this.descricao = descricao;
@@ -37,6 +40,22 @@ public class Classificacao {
         return classificacaoAtingida;
     }
 
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public void setDataCriacao(LocalDateTime dataCriacao) {
+        this.dataCriacao = dataCriacao;
+    }
+
+    public void setValorPercentualAtingido(Double valorPercentualAtingido) {
+        this.valorPercentualAtingido = valorPercentualAtingido;
+    }
+
+    public void setClassificacaoAtingida(ClassificacaoEnum classificacaoAtingida) {
+        this.classificacaoAtingida = classificacaoAtingida;
+    }
+    
     @Override
     public String toString() {
         return "Classificacao{" + "descricao=" + descricao + ", dataCriacao=" + dataCriacao + ", valorPercentualAtingido=" + valorPercentualAtingido + ", classificacaoAtingida=" + classificacaoAtingida + '}';

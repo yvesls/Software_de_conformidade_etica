@@ -9,6 +9,7 @@ public class Iteracao {
     private LocalDate previsaoConclusao;
     private LocalDate dataConclusao;
     private String status;
+    private Projeto projeto;
     private ArrayList<EtapaIteracao> etapas;
     
     public Iteracao() {
@@ -22,12 +23,30 @@ public class Iteracao {
         this.etapas = new ArrayList();
     }
 
+    public Iteracao(String descricao, LocalDate dataInicio, LocalDate previsaoConclusao, LocalDate dataConclusao, String status, Projeto projeto, ArrayList<EtapaIteracao> etapas) {
+        this.descricao = descricao;
+        this.dataInicio = dataInicio;
+        this.previsaoConclusao = previsaoConclusao;
+        this.dataConclusao = dataConclusao;
+        this.status = status;
+        this.projeto = projeto;
+        this.etapas = etapas;
+    }
+
     public void addEtapa(EtapaIteracao etapa) {
         this.etapas.add(etapa);
     }
 
     public ArrayList<EtapaIteracao> getEtapas() {
         return etapas;
+    }
+
+    public void setProjeto(Projeto projeto) {
+        this.projeto = projeto;
+    }
+
+    public void setEtapas(ArrayList<EtapaIteracao> etapas) {
+        this.etapas = etapas;
     }
 
     public String getDescricao() {
@@ -69,10 +88,13 @@ public class Iteracao {
     public void setStatus(String status) {
         this.status = status;
     }
-    
-    @Override
-    public String toString() {
-        return "Iteracao{" + "descricao=" + descricao + ", dataInicio=" + dataInicio + ", dataConclusao=" + dataConclusao + ", previsaoConclusao=" + previsaoConclusao + ", status=" + status + '}';
+
+    public Projeto getProjeto() {
+        return projeto;
     }
 
+    @Override
+    public String toString() {
+        return "Iteracao{" + "descricao=" + descricao + ", dataInicio=" + dataInicio + ", previsaoConclusao=" + previsaoConclusao + ", dataConclusao=" + dataConclusao + ", status=" + status + ", projeto=" + projeto + ", etapas=" + etapas + '}';
+    }
 }

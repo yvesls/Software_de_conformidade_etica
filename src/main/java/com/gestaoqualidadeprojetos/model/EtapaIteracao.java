@@ -16,4 +16,8 @@ public class EtapaIteracao extends EtapaIteracaoBase{
         return iteracao;
     }
 
+    @Override
+    public String toString() {
+        return "EtapaIteracao{" + "descricao=" + this.getDescricao() + '}';
+    }
 }

@@ -26,11 +26,11 @@ public class ClassificacaoBaseRepository {
     
     private ArrayList<ClassificacaoBase> generateAllMock() {
         listaClassificacaoBase = new ArrayList<ClassificacaoBase>();
-        var cb1 = new ClassificacaoBase(100.0, 90.0, ClassificacaoEnum.A);
-        var cb2 = new ClassificacaoBase(75.0, 89.9, ClassificacaoEnum.B);
-        var cb3 = new ClassificacaoBase(60.0, 79.9, ClassificacaoEnum.C);
-        var cb4 = new ClassificacaoBase(45.0, 59.9, ClassificacaoEnum.D);
-        var cb5 = new ClassificacaoBase( 0.0, 44.9, ClassificacaoEnum.E);
+        var cb1 = new ClassificacaoBase(100.0, 90.0, ClassificacaoEnum.A, "Excelente");
+        var cb2 = new ClassificacaoBase(75.0, 89.9, ClassificacaoEnum.B, "Atingiu o mínimo necessário");
+        var cb3 = new ClassificacaoBase(60.0, 79.9, ClassificacaoEnum.C, "Não atingiu o mínimo necessário");
+        var cb4 = new ClassificacaoBase(45.0, 59.9, ClassificacaoEnum.D, "Pobre");
+        var cb5 = new ClassificacaoBase( 0.0, 44.9, ClassificacaoEnum.E, "Ruim");
         listaClassificacaoBase.add(cb1);
         listaClassificacaoBase.add(cb2);
         listaClassificacaoBase.add(cb3);

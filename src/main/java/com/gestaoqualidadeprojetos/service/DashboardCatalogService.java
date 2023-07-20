@@ -4,7 +4,13 @@
  */
 package com.gestaoqualidadeprojetos.service;
 
+import com.gestaoqualidadeprojetos.business.steps.CreateEtapaMembroEquipeResult;
+import com.gestaoqualidadeprojetos.business.steps.CreateMap;
+import com.gestaoqualidadeprojetos.business.steps.NotifiesMembersNotResponded;
 import com.gestaoqualidadeprojetos.business.steps.ProcessStep;
+import com.gestaoqualidadeprojetos.business.steps.ValidatesDateCurrent;
+import com.gestaoqualidadeprojetos.business.steps.ValidatesIfAllMembersAnswered;
+import com.gestaoqualidadeprojetos.business.steps.ValidatesIteracaoResultExists;
 
 /**
  *
@@ -12,11 +18,16 @@ import com.gestaoqualidadeprojetos.business.steps.ProcessStep;
  */
 public class DashboardCatalogService {
 
-    public static ProcessStep createIterationResultProcess = buildChain();
+    public static ProcessStep createIterationResultProcess = buildChain(
+            new ValidatesDateCurrent(),
+            new ValidatesIteracaoResultExists(),
+            new ValidatesIfAllMembersAnswered(),
+            new NotifiesMembersNotResponded(),
+            new CreateEtapaMembroEquipeResult());
 
-    public static ProcessStep createProjectResultProcess = buildChain();
+    /*public static ProcessStep createProjectResultProcess = buildChain();
 
-    public static ProcessStep createTeamMemberResultProcess = buildChain();
+    public static ProcessStep createTeamMemberResultProcess = buildChain();*/
 
     private static ProcessStep buildChain(ProcessStep... steps) {
         for (int index = 0; index < steps.length - 1; index++) {

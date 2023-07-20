@@ -30,4 +30,9 @@ public class MembrosNotificacao {
     public String getMensagem() {
         return mensagem;
     }
+
+    @Override
+    public String toString() {
+        return "MembrosNotificacao{" + "membros=" + membros + ", mensagem=" + mensagem + '}';
+    }
 }
