@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.gestaoqualidadeprojetos.business.steps;
+package com.gestaoqualidadeprojetos.business.steps.iteracaoprocess;
 
+import com.gestaoqualidadeprojetos.business.steps.ProcessStep;
 import com.gestaoqualidadeprojetos.model.EtapaIteracao;
 import com.gestaoqualidadeprojetos.model.Iteracao;
 import com.gestaoqualidadeprojetos.model.MembroEquipe;

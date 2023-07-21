@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.gestaoqualidadeprojetos.business.steps;
+package com.gestaoqualidadeprojetos.business.steps.iteracaoprocess;
 
 import com.gestaoqualidadeprojetos.business.GeraClassificacao;
+import com.gestaoqualidadeprojetos.business.steps.ProcessStep;
 import com.gestaoqualidadeprojetos.model.EtapaIteracao;
 import com.gestaoqualidadeprojetos.model.Iteracao;
 import com.gestaoqualidadeprojetos.model.MembroEquipe;
-import com.gestaoqualidadeprojetos.model.Pergunta;
 import com.gestaoqualidadeprojetos.model.RespostaPergunta;
 import com.gestaoqualidadeprojetos.model.ResultadoEtapaMembroEquipe;
 import com.gestaoqualidadeprojetos.repository.MembroEquipeRepository;
@@ -30,13 +30,14 @@ public class CreateEtapaMembroEquipeResult extends ProcessStep {
         var reposResPer = new RespostaPerguntaRepository();
         var repository = new MembroEquipeRepository();
         var membros = repository.getByProject(iteracao.getProjeto());
+        System.out.println("-------------------------------------- Criação do resultado da etapa por membro de equipe --------------------------------------");
 
         var resultadoEtapaMembros = new ArrayList<ResultadoEtapaMembroEquipe>();
 
         for (MembroEquipe membro : membros) {
             var mapAcumulado = new HashMap<MembroEquipe, Double>();
             for (EtapaIteracao etapa : etapas) {
-                System.out.println("-----------------------------------------" + "Etapa - " + etapa.getDescricao() + "-----------------------------------------");
+                System.out.println("----------------------------------------- " + "Etapa - " + etapa.getDescricao() + " -----------------------------------------");
 
                 var qtdTotalPerguntas = 0.0;
                 var rps = reposResPer.getByQuestionarioEtapa(etapa.getQuestionarioEtapa());

@@ -34,12 +34,11 @@ public class ResultadoService {
         System.out.println(response);
     }
 
-    public void gerarResultadoProjeto(GenericService genericService, Projeto projeto) throws ParseException {
-
-    }
-
-    public void gerarResultadoIteracaoMembroEquipe(GenericService genericService, Iteracao iteracao) throws ParseException {
-
+    public void gerarResultadoProjeto(Projeto projeto) throws ParseException {
+        var context = new DashboardProcessContextService();
+        context.put("projeto", projeto);
+        Object response = GenericService.run(DashboardCatalogService.createProjectResultProcess, context);
+        System.out.println(response);
     }
 
     public ResultadoIteracao getResultadoIteracao(Iteracao iteracao) throws Exception {

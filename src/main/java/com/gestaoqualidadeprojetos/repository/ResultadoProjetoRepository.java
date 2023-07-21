@@ -29,13 +29,15 @@ public class ResultadoProjetoRepository {
     }
     
     private ArrayList<ResultadoProjeto> generateAllMock() {
-        listaResultadosProjeto = new ArrayList<ResultadoProjeto>();
-        return listaResultadosProjeto;
+        return null;
     }
     
     private ResultadoProjeto getMockByNome(Projeto projeto) {
+        if(listaResultadosProjeto == null) {
+            return null;
+        }
         for(ResultadoProjeto rp : listaResultadosProjeto) {
-            if(rp.getProjeto().equals(projeto)) {
+            if(rp.getProjeto().getNome().equals(projeto.getNome())) {
                 return rp;
             }
         }

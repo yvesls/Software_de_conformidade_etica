@@ -24,4 +24,9 @@ public abstract class Resultado {
     public void setClassificacao(Classificacao classificacao) {
         this.classificacao = classificacao;
     }
+
+    @Override
+    public String toString() {
+        return "Resultado{" + "classificacao=" + classificacao + '}';
+    }
 }

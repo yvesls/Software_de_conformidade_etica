@@ -73,6 +73,6 @@ public class ResultadoMembroEquipe extends Resultado {
 
     @Override
     public String toString() {
-        return "ResultadoMembroEquipe{" + " membro=" + membro.getNome() + ", iteracao=" + iteracao.getDescricao() + '}';
+        return "ResultadoMembroEquipe{" + " membro=" + membro.getNome() + ", iteracao=" + iteracao.getDescricao() + "classificacao=" + classificacao +  '}';
     }
 }

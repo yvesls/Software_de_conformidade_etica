@@ -21,7 +21,6 @@ public class GeraClassificacao {
         var repository = new ClassificacaoBaseRepository();
         var classificacoesBase = repository.getAll();
         DecimalFormat formato = new DecimalFormat("#.0");
-        System.out.println("Informações da classificação: ----------------------------------------------------------------");
         System.out.println("qtdRespostasSim: " + qtdRespostasSim);
         System.out.println("qtdTotalRespostas: " + qtdTotalRespostas);
         String valorPerAtingidoString = formato.format((qtdRespostasSim/qtdTotalRespostas)*100);
@@ -49,7 +48,6 @@ public class GeraClassificacao {
         var repository = new ClassificacaoBaseRepository();
         var classificacoesBase = repository.getAll();
         DecimalFormat formato = new DecimalFormat("#.0");
-        System.out.println("Informações da classificação: ----------------------------------------------------------------");
         String valorPerAtingidoString = formato.format((qtdRespostasSim/qtdTotalRespostas));
         var valorPerAtingido = Double.parseDouble(valorPerAtingidoString.replace(",", "."));
         System.out.println("valorPerAtingido: " + valorPerAtingido);

@@ -10,23 +10,20 @@ import java.util.List;
  * @author Note102
  */
 public class ResultadoIteracao extends Resultado {
-    private String descricao;
     private LocalDate dataResultado;
     private ArrayList<ResultadoEtapaIteracao> resultadosEtapa;
     private ArrayList<ResultadoMembroEquipe> resultadosMembroEquipe;
     private Iteracao iteracao;
+    
+    public ResultadoIteracao(){
+    }
 
-    public ResultadoIteracao(String descricao, LocalDate dataResultado, Classificacao classificacao, ArrayList<ResultadoEtapaIteracao> resultadosEtapa, ArrayList<ResultadoMembroEquipe> resultadosMembroEquipe, Iteracao iteracao) {
+    public ResultadoIteracao(LocalDate dataResultado, Classificacao classificacao, ArrayList<ResultadoEtapaIteracao> resultadosEtapa, ArrayList<ResultadoMembroEquipe> resultadosMembroEquipe, Iteracao iteracao) {
         super(classificacao);
-        this.descricao = descricao;
         this.dataResultado = dataResultado;
         this.resultadosEtapa = resultadosEtapa;
         this.resultadosMembroEquipe = resultadosMembroEquipe;
         this.iteracao = iteracao;
-    }
-
-    public String getDescricao() {
-        return descricao;
     }
 
     public LocalDate getDataResultado() {
@@ -49,8 +46,28 @@ public class ResultadoIteracao extends Resultado {
         return classificacao;
     }
 
+    public void setDataResultado(LocalDate dataResultado) {
+        this.dataResultado = dataResultado;
+    }
+
+    public void setResultadosEtapa(ArrayList<ResultadoEtapaIteracao> resultadosEtapa) {
+        this.resultadosEtapa = resultadosEtapa;
+    }
+
+    public void setResultadosMembroEquipe(ArrayList<ResultadoMembroEquipe> resultadosMembroEquipe) {
+        this.resultadosMembroEquipe = resultadosMembroEquipe;
+    }
+
+    public void setIteracao(Iteracao iteracao) {
+        this.iteracao = iteracao;
+    }
+
+    public void setClassificacao(Classificacao classificacao) {
+        this.classificacao = classificacao;
+    }
+
     @Override
     public String toString() {
-        return "ResultadoIteracao{" + "descricao=" + descricao + ", dataResultado=" + dataResultado + ", resultadosEtapa=" + resultadosEtapa + ", resultadosMembroEquipe=" + resultadosMembroEquipe + ", iteracao=" + iteracao + '}';
+        return "ResultadoIteracao{" + "dataResultado=" + dataResultado + ", iteracao=" + iteracao.getDescricao() + "classificacao=" + classificacao +  '}';
     }
 }

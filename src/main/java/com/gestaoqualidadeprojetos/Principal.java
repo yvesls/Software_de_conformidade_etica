@@ -465,11 +465,12 @@ public class Principal {
             
             /*DASHBOARD*/
             System.out.println("\n--------------------------DASHBOARD--------------------------\n");
-            
+            System.out.println("\n--------------------------GERAR RESULTADO DA ITERAÇÃO--------------------------\n");
             System.out.println("Gerar resultado para iteração: ");
             var resultadoService = new ResultadoService();
             resultadoService.gerarResultadoIteracao(projetoCascata.getIteracoes().get(0));
-            
+            System.out.println("\n--------------------------GERAR RESULTADO DO PROJETO--------------------------\n");
+            resultadoService.gerarResultadoProjeto(projetoCascata);
         } catch (RuntimeException ex) {
             Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Exception ex) {

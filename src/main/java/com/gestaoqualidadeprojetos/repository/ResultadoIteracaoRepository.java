@@ -2,6 +2,7 @@ package com.gestaoqualidadeprojetos.repository;
 
 import com.gestaoqualidadeprojetos.model.Classificacao;
 import com.gestaoqualidadeprojetos.model.Iteracao;
+import com.gestaoqualidadeprojetos.model.Projeto;
 import com.gestaoqualidadeprojetos.model.ResultadoEtapaIteracao;
 import com.gestaoqualidadeprojetos.model.ResultadoIteracao;
 import com.gestaoqualidadeprojetos.model.ResultadoMembroEquipe;
@@ -23,7 +24,23 @@ public class  ResultadoIteracaoRepository {
     }
     
     public ResultadoIteracao getByIteracao(Iteracao iteracao) {
+        if(listaResultadosIteracao == null) {
+            return null;
+        }
         return getMockByIteracao(iteracao.getDescricao());
+    }
+    
+    public ArrayList<ResultadoIteracao> getByProjeto(Projeto projeto) {
+        if(listaResultadosIteracao == null) {
+            return null;
+        }
+        var ris = new ArrayList<ResultadoIteracao>();
+        for(ResultadoIteracao ri : listaResultadosIteracao) {
+            if(ri.getIteracao().getProjeto().getNome().equals(projeto.getNome())) {
+               ris.add(ri);
+            }
+        }
+        return ris;
     }
     
     public ArrayList<ResultadoIteracao> getAll() {
@@ -40,6 +57,9 @@ public class  ResultadoIteracaoRepository {
     }
     
     private ArrayList<ResultadoIteracao> generateAllMock() {
+        if(listaResultadosIteracao == null) {
+            return null;
+        }
         listaResultadosIteracao = new ArrayList<ResultadoIteracao>();
         ArrayList<Classificacao> classificacoes = new ClassificacaoRepository().getAll();;
         var etapas = new ArrayList<ResultadoEtapaIteracao>();
@@ -48,9 +68,9 @@ public class  ResultadoIteracaoRepository {
         LocalDate dataFim = LocalDate.of(2023, 8, 1);
         Iteracao cascata = new Iteracao("Iteração Única", dataInicio, dataFim, "ABERTA");
  
-        var resultadoIteracao1 = new ResultadoIteracao("A iteração não alcançou o esperado", LocalDate.now(), classificacoes.get(6), etapas, resultadoMembros, cascata);
+        var resultadoIteracao1 = new ResultadoIteracao( LocalDate.now(), classificacoes.get(6), etapas, resultadoMembros, cascata);
         listaResultadosIteracao.add(resultadoIteracao1);
-        return listaResultadosIteracao;
+        return null;
     }
     
     private ResultadoIteracao getMockByIteracao(String iteracao) {

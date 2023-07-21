@@ -4,19 +4,26 @@
  */
 package com.gestaoqualidadeprojetos.service;
 
-import com.gestaoqualidadeprojetos.business.steps.CreateEtapaIteracaoResult;
-import com.gestaoqualidadeprojetos.business.steps.CreateEtapaMembroEquipeResult;
-import com.gestaoqualidadeprojetos.business.steps.CreateIteracaoResult;
-import com.gestaoqualidadeprojetos.business.steps.CreateMembroEquipeResult;
-import com.gestaoqualidadeprojetos.business.steps.NotifiesMembersNotResponded;
 import com.gestaoqualidadeprojetos.business.steps.ProcessStep;
-import com.gestaoqualidadeprojetos.business.steps.SaveEtapaIteracaoResult;
-import com.gestaoqualidadeprojetos.business.steps.SaveEtapaMembroEquipeResult;
-import com.gestaoqualidadeprojetos.business.steps.SaveIteracaoResult;
-import com.gestaoqualidadeprojetos.business.steps.SaveMembroEquipeResult;
-import com.gestaoqualidadeprojetos.business.steps.ValidatesDateCurrent;
-import com.gestaoqualidadeprojetos.business.steps.ValidatesIfAllMembersAnswered;
-import com.gestaoqualidadeprojetos.business.steps.ValidatesIteracaoResultExists;
+import com.gestaoqualidadeprojetos.business.steps.iteracaoprocess.CreateEtapaIteracaoResult;
+import com.gestaoqualidadeprojetos.business.steps.iteracaoprocess.CreateEtapaMembroEquipeResult;
+import com.gestaoqualidadeprojetos.business.steps.iteracaoprocess.CreateIteracaoResult;
+import com.gestaoqualidadeprojetos.business.steps.iteracaoprocess.CreateMembroEquipeResult;
+import com.gestaoqualidadeprojetos.business.steps.iteracaoprocess.NotifiesMembersNotResponded;
+import com.gestaoqualidadeprojetos.business.steps.iteracaoprocess.SaveEtapaIteracaoResult;
+import com.gestaoqualidadeprojetos.business.steps.iteracaoprocess.SaveEtapaMembroEquipeResult;
+import com.gestaoqualidadeprojetos.business.steps.iteracaoprocess.SaveIteracaoResult;
+import com.gestaoqualidadeprojetos.business.steps.iteracaoprocess.SaveMembroEquipeResult;
+import com.gestaoqualidadeprojetos.business.steps.iteracaoprocess.ValidatesDateCurrentIteracao;
+import com.gestaoqualidadeprojetos.business.steps.iteracaoprocess.ValidatesIfAllMembersAnswered;
+import com.gestaoqualidadeprojetos.business.steps.iteracaoprocess.ValidatesIteracaoResultExists;
+import com.gestaoqualidadeprojetos.business.steps.projetoprocess.CreateProjetoResult;
+import com.gestaoqualidadeprojetos.business.steps.projetoprocess.SaveProjetoResult;
+import com.gestaoqualidadeprojetos.business.steps.projetoprocess.ValidatesAllCompletedIterations;
+import com.gestaoqualidadeprojetos.business.steps.projetoprocess.ValidatesDataCurrentProject;
+import com.gestaoqualidadeprojetos.business.steps.projetoprocess.ValidatesProjectResultExists;
+
+
 
 /**
  *
@@ -25,7 +32,7 @@ import com.gestaoqualidadeprojetos.business.steps.ValidatesIteracaoResultExists;
 public class DashboardCatalogService {
 
     public static ProcessStep createIterationResultProcess = buildChain(
-            new ValidatesDateCurrent(),
+            new ValidatesDateCurrentIteracao(),
             new ValidatesIteracaoResultExists(),
             new ValidatesIfAllMembersAnswered(),
             new NotifiesMembersNotResponded(),
@@ -38,7 +45,12 @@ public class DashboardCatalogService {
             new CreateIteracaoResult(),
             new SaveIteracaoResult());
 
-    /*public static ProcessStep createProjectResultProcess = buildChain();*/
+    public static ProcessStep createProjectResultProcess = buildChain(
+            new ValidatesDataCurrentProject(),
+            new ValidatesProjectResultExists(),
+            new ValidatesAllCompletedIterations(),
+            new CreateProjetoResult(),
+            new SaveProjetoResult());
 
     private static ProcessStep buildChain(ProcessStep... steps) {
         for (int index = 0; index < steps.length - 1; index++) {

@@ -2,14 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.gestaoqualidadeprojetos.business.steps;
+package com.gestaoqualidadeprojetos.business.steps.iteracaoprocess;
 
 import com.gestaoqualidadeprojetos.business.GeraClassificacao;
+import com.gestaoqualidadeprojetos.business.steps.ProcessStep;
+import com.gestaoqualidadeprojetos.model.EtapaIteracao;
 import com.gestaoqualidadeprojetos.model.Iteracao;
-import com.gestaoqualidadeprojetos.model.MembroEquipe;
+import com.gestaoqualidadeprojetos.model.ResultadoEtapaIteracao;
 import com.gestaoqualidadeprojetos.model.ResultadoEtapaMembroEquipe;
-import com.gestaoqualidadeprojetos.model.ResultadoMembroEquipe;
-import com.gestaoqualidadeprojetos.repository.MembroEquipeRepository;
 import com.gestaoqualidadeprojetos.service.DashboardProcessContextService;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,42 +18,37 @@ import java.util.List;
  *
  * @author Note102
  */
-public class CreateMembroEquipeResult extends ProcessStep {
+public class CreateEtapaIteracaoResult extends ProcessStep {
 
     @Override
     public DashboardProcessContextService execute(DashboardProcessContextService context) throws RuntimeException, Exception {
         var iteracao = (Iteracao) context.get("iteracao");
         var resultadosMembroEtapa = (List<ResultadoEtapaMembroEquipe>) context.get("resultadosEtapaMembros");
-        var repository = new MembroEquipeRepository();
-        var membros = repository.getByProject(iteracao.getProjeto());
-        var resultadosMembro = new ArrayList<ResultadoMembroEquipe>();
-        System.out.println("-------------------------------------- Criação do resultado por membro de equipe --------------------------------------");
-
-        for (MembroEquipe membro : membros) {
+        var etapas = iteracao.getEtapas();
+        var resultadosEtapas = new ArrayList<ResultadoEtapaIteracao>();
+        System.out.println("-------------------------------------- Criação do resultado da etapa para iteração --------------------------------------");
+        for (EtapaIteracao etapa : etapas) {
+            System.out.println("----------------------------------------- " + "Etapa - " + etapa.getDescricao() + " -----------------------------------------");
             var somaPercentuais = 0;
             var totalQuantidade = 0;
-            var listResultadosEtapa = new ArrayList<ResultadoEtapaMembroEquipe>();
             for (ResultadoEtapaMembroEquipe reme : resultadosMembroEtapa) {
-                if (reme.getMembro().getEmail().equals(membro.getEmail())) {
+                if (reme.getEtapa().getDescricao().equals(etapa.getDescricao())) {
                     somaPercentuais += reme.getClassificacao().getValorPercentualAtingido();
-                    listResultadosEtapa.add(reme);
                     totalQuantidade++;
                 }
             }
-            var resultado = new ResultadoMembroEquipe();
+            var resultado = new ResultadoEtapaIteracao();
             var geraClassificacao = new GeraClassificacao();
-            System.out.println(somaPercentuais);
             var classificacao = geraClassificacao.gerar(somaPercentuais, totalQuantidade);
-            resultado.setMembro(membro);
             resultado.setClassificacao(classificacao);
-            resultado.setResultadosEtapa(listResultadosEtapa);
+            resultado.setEtapa(etapa);
             resultado.setIteracao(iteracao);
-            resultadosMembro.add(resultado);
+            resultadosEtapas.add(resultado);
             System.out.println(resultado);
             somaPercentuais = 0;
             totalQuantidade = 0;
         }
-        context.put("resultadosMembros", resultadosMembro);
+        context.put("resultadosEtapasIteracao", resultadosEtapas);
         return next(context, true);
     }
 

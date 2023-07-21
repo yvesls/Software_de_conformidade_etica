@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.gestaoqualidadeprojetos.business.steps;
+package com.gestaoqualidadeprojetos.business.steps.iteracaoprocess;
 
+import com.gestaoqualidadeprojetos.business.steps.ProcessStep;
 import com.gestaoqualidadeprojetos.model.Iteracao;
 import com.gestaoqualidadeprojetos.repository.ResultadoIteracaoRepository;
 import com.gestaoqualidadeprojetos.service.DashboardProcessContextService;
@@ -18,7 +19,7 @@ public class ValidatesIteracaoResultExists extends ProcessStep {
     public DashboardProcessContextService execute(DashboardProcessContextService context) throws RuntimeException, Exception {
         var iteracao = (Iteracao) context.get("iteracao");
         var repository = new ResultadoIteracaoRepository();
-        if(repository.getByIteracao(iteracao) == null) {
+        if(repository.getByIteracao(iteracao) != null) {
             throw new RuntimeException("Não é possível gerar o resultado pois já existe resultado para esta iteração!");
         }
         System.out.println("passou pela validação resultado não gerado para a iteração atual");
