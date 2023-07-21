@@ -17,8 +17,32 @@ public class ResultadoEtapaIteracao extends ResultadoEtapa {
         this.iteracao = iteracao;
     }
 
+    public Iteracao getIteracao() {
+        return iteracao;
+    }
+
+    public void setIteracao(Iteracao iteracao) {
+        this.iteracao = iteracao;
+    }
+
+    public Classificacao getClassificacao() {
+        return classificacao;
+    }
+
+    public void setClassificacao(Classificacao classificacao) {
+        this.classificacao = classificacao;
+    }
+
+    public EtapaIteracao getEtapa() {
+        return etapa;
+    }
+
+    public void setEtapa(EtapaIteracao etapa) {
+        this.etapa = etapa;
+    }
+
     @Override
     public String toString() {
-        return "ResultadoEtapaIteracao{" + "iteracao=" + iteracao + '}';
+        return "ResultadoEtapaIteracao{" + "classificacao=" + classificacao + ", etapa=" + etapa.getDescricao() + '}';
     }
 }

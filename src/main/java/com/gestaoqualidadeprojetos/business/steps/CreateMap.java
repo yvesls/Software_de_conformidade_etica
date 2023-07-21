@@ -17,7 +17,7 @@ public class CreateMap extends ProcessStep {
     }
 
     @Override
-    public DashboardProcessContextService execute(DashboardProcessContextService context) throws Exception {
+    public DashboardProcessContextService execute(DashboardProcessContextService context) throws RuntimeException, Exception {
         context.encapsulate((String) args[0]);
         return next(context, true);
     }

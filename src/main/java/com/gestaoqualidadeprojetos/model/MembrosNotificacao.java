@@ -11,22 +11,24 @@ import java.util.ArrayList;
  * @author Note102
  */
 public class MembrosNotificacao {
-    private ArrayList<MembroEquipe> membros;
+    private MembroEquipe membros;
     private String mensagem;
+    private EtapaIteracao etapa;
 
-    public MembrosNotificacao(ArrayList<MembroEquipe> membros) {
-        this.membros = membros;
-    }
-
-    public MembrosNotificacao(ArrayList<MembroEquipe> membros, String mensagem) {
+    public MembrosNotificacao(MembroEquipe membros, String mensagem, EtapaIteracao etapa) {
         this.membros = membros;
         this.mensagem = mensagem;
+        this.etapa = etapa;
     }
 
-    public ArrayList<MembroEquipe> getMembros() {
+    public MembroEquipe getMembros() {
         return membros;
     }
 
+    public EtapaIteracao getEtapa() {
+        return etapa;
+    }
+    
     public String getMensagem() {
         return mensagem;
     }

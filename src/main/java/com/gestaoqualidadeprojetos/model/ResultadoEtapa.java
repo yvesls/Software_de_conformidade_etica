@@ -6,8 +6,8 @@ package com.gestaoqualidadeprojetos.model;
  * @author Note102
  */
 public abstract class ResultadoEtapa {
-    private Classificacao classificacao;
-    private EtapaIteracao etapa;
+    protected Classificacao classificacao;
+    protected EtapaIteracao etapa;
     
     public ResultadoEtapa () {
     }

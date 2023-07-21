@@ -1,4 +1,3 @@
-
 package com.gestaoqualidadeprojetos.model;
 
 import java.time.LocalDateTime;
@@ -9,21 +8,19 @@ import java.util.ArrayList;
  * @author Note102
  */
 public class ResultadoProjeto extends Resultado {
-   private String descricao;
-   private LocalDateTime dataResultado;
-   private ArrayList<ResultadoIteracao> resultadosIteracao;
-   private Projeto projeto;
 
-    public ResultadoProjeto(String descricao, LocalDateTime dataResultado, ArrayList<ResultadoIteracao> resultadosIteracao, Projeto projeto, Classificacao classificacao) {
+    private LocalDateTime dataResultado;
+    private ArrayList<ResultadoIteracao> resultadosIteracao;
+    private Projeto projeto;
+
+    public ResultadoProjeto() {
+    }
+
+    public ResultadoProjeto(LocalDateTime dataResultado, ArrayList<ResultadoIteracao> resultadosIteracao, Projeto projeto, Classificacao classificacao) {
         super(classificacao);
-        this.descricao = descricao;
         this.dataResultado = dataResultado;
         this.resultadosIteracao = resultadosIteracao;
         this.projeto = projeto;
-    }
-
-    public String getDescricao() {
-        return descricao;
     }
 
     public LocalDateTime getDataResultado() {
@@ -38,8 +35,24 @@ public class ResultadoProjeto extends Resultado {
         return projeto;
     }
 
+    public void setDataResultado(LocalDateTime dataResultado) {
+        this.dataResultado = dataResultado;
+    }
+
+    public void setResultadosIteracao(ArrayList<ResultadoIteracao> resultadosIteracao) {
+        this.resultadosIteracao = resultadosIteracao;
+    }
+
+    public void setProjeto(Projeto projeto) {
+        this.projeto = projeto;
+    }
+
+    public void setClassificacao(Classificacao classificacao) {
+        this.classificacao = classificacao;
+    }
+
     @Override
     public String toString() {
-        return "ResultadoProjeto{" + "descricao=" + descricao + ", dataResultado=" + dataResultado + ", classificacao=" + classificacao + ", resultadosIteracao=" + resultadosIteracao + ", projeto=" + projeto + '}';
+        return "ResultadoProjeto{" + " dataResultado=" + dataResultado + ", classificacao=" + classificacao.getClassificacaoAtingida() + ", projeto=" + projeto.getNome() + '}';
     }
 }

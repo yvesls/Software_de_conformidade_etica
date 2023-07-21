@@ -8,35 +8,27 @@ import java.util.List;
  * @author Note102
  */
 public class ResultadoMembroEquipe extends Resultado {
-    private Integer quantidadeRespostasSim;
-    private Integer quantidadeTotalPerguntas;
-    private double percentualRespostasSim;
     private Peso pesoAtribuido;
     private MembroEquipe membro;
     private List<ResultadoEtapaMembroEquipe> resultadosEtapa;
     private Iteracao iteracao;
+    
+    public ResultadoMembroEquipe (){
+    }
 
-    public ResultadoMembroEquipe(Integer quantidadeRespostasSim, Integer quantidadeTotalPerguntas, double percentualRespostasSim, Peso pesoAtribuido, Classificacao classificacao, MembroEquipe membro, Iteracao iteracao, List<ResultadoEtapaMembroEquipe> resultadosEtapa) {
-        super(classificacao);
-        this.quantidadeRespostasSim = quantidadeRespostasSim;
-        this.quantidadeTotalPerguntas = quantidadeTotalPerguntas;
-        this.percentualRespostasSim = percentualRespostasSim;
+    public ResultadoMembroEquipe(Peso pesoAtribuido, MembroEquipe membro, List<ResultadoEtapaMembroEquipe> resultadosEtapa, Iteracao iteracao) {
         this.pesoAtribuido = pesoAtribuido;
         this.membro = membro;
         this.resultadosEtapa = resultadosEtapa;
         this.iteracao = iteracao;
     }
 
-    public Integer getQuantidadeRespostasSim() {
-        return quantidadeRespostasSim;
-    }
-
-    public Integer getQuantidadeTotalPerguntas() {
-        return quantidadeTotalPerguntas;
-    }
-
-    public double getPercentualRespostasSim() {
-        return percentualRespostasSim;
+    public ResultadoMembroEquipe(Peso pesoAtribuido, MembroEquipe membro, List<ResultadoEtapaMembroEquipe> resultadosEtapa, Iteracao iteracao, Classificacao classificacao) {
+        super(classificacao);
+        this.pesoAtribuido = pesoAtribuido;
+        this.membro = membro;
+        this.resultadosEtapa = resultadosEtapa;
+        this.iteracao = iteracao;
     }
 
     public Peso getPesos() {
@@ -59,8 +51,28 @@ public class ResultadoMembroEquipe extends Resultado {
         return resultadosEtapa;
     }
 
+    public void setPesoAtribuido(Peso pesoAtribuido) {
+        this.pesoAtribuido = pesoAtribuido;
+    }
+
+    public void setMembro(MembroEquipe membro) {
+        this.membro = membro;
+    }
+
+    public void setResultadosEtapa(List<ResultadoEtapaMembroEquipe> resultadosEtapa) {
+        this.resultadosEtapa = resultadosEtapa;
+    }
+
+    public void setIteracao(Iteracao iteracao) {
+        this.iteracao = iteracao;
+    }
+
+    public void setClassificacao(Classificacao classificacao) {
+        this.classificacao = classificacao;
+    }
+
     @Override
     public String toString() {
-        return "ResultadoMembroEquipe{" + "quantidadeRespostasSim=" + quantidadeRespostasSim + ", quantidadeTotalPerguntas=" + quantidadeTotalPerguntas + ", percentualRespostasSim=" + percentualRespostasSim + ", pesoAtribuido=" + pesoAtribuido + ", membro=" + membro + ", resultadosEtapa=" + resultadosEtapa + ", iteracao=" + iteracao + '}';
+        return "ResultadoMembroEquipe{" + " membro=" + membro.getNome() + ", iteracao=" + iteracao.getDescricao() + "classificacao=" + classificacao +  '}';
     }
 }

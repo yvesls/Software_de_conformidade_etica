@@ -19,13 +19,13 @@ public abstract class ProcessStep {
         this.args = args;
     }
 
-    public abstract DashboardProcessContextService execute(DashboardProcessContextService context) throws Exception;
+    public abstract DashboardProcessContextService execute(DashboardProcessContextService context) throws RuntimeException, Exception;
 
     public void setNextStep(ProcessStep next) {
         this.nextStep = next;
     }
 
-    protected DashboardProcessContextService next(DashboardProcessContextService context, Object actualResult) throws Exception {
+    protected DashboardProcessContextService next(DashboardProcessContextService context, Object actualResult) throws RuntimeException, Exception {
         context.addProcessResult(actualResult);
         return this.nextStep != null ? nextStep.execute(context) : context;
     }

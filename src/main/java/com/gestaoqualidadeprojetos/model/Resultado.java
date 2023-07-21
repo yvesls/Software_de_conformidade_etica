@@ -9,6 +9,9 @@ import com.gestaoqualidadeprojetos.model.Classificacao;
  */
 public abstract class Resultado {
     protected Classificacao classificacao;
+    
+    public Resultado(){
+    }
 
     public Resultado(Classificacao classificacao) {
         this.classificacao = classificacao;
@@ -20,5 +23,10 @@ public abstract class Resultado {
 
     public void setClassificacao(Classificacao classificacao) {
         this.classificacao = classificacao;
+    }
+
+    @Override
+    public String toString() {
+        return "Resultado{" + "classificacao=" + classificacao + '}';
     }
 }
