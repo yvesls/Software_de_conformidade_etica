@@ -34,8 +34,9 @@ public class RespostaPerguntaRepository {
     public List<RespostaPergunta> getByQuestionarioEtapa(QuestionarioEtapa questionarioEtapa) {
         this.gerarMock();
         var listRp = new ArrayList<RespostaPergunta>();
-        for (RespostaPergunta rp : this.respostasPerguntas) {
-            if (rp.getPergunta().getQuestionario().getNomeQuestionario().equals(questionarioEtapa.getNomeQuestionario())) {
+        for(RespostaPergunta rp : respostasPerguntas) {
+            if(rp.getPergunta().getQuestionario().getNomeQuestionario().equals(questionarioEtapa.getNomeQuestionario())) {
+
                 listRp.add(rp);
             }
         }
