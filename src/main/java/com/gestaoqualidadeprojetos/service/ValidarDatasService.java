@@ -1,15 +1,25 @@
 package com.gestaoqualidadeprojetos.service;
+import java.time.LocalDate;
 
-import java.util.Date;
+public class ValidarDatasService {
+    private static ValidarDatasService instance;
 
-public abstract class ValidarDatasService {
-    
-    public boolean validarDatas(Date dataInicial, Date dataFinal) {
+    private ValidarDatasService() {
+        
+    }
+
+    public static ValidarDatasService getInstance() {
+        if (instance == null) {
+            instance = new ValidarDatasService();
+        }
+        return instance;
+    }
+
+    public boolean validarDatas(LocalDate dataInicial, LocalDate dataFinal) {
         if (dataInicial.compareTo(dataFinal) < 0) {
             return true;
         }
         System.out.println("A previsão de conclusão deve ser maior que a data inicial.");
         return false;
     }
-    
 }

@@ -10,17 +10,18 @@ import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProjetoService extends ValidarDatasService {
-
+public class ProjetoService{
+    private ValidarDatasService validarDatasService;
     private ProjetoRepository projetosRepository;
 
     public ProjetoService() {
+        this.validarDatasService = ValidarDatasService.getInstance();
         this.projetosRepository = new ProjetoRepository();
     }
 
     /*PROJETO*/
     public Projeto criarProjeto(String nome, LocalDate dataInicio, LocalDate previsaoConclusao, String status, String tipo, int quantidadeIteracao) {
-        if (validarDatas(dataInicio, previsaoConclusao)) {
+        if (validarDatasService.validarDatas(dataInicio, previsaoConclusao)) {
             return new Projeto(nome, dataInicio, previsaoConclusao, status, tipo, quantidadeIteracao);
         }
         return null;
